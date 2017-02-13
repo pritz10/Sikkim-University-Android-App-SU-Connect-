@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/department"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Departments" />
+        <item
+            android:id="@+id/libsu"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="LibSu" />
+        <item
+            android:id="@+id/lost"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Lost/Found" />
+        <item
+            android:id="@+id/susa"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="SUSA" />
+    </group>
+
+    <item android:title="Blog">
+        <menu>
+            <item
+                android:id="@+id/fourms"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Forums" />
+            <item
+                android:id="@+id/gallery"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Gallery" />
+            <item
+                android:id="@+id/add"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Add Post" />
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Hepl/Feedback" />
+        </menu>
+    </item>
+
+</menu>
