@@ -15,7 +15,7 @@
 
     <style name="font">
         <item name="android:textSize">25dp</item><!-- text size in menu-->
-            </style>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

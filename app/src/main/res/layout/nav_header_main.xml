@@ -14,11 +14,10 @@
     android:weightSum="1">
 
     <ImageView
-        android:layout_width="105dp"
-        android:layout_height="70dp"
+        android:layout_width="61dp"
+        android:layout_height="55dp"
         app:srcCompat="@drawable/ps"
-        android:id="@+id/imageView"
-        android:layout_weight="0.27" />
+        android:id="@+id/imageView" />
 
     <TextView
         android:layout_width="match_parent"

@@ -18,6 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Departments"
+            android:label="@string/title_activity_departments"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LibSu"
+            android:label="@string/title_activity_lib_su"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Lost_Found"
+            android:label="@string/title_activity_lost__found"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -81,11 +82,17 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.department) {
+            Intent intent=new Intent(getApplicationContext(),Departments.class);
+            startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.libsu) {
+            Intent intent=new Intent(getApplicationContext(),LibSu.class);
+            startActivity(intent);
 
         } else if (id == R.id.lost) {
 
+            Intent intent=new Intent(getApplicationContext(),Lost_Found.class);
+            startActivity(intent);
         } else if (id == R.id.susa) {
 
         } else if (id == R.id.fourms) {
