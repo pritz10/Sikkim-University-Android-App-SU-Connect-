@@ -17,32 +17,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="LOST / FOUND Title"
         android:ems="10"
-        android:id="@+id/editText"
+        android:background="@drawable/shape"
+        android:id="@+id/ltitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/lost"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Lost /found title " />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="DETAILS"
+        android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/ldetail"
+        android:background="@drawable/shape"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/ltitle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:hint="Details"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@mipmap/add_btn"
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/editText2" />
+        android:id="@+id/lost"
+        android:layout_width="650dp"
+        android:layout_height="200dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

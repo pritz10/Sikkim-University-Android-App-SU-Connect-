@@ -29,6 +29,10 @@
         <activity
             android:name=".Lost_Found"
             android:label="@string/title_activity_lost__found"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SUSA"
+            android:label="@string/title_activity_sus"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

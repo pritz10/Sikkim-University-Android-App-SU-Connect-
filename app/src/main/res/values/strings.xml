@@ -81,4 +81,6 @@
     <string name="title_activity_departments">Departments</string>
     <string name="title_activity_lib_su">LibSu</string>
     <string name="title_activity_lost__found">Lost_Found</string>
+    <string name="title_activity_forums">Forums</string>
+    <string name="title_activity_sus">SUSA</string>
 </resources>
