@@ -33,7 +33,16 @@
         <activity
             android:name=".SUSA"
             android:label="@string/title_activity_sus"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Forums"
+            android:label="@string/title_activity_forums"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -22,7 +22,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static android.R.attr.data;
+import static android.R.id.message;
 
 public class Lost_Found extends AppCompatActivity {
 
@@ -32,7 +36,8 @@ public class Lost_Found extends AppCompatActivity {
     private  Uri imageurl=null;
     private static final int GALLERY_REQUEST=1;
     private StorageReference mStorageRef;
-    private DatabaseReference databaseReference;
+    DatabaseReference mref=FirebaseDatabase.getInstance().getReference().child("lost");
+
     private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +45,9 @@ public class Lost_Found extends AppCompatActivity {
         setContentView(R.layout.activity_lost__found);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mStorageRef = FirebaseStorage.getInstance().getReference();
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("lost");
+        mStorageRef=FirebaseStorage.getInstance().getReference();
 
+        //initialization//
         lost = (ImageButton) findViewById(R.id.lost);
         ltitle = (EditText) findViewById(R.id.ltitle);
         ldetail = (EditText) findViewById(R.id.ldetail);
@@ -66,20 +71,24 @@ public class Lost_Found extends AppCompatActivity {
     private void startposting() {
         progressDialog.setMessage("Just Wait....");
         progressDialog.show();
-        String title = ltitle.getText().toString().trim();
-        String detail = ldetail.getText().toString().trim();
+        final String title = ltitle.getText().toString().trim();
+        final String detail = ldetail.getText().toString().trim();
         if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null)
         {
-
             StorageReference reference=mStorageRef.child("Blog_images").child(imageurl.getLastPathSegment());
             reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                     Uri downloaduri=taskSnapshot.getDownloadUrl();
-                    DatabaseReference detail=databaseReference.push();
-                    detail.child("title").setValue(ltitle);
-                    detail.child("details").setValue(ldetail);
-                    detail.child("imageurl").setValue(downloaduri.toString());
+
+                    DatabaseReference databaseReference=mref.push();
+                    databaseReference.child("title").setValue(title);
+                    databaseReference.child("detail").setValue(detail);
+                    databaseReference.child("image").setValue(downloaduri.toString());
+                    databaseReference.child("Username").setValue("Robin");
+                    databaseReference.child("Dept name").setValue("Commerce");
+
+
                     progressDialog.dismiss();
 
 
