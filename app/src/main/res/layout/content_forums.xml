@@ -5,12 +5,34 @@
     android:id="@+id/content_forums"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.Forums"
     tools:showIn="@layout/activity_forums">
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="gravity"
+        android:id="@+id/list"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/editText2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Enter Messages and Your Queries Here" />
 
 </RelativeLayout>

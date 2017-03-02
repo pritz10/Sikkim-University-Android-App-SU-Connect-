@@ -87,8 +87,6 @@ public class Lost_Found extends AppCompatActivity {
                     databaseReference.child("image").setValue(downloaduri.toString());
                     databaseReference.child("Username").setValue("Robin");
                     databaseReference.child("Dept name").setValue("Commerce");
-
-
                     progressDialog.dismiss();
 
 
