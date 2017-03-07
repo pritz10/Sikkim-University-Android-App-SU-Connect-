@@ -1,7 +1,7 @@
 package com.pritz.sikkimuniversity;
 
 
-public class lost
+public class lost  // for initializing //
 {
 
         String ltitle,ldetail;
@@ -11,17 +11,17 @@ public class lost
         }
         public lost(String ltitle,String ldetail)
         {
-            this.ltitle=ltitle;
-            this.ldetail=ldetail;
+            this.ltitle=ltitle; // for title of lost/found//
+            this.ldetail=ldetail; // for detail of lost/found
         }
         public String getT()
         {
             return ltitle;
-        }
+        } //method for returning the title pritz//
         public String getD()
         {
             return ldetail;
-        }
+        } // method for returning the detail pritz//
 
     }
 

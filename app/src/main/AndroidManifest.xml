@@ -37,6 +37,20 @@
         <activity
             android:name=".Forums"
             android:label="@string/title_activity_forums"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pronounciation"
+            android:label="@string/title_activity_pronounciation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SU_Live"
+            android:label="@string/title_activity_su__live"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ListenUp" />
+        <activity android:name=".Pronounce_Right" />
+        <activity
+            android:name=".LostFound"
+            android:label="@string/title_activity_lost_found"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

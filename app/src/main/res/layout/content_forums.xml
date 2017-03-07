@@ -18,9 +18,12 @@
         android:layout_height="match_parent"
         android:textAlignment="gravity"
         android:id="@+id/list"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_above="@+id/editText2"
-        android:layout_alignParentStart="true" />
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -33,6 +36,6 @@
         android:id="@+id/editText2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Enter Messages and Your Queries Here" />
+        android:hint=" Queries, Suggestions, Messages " />
 
 </RelativeLayout>

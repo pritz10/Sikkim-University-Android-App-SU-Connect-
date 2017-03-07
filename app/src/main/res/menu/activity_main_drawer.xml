@@ -27,6 +27,10 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Forums" />
             <item
+                android:id="@+id/pron"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Pronounciation" />
+            <item
                 android:id="@+id/gallery"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Gallery" />

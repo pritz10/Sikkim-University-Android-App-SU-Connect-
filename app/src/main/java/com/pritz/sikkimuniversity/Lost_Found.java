@@ -70,11 +70,11 @@ public class Lost_Found extends AppCompatActivity {
     }
     private void startposting() {
         progressDialog.setMessage("Just Wait....");
-        progressDialog.show();
         final String title = ltitle.getText().toString().trim();
         final String detail = ldetail.getText().toString().trim();
         if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null)
         {
+            progressDialog.show();
             StorageReference reference=mStorageRef.child("Blog_images").child(imageurl.getLastPathSegment());
             reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override

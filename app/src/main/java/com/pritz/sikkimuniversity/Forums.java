@@ -17,12 +17,15 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import static android.R.id.message;
-import static com.pritz.sikkimuniversity.R.id.list;
+
 
 public class Forums extends AppCompatActivity{
     EditText editText;
@@ -38,11 +41,15 @@ public class Forums extends AppCompatActivity{
         setSupportActionBar(toolbar);
         editText = (EditText) findViewById(R.id.editText2);
         list = (ListView) findViewById(R.id.list);
+        final String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Chat chat = new Chat("Mr.Partha Sir", editText.getText().toString());
+                String s=editText.getText().toString();
+                s=currentDateTimeString+"\n"+s;
+                String d="Pritam\t"+"(Computer Applications)";
+                Chat chat = new Chat(d,s);
 
                 Map<String,Object> values = new HashMap<>();
                 values.put("name", "puf");
@@ -54,8 +61,10 @@ public class Forums extends AppCompatActivity{
         });
 
         final List<Chat> listmes = new LinkedList<>();
+
+
         final ArrayAdapter<Chat> adapter = new ArrayAdapter<Chat>
-                (this, android.R.layout.two_line_list_item, listmes) {
+                (this,android.R.layout.two_line_list_item, listmes) {
             @Override
             public View getView(int pos, View view, ViewGroup parent) {
                 if (view == null)
@@ -69,6 +78,9 @@ public class Forums extends AppCompatActivity{
             }
         };
         list.setAdapter(adapter);
+
+
+
         mref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {

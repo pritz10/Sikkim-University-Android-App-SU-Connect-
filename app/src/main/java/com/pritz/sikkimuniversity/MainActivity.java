@@ -101,10 +101,17 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.fourms) {
-            Intent intent=new Intent(getApplicationContext(),Forums.class);
+            Intent intent = new Intent(getApplicationContext(), Forums.class);
             startActivity(intent);
+        }
+            else if (id == R.id.pron) {
+                Intent intent=new Intent(getApplicationContext(),Pronounce_Right.class);
+                startActivity(intent);
 
         } else if (id == R.id.gallery) {
+            Intent intent=new Intent(getApplicationContext(),SU_Live.class);
+            startActivity(intent);
+
 
         }
 
