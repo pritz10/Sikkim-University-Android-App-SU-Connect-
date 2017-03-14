@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by user on 2/28/2017.
  */
 public class Chat {
-   // Pronounciation call=new Pronounciation();
+
     String name,mess;
 
 

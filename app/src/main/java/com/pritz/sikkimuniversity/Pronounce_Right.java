@@ -22,7 +22,7 @@ public class Pronounce_Right extends Activity implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pronounce__right);
+        setContentView(R.layout.activity_departments);
         tts = new TextToSpeech(this, this);
 
         btnSpeak = (Button) findViewById(R.id.listen);

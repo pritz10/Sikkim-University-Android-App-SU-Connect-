@@ -10,6 +10,7 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/nav"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:weightSum="1">
 
@@ -27,6 +28,7 @@
         android:text="Pritam Shah"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
+        android:id="@+id/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView

@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import static android.R.id.message;
 
@@ -30,6 +32,7 @@ import static android.R.id.message;
 public class Forums extends AppCompatActivity{
     EditText editText;
     ListView list;
+    TextToSpeech t1;
     FirebaseListAdapter firebaseListAdapter;
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("forums");
 
@@ -39,26 +42,40 @@ public class Forums extends AppCompatActivity{
         setContentView(R.layout.activity_forums);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
+
+
         editText = (EditText) findViewById(R.id.editText2);
         list = (ListView) findViewById(R.id.list);
         final String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String s=editText.getText().toString();
                 s=currentDateTimeString+"\n"+s;
-                String d="Pritam\t"+"(Computer Applications)";
-                Chat chat = new Chat(d,s);
+               String d="Tilak  \t"+"(Anthropology)";
+              Chat chat = new Chat(d,s);
 
                 Map<String,Object> values = new HashMap<>();
-                values.put("name", "puf");
+                values.put("name", "Pritam");
                 values.put("message", message);
                 mref.push().setValue(chat);
                 editText.setText("");
 
             }
         });
+
 
         final List<Chat> listmes = new LinkedList<>();
 
@@ -72,9 +89,13 @@ public class Forums extends AppCompatActivity{
                     view = getLayoutInflater().inflate(android.R.layout.two_line_list_item, parent, false);
                 }
                 Chat chat = listmes.get(pos);
+
                 ((TextView) view.findViewById(android.R.id.text1)).setText(chat.getName());
                 ((TextView) view.findViewById(android.R.id.text2)).setText(chat.getMess());
+
+
                 return view;
+
             }
         };
         list.setAdapter(adapter);
@@ -87,6 +108,9 @@ public class Forums extends AppCompatActivity{
                 Chat chat=dataSnapshot.getValue(Chat.class);
                 listmes.add(chat);
                 adapter.notifyDataSetChanged();
+                t1.speak(chat.getName(), TextToSpeech.QUEUE_FLUSH, null);
+                Toast.makeText(Forums.this, "Message sent...", Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
