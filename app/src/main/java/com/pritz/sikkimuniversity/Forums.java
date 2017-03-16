@@ -92,7 +92,8 @@ public class Forums extends AppCompatActivity{
 
 
 
-
+                ((TextView) view.findViewById(android.R.id.text1)).setText(chat.getName());
+                ((TextView) view.findViewById(android.R.id.text2)).setText(chat.getMess());
                 return view;
 
             }

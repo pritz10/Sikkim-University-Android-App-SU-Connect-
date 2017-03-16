@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "416241124000",
+    "firebase_url": "https://shipfast-6970e.firebaseio.com",
+    "project_id": "shipfast-6970e",
+    "storage_bucket": "shipfast-6970e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416241124000:android:8614d69cd40649b8",
+        "android_client_info": {
+          "package_name": "com.pritz.sikkimuniversity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416241124000-sbi6s3siulqiqb9m4nuf2hcf752fe5s1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pritz.sikkimuniversity",
+            "certificate_hash": "0b3450fd994d898f9b21a45939b7beb1e857fca8"
+          }
+        },
+        {
+          "client_id": "416241124000-m2j0nqimjv3jodcc40ph5v5jff4qqji6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC21HjqLZ_q19Qg_0T9eKj07-1nTCylzhg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416241124000-m2j0nqimjv3jodcc40ph5v5jff4qqji6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
