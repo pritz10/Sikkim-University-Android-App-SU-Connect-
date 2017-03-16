@@ -90,8 +90,7 @@ public class Forums extends AppCompatActivity{
                 }
                 Chat chat = listmes.get(pos);
 
-                ((TextView) view.findViewById(android.R.id.text1)).setText(chat.getName());
-                ((TextView) view.findViewById(android.R.id.text2)).setText(chat.getMess());
+
 
 
                 return view;
