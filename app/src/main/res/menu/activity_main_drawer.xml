@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/department"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/de"
             android:title="Departments" />
         <item
             android:id="@+id/libsu"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/lib"
             android:title="LibSu" />
         <item
             android:id="@+id/lost"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/los"
             android:title="Lost/Found" />
         <item
             android:id="@+id/susa"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/sua"
             android:title="SUSA" />
     </group>
 
@@ -24,15 +24,15 @@
         <menu>
             <item
                 android:id="@+id/fourms"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/worker"
                 android:title="Forums" />
             <item
                 android:id="@+id/pron"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/tts"
                 android:title="Pronounciation" />
             <item
                 android:id="@+id/gallery"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/gal"
                 android:title="SU_Live" />
             <item
                 android:id="@+id/add"
@@ -40,7 +40,7 @@
                 android:title="Add Post" />
             <item
                 android:id="@+id/help"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/headset"
                 android:title="Hepl/Feedback" />
         </menu>
     </item>
