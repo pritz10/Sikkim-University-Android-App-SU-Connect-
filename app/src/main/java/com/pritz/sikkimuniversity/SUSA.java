@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
@@ -27,13 +28,33 @@ public class SUSA extends AppCompatActivity {
         setSupportActionBar(toolbar);
         webView = (WebView) findViewById(R.id.webview);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        WebSettings webSettings=webView.getSettings();
         webView.setWebViewClient(new SUSA.myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
 
+
         webView.loadUrl("http://sikkimuniversitystudentsassociation.in/");
-        webView.clearCache(true);
-        webView.clearHistory();
+      //  webView.clearCache(true);
+      //  webView.clearHistory();
+
+
+
+       webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+     webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+       webView.getSettings().setAppCacheEnabled(true);
+       webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setSavePassword(true);
+        webSettings.setSaveFormData(true);
+        webSettings.setEnableSmoothTransition(true);
+
+
+
+       // webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+      //  webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 
     }
 

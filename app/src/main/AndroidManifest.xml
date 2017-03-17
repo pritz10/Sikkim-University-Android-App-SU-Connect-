@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pritz.sikkimuniversity">
-
+    android:hardwareAccelerated="true"
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -42,15 +43,15 @@
             android:name=".Pronounciation"
             android:label="@string/title_activity_pronounciation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".SU_Live"
-            android:label="@string/title_activity_su__live"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ListenUp" />
         <activity android:name=".Pronounce_Right" />
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SU_Live"
+            android:label="@string/title_activity_su__live"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

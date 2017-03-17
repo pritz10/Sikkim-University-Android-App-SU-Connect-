@@ -107,8 +107,8 @@ public class Forums extends AppCompatActivity{
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Chat chat=dataSnapshot.getValue(Chat.class);
                 listmes.add(chat);
-                adapter.notifyDataSetChanged();
                 t1.speak(chat.getName(), TextToSpeech.QUEUE_FLUSH, null);
+                adapter.notifyDataSetChanged();
                 Toast.makeText(Forums.this, "Message sent...", Toast.LENGTH_SHORT).show();
 
             }
