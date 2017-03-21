@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.lost) {
 
-            Intent intent=new Intent(getApplicationContext(),Lost_Found.class);
+            Intent intent=new Intent(getApplicationContext(),LostFound.class);
             startActivity(intent);
         } else if (id == R.id.susa) {
             Intent intent=new Intent(getApplicationContext(),SUSA.class);
@@ -119,4 +119,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

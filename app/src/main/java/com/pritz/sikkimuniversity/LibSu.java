@@ -2,12 +2,14 @@ package com.pritz.sikkimuniversity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
@@ -41,29 +43,14 @@ public class LibSu extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
 
-        webView.loadUrl("http://14.139.206.50/W27/login.aspx/");
-       // webView.clearCache(true);
-        //webView.clearHistory();
+        webView.loadUrl("http://14.139.206.50/w27/MyInfo/w27MyInfo.aspx");
 
-        webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        webView.getSettings().setAppCacheEnabled(true);
-        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-        webSettings.setUseWideViewPort(true);
-        webSettings.setSavePassword(true);
-        webSettings.setSaveFormData(true);
-        webSettings.setEnableSmoothTransition(true);
 
     }
 
     public class myWebClient extends WebViewClient
     {
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                       super.onPageStarted(view, url, favicon);
-        }
+
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -74,7 +61,8 @@ public class LibSu extends AppCompatActivity {
         @Override
         public void onReceivedError(WebView view, int errorCode,
                                     String description, String failingUrl) {
-                  Toast.makeText(getApplicationContext(), "Oh no! " + description, Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.nointernet);
+                  Toast.makeText(getApplicationContext(),  "NO INTERNET\t!\nCheck Your Internet Connection... "+ description, Toast.LENGTH_SHORT).show();
             //super.onReceivedError(view, errorCode, description, failingUrl);
         }
         @Override
@@ -83,8 +71,12 @@ public class LibSu extends AppCompatActivity {
             super.onPageFinished(view, url);
 
             progressBar.setVisibility(View.GONE);
+
         }
+
+
     }
+
 
 
   /*  @Override

@@ -13,21 +13,21 @@
         <ImageView
             android:id="@+id/postimage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/add_btn" />
+            android:layout_height="197dp"
+            app:srcCompat="@drawable/lo"/>
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/posttitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:paddingTop="5dp"
             android:text="Something Went Wromg"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="22dp" />
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/detail"
+            android:id="@+id/postdetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
