@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_su__live"
+    android:id="@+id/content_sus"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.pritz.sikkimuniversity.SU_Live"
-    tools:showIn="@layout/activity_su__live"
+    tools:context="com.pritz.sikkimuniversity.SUSA"
+    tools:showIn="@layout/activity_sus"
     >
 
     <ProgressBar
@@ -19,6 +19,7 @@
         />
 
     <WebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

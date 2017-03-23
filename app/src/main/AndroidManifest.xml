@@ -35,10 +35,6 @@
             android:label="@string/title_activity_lost__found"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SUSA"
-            android:label="@string/title_activity_sus"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Forums"
             android:label="@string/title_activity_forums"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -52,10 +48,14 @@
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SUSA"
+            android:label="SUSA"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SU_Live"
             android:label="@string/title_activity_su__live"
             android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

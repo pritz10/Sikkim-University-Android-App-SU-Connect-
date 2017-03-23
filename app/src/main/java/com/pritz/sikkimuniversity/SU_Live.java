@@ -34,7 +34,7 @@ public class SU_Live extends AppCompatActivity {
         webView.getSettings().setBuiltInZoomControls(true);
 
 
-        webView.loadUrl("http://cus.ac.in/recent-events");
+        webView.loadUrl("https://easypay.axisbank.co.in/easyPay/makePayment?mid=MjgxMDM%3D");
         //  webView.clearCache(true);
         //  webView.clearHistory();
 
