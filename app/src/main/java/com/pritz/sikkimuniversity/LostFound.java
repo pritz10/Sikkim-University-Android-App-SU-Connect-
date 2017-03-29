@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,10 +29,15 @@ import static com.pritz.sikkimuniversity.R.id.postimage;
 public class LostFound extends AppCompatActivity {
 private RecyclerView postinsta;
     private DatabaseReference mdatabase;
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_found);
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Fetching Data....");
+        progressDialog.show();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("lost");
@@ -60,13 +66,16 @@ private RecyclerView postinsta;
         protected void populateViewHolder(BlogViewholder viewHolder, post model, int position) {
         viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
-
             viewHolder.setImage(getApplicationContext(),model.getImage());
             viewHolder.setUsername(model.getUserame());
+
 
         }
     };
     postinsta.setAdapter(firebaseRecyclerAdapter);
+    mdatabase.keepSynced(true);
+
+
 }
 
 public static class BlogViewholder extends RecyclerView.ViewHolder{
