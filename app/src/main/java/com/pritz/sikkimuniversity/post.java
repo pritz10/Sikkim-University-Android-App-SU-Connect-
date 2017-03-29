@@ -5,7 +5,7 @@ package com.pritz.sikkimuniversity;
  */
 
 public class post {
-    private String title,detail,image;
+    private String title,detail,image,Username;
 
     public String getDetail()
     {
@@ -31,10 +31,19 @@ public class post {
 
         return title;
     }
-
     public void setTitle(String title)
     {
         this.title = title;
     }
+    public String getUserame()
+    {
+        return Username;
+    }
+    public void setUsername(String Username)
+    {
+        this.Username = Username;
+    }
+
+
 
 }

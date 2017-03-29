@@ -13,8 +13,7 @@ import android.widget.EditText;
 public class Pronounce_Right extends Activity implements
         TextToSpeech.OnInitListener {
 
-    float a = 2f;
-    float b = 0.9f;
+
     private TextToSpeech tts;
     private Button btnSpeak;
     private EditText txtText;
@@ -55,8 +54,7 @@ public class Pronounce_Right extends Activity implements
 
         if (status == TextToSpeech.SUCCESS) {
 
-            tts.setPitch(a);
-            //tts.setSpeechRate(b);
+
             int result = tts.setLanguage(Locale.ENGLISH);
 
             if (result == TextToSpeech.LANG_MISSING_DATA

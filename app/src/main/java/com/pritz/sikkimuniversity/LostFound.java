@@ -60,7 +60,9 @@ private RecyclerView postinsta;
         protected void populateViewHolder(BlogViewholder viewHolder, post model, int position) {
         viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
+
             viewHolder.setImage(getApplicationContext(),model.getImage());
+            viewHolder.setUsername(model.getUserame());
 
         }
     };
@@ -91,6 +93,11 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
         ImageView post=(ImageView)view.findViewById(postimage);
         Picasso.with(ctx).load(image).into(post);
 
+    }
+    public void setUsername(String Username)
+    {
+        TextView pname=(TextView)view.findViewById(R.id.postname);
+        pname.setText("Pritam Shah"+"(Computer Apps.)");
     }
 
 

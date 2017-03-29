@@ -27,7 +27,7 @@ public class SU_Live extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         webView = (WebView) findViewById(R.id.webview1);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         WebSettings webSettings=webView.getSettings();
       //  webView.setWebViewClient(new SU_Live.myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
