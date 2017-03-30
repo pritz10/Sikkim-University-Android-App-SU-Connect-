@@ -16,7 +16,7 @@
             android:title="Lost/Found" />
         <item
             android:id="@+id/susa"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/susa"
             android:title="SUSA" />
     </group>
 
@@ -24,23 +24,23 @@
         <menu>
             <item
                 android:id="@+id/fourms"
-                android:icon="@drawable/ic_menu_gallery"
+                android:icon="@drawable/forms"
                 android:title="Forums" />
             <item
                 android:id="@+id/pron"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/tts"
                 android:title="Pronounciation" />
             <item
                 android:id="@+id/gallery"
-                android:icon="@drawable/ic_menu_gallery"
+                android:icon="@drawable/suliv"
                 android:title="SU_Live" />
             <item
                 android:id="@+id/add"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Add Post" />
+                android:icon="@drawable/forums1"
+                android:title="Contact Book" />
             <item
                 android:id="@+id/help"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/help"
                 android:title="Hepl/Feedback" />
         </menu>
     </item>
