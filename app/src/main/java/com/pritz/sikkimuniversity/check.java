@@ -16,6 +16,20 @@ import android.net.ConnectivityManager;
             } else {
                 return false;
             }
+            if (con_manager.getActiveNetworkInfo() != null
+                    && con_manager.getActiveNetworkInfo().isAvailable()
+                    && con_manager.getActiveNetworkInfo().isConnected()) {
+                return true;
+            } else {
+                return false;
+            }
+            if (con_manager.getActiveNetworkInfo() != null
+                    && con_manager.getActiveNetworkInfo().isAvailable()
+                    && con_manager.getActiveNetworkInfo().isConnected()) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 
