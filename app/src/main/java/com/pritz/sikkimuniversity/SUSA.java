@@ -28,6 +28,8 @@ public class SUSA extends AppCompatActivity {
         setContentView(R.layout.activity_sus);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         webView = (WebView) findViewById(R.id.webview);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -77,8 +79,6 @@ public class SUSA extends AppCompatActivity {
         @Override
         public void onReceivedError(WebView view, int errorCode,
                                     String description, String failingUrl) {
-
-
             setContentView(R.layout.nointernet);
             Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection... " + description, Toast.LENGTH_SHORT).show();
             //super.onReceivedError(view, errorCode, description, failingUrl);

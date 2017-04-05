@@ -30,19 +30,20 @@ public class LostFound extends AppCompatActivity {
 private RecyclerView postinsta;
     private DatabaseReference mdatabase;
     private ProgressDialog progressDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_found);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Fetching Data....");
         progressDialog.show();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("lost");
         postinsta=(RecyclerView) findViewById(R.id.postinsta);
         postinsta.setHasFixedSize(true);
+        mdatabase.keepSynced(true);
         postinsta.setLayoutManager(new LinearLayoutManager(this));
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +51,6 @@ private RecyclerView postinsta;
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),Lost_Found .class);
                 startActivity(intent);
-
             }
         });
 
@@ -64,7 +64,8 @@ private RecyclerView postinsta;
             (post.class,R.layout.postinsta,BlogViewholder.class,mdatabase) {
         @Override
         protected void populateViewHolder(BlogViewholder viewHolder, post model, int position) {
-        viewHolder.setTitle(model.getTitle());
+
+            viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
             viewHolder.setImage(getApplicationContext(),model.getImage());
             viewHolder.setUsername(model.getUserame());
@@ -106,7 +107,7 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
     public void setUsername(String Username)
     {
         TextView pname=(TextView)view.findViewById(R.id.postname);
-        pname.setText("Pritam Shah"+"(Computer Apps.)");
+        pname.setText(Username);
     }
 
 

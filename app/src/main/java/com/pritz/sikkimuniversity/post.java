@@ -32,14 +32,17 @@ public class post {
         return title;
     }
     public void setTitle(String title)
+
     {
         this.title = title;
     }
     public String getUserame()
+
     {
         return Username;
     }
     public void setUsername(String Username)
+
     {
         this.Username = Username;
     }

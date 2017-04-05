@@ -42,6 +42,7 @@ public class Forums extends AppCompatActivity{
         setContentView(R.layout.activity_forums);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -64,7 +65,7 @@ public class Forums extends AppCompatActivity{
             public void onClick(View view) {
                 String s=editText.getText().toString();
                 s=currentDateTimeString+"\n"+s;
-               String d="Robin  \t"+"(Geology)";
+               String d="Aakash  \t"+"(Botany)";
               Chat chat = new Chat(d,s);
 
                 Map<String,Object> values = new HashMap<>();

@@ -87,8 +87,8 @@
     <string name="title_activity_su__live">SU_Live</string>
     <string name="title_activity_lost_found">LostFound</string>
     <string name="title_activity_no__internet__connection">NO_INTERNET_CONNECTION</string>
-
-
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_wall">Wall</string>
 
 
 </resources>

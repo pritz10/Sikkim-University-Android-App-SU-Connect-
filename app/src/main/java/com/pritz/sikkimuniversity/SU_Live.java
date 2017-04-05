@@ -26,6 +26,7 @@ public class SU_Live extends AppCompatActivity {
         setContentView(R.layout.activity_su__live);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = (WebView) findViewById(R.id.webview1);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         WebSettings webSettings=webView.getSettings();

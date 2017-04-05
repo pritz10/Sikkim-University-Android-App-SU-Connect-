@@ -24,38 +24,91 @@
             android:name=".Departments"
             android:label="@string/title_activity_departments"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".LibSu"
             android:label="@string/title_activity_lib_su"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".Lost_Found"
             android:label="@string/title_activity_lost__found"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".Forums"
             android:label="@string/title_activity_forums"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
-            android:name=".Pronounciation"
+            android:name=".Pronounce_Right"
             android:label="@string/title_activity_pronounciation"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ListenUp" />
-        <activity android:name=".Pronounce_Right" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SUSA"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SUSA"
             android:label="SUSA"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".SU_Live"
             android:label="@string/title_activity_su__live"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Wall"
+            android:label="@string/title_activity_wall"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity android:name=".RegisterStudents"></activity>
     </application>
 
 </manifest>

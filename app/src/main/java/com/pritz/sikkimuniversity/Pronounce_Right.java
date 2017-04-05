@@ -4,6 +4,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,9 @@ public class Pronounce_Right extends Activity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_departments);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+
         tts = new TextToSpeech(this, this);
 
         btnSpeak = (Button) findViewById(R.id.listen);

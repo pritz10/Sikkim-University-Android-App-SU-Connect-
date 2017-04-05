@@ -45,6 +45,7 @@ public class Lost_Found extends AppCompatActivity {
         setContentView(R.layout.activity_lost__found);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mStorageRef=FirebaseStorage.getInstance().getReference();
 
         //initialization//
@@ -85,8 +86,8 @@ public class Lost_Found extends AppCompatActivity {
                     databaseReference.child("title").setValue(title);
                     databaseReference.child("detail").setValue(detail);
                     databaseReference.child("image").setValue(downloaduri.toString());
-                    databaseReference.child("Username").setValue("Robin");
-                    databaseReference.child("Dept name").setValue("Commerce");
+                    databaseReference.child("Username").setValue("Prashmita");
+                    databaseReference.child("Dept name").setValue("Microbiology");
                     progressDialog.dismiss();
 
 

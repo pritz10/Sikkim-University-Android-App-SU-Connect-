@@ -36,6 +36,7 @@ public class LibSu extends AppCompatActivity {
         setContentView(R.layout.activity_lib_su);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = (WebView) findViewById(R.id.webview);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         webView.setWebViewClient(new myWebClient());

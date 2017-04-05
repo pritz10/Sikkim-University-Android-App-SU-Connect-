@@ -1,7 +1,9 @@
 package com.pritz.sikkimuniversity;
 
+import android.content.AbstractThreadedSyncAdapter;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -16,15 +18,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+private  FirebaseAuth mAuth;
+     private  FirebaseAuth.AuthStateListener mAuthlistener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+  //  mAuth.addAuthStateListener(mAuthlistener);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//      mAuth=FirebaseAuth.getInstance();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +51,22 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /*mAuth.addAuthStateListener(mAuthlistener);
+        mAuthlistener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser()==null)
+                {
+                    Intent intent=new Intent(MainActivity.this,RegisterStudents.class);
+                    intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
+                }
+            }
+        };*/
+
+
     }
 
 
@@ -87,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.department) {
-            Intent intent=new Intent(getApplicationContext(),Departments.class);
+            Intent intent=new Intent(getApplicationContext(),Register.class);
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.libsu) {
@@ -112,7 +136,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
 
         } else if (id == R.id.gallery) {
-            Intent intent=new Intent(getApplicationContext(),SU_Live.class);
+            Intent intent=new Intent(getApplicationContext(),RegisterStudents.class);
             startActivity(intent);
 
 
