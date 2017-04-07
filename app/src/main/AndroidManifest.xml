@@ -56,7 +56,6 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
@@ -101,12 +100,15 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".RegisterStudents" />
-        <activity android:name=".Pronounce"
+        <activity
+            android:name=".Pronounce"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
+        <activity android:name=".Details" />
+        <activity android:name=".Fromvc"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Shipfast.iml" filepath="$PROJECT_DIR$/Shipfast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SikkimUniversity.iml" filepath="$PROJECT_DIR$/SikkimUniversity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
