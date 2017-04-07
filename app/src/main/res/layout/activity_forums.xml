@@ -31,6 +31,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:srcCompat="@mipmap/send" />
+        app:srcCompat="@mipmap/send"/>
 
 </android.support.design.widget.CoordinatorLayout>

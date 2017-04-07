@@ -110,7 +110,7 @@ public class Forums extends AppCompatActivity{
                 listmes.add(chat);
                 t1.speak(chat.getName(), TextToSpeech.QUEUE_FLUSH, null);
                 adapter.notifyDataSetChanged();
-                Toast.makeText(Forums.this, "Message sent...", Toast.LENGTH_SHORT).show();
+
 
             }
 

@@ -9,50 +9,38 @@
     tools:context="com.pritz.sikkimuniversity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
-   <ImageView
-       android:layout_width="wrap_content"
-       android:layout_height="200dp"
-       android:id="@+id/imageView3"
-       android:src="@drawable/po"
-       ></ImageView>
-    <View
-        android:background="#00000000"
-        android:layout_height="0.8dp"
-        android:layout_width="match_parent"/>
-        <TextView
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/ps" />
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
+        android:layout_alignParentTop="true"
         android:textColor="#000000"
-        android:textStyle="bold"
-    android:id="@+id/ty"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/imageView2"
+        android:text="Sikkim University"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        android:text="Dear Students and Faculty Members
-        Welcome back to Gangtok. Hope you enjoyed your winter vacation. Some of you would have spent part of the vacation on study tour, fieldwork, internship, national service, etc. while others would have spent time with friends and family members. I am sure you have come back energized and empowered with new knowledge and experience to share with others.
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:layout_marginTop="12dp"
+        android:text=" A Central University Under the Act of 2007"
+        android:layout_below="@+id/textView4"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
 
-As I welcome you all, I would like to particularly remind the final semester students that this is your last semester. As such, make the best of the remaining days in hand. You are supposed to be mentored by your teachers during this semester. Hope they are taking care of your intellectual and emotional needs, answering your queries with empathy, and preparing you for the challenging life outside the university. You are lucky to have highly dedicated teachers, although every one of them may not live up to your expectations.
-
-For the teachers I have charted a huge responsibility in the current semester. First of all I would like you all to give your one hour every week to the weaker among your students. You can do this without making them feel inferior. All of them were not rich or lucky enough to go to good schools and colleges, and hence generally perform better in your class. Secondly, I would like you to mentor the final semester students, prepare them for the challenges coming their way in the months and years to come. If you do that they will ever remember you and be grateful to you. Finally, we are embarking on a round of major revision of our curriculum. We wish to make our curriculum helpful to our students in cracking various competitive exams as well as cracking the mysteries of life. We also wish to start some add-on certificate courses from the Odd Semester this year, which would help our students face the job market with one extra qualification in hand. All this is not easy to achieve without the cooperation of every faculty member of the university, but I know you will come forward to do all this for the sake of your students even if it is at times challenging for yourselves.
-
-A very happy 2017 to you all!
-
-
-T.B. Subba" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView6"
-        android:src="@drawable/cal"
-        android:layout_weight="0.40"></ImageView>
-</LinearLayout>
-</ScrollView>
 </RelativeLayout>

@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_forums"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="2dp"
-    android:paddingRight="2dp"
 
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.Forums"
-    tools:showIn="@layout/activity_forums">
+    tools:showIn="@layout/activity_forums"
+    >
 
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAlignment="gravity"
         android:id="@+id/list"
-        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/editText2"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.87"
         android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll"/>
+        android:textAlignment="gravity"
+        android:transcriptMode="alwaysScroll" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:inputType="textMultiLine"
-        android:ems="123"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/editText2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/colorPrimary"
-        android:hint=" Queries, Suggestions, Messages " />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/fors"
+        android:hint="  Queries, Suggestions and Messages !"
+        android:inputType="textMultiLine" />
 
-</RelativeLayout>
+</LinearLayout>

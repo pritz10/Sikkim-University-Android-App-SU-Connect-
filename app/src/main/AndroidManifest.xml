@@ -56,15 +56,7 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity
-            android:name=".Pronounce_Right"
-            android:label="@string/title_activity_pronounciation"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="anddroid.support.PARENT_ACTIVITY"
-                android:value="com.pritz.sikkimuniversity.MainActivity" />
-        </activity>
+
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
@@ -108,7 +100,13 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity android:name=".RegisterStudents"></activity>
+        <activity android:name=".RegisterStudents" />
+        <activity android:name=".Pronounce"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

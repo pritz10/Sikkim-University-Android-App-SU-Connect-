@@ -111,28 +111,30 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textColor="@color/colorPrimary"
         android:text="My Details Should Be -"
-        android:layout_below="@+id/button4" />
+        android:layout_below="@+id/editText12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <RadioButton
         android:id="@+id/radioButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_toEndOf="@+id/textView7"
-        android:layout_toRightOf="@+id/textView7"
-        android:text="Public" />
+        android:text="Public"
+        android:layout_below="@+id/editText6"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
 
     <RadioButton
         android:id="@+id/radioButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
         android:layout_toEndOf="@+id/radioButton7"
         android:layout_toRightOf="@+id/radioButton7"
-        android:text="Private" />
+        android:text="Private"
+        android:layout_alignTop="@+id/radioButton7" />
 
 </RelativeLayout>

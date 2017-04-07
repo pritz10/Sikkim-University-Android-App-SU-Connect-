@@ -1,30 +1,26 @@
 package com.pritz.sikkimuniversity;
 
-import java.util.Locale;
-import android.app.Activity;
-import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Locale;
 
-public class Pronounce_Right extends Activity implements
-        TextToSpeech.OnInitListener {
-
-
+public class Pronounce extends AppCompatActivity implements TextToSpeech.OnInitListener{
     private TextToSpeech tts;
     private Button btnSpeak;
     private EditText txtText;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_departments);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_pronounce);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Pronounce");
 
         tts = new TextToSpeech(this, this);
 

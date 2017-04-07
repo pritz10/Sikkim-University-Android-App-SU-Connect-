@@ -1,8 +1,11 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.AlertDialog;
 import android.content.AbstractThreadedSyncAdapter;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,10 +23,13 @@ import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 private  FirebaseAuth mAuth;
      private  FirebaseAuth.AuthStateListener mAuthlistener;
+int a=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +37,16 @@ private  FirebaseAuth mAuth;
   //  mAuth.addAuthStateListener(mAuthlistener);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setSubtitle("A Central University under Act of 2007");
 //      mAuth=FirebaseAuth.getInstance();
 
+        if(a==0) {
+
+            Snackbar.make(findViewById(android.R.id.content), "Welcome Pritam Shah...", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+            a=a+2;
+
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +99,7 @@ private  FirebaseAuth mAuth;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -97,11 +111,36 @@ private  FirebaseAuth mAuth;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.exit) {
+            Exit();
             return true;
         }
+        if(id==R.id.feed)
+        {
+
+        }
+
+
 
         return super.onOptionsItemSelected(item);
+    }
+    public void Exit()
+    {
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        //builder.setTitle("Exit");
+        builder.setMessage("Are you sure you want to Exit ?");
+        builder.setPositiveButton("No",null);
+        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                //bt.disable();
+                finish();
+                System.exit(0);
+            }
+        });
+        builder.create();
+        builder.show();
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -132,7 +171,7 @@ private  FirebaseAuth mAuth;
             startActivity(intent);
         }
             else if (id == R.id.pron) {
-                Intent intent=new Intent(getApplicationContext(),Pronounce_Right.class);
+                Intent intent=new Intent(getApplicationContext(),Pronounce.class);
                 startActivity(intent);
 
         } else if (id == R.id.gallery) {

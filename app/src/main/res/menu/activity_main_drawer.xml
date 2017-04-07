@@ -29,7 +29,7 @@
             <item
                 android:id="@+id/pron"
                 android:icon="@drawable/tts"
-                android:title="Pronounciation" />
+                android:title="Pronounce" />
             <item
                 android:id="@+id/gallery"
                 android:icon="@drawable/suliv"
@@ -41,7 +41,7 @@
             <item
                 android:id="@+id/help"
                 android:icon="@drawable/help"
-                android:title="Hepl/Feedback" />
+                android:title="Help" />
         </menu>
     </item>
 

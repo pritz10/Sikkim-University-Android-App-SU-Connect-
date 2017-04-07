@@ -19,25 +19,26 @@
         android:layout_height="51dp"
         app:srcCompat="@drawable/ps"
 
-        android:id="@+id/imageView" />
+        android:id="@+id/imageView"
+        android:layout_weight="0.70" />
 
     <TextView
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Shyam Kharel"
-        android:textSize="16dp"
+        android:text="Pritam Shah"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:id="@+id/username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:text="Botany" />
+        android:text="Computer Applications"
+        android:textColor="@color/colorAccent" />
 
 
 </LinearLayout>
