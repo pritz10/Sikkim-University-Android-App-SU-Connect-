@@ -56,7 +56,7 @@ private RecyclerView postinsta;
 
 
     }
-@Override
+    @Override
     protected void onStart()
 {
     super.onStart();
@@ -67,8 +67,9 @@ private RecyclerView postinsta;
 
             viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
-            viewHolder.setImage(getApplicationContext(),model.getImage());
             viewHolder.setUsername(model.getUserame());
+            viewHolder.setImage(getApplicationContext(),model.getImage());
+
 
 
         }

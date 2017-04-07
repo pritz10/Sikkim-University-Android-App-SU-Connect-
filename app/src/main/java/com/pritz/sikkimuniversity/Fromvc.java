@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -11,6 +12,8 @@ public class Fromvc extends AppCompatActivity {
         setContentView(R.layout.activity_fromvc);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("From the Vice-Chancellor’s Desk");
+        ActionBar actionBar = getActionBar();
+
 
     }
 }

@@ -70,7 +70,7 @@ public class Lost_Found extends AppCompatActivity {
         });
     }
     private void startposting() {
-        progressDialog.setMessage("Just Wait....");
+        progressDialog.setMessage("Just Wait.....");
         final String title = ltitle.getText().toString().trim();
         final String detail = ldetail.getText().toString().trim();
         if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null)
@@ -86,9 +86,11 @@ public class Lost_Found extends AppCompatActivity {
                     databaseReference.child("title").setValue(title);
                     databaseReference.child("detail").setValue(detail);
                     databaseReference.child("image").setValue(downloaduri.toString());
-                    databaseReference.child("Username").setValue("Prashmita");
+                    databaseReference.child("Username").setValue("Pritam");
                     databaseReference.child("Dept name").setValue("Microbiology");
                     progressDialog.dismiss();
+                    Intent i=new Intent(Lost_Found.this,LostFound.class);
+                    startActivity(i);
 
 
 

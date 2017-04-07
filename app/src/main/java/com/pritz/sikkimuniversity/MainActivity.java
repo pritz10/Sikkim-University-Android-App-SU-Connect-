@@ -34,8 +34,15 @@ private  FirebaseAuth mAuth;
 int a=0;
     public ImageButton imageButton;
 public Button vcbtn;
+    public Button loc;
+    public Button up;
+    public Button CAL;
+    public Button advr;
+    public Button ir;
+    public Button con;
+    public Button ant;
    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
   //  mAuth.addAuthStateListener(mAuthlistener);
@@ -58,10 +65,28 @@ public Button vcbtn;
        vcbtn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Fromvc.class);
+               Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
                startActivity(intent);
            }
        });
+       loc=(Button)findViewById(R.id.loc);
+       loc.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(getApplication(),Details.class); // Location of SU
+               startActivity(intent);
+           }
+       });
+       ant=(Button)findViewById(R.id.ant);
+       ant.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(getApplication(),AntiRagging.class); // Antiragging
+               startActivity(intent);
+           }
+       });
+
+
         if(a==0) {
 
             Snackbar.make(findViewById(android.R.id.content), "Welcome Pritam Shah...", Snackbar.LENGTH_LONG)
@@ -201,6 +226,10 @@ public Button vcbtn;
             startActivity(intent);
 
 
+        }
+        else if (id == R.id.contact) {
+            Intent intent = new Intent(getApplicationContext(), ContactList.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

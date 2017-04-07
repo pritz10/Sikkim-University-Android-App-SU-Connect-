@@ -35,7 +35,7 @@
                 android:icon="@drawable/suliv"
                 android:title="SU_Live" />
             <item
-                android:id="@+id/add"
+                android:id="@+id/contact"
                 android:icon="@drawable/forums1"
                 android:title="Contact Book" />
             <item
