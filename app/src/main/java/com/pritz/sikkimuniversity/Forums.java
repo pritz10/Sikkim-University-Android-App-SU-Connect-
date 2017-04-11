@@ -29,7 +29,7 @@ import java.util.Map;
 import static android.R.id.message;
 
 
-public class Forums extends AppCompatActivity{
+public class  Forums extends AppCompatActivity{
     EditText editText;
     ListView list;
     TextToSpeech t1;
@@ -65,7 +65,7 @@ public class Forums extends AppCompatActivity{
             public void onClick(View view) {
                 String s=editText.getText().toString();
                 s=currentDateTimeString+"\n"+s;
-               String d="Aakash  \t"+"(Botany)";
+               String d="Pritam  \t"+"(Computer Aplications)";
               Chat chat = new Chat(d,s);
 
                 Map<String,Object> values = new HashMap<>();

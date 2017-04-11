@@ -108,7 +108,7 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
     public void setUsername(String Username)
     {
         TextView pname=(TextView)view.findViewById(R.id.postname);
-        pname.setText(Username);
+        pname.setText("Pritam Shah(Computer Applications)");
     }
 
 

@@ -101,6 +101,8 @@ As I welcome you all, I would like to particularly remind the final semester stu
 For the teachers I have charted a huge responsibility in the current semester.First of all I would like you all to give your one hour every week to the weaker among your students. <p>\n</p>You can do this without making them feel inferior. All of them were not rich or lucky enough to go to good schools and colleges, and hence generally perform better in your class.<p>\n</p> Secondly, I would like you to mentor the final semester students, prepare them for the challenges coming their way in the months and years to come.<p>\n</p> If you do that they will ever remember you and be grateful to you. Finally, we are embarking on a round of major revision of our curriculum.<p>\n</p> We wish to make our curriculum helpful to our students in cracking various competitive exams as well as cracking the mysteries of life. We also wish to start some add-on certificate courses from the Odd Semester this year, which would help our students face the job market with one extra qualification in hand.<p>\n</p><p>\n</p> All this is not easy to achieve without the cooperation of every faculty member of the university, but I know you will come forward to do all this for the sake of your students even if it is at times challenging for yourselves.
 
 A very happy 2017 to you all
+        <p>\n</p>
+        <p>\n</p>
 
 
 T.B. Subba</p>
@@ -191,5 +193,886 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
      <p>\n</p>  To recommend withdrawal of affiliation of institutions which did not curb ragging effectively.</p>
 
 </string>
+
+
+
+    <string-array name="Schools">
+        <item>School of Human Sciences</item>
+        <item>School of Language And Literature</item>
+        <item>School of Life Sciences</item>
+        <item>School of Physical Sciences</item>
+        <item>School of Professional Studies</item>
+        <item>School of Social Sciences</item>
+    </string-array>
+
+    <string-array name="SCHOOL_OF_HUMAN_SCIENCES">
+        <item>Department of Anthropology</item>
+        <item>Department of Geography</item>
+        <item>Department of Psychology</item>
+    </string-array>
+
+    <string-array name="SCHOOL_OF_LANGUAGE_AND_LITERATURE">
+        <item>Department of Bhutia</item>
+        <item>Department of Chinese</item>
+        <item>Department of English</item>
+        <item>Department of Hindi</item>
+        <item>Department of Lepcha</item>
+        <item>Department of Limboo</item>
+        <item>Department of Nepali</item>
+    </string-array>
+    <string-array name="SCHOOL_OF_LIFE_SCIENCES">
+        <item>Department of Botany</item>
+        <item>Department of Horticultre</item>
+        <item>Department of Microbiology</item>
+        <item>Department of Zoology</item>
+    </string-array>
+    <string-array name="SCHOOL_OF_PHYSICAL_SCIENCES">
+        <item>Department of Chemistry</item>
+        <item>Department of Computer Applications</item>
+        <item>Department of Geology</item>
+        <item>Department of Mathematics</item>
+        <item>Department of Physics</item>
+    </string-array>
+    <string-array name="SCHOOL_OF_PROFESSIONAL_STUDIES">
+        <item>Department of Commerce</item>
+        <item>Department of Education</item>
+        <item>Department of Management</item>
+        <item>Department of Mass Communication</item>
+        <item>Department of Music</item>
+        <item>Department of Tourism</item>
+    </string-array>
+    <string-array name="SCHOOL_OF_SOCIAL_SCIENCES">
+        <item>Department of Economics</item>
+        <item>Department of History</item>
+        <item>Department of International Relationship</item>
+        <item>Department of Law</item>
+        <item>Department of Peace and Conflict</item>
+        <item>Department of Political Science</item>
+        <item>Department of Sociology</item>
+    </string-array>
+
+    <string-array name="_2teachers_name3">
+        <item>Irshad Gulam Ahmed</item>
+        <item>Jayita Sengupta</item>
+        <item>Rosy Chamling</item>
+    </string-array>
+    <string-array name="_2Designation3">
+        <item>Professor</item>
+        <item>Associate Professor</item>
+        <item> Associate Professor</item>
+    </string-array>
+    <string-array name="_2PhoneNumber3">
+        <item>9749102132</item>
+        <item>9635712676</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_2email3">
+        <item>igahmed@cus.ac.in</item>
+        <item> jsengupta@cus.ac.in</item>
+        <item>rchamling@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_2teachers_name2">
+        <item>Dr. Dhriti Roy</item>
+        <item>Mr. Moromti Baroowa</item>
+        <item>Mr. Irfan Ahmad</item>
+    </string-array>
+    <string-array name="_2Designation2">
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item> Assistant Professor, Chinese </item>
+    </string-array>
+    <string-array name="_2PhoneNumber2">
+        <item>9749102132</item>
+        <item>9635712676</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_2email2">
+        <item>droy@cus.ac.in</item>
+        <item> mbaroowa@cus.ac.in</item>
+        <item>iahmad@cus.ac.in</item>
+    </string-array>
+    <string-array name="_1teachers_name1">
+        <item>Dr. K.R. Rama Mohan</item>
+        <item>Dr. Maibam Samson Singh</item>
+        <item>Dr. Charisma Karthak. Lepcha</item>
+    </string-array>
+    <string-array name="_1Designation1">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_1PhoneNumber1">
+        <item>2134213456</item>
+        <item>a234627677</item>
+        <item>4446874654</item>
+    </string-array>
+    <string-array name="_1email1">
+        <item>krrmohan@cus.ac.in</item>
+        <item>mssingh@cus.ac.in</item>
+        <item>cklepcha@cus.ac.in</item>
+    </string-array>
+    <string-array name="_1teachers_name2">
+        <item>Dr. Sohel Firdos</item>
+        <item>Dr. Uttam Lal</item>
+        <item>Dr. Rafiul Ahmed</item>
+        <item>Dr. Elangbam Ishwarjit Singh</item>
+        <item>Dr. Abdul Hannan</item>
+        <item>Dr. Vimal Khawas</item>
+    </string-array>
+    <string-array name="_1Designation2">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant professor.</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_1PhoneNumber2">
+        <item>9749102132</item>
+        <item>9635712676</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>1455468646</item>
+        <item>5456453165</item>
+    </string-array>
+    <string-array name="_1email2">
+        <item>sfirdos@cus.ac.in</item>
+        <item>ulal@cus.ac.in</item>
+        <item>rahmed@cus.ac.in</item>
+        <item>eisingh@cus.ac.in</item>
+        <item>ahannan@cus.ac.in</item>
+        <item>vkhawas@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_1teachers_name3">
+        <item>Dr. Nutankumar S. Thingujam</item>
+        <item>Dr. Satyananda Panda</item>
+        <item>Dr. Saurabh Maheshwari</item>
+        <item>Dr. Namrata</item>
+    </string-array>
+    <string-array name="_1Designation3">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_1PhoneNumber3">
+        <item>9749102132</item>
+        <item>9635712676</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+    </string-array>
+    <string-array name="_1email3">
+        <item>nsthingujam@cus.ac.in</item>
+        <item>spanda@cus.ac.in</item>
+        <item> smaheshwari@cus.ac.in</item>
+        <item>namrata@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_2teachers_name1">
+        <item>Bhaichung Tshering Bhutia</item>
+        <item>Dr. Hissay Wangchuk Bhutia</item>
+
+    </string-array>
+    <string-array name="_2Designation1">
+        <item>Associate Professor </item>
+        <item>Associate Professor </item>
+
+    </string-array>
+    <string-array name="_2PhoneNumber1">
+        <item>9749102132</item>
+        <item>9635712676</item>
+
+    </string-array>
+    <string-array name="_2email1">
+        <item> btbhutia@cus.ac.in</item>
+        <item> hwbhutia@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_2teachers_name4">
+        <item>Mr. Dinesh Shahu</item>
+        <item>Mrs. Chukey Bhutia</item>
+    </string-array>
+    <string-array name="_2Designation4">
+        <item> Assistant Professor </item>
+        <item>Assistant Professor </item>
+    </string-array>
+    <string-array name="_2PhoneNumber4">
+        <item>9749102132</item>
+        <item>9635712676</item>
+        =
+    </string-array>
+    <string-array name="_2email4">
+        <item>dshahu@cus.ac.in</item>
+        <item>cbhutia01@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_2teachers_name5">
+        <item>Kachyo Lepcha</item>
+        <item>Dukmit Lepcha</item>
+    </string-array>
+    <string-array name="_2Designation5">
+        <item>Assistant Professor</item>
+        <item>Assistant Proffesor</item>
+    </string-array>
+    <string-array name="_2PhoneNumber5">
+        <item>9749102132</item>
+        <item>7894561548</item>
+    </string-array>
+    <string-array name="_2email5">
+        <item>klepcha@cus.ac.in</item>
+        <item>duk_mit@yahoo.com</item>
+    </string-array>
+
+
+    <string-array name="_2teachers_name6">
+        <item>Kausila Subba</item>
+        <item>Tej Raj Limboo</item>
+    </string-array>
+    <string-array name="_2Designation6">
+        <item>Asst. Professor</item>
+        <item>Assistant Proffesor</item>
+    </string-array>
+    <string-array name="_2PhoneNumber6">
+        <item>9749102132</item>
+        <item>7894561548</item>
+    </string-array>
+    <string-array name="_2email6">
+        <item>trlimboo@cus.ac.in</item>
+        <item>ksubba01@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_2teachers_name7">
+        <item>Pratap Chandra Pradhan</item>
+        <item>Dr. Kabita Lama</item>
+        <item>Dr. Pushpa Sharma</item>
+        <item>Dr. Samar Sinhai</item>
+        <item>Mr. Dewchandra Subba</item>
+        <item>Mr. Balaram Pandey</item>
+    </string-array>
+    <string-array name="_2Designation7">
+        <item>Professor</item>
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant professor</item>
+        <item>Assistant professor</item>
+    </string-array>
+    <string-array name="_2PhoneNumber7">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>9635712676</item>
+        <item>7715548554</item>
+    </string-array>
+    <string-array name="_2email7">
+        <item>pcpradhan@cus.ac.in</item>
+        <item>klama@cus.ac.in</item>
+        <item>psharma@cus.ac.in</item>
+        <item>ssinha@cus.ac.in</item>
+        <item>dsubba01@cus.ac.in</item>
+        <item>bpandey@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_3teachers_name1">
+        <item>N Sathyanarayana</item>
+        <item>Dhani Raj Chhetri</item>
+        <item>Santosh Kumar Rai</item>
+        <item>N. Bijayalaxmi Devi</item>
+        <item>Dr. Arun Chettri</item>
+        <item>Dr. Arun Kumar Rai </item>
+    </string-array>
+    <string-array name="_3Designation1">
+        <item>Associate Professor </item>
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant prof.</item>
+        <item>Assistant professor</item>
+    </string-array>
+    <string-array name="_3PhoneNumber1">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>9635712676</item>
+        <item>4755885556</item>
+    </string-array>
+    <string-array name="_3email1">
+        <item>nsathyanarayana@cus.ac.in</item>
+        <item>drchhetri@cus.ac.in</item>
+        <item>skrai@cus.ac.in</item>
+        <item>nbdevi@cus.ac.in</item>
+        <item>achettri01@cus.ac.in</item>
+        <item>akrai@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_3teachers_name2">
+        <item>Dr. S. Manivannan</item>
+        <item>Dr. Manju Rana</item>
+        <item>Dr. Sujata Upadhyay</item>
+        <item>Dr. Niladri Bag</item>
+        <item>Mr. Rajesh Kumar</item>
+    </string-array>
+    <string-array name="_3Designation2">
+        <item>Associate Professor </item>
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant professor</item>
+    </string-array>
+    <string-array name="_3PhoneNumber2">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>9635712676</item>
+    </string-array>
+    <string-array name="_3email2">
+        <item>smanivanan@cus.ac.in</item>
+        <item>mrana@cus.ac.in</item>
+        <item>supadhyay@cus.ac.in</item>
+        <item>nbdevi@cus.ac.in</item>
+        <item>nbag@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_3teachers_name3">
+        <item>Prof. Jyoti Prakash Tamang</item>
+        <item>Dr. Hare Krishna Tiwari</item>
+        <item>Dr. Bimala Singh</item>
+        <item>Dr. Buddhiman Tamang</item>
+        <item>Dr. Nagendra Thakur</item>
+    </string-array>
+    <string-array name="_3Designation3">
+        <item>Professor </item>
+        <item>Associate Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant professor</item>
+    </string-array>
+    <string-array name="_3PhoneNumber3">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>9635712676</item>
+    </string-array>
+    <string-array name="_3email3">
+        <item>jptamang@cus.ac.in</item>
+        <item>hktiwari@cus.ac.in</item>
+        <item>bsingh@cus.ac.in</item>
+        <item>btamang01@cus.ac.in</item>
+        <item>nthakur@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_3teachers_name4">
+        <item>Dr. Basundhara Chettri</item>
+        <item>Dr. Bhoj Kumar Acharya</item>
+        <item>Dr. Bisu Singh</item>
+        <item>Dr. Sudeep Ghatani</item>
+    </string-array>
+    <string-array name="_3Designation4">
+        <item>Associate Professor </item>
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant professor</item>
+    </string-array>
+    <string-array name="_3PhoneNumber4">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+    </string-array>
+    <string-array name="_3email4">
+        <item>bchettri01@cus.ac.in</item>
+        <item>bkacharya@cus.ac.in</item>
+        <item>bsingh01@cus.ac.in</item>
+        <item>sghatani@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_4teachers_name1">
+        <item>Dr. Sudarsan Tamang</item>
+        <item>Dr. Somendra Nath Chakraborty</item>
+        <item>Dr. Biswajit Gopal Roy</item>
+    </string-array>
+    <string-array name="_4Designation1">
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_4PhoneNumber1">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_4email1">
+        <item>stamang@cus.ac.in</item>
+        <item>snchakraborty@cus.ac.in</item>
+        <item>bgroy@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_4teachers_name2">
+        <item>Dr.Mohan Pradhan</item>
+        <item>Mr.Partha Pratim Ray</item>
+        <item>Mrs.Lekhika Chettri</item>
+        <item>Mrs.Rebicka Rai</item>
+        <item>Mrs.Chunnu Khawas</item>
+    </string-array>
+    <string-array name="_4Designation2">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item> Assistant Professor</item>
+        <item> Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_4PhoneNumber2">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>9933450552</item>
+        <item>9635712676</item>
+    </string-array>
+    <string-array name="_4email2">
+        <item>mohanpratap@gmail.com</item>
+        <item>ppray@cus.ac.in</item>
+        <item>lchettri@cus.ac.in</item>
+        <item>rrai@cus.ac.in</item>
+        <item>ckhawas@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_4teachers_name3">
+        <item>Dr. Rakesh Kumar Ranjan</item>
+        <item>Dr. Md. Abdullah Khan</item>
+        <item>Dr. Nishchal Wanjari</item>
+        <item>Mr. Badikar Ananda Ganapati</item>
+        <item>Om Prakash Kaptan</item>
+    </string-array>
+    <string-array name="_4Designation3">
+        <item>In-charge, Assistant Professor</item>
+        <item>Assistant Proffesor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_4PhoneNumber3">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>3458936950</item>
+    </string-array>
+    <string-array name="_4email3">
+        <item>rkranjan@cus.ac.in</item>
+        <item>akhan@cus.ac.in</item>
+        <item>nwanjari@cus.ac.in</item>
+        <item>bganapati@cus.ac.in</item>
+        <item>opkaptan@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_4teachers_name4">
+        <item>Dr. Thoudem Roshan Singh</item>
+        <item>Ms. Rinkila Bhutia</item>
+    </string-array>
+    <string-array name="_4Designation4">
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_4PhoneNumber4">
+        <item>2348094594</item>
+        <item>8734454356</item>
+    </string-array>
+    <string-array name="_4email4">
+        <item>trsingh@cus.ac.in</item>
+        <item>rbhutia@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_4teachers_name5">
+        <item>Dr. Subir Mukhopadhyay</item>
+        <item>Dr. Amitabha Bhattacharyya</item>
+        <item>Dr. Hemam Dinesh Singh</item>
+        <item>Dr. Ajay Tripathi</item>
+        <item>Dr. Archana Tiwari</item>
+    </string-array>
+    <string-array name="_4Designation5">
+        <item>Associate Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_4PhoneNumber5">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>3458936950</item>
+    </string-array>
+    <string-array name="_4email5">
+        <item>smukhopadhyay@cus.ac.in</item>
+        <item>abhattacharyya@cus.ac.in</item>
+        <item>hdsingh@cus.ac.in</item>
+        <item>atripathi@cus.ac.in</item>
+        <item>atiwari@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_5teachers_name1">
+        <item>Dr. Abhijit Dutta</item>
+        <item>Dr. A N Shankar</item>
+        <item>Dr. Sudhansu Sekhar Mahapatra</item>
+        <item>Sh. Bivek Tamang</item>
+        <item>Mr. Rakesh Basnet</item>
+        <item>Mr. B Muthupandian</item>
+    </string-array>
+    <string-array name="_5Designation1">
+        <item>Associate Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+
+    </string-array>
+    <string-array name="_5PhoneNumber1">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>3458936950</item>
+        <item>3456565666</item>
+    </string-array>
+    <string-array name="_5email1">
+        <item>adutta@cus.ac.in</item>
+        <item>anshankar@cus.ac.in</item>
+        <item>ssmahapatra@cus.ac.in</item>
+        <item>btamang@cus.ac.in</item>
+        <item>rbasnet@cus.ac.in</item>
+        <item>bmpandian@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_5teachers_name2">
+        <item>Dr.T.J.M.S. Raju</item>
+        <item>Dr. Anju Verma</item>
+        <item>Dr. Subhash Misra</item>
+        <item>Dr. Vimal Kishor</item>
+    </string-array>
+    <string-array name="_5Designation2">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_5PhoneNumber2">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+    </string-array>
+    <string-array name="_5email2">
+        <item>tjmsraju@cus.ac.in</item>
+        <item>averma@cus.ac.in</item>
+        <item>smisra@cus.ac.in</item>
+        <item>vkishor@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_5teachers_name3">
+        <item>Dr. V. Rama Devi</item>
+        <item>Dr. Shailendra Kumar</item>
+        <item>Dr. Pradip Kumar Das</item>
+        <item>Dr. A. Ravi Prakash</item>
+        <item>Dr. Krishna Murari</item>
+        <item>Rachana Rai</item>
+    </string-array>
+    <string-array name="_5Designation3">
+        <item>Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_5PhoneNumber3">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>2348975475</item>
+        <item>9469868695</item>
+    </string-array>
+    <string-array name="_5email3">
+        <item>vrdevi@cus.ac.in</item>
+        <item>skumar@cus.ac.in</item>
+        <item>pkdas@cus.ac.in</item>
+        <item>arprakash@cus.ac.in</item>
+        <item>kmurari@cus.ac.in</item>
+        <item>rrai02@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_5teachers_name4">
+        <item>Dr. Silajit Guha</item>
+        <item>Dr. Manoj Das</item>
+        <item>Ms. Jasmine Yimchunger</item>
+    </string-array>
+    <string-array name="_5Designation4">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_5PhoneNumber4">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_5email4">
+        <item>sguha@cus.ac.in</item>
+        <item>mkdas@cus.ac.in</item>
+        <item>jyimchunger@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_5teachers_name5">
+        <item>Dr. Krishnendu Dutta</item>
+        <item>Mr. Jayanta Kumar Barman</item>
+        <item>Ms. Samidha Vedabala</item>
+        <item>Ms. Samidha Vedabalar</item>
+    </string-array>
+    <string-array name="_5Designation5">
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_5PhoneNumber5">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+    </string-array>
+    <string-array name="_5email5">
+        <item>kdutta@cus.ac.in</item>
+        <item>jkbarman@cus.ac.in</item>
+        <item>svedabala@cus.ac.in</item>
+        <item>skumar01@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_5teachers_name6">
+        <item>Ms. Ashi Pempem Wangmo</item>
+        <item>Mr. Jigme Wangchuk Bhutia</item>
+    </string-array>
+    <string-array name="_5Designation6">
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_5PhoneNumber6">
+        <item>9749102132</item>
+        <item>7894561548</item>
+    </string-array>
+    <string-array name="_5email6">
+        <item>apwangmo@cus.ac.in</item>
+        <item>jbhutia@cus.ac.in</item>
+    </string-array>
+
+
+    <string-array name="_6teachers_name1">
+        <item>Dr. Manesh Choubey</item>
+        <item>Dr. Komol Singha</item>
+        <item>Dr. Ruma Kundu</item>
+        <item>Dr. Pradyut Guha</item>
+        <item>Dr. Rangalal Mahapatra</item>
+    </string-array>
+    <string-array name="_6Designation1">
+        <item>Associate Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber1">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>2348975475</item>
+    </string-array>
+    <string-array name="_6email1">
+        <item>mchoubey@cus.ac.in</item>
+        <item>ksingha@cus.ac.in</item>
+        <item>rkundu@cus.ac.in</item>
+        <item>pguha@cus.ac.in</item>
+        <item>rmohapatra@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name2">
+        <item>Dr.V.Krishna Ananth</item>
+        <item>Dr. Vijay Kumar Thangellapali</item>
+        <item>Ms. Sangmu Thendup</item>
+        <item>Dr. Anira Phipon Lepcha</item>
+        <item>Dr. S. Jeevanandam</item>
+        <item>DR. KHWAIRAKPAM RENUKA DEVI</item>
+    </string-array>
+    <string-array name="_6Designation2">
+        <item>Associate Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber2">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>2348975475</item>
+        <item>8275875485</item>
+    </string-array>
+    <string-array name="_6email2">
+        <item>vkananth@cus.ac.in</item>
+        <item>vktangellapali@cus.ac.in</item>
+        <item>sthendup@cus.ac.in</item>
+        <item>aplepcha@cus.ac.in</item>
+        <item>sjeevanandam@cus.ac.in</item>
+        <item>krdevi@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name3">
+        <item>Dr. Manish</item>
+        <item>Dr. Sebastian N</item>
+        <item>Mr. Phairembam Newton Singh</item>
+    </string-array>
+    <string-array name="_6Designation3">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber3">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_6email3">
+        <item>msrivastava@cus.ac.in</item>
+        <item>nsebastian@cus.ac.in</item>
+        <item>pnsingh@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name4">
+        <item>Dr. Imtiaz Gulam Ahmed</item>
+        <item>Mr. Veer Mayank</item>
+        <item>Ms. Denkila Bhutia</item>
+        <item>Dr. Nidhi Saxena</item>
+        <item>Dr. Nidhi Saxena</item>
+        <item>Sonam Yangchen Bhutia</item>
+    </string-array>
+    <string-array name="_6Designation4">
+        <item>Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber4">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>2348975475</item>
+        <item>3456565656</item>
+    </string-array>
+    <string-array name="_6email4">
+        <item>igahmedlaw@cus.ac.in</item>
+        <item>vmayank@cus.ac.in</item>
+        <item>dbhutia@cus.ac.in</item>
+        <item>nsaxena@cus.ac.in </item>
+        <item>not submitted</item>
+        <item>sybhutia@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name5">
+        <item>Dr. Nawal K Paswan</item>
+        <item>Dr. Salvin Paul</item>
+        <item>Dr. Sanghamitra Choudhury</item>
+    </string-array>
+    <string-array name="_6Designation5">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber5">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_6email5">
+        <item>nkpaswan@cus.ac.in</item>
+        <item>spaul@cus.ac.in</item>
+        <item>schoudhury@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name6">
+        <item>Dr. Durga Prasad Chettri</item>
+        <item>Mr. Bidhan Golay</item>
+        <item>Dr. Gadde Omprasad</item>
+        <item>Dr Amit Kumar Gupta</item>
+        <item>Dr. Budh Bdr. Lama</item>
+        <item>Swastika Pradhan</item>
+    </string-array>
+    <string-array name="_6Designation6">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber6">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+        <item>5673869344</item>
+        <item>2348975475</item>
+        <item>8275875485</item>
+    </string-array>
+    <string-array name="_6email6">
+        <item>dpchettri@cus.ac.in</item>
+        <item>bgolay@cus.ac.in</item>
+        <item>opgadde@cus.ac.in</item>
+        <item>akgupta@cus.ac.in</item>
+        <item>bblama@cus.ac.in</item>
+        <item>spradhan@cus.ac.in</item>
+    </string-array>
+
+    <string-array name="_6teachers_name7">
+        <item>Dr. Swati Akshay Sachdeva</item>
+        <item>Dr. Khangembam Indira</item>
+        <item>Shankar Narayan Bagh</item>
+    </string-array>
+    <string-array name="_6Designation7">
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+    </string-array>
+    <string-array name="_6PhoneNumber7">
+        <item>9749102132</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
+    </string-array>
+    <string-array name="_6email7">
+        <item>sasachdeva@cus.ac.in</item>
+        <item>kindira@cus.ac.in</item>
+        <item>snbagh@cus.ac.in</item>
+    </string-array>
+
 
 </resources>

@@ -3,6 +3,10 @@
     package="com.pritz.sikkimuniversity">
     android:hardwareAccelerated="true"
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
 
     <application
         android:allowBackup="true"
@@ -112,7 +116,88 @@
         <activity android:name=".Details" />
         <activity android:name=".Fromvc" />
         <activity android:name=".AntiRagging" />
-        <activity android:name=".ContactList"></activity>
+        <activity android:name=".ContactList" />
+        <activity android:name=".Contact"></activity>
+
+        <activity
+            android:name=".Schools"
+
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".Department_list"
+
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".HumanScience"
+
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".LanguageandLitreature"
+            android:label="jahsdfkjh"
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".LifeSciences"
+            android:label="Dsidhsihgf"
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PhysicalSciences"
+            android:label="sfgbfgh"
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ProfessionalStudies"
+            android:label="Deptdgk[nb"
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SocialSciences"
+            android:label="Deptsvd"
+            android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

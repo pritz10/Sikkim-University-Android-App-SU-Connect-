@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -22,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 private  FirebaseAuth mAuth;
      private  FirebaseAuth.AuthStateListener mAuthlistener;
 int a=0;
-    public ImageButton imageButton;
+    public ImageView imageButton;
 public Button vcbtn;
     public Button loc;
     public Button up;
@@ -52,14 +54,14 @@ public Button vcbtn;
 //      mAuth=FirebaseAuth.getInstance();
 
 
-        imageButton=(ImageButton)findViewById(R.id.imageButton);
+       /* imageButton=(ImageButton)findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplication(),Details.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
        vcbtn=(Button)findViewById(R.id.vcbtn);
        vcbtn.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +85,24 @@ public Button vcbtn;
            public void onClick(View v) {
                Intent intent=new Intent(getApplication(),AntiRagging.class); // Antiragging
                startActivity(intent);
+           }
+       });
+       CAL=(Button)findViewById(R.id.CAL);
+       CAL.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(getApplication(),Wall.class);
+
+            startActivity(intent);           }
+       });
+       con=(Button)findViewById(R.id.con);
+       con.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(getApplication(),Contact.class);
+
+               startActivity(intent);
+
            }
        });
 
@@ -165,6 +185,17 @@ public Button vcbtn;
         if(id==R.id.feed)
         {
 
+            String uriText =
+                    "mailto:"+"developerapphelp@gmail.com"+
+                            "?subject=" + Uri.encode("test subject");
+            Uri uri= Uri.parse(uriText);
+
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
+
+            Intent i = Intent.createChooser(emailIntent, "Send email to the developer...");
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(i);
         }
 
 
@@ -197,7 +228,7 @@ public Button vcbtn;
         int id = item.getItemId();
 
         if (id == R.id.department) {
-            Intent intent=new Intent(getApplicationContext(),Register.class);
+            Intent intent=new Intent(getApplicationContext(),Schools.class);
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.libsu) {
@@ -222,7 +253,7 @@ public Button vcbtn;
                 startActivity(intent);
 
         } else if (id == R.id.gallery) {
-            Intent intent=new Intent(getApplicationContext(),RegisterStudents.class);
+            Intent intent=new Intent(getApplicationContext(),SU_Live.class);
             startActivity(intent);
 
 
@@ -231,6 +262,8 @@ public Button vcbtn;
             Intent intent = new Intent(getApplicationContext(), ContactList.class);
             startActivity(intent);
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
