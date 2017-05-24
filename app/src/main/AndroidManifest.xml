@@ -117,7 +117,7 @@
         <activity android:name=".Fromvc" />
         <activity android:name=".AntiRagging" />
         <activity android:name=".ContactList" />
-        <activity android:name=".Contact"></activity>
+        <activity android:name=".Contact1"></activity>
 
         <activity
             android:name=".Schools"
@@ -192,6 +192,33 @@
             android:name=".SocialSciences"
             android:label="Deptsvd"
             android:parentActivityName=".Schools"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayData"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivityLogin"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"

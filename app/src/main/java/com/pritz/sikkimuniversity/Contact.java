@@ -1,27 +1,45 @@
 package com.pritz.sikkimuniversity;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+/**
+ * Created by Alaeddin on 5/14/2017.
+ */
 
-public class Contact extends AppCompatActivity {
-public Button button;
-    String number=" +91-3592-251468";
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
-        button=(Button)findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:"+number));
-                startActivity(intent);
-            }
-        });
+public class Contact {
+    int Id;
+    String Name,Email,UserName,Password;
+
+
+   // public  void SetId(int id){this.Id=id; }
+    //public  int GetId(){return Id;}
+
+    public void SetName(String name){
+        this.Name=name;
+    }
+    public String GetName(){
+        return Name;
+    }
+
+    public void SetEmail(String email){
+        this.Email=email;
+    }
+    public String GetEmail(){
+        return Email;
+
+    }
+
+    public void SetUserName(String username){
+        this.UserName=username;
+    }
+    public String GetUserName(){
+        return UserName;
+    }
+
+    public void SetPassword(String password){
+        this.Password=password;
+    }
+
+    public String GetPassword(){
+        return Password;
     }
 }
+

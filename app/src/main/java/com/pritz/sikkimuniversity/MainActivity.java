@@ -1,17 +1,12 @@
 package com.pritz.sikkimuniversity;
 
 import android.app.AlertDialog;
-import android.content.AbstractThreadedSyncAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.ShareCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,12 +17,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,6 +39,9 @@ public Button vcbtn;
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+       View hView =  navigationView.getHeaderView(0);
+       Button nav_user = (Button)hView.findViewById(R.id.username1);
   //  mAuth.addAuthStateListener(mAuthlistener);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,7 +57,13 @@ public Button vcbtn;
                 startActivity(intent);
             }
         });*/
-
+       nav_user.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent x = new Intent(MainActivity.this,MainActivityLogin.class);
+               startActivity(x);
+           }
+       });
        vcbtn=(Button)findViewById(R.id.vcbtn);
        vcbtn.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -99,7 +100,7 @@ public Button vcbtn;
        con.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Contact.class);
+               Intent intent=new Intent(getApplication(),Contact1.class);
 
                startActivity(intent);
 
@@ -129,8 +130,6 @@ public Button vcbtn;
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         /*mAuth.addAuthStateListener(mAuthlistener);
