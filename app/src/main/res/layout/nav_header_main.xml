@@ -22,16 +22,18 @@
         android:id="@+id/imageView"
         android:layout_weight="0.70" />
 
-    <TextView
-        android:id="@+id/username"
+    <Button
+        android:id="@+id/username1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Pritam Shah"
+        android:text="Signup User"
+        android:gravity="left"
+        android:shadowColor="@color/cardview_light_background"
+        android:background="@color/cardview_light_background"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorAccent"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/textView"

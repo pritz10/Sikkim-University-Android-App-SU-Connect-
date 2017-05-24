@@ -1074,5 +1074,11 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
         <item>snbagh@cus.ac.in</item>
     </string-array>
 
-
+    <string name="btn_Login">Log In</string>
+    <string name="tv_UserName">User Name</string>
+    <string name="tv_Password">Password</string>
+    <string name="tv_Name">Name</string>
+    <string name="tv_Email">Email</string>
+    <string name="tv_ConfirmPassword">Confirm Passwor</string>
+    <string name="btn_SigUp">Sign Up</string>
 </resources>
