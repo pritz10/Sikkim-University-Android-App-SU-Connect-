@@ -11,21 +11,22 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ps"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="Sikkim University"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Departments"
             android:label="@string/title_activity_departments"
@@ -35,6 +36,7 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
+
         <activity
             android:name=".LibSu"
             android:label="@string/title_activity_lib_su"
@@ -114,10 +116,22 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".Details" />
-        <activity android:name=".Fromvc" />
-        <activity android:name=".AntiRagging" />
+        <activity
+            android:name=".Fromvc"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="anddroid.support.PARENT_ACTIVITY"
+            android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AntiRagging"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="anddroid.support.PARENT_ACTIVITY"
+            android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity android:name=".ContactList" />
-        <activity android:name=".Contact1"></activity>
+
 
         <activity
             android:name=".Schools"
@@ -164,7 +178,7 @@
             android:name=".LifeSciences"
             android:label="Dsidhsihgf"
             android:parentActivityName=".Schools"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
@@ -183,7 +197,7 @@
             android:name=".ProfessionalStudies"
             android:label="Deptdgk[nb"
             android:parentActivityName=".Schools"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
@@ -192,33 +206,6 @@
             android:name=".SocialSciences"
             android:label="Deptsvd"
             android:parentActivityName=".Schools"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="anddroid.support.PARENT_ACTIVITY"
-                android:value="com.pritz.sikkimuniversity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".DisplayData"
-            android:label="Deptsvd"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="anddroid.support.PARENT_ACTIVITY"
-                android:value="com.pritz.sikkimuniversity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".MainActivityLogin"
-            android:label="Deptsvd"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="anddroid.support.PARENT_ACTIVITY"
-                android:value="com.pritz.sikkimuniversity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".SignUp"
-            android:label="Deptsvd"
-            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"

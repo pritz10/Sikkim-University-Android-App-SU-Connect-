@@ -1,12 +1,17 @@
 package com.pritz.sikkimuniversity;
 
 import android.app.AlertDialog;
+import android.content.AbstractThreadedSyncAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.ShareCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,14 +22,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-private  FirebaseAuth mAuth;
-     private  FirebaseAuth.AuthStateListener mAuthlistener;
+
 int a=0;
     public ImageView imageButton;
 public Button vcbtn;
@@ -39,31 +46,10 @@ public Button vcbtn;
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-       View hView =  navigationView.getHeaderView(0);
-       Button nav_user = (Button)hView.findViewById(R.id.username1);
-  //  mAuth.addAuthStateListener(mAuthlistener);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("A Central University established by an Act of Parliament of India,2007");
-//      mAuth=FirebaseAuth.getInstance();
-
-
-       /* imageButton=(ImageButton)findViewById(R.id.imageButton);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplication(),Details.class);
-                startActivity(intent);
-            }
-        });*/
-       nav_user.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent x = new Intent(MainActivity.this,MainActivityLogin.class);
-               startActivity(x);
-           }
-       });
        vcbtn=(Button)findViewById(R.id.vcbtn);
        vcbtn.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -108,13 +94,6 @@ public Button vcbtn;
        });
 
 
-        if(a==0) {
-
-            Snackbar.make(findViewById(android.R.id.content), "Welcome Pritam Shah...", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-            a=a+2;
-
-        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -130,27 +109,13 @@ public Button vcbtn;
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*mAuth.addAuthStateListener(mAuthlistener);
-        mAuthlistener=new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser()==null)
-                {
-                    Intent intent=new Intent(MainActivity.this,RegisterStudents.class);
-                    intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-
-                }
-            }
-        };*/
 
 
     }
-
-
-
 
     @Override
     public void onBackPressed() {

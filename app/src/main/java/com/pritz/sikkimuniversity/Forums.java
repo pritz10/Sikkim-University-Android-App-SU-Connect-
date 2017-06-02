@@ -65,7 +65,7 @@ public class  Forums extends AppCompatActivity{
             public void onClick(View view) {
                 String s=editText.getText().toString();
                 s=currentDateTimeString+"\n"+s;
-               String d="Pritam  \t"+"(Computer Aplications)";
+               String d="Pritam Shah \t"+"(Computer Aplications)";
               Chat chat = new Chat(d,s);
 
                 Map<String,Object> values = new HashMap<>();
