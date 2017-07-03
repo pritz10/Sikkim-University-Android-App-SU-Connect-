@@ -195,7 +195,6 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
 </string>
 
 
-
     <string-array name="Schools">
         <item>School of Human Sciences</item>
         <item>School of Language And Literature</item>
@@ -255,20 +254,32 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
         <item>Irshad Gulam Ahmed</item>
         <item>Jayita Sengupta</item>
         <item>Rosy Chamling</item>
+        <item>Ram Bhawan Yadav</item>
+        <item>Saswati Saha</item>
+        <item>Abrona Lee Pandi Aden</item>
     </string-array>
     <string-array name="_2Designation3">
         <item>Professor</item>
         <item>Associate Professor</item>
+        <item> Associate Professor</item>
+        <item> Associate Professor</item>
+        <item> Associate Professor</item>
         <item> Associate Professor</item>
     </string-array>
     <string-array name="_2PhoneNumber3">
         <item>9749102132</item>
         <item>9635712676</item>
         <item>8116413752</item>
+        <item>8116413752</item>
+        <item>8116413752</item>
+        <item>8116413752</item>
     </string-array>
     <string-array name="_2email3">
         <item>igahmed@cus.ac.in</item>
         <item> jsengupta@cus.ac.in</item>
+        <item>rchamling@cus.ac.in</item>
+        <item>rchamling@cus.ac.in</item>
+        <item>rchamling@cus.ac.in</item>
         <item>rchamling@cus.ac.in</item>
     </string-array>
 
@@ -621,10 +632,11 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
 
     <string-array name="_4teachers_name2">
         <item>Dr.Mohan Pradhan</item>
-        <item>Mr.Partha Pratim Ray</item>
-        <item>Mrs.Lekhika Chettri</item>
-        <item>Mrs.Rebicka Rai</item>
         <item>Mrs.Chunnu Khawas</item>
+        <item>Mr.Partha Pratim Ray</item>
+        <item>Mrs.Rebicka Rai</item>
+        <item>Mrs.Lekhika Chettri</item>
+
     </string-array>
     <string-array name="_4Designation2">
         <item>Associate Professor</item>
@@ -635,17 +647,20 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
     </string-array>
     <string-array name="_4PhoneNumber2">
         <item>9749102132</item>
+        <item>9635712676</item>
         <item>7894561548</item>
         <item>8116413752</item>
         <item>9933450552</item>
-        <item>9635712676</item>
+
     </string-array>
     <string-array name="_4email2">
         <item>mohanpratap@gmail.com</item>
-        <item>ppray@cus.ac.in</item>
-        <item>lchettri@cus.ac.in</item>
-        <item>rrai@cus.ac.in</item>
         <item>ckhawas@cus.ac.in</item>
+        <item>ppray@cus.ac.in</item>
+        <item>rrai@cus.ac.in</item>
+        <item>lchettri@cus.ac.in</item>
+
+
     </string-array>
 
     <string-array name="_4teachers_name3">
@@ -971,7 +986,7 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
         <item>Mr. Veer Mayank</item>
         <item>Ms. Denkila Bhutia</item>
         <item>Dr. Nidhi Saxena</item>
-        <item>Dr. Nidhi Saxena</item>
+        <item>Mr. Vjoy  V</item>
         <item>Sonam Yangchen Bhutia</item>
     </string-array>
     <string-array name="_6Designation4">

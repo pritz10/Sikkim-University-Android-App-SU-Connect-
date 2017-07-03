@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 public class Details extends AppCompatActivity {
     private WebView webView;
-    private ProgressBar progressBar;
+ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,9 @@ public class Details extends AppCompatActivity {
         getSupportActionBar().hide();
 
         webView = (WebView) findViewById(R.id.webview);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+       progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage(" So the day was tough...");
+        progressDialog.show();
         WebSettings webSettings = webView.getSettings();
         webView.setWebViewClient(new Details.myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
@@ -53,6 +56,7 @@ public class Details extends AppCompatActivity {
 
     }
 
+
     public class myWebClient extends WebViewClient {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -79,7 +83,7 @@ public class Details extends AppCompatActivity {
 
             super.onPageFinished(view, url);
 
-            progressBar.setVisibility(View.GONE);
+progressDialog.dismiss();
         }
     }
 

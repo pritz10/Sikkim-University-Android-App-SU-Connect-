@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import static com.pritz.sikkimuniversity.R.id.webview;
 
 public class SUSA extends AppCompatActivity {
     private WebView webView;
-    private ProgressBar progressBar;
+  ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,10 @@ public class SUSA extends AppCompatActivity {
 
 
         webView = (WebView) findViewById(R.id.webview);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Have Patience....");
+        progressDialog.show();
         WebSettings webSettings=webView.getSettings();
         webView.setWebViewClient(new myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
@@ -89,7 +93,7 @@ public class SUSA extends AppCompatActivity {
 
             super.onPageFinished(view, url);
 
-            progressBar.setVisibility(View.GONE);
+           progressDialog.dismiss();
         }
     }
 

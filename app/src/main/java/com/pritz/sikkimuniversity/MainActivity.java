@@ -74,14 +74,16 @@ public Button vcbtn;
                startActivity(intent);
            }
        });
+
        CAL=(Button)findViewById(R.id.CAL);
        CAL.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Intent intent=new Intent(getApplication(),Wall.class);
-
-            startActivity(intent);           }
+               startActivity(intent);
+           }
        });
+
        con=(Button)findViewById(R.id.con);
        con.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -92,6 +94,22 @@ public Button vcbtn;
 
            }
        });
+       up=(Button)findViewById(R.id.up);
+       up.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Snackbar.make(v, "No Upcoming Events\n,Thankyou !", Snackbar.LENGTH_LONG)
+                       .setAction("Action", null).show();
+           }
+       });
+       advr=(Button)findViewById(R.id.advr);
+       advr.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Snackbar.make(v, "Currently No Advertisements !", Snackbar.LENGTH_LONG)
+                       .setAction("Action", null).show();
+           }
+       });
 
 
 
@@ -99,8 +117,8 @@ public Button vcbtn;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "WELCOME   PRITAM SHAH....", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(getApplicationContext(), Forums.class);
+                startActivity(intent);
             }
         });
 
@@ -217,13 +235,13 @@ public Button vcbtn;
                 startActivity(intent);
 
         } else if (id == R.id.gallery) {
-            Intent intent=new Intent(getApplicationContext(),SU_Live.class);
+            Intent intent=new Intent(getApplicationContext(),Login.class);
             startActivity(intent);
 
 
         }
         else if (id == R.id.contact) {
-            Intent intent = new Intent(getApplicationContext(), ContactList.class);
+            Intent intent = new Intent(getApplicationContext(), Contact1.class);
             startActivity(intent);
         }
 

@@ -53,7 +53,6 @@ public class  Forums extends AppCompatActivity{
             }
         });
 
-
         editText = (EditText) findViewById(R.id.editText2);
         list = (ListView) findViewById(R.id.list);
         final String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
@@ -90,9 +89,6 @@ public class  Forums extends AppCompatActivity{
                     view = getLayoutInflater().inflate(android.R.layout.two_line_list_item, parent, false);
                 }
                 Chat chat = listmes.get(pos);
-
-
-
                 ((TextView) view.findViewById(android.R.id.text1)).setText(chat.getName());
                 ((TextView) view.findViewById(android.R.id.text2)).setText(chat.getMess());
                 return view;

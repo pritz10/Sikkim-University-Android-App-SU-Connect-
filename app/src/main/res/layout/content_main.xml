@@ -35,46 +35,54 @@
             android:id="@+id/vcbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Message From VC" />
 
         <Button
             android:id="@+id/loc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Location of Sikkim University" />
 
         <Button
             android:id="@+id/up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Upcoming Events" />
 
         <Button
             android:id="@+id/ant"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="AntiRagging" />
 
         <Button
             android:id="@+id/ir"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Important Notifications" />
 
         <Button
             android:id="@+id/advr"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Advertisements" />
 
         <Button
             android:id="@+id/CAL"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CALENDAR" />
 
         <Button
             android:id="@+id/con"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CONTACT US" />

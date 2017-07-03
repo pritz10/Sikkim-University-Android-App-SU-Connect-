@@ -1,6 +1,7 @@
 package com.pritz.sikkimuniversity;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,7 +30,8 @@ import static com.pritz.sikkimuniversity.R.id.webview;
 public class LibSu extends AppCompatActivity {
 
     private WebView webView;
-    ProgressBar progressBar;
+  //  ProgressBar progressBar;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +40,14 @@ public class LibSu extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = (WebView) findViewById(R.id.webview);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressDialog=new ProgressDialog(this);
+      //  progressBar = (ProgressBar) findViewById(R.id.progressBar);
         webView.setWebViewClient(new myWebClient());
         WebSettings webSettings=webView.getSettings();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
-
+        progressDialog.setMessage("Have a Good day...");
+        progressDialog.show();
         webView.loadUrl("http://14.139.206.50/w27/MyInfo/w27MyInfo.aspx");
 
 
@@ -71,7 +75,7 @@ public class LibSu extends AppCompatActivity {
 
             super.onPageFinished(view, url);
 
-            progressBar.setVisibility(View.GONE);
+          progressDialog.dismiss();
 
         }
 

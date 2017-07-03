@@ -13,6 +13,7 @@ public class AntiRagging extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Antiragging");
         setContentView(R.layout.activity_anti_ragging);
         imageButton=(ImageButton)findViewById(R.id.imagebtn);
         imageButton.setOnClickListener(new View.OnClickListener() {

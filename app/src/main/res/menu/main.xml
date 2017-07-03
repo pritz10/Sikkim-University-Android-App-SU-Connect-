@@ -2,11 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:orderInCategory="100" />
-    <item
-        android:id="@+id/logout"
-        android:orderInCategory="101"
-        android:title="Logout"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/feed"
         android:orderInCategory="101"
