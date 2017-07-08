@@ -2,8 +2,10 @@ package com.pritz.sikkimuniversity;
 
 import android.app.AlertDialog;
 import android.content.AbstractThreadedSyncAdapter;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -24,10 +26,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Locale;
+
+import static android.R.attr.x;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,9 +52,25 @@ public Button vcbtn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+       Intent intent = getIntent();
+       NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+       View hView = navigationView.getHeaderView(0);
+       TextView nav_user = (TextView)hView.findViewById(R.id.username1);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("A Central University established by an Act of Parliament of India,2007");
+       //final String x = intent.getStringExtra("UserName");
+       //if(x == null)
+       //{}
+       //else
+         //  nav_user.setText(x);
+
+       SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+       String name = sharedPreferences.getString("s_name","");
+       nav_user.setText(name);
+
        vcbtn=(Button)findViewById(R.id.vcbtn);
        vcbtn.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -118,6 +139,7 @@ public Button vcbtn;
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Forums.class);
+                intent.putExtra("name",x);
                 startActivity(intent);
             }
         });
@@ -128,7 +150,7 @@ public Button vcbtn;
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+       // NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -141,6 +163,7 @@ public Button vcbtn;
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+
             super.onBackPressed();
         }
     }
@@ -169,7 +192,7 @@ public Button vcbtn;
 
             String uriText =
                     "mailto:"+"developerapphelp@gmail.com"+
-                            "?subject=" + Uri.encode("test subject");
+                            "?subject=" + Uri.encode("Feedback..");
             Uri uri= Uri.parse(uriText);
 
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
@@ -228,6 +251,7 @@ public Button vcbtn;
 
         } else if (id == R.id.fourms) {
             Intent intent = new Intent(getApplicationContext(), Forums.class);
+            intent.putExtra("name",x);
             startActivity(intent);
         }
             else if (id == R.id.pron) {

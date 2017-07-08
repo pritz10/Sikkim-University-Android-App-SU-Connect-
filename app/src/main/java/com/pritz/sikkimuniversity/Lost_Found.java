@@ -1,7 +1,9 @@
 package com.pritz.sikkimuniversity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -86,8 +88,12 @@ public class Lost_Found extends AppCompatActivity {
                     databaseReference.child("title").setValue(title);
                     databaseReference.child("detail").setValue(detail);
                     databaseReference.child("image").setValue(downloaduri.toString());
-                    databaseReference.child("Username").setValue("Pritam");
-                    databaseReference.child("Dept name").setValue("Microbiology");
+
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                    String name = sharedPreferences.getString("s_name","");
+
+                    databaseReference.child("Username").setValue(name);
                     progressDialog.dismiss();
                     Intent i=new Intent(Lost_Found.this,LostFound.class);
                     startActivity(i);

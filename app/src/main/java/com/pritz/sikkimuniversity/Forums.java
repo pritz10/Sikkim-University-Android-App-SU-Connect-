@@ -1,4 +1,7 @@
 package com.pritz.sikkimuniversity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +36,7 @@ public class  Forums extends AppCompatActivity{
     EditText editText;
     ListView list;
     TextToSpeech t1;
+    String d="hello";
     FirebaseListAdapter firebaseListAdapter;
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("forums");
 
@@ -43,6 +47,11 @@ public class  Forums extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       // Intent intent = getIntent();
+       //final String x = intent.getStringExtra("name");
+
+        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+        final String name = sharedPreferences.getString("s_name","");
 
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -64,8 +73,10 @@ public class  Forums extends AppCompatActivity{
             public void onClick(View view) {
                 String s=editText.getText().toString();
                 s=currentDateTimeString+"\n"+s;
-               String d="Pritam Shah \t"+"(Computer Aplications)";
-              Chat chat = new Chat(d,s);
+
+
+               //String d="Pritam Shah \t"+"(Computer Aplications)";
+              Chat chat = new Chat(name,s);
 
                 Map<String,Object> values = new HashMap<>();
                 values.put("name", "Pritam");
