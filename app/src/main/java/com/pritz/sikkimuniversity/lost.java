@@ -21,7 +21,7 @@ public class lost  // for initializing //
         public String getD()
         {
             return ldetail;
-        } // method for returning the detail pritz//
+        } /////////////// method for returning the detail pritz//
 
     }
 
