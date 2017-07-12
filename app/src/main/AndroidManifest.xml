@@ -215,7 +215,7 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".SU_Connect" />
-        <activity android:name=".About" />
+        <activity android:name=".lol" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"

@@ -122,13 +122,13 @@ public class RowAdapter extends ArrayAdapter{
 
 
                 ops.add(ContentProviderOperation.newInsert(
-                            ContactsContract.Data.CONTENT_URI)
-                            .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
-                            .withValue(ContactsContract.Data.MIMETYPE,
-                                    ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
-                            .withValue(
-                                    ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME,
-                                    x).build());
+                        ContactsContract.Data.CONTENT_URI)
+                        .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
+                        .withValue(ContactsContract.Data.MIMETYPE,
+                                ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
+                        .withValue(
+                                ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME,
+                                x).build());
                 ops.add(ContentProviderOperation.
                         newInsert(ContactsContract.Data.CONTENT_URI)
                         .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
@@ -155,6 +155,6 @@ public class RowAdapter extends ArrayAdapter{
                 }
             }
         });
-            return row;
+        return row;
     }
 }

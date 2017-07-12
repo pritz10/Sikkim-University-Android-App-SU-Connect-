@@ -1,49 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
  >
 
     <LinearLayout
         android:id="@+id/postinta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/postname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:text="Something Went Wromg"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-        <ImageView
-            android:id="@+id/postimage"
-            android:layout_width="match_parent"
-            android:layout_height="197dp"
-            app:srcCompat="@drawable/lo"/>
 
         <TextView
             android:id="@+id/posttitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:layout_gravity="left"
             android:paddingTop="5dp"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
             android:text="Something Went Wromg"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="22dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/postimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/vc" />
+
+        <TextView
+            android:id="@+id/losname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Name@Department Name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/postdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Something Went Wromg"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:paddingTop="10dp"
-            android:text="This is  something really cool"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="15dp" />
+            android:textSize="13dp"
+            android:text="June 2 7:23 Pm" />
 
     </LinearLayout>
 

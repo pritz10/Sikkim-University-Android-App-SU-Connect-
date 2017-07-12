@@ -37,24 +37,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
             android:text="Message From VC"
 
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/loc"
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Location of Sikkim University" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
+
             android:id="@+id/up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,8 +62,9 @@
             android:text="Upcoming Events" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
+
             android:id="@+id/ant"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -71,17 +72,20 @@
             android:text="AntiRagging" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
             android:id="@+id/ir"
-            android:textStyle="bold"
+
+
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Important Notifications" />
+            android:text="Important Notifications"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
+
             android:id="@+id/advr"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -89,8 +93,9 @@
             android:text="Advertisements" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
+
             android:id="@+id/CAL"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -98,8 +103,9 @@
             android:text="Calendar" />
 
         <Button
-            android:textColor="@color/colorPrimaryDark"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:textColor="@color/colorAccent"
+
+
             android:id="@+id/con"
             android:textStyle="bold"
             android:layout_width="match_parent"

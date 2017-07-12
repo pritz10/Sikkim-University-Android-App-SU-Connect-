@@ -24,6 +24,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -78,6 +80,7 @@ public class Lost_Found extends AppCompatActivity {
         if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null)
         {
             progressDialog.show();
+            progressDialog.setCancelable(false);
             StorageReference reference=mStorageRef.child("Blog_images").child(imageurl.getLastPathSegment());
             reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -94,6 +97,8 @@ public class Lost_Found extends AppCompatActivity {
                     String name = sharedPreferences.getString("s_name","");
 
                     databaseReference.child("Username").setValue(name);
+                    final String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+                    databaseReference.child("date").setValue(currentDateTimeString);
                     progressDialog.dismiss();
                     Intent i=new Intent(Lost_Found.this,LostFound.class);
                     startActivity(i);

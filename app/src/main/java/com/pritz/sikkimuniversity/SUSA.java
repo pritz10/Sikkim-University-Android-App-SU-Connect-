@@ -30,7 +30,7 @@ public class SUSA extends AppCompatActivity {
         setContentView(R.layout.activity_sus);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         webView = (WebView) findViewById(R.id.webview);

@@ -5,8 +5,14 @@
     android:id="@+id/activity_department_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@color/colorAccent"
+    android:layout_gravity="center"
+    android:layout_marginBottom="12dp"
+
+    android:layout_marginEnd="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp"
     android:descendantFocusability="blocksDescendants"
     tools:context="com.pritz.sikkimuniversity.Department_list">
   <ListView

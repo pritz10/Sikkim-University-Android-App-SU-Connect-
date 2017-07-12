@@ -127,8 +127,11 @@ public Button vcbtn;
        advr.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Snackbar.make(v, "Currently No Advertisements !", Snackbar.LENGTH_LONG)
-                       .setAction("Action", null).show();
+               Intent intent = new Intent(getApplicationContext(), lol.class);
+                             startActivity(intent);
+
+               // Snackbar.make(v, "Currently No Advertisements !", Snackbar.LENGTH_LONG)
+                       //.setAction("Action", null).show();
            }
        });
 

@@ -5,7 +5,26 @@ package com.pritz.sikkimuniversity;
  */
 
 public class post {
-    private String title,detail,image,Username;
+
+    private String title,detail,image,Username,date;
+
+  /*  public post(String title,String detail,String image,String Username)
+    {
+
+        this.title=title;
+        this.detail=detail;
+        this.image=image;
+        this.Username=Username;
+    }*/
+    public String getUsername()
+    {
+        return Username;
+    }
+
+    public void setUsername(String Username)
+    {
+        this.Username = Username;
+    }
 
     public String getDetail()
     {
@@ -36,15 +55,14 @@ public class post {
     {
         this.title = title;
     }
-    public String getUserame()
-
+    public String getDate()
     {
-        return Username;
+        return date;
     }
-    public void setUsername(String Username)
 
+    public void setDate(String Username)
     {
-        this.Username = Username;
+        this.date = date;
     }
 
 

@@ -64,11 +64,13 @@ private RecyclerView postinsta;
             (post.class,R.layout.postinsta,BlogViewholder.class,mdatabase) {
         @Override
         protected void populateViewHolder(BlogViewholder viewHolder, post model, int position) {
-
+            viewHolder.setUsername(model.getUsername());
+            viewHolder.setImage(getApplicationContext(),model.getImage());
             viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
-            viewHolder.setUsername(model.getUserame());
-            viewHolder.setImage(getApplicationContext(),model.getImage());
+            viewHolder.setDate(model.getDate());
+
+
 
 
 
@@ -107,8 +109,13 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
     }
     public void setUsername(String Username)
     {
-        TextView pname=(TextView)view.findViewById(R.id.postname);
+        TextView pname=(TextView)view.findViewById(R.id.losname);
         pname.setText(Username);
+    }
+    public void setDate(String date)
+    {
+        TextView date1=(TextView)view.findViewById(R.id.date);
+        date1.setText(date);
     }
 
 

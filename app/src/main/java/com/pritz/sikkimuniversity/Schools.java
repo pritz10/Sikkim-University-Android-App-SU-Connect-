@@ -19,24 +19,27 @@ public class Schools extends AppCompatActivity {
     "School of Professional Studies",
     "School of Social Sciences"};
     ListView listView;
+    List_School lc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_schools);
-
         getSupportActionBar().setTitle("Schools");
-        listView=(ListView)findViewById(R.id.simplelist);
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, schools);
-        listView.setAdapter(arrayAdapter);
+        listView= (ListView) findViewById(R.id.simplelist);
+        int i = 0;
+        lc = new List_School(getApplicationContext(), R.layout.layout_of_schools);
+        listView.setAdapter(lc);
+        TeacherDetailsProvider tdp1;
+        for (String id : schools) {
+            tdp1 = new TeacherDetailsProvider(schools[i]);
+            lc.add(tdp1);
+            i++;
+        }
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent x= new Intent(Schools.this,Department_list.class);
-                x.putExtra("dept_names",position);
+                Intent x = new Intent(Schools.this,Department_list.class);
+                x.putExtra("dept_names", position);
                 startActivity(x);
             }
         });
