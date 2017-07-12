@@ -3,15 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:layout_marginBottom="12dp"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorAccent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="@drawable/des"
+        android:background="@color/colorAccent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="12dp"
         android:layout_alignParentStart="true">
 
         <ImageView
@@ -27,7 +25,6 @@
             android:layout_below="@+id/details"
             android:layout_toRightOf="@+id/image"
             android:background="@drawable/fors"
-
             android:text="Call"
             android:textColor="#FFFFFF"
             android:textSize="12dp"
@@ -42,7 +39,7 @@
             android:textStyle="bold"
 
             android:gravity="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:layout_toRightOf="@+id/image"
             />
         <TextView
@@ -50,7 +47,7 @@
             android:layout_height="20dp"
             android:hint="hello"
             android:text="name_of_teachers"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:gravity="center"
             android:textSize="13dp"
             android:textStyle="bold"
@@ -87,7 +84,7 @@
             android:layout_height="5dp"
             android:layout_below="@+id/email"
             android:layout_marginTop="2dp"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimary" />
 
     </RelativeLayout>
 </RelativeLayout>
