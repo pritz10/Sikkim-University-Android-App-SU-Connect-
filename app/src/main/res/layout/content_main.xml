@@ -5,7 +5,11 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_marginBottom="7dp"
+    android:layout_margin="7dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -15,10 +19,11 @@
         android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/su"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/su" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,7 +42,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
+            android:layout_marginBottom="2dp"
             android:textColor="@color/colorAccent"
+            android:background="@drawable/dept1"
             android:text="Message From VC"
 
             android:textStyle="bold" />
@@ -45,8 +52,9 @@
         <Button
             android:id="@+id/loc"
             android:textColor="@color/colorAccent"
-
+            android:background="@drawable/dept1"
             android:layout_width="match_parent"
+            android:layout_marginBottom="2dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Location of Sikkim University" />
@@ -54,8 +62,9 @@
         <Button
             android:textColor="@color/colorAccent"
 
-
+            android:background="@drawable/dept1"
             android:id="@+id/up"
+            android:layout_marginBottom="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -64,8 +73,9 @@
         <Button
             android:textColor="@color/colorAccent"
 
-
+            android:background="@drawable/dept1"
             android:id="@+id/ant"
+            android:layout_marginBottom="2dp"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,8 +83,8 @@
 
         <Button
             android:id="@+id/ir"
-
-
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/dept1"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,8 +94,8 @@
 
         <Button
             android:textColor="@color/colorAccent"
-
-
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/dept1"
             android:id="@+id/advr"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -94,8 +104,8 @@
 
         <Button
             android:textColor="@color/colorAccent"
-
-
+            android:background="@drawable/dept1"
+            android:layout_marginBottom="2dp"
             android:id="@+id/CAL"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -104,8 +114,8 @@
 
         <Button
             android:textColor="@color/colorAccent"
-
-
+            android:background="@drawable/dept1"
+            android:layout_marginBottom="2dp"
             android:id="@+id/con"
             android:textStyle="bold"
             android:layout_width="match_parent"

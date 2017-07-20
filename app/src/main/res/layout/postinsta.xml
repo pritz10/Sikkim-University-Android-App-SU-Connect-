@@ -63,10 +63,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/datei"
+            android:textSize="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="13dp"
             android:text="June 2 7:23 Pm" />
 
     </LinearLayout>

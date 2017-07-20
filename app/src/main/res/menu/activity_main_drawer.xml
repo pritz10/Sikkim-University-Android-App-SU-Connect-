@@ -15,33 +15,34 @@
             android:icon="@drawable/lossss"
             android:title="Lost/Found" />
         <item
-            android:id="@+id/susa"
-            android:icon="@drawable/susa"
-            android:title="SUSA" />
+            android:id="@+id/gallery"
+            android:icon="@drawable/suliv"
+            android:title="Blood Donors" />
+
     </group>
 
-    <item android:title="Blog">
+    <item android:title="Help">
         <menu>
             <item
                 android:id="@+id/fourms"
                 android:icon="@drawable/forms"
-                android:title="Forums" />
+                android:title="Chat Room" />
             <item
-                android:id="@+id/pron"
-                android:icon="@drawable/tts"
-                android:title="Pronounce" />
-            <item
-                android:id="@+id/gallery"
-                android:icon="@drawable/suliv"
-                android:title="Blood Donation" />
+                android:id="@+id/susa"
+                android:icon="@drawable/susa"
+                android:title="SUSA" />
             <item
                 android:id="@+id/contact"
                 android:icon="@drawable/forums1"
                 android:title="Contact Book" />
             <item
+                android:id="@+id/pron"
+                android:icon="@drawable/tts"
+                android:title="Pronounce" />
+            <item
                 android:id="@+id/help"
                 android:icon="@drawable/help"
-                android:title="Help" />
+                android:title="Help/Report" />
         </menu>
     </item>
 

@@ -38,7 +38,7 @@ public class  Forums extends AppCompatActivity{
     ListView listView;
     TextToSpeech t1;
     forumss ra;
-    FirebaseListAdapter firebaseListAdapter;
+
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("forums");
 
     @Override
@@ -47,9 +47,10 @@ public class  Forums extends AppCompatActivity{
         setContentView(R.layout.activity_forums);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Chat Room");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       // Intent intent = getIntent();
-       //final String x = intent.getStringExtra("name");
+        // Intent intent = getIntent();
+        //final String x = intent.getStringExtra("name");
 
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         final String name = sharedPreferences.getString("s_name","");
@@ -58,7 +59,7 @@ public class  Forums extends AppCompatActivity{
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    t1.setLanguage(Locale.UK);
+                    t1.setLanguage(Locale.ENGLISH);
                 }
             }
         });
@@ -77,55 +78,43 @@ public class  Forums extends AppCompatActivity{
                 final String message=editText.getText().toString();
                 if (!TextUtils.isEmpty(message))
                 {
-                final GetterandSetter getterandSetter = new GetterandSetter(name,date,message);
-                //String d="Pritam Shah \t"+"(Computer Aplications)";
-                Map<String,Object> values = new HashMap<>();
-                values.put("name", "Pritam");
-                values.put("date",date);
-                values.put("message",message);
-                mref.push().setValue(getterandSetter);
-                editText.setText("");
+                    final GetterandSetter getterandSetter = new GetterandSetter(name,date,message);
+                    //String d="Pritam Shah \t"+"(Computer Aplications)";
+                    Map<String,Object> values = new HashMap<>();
+                    values.put("name", "Pritam");
+                    values.put("date",date);
+                    values.put("message",message);
+                    mref.push().setValue(getterandSetter);
+                    editText.setText("");
 
 
                 }
 
             }
         });
-        listView.setAdapter(ra);
+
+        FirebaseListAdapter<GetterandSetter> adapter=new FirebaseListAdapter<GetterandSetter>(this, GetterandSetter.class, R.layout.formlayout,mref) {
+            @Override
+            protected void populateView(View v, GetterandSetter model, int position)
+            {
+                TextView date_,name_;
+                EditText mainframe_;
+                mainframe_=(EditText)v.findViewById(R.id.mainframe);
+                date_=(TextView)v.findViewById(R.id.date);
+                name_=(TextView)v.findViewById(R.id.name);
+                mainframe_.setText(model.getMessage());
+                name_.setText(model.getname());
+                date_.setText(model.getDate());
+
+
+            }
+        };
+
+        listView.setAdapter(adapter);
+        t1.speak(getterandSetter.getname(), TextToSpeech.QUEUE_FLUSH, null);
         //ra.add(getterandSetter);
 
-        mref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                GetterandSetter getterandSetter=dataSnapshot.getValue(GetterandSetter.class);
-                ra.add(getterandSetter);
-                t1.speak(getterandSetter.getname(), TextToSpeech.QUEUE_FLUSH, null);
-                ra.notifyDataSetChanged();
 
-
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Forums.this, "HELP", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
     }
 }

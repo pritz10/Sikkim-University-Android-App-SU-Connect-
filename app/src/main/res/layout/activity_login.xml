@@ -10,20 +10,26 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageView6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/fors"
+        android:background="@drawable/des"
         android:capitalize="characters"
         android:ems="10"
-        android:hint=" Registration Number"
-        android:inputType="textMultiLine"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="20dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+
+        android:hint="Registration Number "
+
+        android:inputType="textVisiblePassword"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <android.support.design.widget.FloatingActionButton
@@ -71,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:background="@color/colorPrimaryDark"
-        android:onClick="pl"
+        android:onClick="guestmode"
         app:backgroundTint="@color/cardview_light_background"
         app:srcCompat="@drawable/guest"
         android:layout_alignTop="@+id/fa"

@@ -26,55 +26,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView3"
                 android:text="@string/aboutapp"
-                android:textSize="20dp"
+
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageVidfew"
-                android:src="@drawable/f"
-                ></ImageView>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:id="@+id/imageView3"
-                android:src="@drawable/g"
-                android:layout_weight="0.04"></ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView1"
-                android:src="@drawable/a"
-                ></ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
-                android:src="@drawable/b"
-                ></ImageView>
-
-            <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:src="@drawable/c"
-            ></ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageViewd"
-                android:src="@drawable/d"
-                ></ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageVifew"
-                android:src="@drawable/e"
-                ></ImageView>
 
             <Button
                 android:id="@+id/button5"

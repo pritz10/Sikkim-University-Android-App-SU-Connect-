@@ -60,7 +60,7 @@ public class post {
         return date;
     }
 
-    public void setDate(String Username)
+    public void setDate(String date)
     {
         this.date = date;
     }

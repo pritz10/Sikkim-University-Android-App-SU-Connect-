@@ -216,11 +216,47 @@
         </activity>
         <activity android:name=".SU_Connect" />
         <activity android:name=".lol" />
+        <activity android:name=".Aboout_App" />
+        <activity android:name=".GuestMode" />
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Aboout_App"></activity>
+            android:name=".help"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Developers"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Blood"
+            android:label="Deptsvd"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+
+        <activity
+            android:name=".Donate_Blood"
+            android:label="Deptsvd"
+            android:parentActivityName=".Blood"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

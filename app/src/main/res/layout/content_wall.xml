@@ -2,18 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_lib_su"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.Wall"
     tools:showIn="@layout/activity_wall">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+
+    <WebView
+        android:id="@+id/webview"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cal"
-        android:layout_centerVertical="true"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+    </WebView>
+
 </RelativeLayout>

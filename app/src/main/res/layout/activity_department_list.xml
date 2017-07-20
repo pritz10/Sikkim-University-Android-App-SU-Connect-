@@ -19,6 +19,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:divider="@null"
+      android:foregroundGravity="center"
       android:dividerHeight="0dp"
       android:id="@+id/list_view"
       android:layout_alignParentTop="true"

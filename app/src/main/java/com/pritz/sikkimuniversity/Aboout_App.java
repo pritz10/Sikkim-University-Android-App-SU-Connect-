@@ -13,7 +13,9 @@ Button b;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboout__app);
-b=(Button) findViewById(R.id.button5);
+        getSupportActionBar().setTitle("Inside App");
+
+        b=(Button) findViewById(R.id.button5);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

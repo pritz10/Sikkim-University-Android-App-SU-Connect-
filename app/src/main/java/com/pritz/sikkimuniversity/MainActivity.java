@@ -262,13 +262,17 @@ public Button vcbtn;
                 startActivity(intent);
 
         } else if (id == R.id.gallery) {
-            Intent intent=new Intent(getApplicationContext(),Login.class);
+            Intent intent=new Intent(getApplicationContext(),Blood.class);
             startActivity(intent);
 
 
         }
         else if (id == R.id.contact) {
             Intent intent = new Intent(getApplicationContext(), Contact1.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.help) {
+            Intent intent = new Intent(getApplicationContext(),help.class);
             startActivity(intent);
         }
 

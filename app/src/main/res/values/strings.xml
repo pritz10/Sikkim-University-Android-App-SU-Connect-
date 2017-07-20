@@ -91,6 +91,27 @@
     <string name="title_activity_wall">Wall</string>
 
 
+    <string name="guest">
+<p>\n</p>Sikkim University is a central university established under an Act of Parliament of India [THE SIKKIM UNIVERSITY ACT, 2006 ]. It is located at Gangtok
+        <p>\n</p>  <p>\n</p>Campus size: 1.177 mi²  <p>\n</p>
+Vice-Chancellor: Tanka Bahadur Subba  <p>\n</p>
+Location: Gangtok, Sikkim, India  <p>\n</p>
+Chancellor: Ruma Pal  <p>\n</p>
+Founded: 2006  <p>\n</p>
+Headquarters: Gangtok, India<p>\n</p></string>
+
+<string-array name="bloodgrp">
+    <item>Enter Your Blood Group</item>
+    <item>O+</item>
+    <item>O-</item>
+    <item>A+</item>
+    <item>A-</item>
+    <item>AB+</item>
+    <item>AB-</item>
+    <item>B+</item>
+    <item>B-</item>
+</string-array>
+
     <string name="VC">
         Dear Students and Faculty Members<p align="justify">
 
@@ -107,7 +128,7 @@ A very happy 2017 to you all
 
 T.B. Subba</p>
     </string>
-    <string name="antiragging"> <p align="justify">RAGGING: Any disorderly conduct whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness any other student, indulging in rowdy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or to raise fear or apprehension thereof in a fresher or a junior student or asking the students to
+    <string name="antiragging"> <p align="justify">Click Here <p>\n</p> <p>\n</p>RAGGING: Any disorderly conduct whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness any other student, indulging in rowdy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or to raise fear or apprehension thereof in a fresher or a junior student or asking the students to
 
     do any act or perform something which such student will not in the ordinary course and which has the effect of causing or generating a sense of shame or embarrassment so as to adversely affect the physique or psyche of a fresher or a junior student”.<p>\n</p>
   <p>\n</p><p>\n</p> Anti-Ragging Cell<p>\n</p>
@@ -141,10 +162,10 @@ Building Co-ordinators of all Buildings
 
 
 Members<p>\n</p>
-    A student who has been ragged or has seen someone being ragged in hostels or in departments or within the University building may submit his/her complaint to any one of the above members who may bring to the notice to the Dean, Students’ Welfare immediately. Upon receipt of such complaint, the Dean, Students’ Welfare shall convene a meeting of the Cell within three (3) days. Anti-Ragging Cell shall inquire into the complaint. If the complaint is found to be true and perpetrator(s) is/are identified, the Cell may make appropriate recommendations to the Vice-Chancellor as per standing Supreme Court rulings.
+     <p>\n</p>A student who has been ragged or has seen someone being ragged in hostels or in departments or within the University building may submit his/her complaint to any one of the above members who may bring to the notice to the Dean, Students’ Welfare immediately.  <p>\n</p>Upon receipt of such complaint, the Dean, Students’ Welfare shall convene a meeting of the Cell within three (3) days. <p>\n</p> Anti-Ragging Cell shall inquire into the complaint. If the complaint is found to be true and perpetrator(s) is/are identified, the Cell may make appropriate recommendations to the Vice-Chancellor as per standing Supreme Court rulings. <p>\n</p>
 <p>\n</p>The Cell shall sensitize the students on anti-ragging rules from time to time and display notices in hostels and departments informing them of the likely consequences if they indulge in ragging.
 
-<p>\n</p>Activities Considered as Ragging:<p>\n</p>
+ <p>\n</p><p>\n</p>Activities Considered as Ragging:<p>\n</p>
 
    <p>\n</p> Any conduct by words spoken or written or an act which has the effect of teasing, threading or handling with rudeness to a fresher or any other student.
    <p>\n</p> Financial extortion or act of forceful expenditure.
@@ -157,21 +178,21 @@ Members<p>\n</p>
 
 
 
-<p>\n</p>The Recommendations of Shri R. K. Raghavan Committee:<p>\n</p>
+<p>\n</p> <p>\n</p>The Recommendations of Shri R. K. Raghavan Committee:<p>\n</p>
 
 Verbal Ragging: When a senior causes mental harassment, discomfort for the junior by forcing him/her to answer unacceptable/personal questions, dance, sing, etc. is said to rag the junior. It also includes within its ambit “cyber ragging”. Punishment: 1 year imprisonment or fine
 
-Severe Verbal Ragging: Where the mental harassment, discomfort is to such an act as forces the junior to withdraw from the college. Punishment: 7 year imprisonment with fine
+ <p>\n</p>Severe Verbal Ragging: Where the mental harassment, discomfort is to such an act as forces the junior to withdraw from the college. Punishment: 7 year imprisonment with fine
 
-Physical Ragging: Any act by the senior towards the junior which inflicts bodily injury on the junior. Like beating the junior, hitting him/her with objects etc. Punishment: 7 year imprisonment with fine
+ <p>\n</p>Physical Ragging: Any act by the senior towards the junior which inflicts bodily injury on the junior. Like beating the junior, hitting him/her with objects etc. Punishment: 7 year imprisonment with fine
 
-Sexual Ragging: where the senior asks the junior to do an act which damages sexual dignity of the junior. Punishment: 7 year rigorous imprisonment and fine
+ <p>\n</p>Sexual Ragging: where the senior asks the junior to do an act which damages sexual dignity of the junior. Punishment: 7 year rigorous imprisonment and fine
 
 
 
-<p>\n</p>OBJECTIVES:<p>\n</p>
+<p>\n</p> <p>\n</p>OBJECTIVES: <p>\n</p>
 
-<p>\n</p>To Curb the Menace of Ragging in Sikkim University<p>\n</p>
+<p>\n</p>To Curb the Menace of Ragging in Sikkim University
 
 <p>\n</p>Anti Ragging Policy – Ragging is strictly banned in the premises of Sikkim University and its affiliated institutions. If anybody found indulging in such activities, strict action will be taken irrespective of the extent.
 
@@ -181,7 +202,7 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
 
 
 
-  <p>\n</p> FUNCTIONS OF THE ANTI-RAGGING COMMITTEE
+  <p>\n</p>  <p>\n</p>FUNCTIONS OF THE ANTI-RAGGING COMMITTEE <p>\n</p>
 
 
       <p>\n</p> To get an undertaking in the prescribed format from the candidate concerned on anti ragging.
@@ -194,14 +215,14 @@ Sexual Ragging: where the senior asks the junior to do an act which damages sexu
 </string>
 
 
-
     <string name="aboutapp">
       <p>\n</p> SU-Connect-This is an Android Application for Sikkim University-A Central University under the act of Parliament 2007.<p>\n</p>
        <p>\n</p> There is lot of features inside this app. Some of  the are-
         <p>\n</p><p>\n</p>Chat Room-This is a huge group chat enables you to connect with your friends from same or other departments.You can send messages,queries and suggestions.
-        <p>\n</p><p>\n</p>School-Here you can get the contact details of each and every teacher of Sikkim University.
+        <p>\n</p><p>\n</p>Schools-Here you can get the contact details of each and every teacher of Sikkim University.
         <p>\n</p><p>\n</p>Lost/Found- Here you can post images of lost or found item so that you can get it back or help other getting it.
         <p>\n</p><p>\n</p>SUSA-You can get SUSA connectivity.
+        <p>\n</p><p>\n</p>Blood Donation- Here you can find blood donors from Sikkim University and also be a blood donor.
         <p>\n</p><p>\n</p>And Many More that no universty or college  app have.The app is brought you by Department of Computer Appications and here we are adding more features and optimizing it. <p>\n</p><p>\n</p> So Log-in and Enjoy.
         <p>\n</p>if You are having login problem then you can report to admin, just scroll down.
     </string>

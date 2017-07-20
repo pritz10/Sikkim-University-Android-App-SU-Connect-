@@ -72,6 +72,10 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(Login.this, Aboout_App.class);
         startActivity(intent);
     }
+    public void guestmode(View v) {
+        Intent intent = new Intent(Login.this, GuestMode.class);
+        startActivity(intent);
+    }
 
     // Triggers when LOGIN Button clicked
     public void checkLogin(View arg0) {

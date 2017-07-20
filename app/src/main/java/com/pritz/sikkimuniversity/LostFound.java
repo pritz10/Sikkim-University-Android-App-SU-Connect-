@@ -114,7 +114,7 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
     }
     public void setDate(String date)
     {
-        TextView date1=(TextView)view.findViewById(R.id.date);
+        TextView date1=(TextView)view.findViewById(R.id.datei);
         date1.setText(date);
     }
 

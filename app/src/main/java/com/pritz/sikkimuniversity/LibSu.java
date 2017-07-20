@@ -48,8 +48,7 @@ public class LibSu extends AppCompatActivity {
         webView.getSettings().setBuiltInZoomControls(true);
         progressDialog.setMessage("Have a Good day...");
         progressDialog.show();
-        webView.loadUrl("http://14.139.206.50/w27/MyInfo/w27MyInfo.aspx");
-
+       webView.loadUrl("http://14.139.206.50:8000/");
 
     }
 
