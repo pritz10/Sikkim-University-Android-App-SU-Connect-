@@ -37,7 +37,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email1);
             Phno = getResources().getStringArray(R.array._5PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -55,7 +55,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email2);
             Phno = getResources().getStringArray(R.array._5PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -73,7 +73,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email3);
             Phno = getResources().getStringArray(R.array._5PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -91,7 +91,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email4);
             Phno = getResources().getStringArray(R.array._5PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -109,7 +109,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email5);
             Phno = getResources().getStringArray(R.array._5PhoneNumber5);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -128,7 +128,7 @@ public class ProfessionalStudies extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._5email6);
             Phno = getResources().getStringArray(R.array._5PhoneNumber6);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

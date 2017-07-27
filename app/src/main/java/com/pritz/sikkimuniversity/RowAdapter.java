@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.ContactsContract;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,9 +33,9 @@ public class RowAdapter extends ArrayAdapter{
         ImageView dp;
         TextView names;
         TextView details;
-        Button phonenuber;
-        Button adder;
-        Button emailID;
+        FloatingActionButton phonenuber;
+        FloatingActionButton adder;
+        FloatingActionButton emailID;
     }
 
     @Override
@@ -60,14 +61,14 @@ public class RowAdapter extends ArrayAdapter{
         final Datahandler dh;
         if(convertView==null){
             LayoutInflater inflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row=inflater.inflate(R.layout.custom_view,parent,false);
+            row=inflater.inflate(R.layout.costum_view,parent,false);
             dh = new Datahandler();
             dh.dp=(ImageView)row.findViewById(R.id.image);
             dh.names=(TextView)row.findViewById(R.id.name);
             dh.details=(TextView)row.findViewById(R.id.details);
-            dh.phonenuber=(Button)row.findViewById(R.id.call);
-            dh.adder=(Button)row.findViewById(R.id.add);
-            dh.emailID=(Button)row.findViewById(R.id.email);
+            dh.phonenuber=(FloatingActionButton) row.findViewById(R.id.call);
+            dh.adder=( FloatingActionButton)row.findViewById(R.id.add);
+            dh.emailID=( FloatingActionButton)row.findViewById(R.id.email);
             row.setTag(dh);
         }
         else{

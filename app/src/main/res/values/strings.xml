@@ -100,17 +100,17 @@ Chancellor: Ruma Pal  <p>\n</p>
 Founded: 2006  <p>\n</p>
 Headquarters: Gangtok, India<p>\n</p></string>
 
-<string-array name="bloodgrp">
-    <item>Enter Your Blood Group</item>
-    <item>O+</item>
-    <item>O-</item>
-    <item>A+</item>
-    <item>A-</item>
-    <item>AB+</item>
-    <item>AB-</item>
-    <item>B+</item>
-    <item>B-</item>
-</string-array>
+    <string-array name="bloodgrp">
+        <item>Enter Your Blood Group</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>B+</item>
+        <item>B-</item>
+    </string-array>
 
     <string name="VC">
         Dear Students and Faculty Members<p align="justify">
@@ -1129,6 +1129,32 @@ Verbal Ragging: When a senior causes mental harassment, discomfort for the junio
     <string name="tv_ConfirmPassword">Confirm Passwor</string>
     <string name="btn_SigUp">Sign Up</string>
     <string name="title_activity_scrolling">Details</string>
+
+    <string name="nss">
+        "Introduction to SU NSS Cell.\n\n"
+
+        "Sikkim University  NSS Cell was initiated on January 8th, 2014 and  registered to the Regional Centre, Gangtok i.e. Dept. of Sports and Youth Affairs, Govt. of Sikkim with sanction of three units in the month of March, 2015.\n"  "\nThe in-charge of NSS Cell  is Programme Coordinator appointed by Hon’ble Vice-Chancellor for a period of three years and presently the position  is held by Dr. Sujata Upadhyay, Assistant Professor, Dept. of Horticulture.   Dr. Subhash Mishra, Assistant Professor, Dept. of Education, Dr. Jigmie W. Bhutia, Assistant Professor, Dept. of Tourism and Dr. Namrata, Dept. of Psychology are serving as Programme Officers of NSS.\n" "\nThe Cell has a formally constituted Advisory Board headed by the Hon’ble Vice-Chancellor as its Chief Patron. The Cell has three registered units i.e. 300 enrolled student volunteers presently.  The Cell is also supported by participations from faculty members and administrative staff members of the University. It is engaged in social activities in and around Gangtok in the State of Sikkim. It organizes regular activities or programmes in a year in the form of orientation/personality development workshops, blood donation camp, plantation programmes, cleaning drive, health awareness etc. The fifty per cent students of a unit participate in Special Camps organized once in a year on a certain theme.\n\n"
+        "The Cell has organized/participated in  various programmes e.g. Orientation programme, “Swachchha Bharat Abhiyaan (cleaning drive and field visits)”,  “Green Walk”, Blood donation camp, “Sikkim Run”, “National Youth Festival (Guwahati)”, “Bharatiya Chhatra Sansad (Pune)”, Training programme on “Solid Waste Management” at IIT, Guwahati, Special Camp on “Creation of Sanitation Awareness”, TCS Employability training programme, Workshop on “Holistic Personality Development of Students”, various speech, debate, essay competitions etc.\n\n"
+        "The NSS activities are exclusively funded by the Ministry of Sports and Youth Affairs, Govt. of India, hence no fee is charged from the members.  The scheme is designed in such a manner so as to involve as many students of University in various social activities and encourage them to become ideal citizens of the country. As in most of the institutions, NSS volunteers in Sikkim University are not required to put on uniform but wearing of NSS badge in its  programmes is mandatory. The Cell provides certificates to the participating volunteers on completion of a minimum of 240 hours of regular activities and a special camp in a duration of two years. The certificate has significant value in co-curricular activities in the academic career of students. \n\n"
+        "How to apply:\n"
+"All students admitted in the University are free to apply for NSS membership. Application in the prescribed format may be submitted to the NSS Cell in the beginning of Monsoon Semester during the month of August and the notice regarding enrollment is circulated by NSS Cell every year mentioning vacancy and other details.\n"
+
+"\nContact details: Dr. Sujata Upadhyay (8967036279), Dr. Subhash Misra (9474032624)\n"
+        "\nNSS Motto-
+The motto or watchword of the National Service Scheme is : ‘NOT ME BUT YOU’. This reflects the essence of democratic living and upholds the need for selfless service and appreciation of the other person’s point of view and also to show consideration for fellow human beings. It underlines that the welfare of an individual is ultimately dependent on the welfare of society on the whole. Therefore, it should be the aim of the NSS to demonstrate this motto in its day-to-day programme.
+\nNSS Symbol-
+The symbol of the National Service Scheme, as appearing on the cover page of this Manual is based on the ‘Rath’ wheel of the Konark Sun Temple situated in Orissa. These giant wheels of the Sun Temple portray the cycle of creation, preservation and release and signify the movement in life across time and space. The design of the symbol, a simplified form of the Sun-chariot wheel primarily depicts movement. The wheel signifies the progressive cycle of life. It stands for continuity as well as change and implies the continuous striving of NSS for social transformation and upliftment.
+\nNSS Badge-
+The NSS symbol is embossed on the NSS badge. The NSS volunteers wear it while undertaking any programme of community service. The Konark wheel in the symbol has eight bars which represent the 24 hours of the day. Hence, the badge reminds the wearer to be in readiness for service of the nation round the clock i.e. for 24 hours. The red colour in the badge indicates that the NSS volunteers are full of blood i.e. lively, active, energetic and full of high spirit. The navy blue colour indicates the cosmos of which the NSS is a tiny part, ready to contribute its share for the welfare of the mankind.
+\nNSS Day-
+NSS was formally launched on 24th September, 1969, the birth centenary year of the Father of the Nation. Therefore, 24 September is celebrated every year as NSS Day with appropriate programmes and activities.
+\nNSS Song-
+During Silver Jubilee Year the NSS theme song had been composed. All NSS volunteers are expected to learn the theme song and sing the song during NSS programmes and celebrations. "
+        "\n\nSome of the recent activities of NSS\n"
+
+    </string>
+
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

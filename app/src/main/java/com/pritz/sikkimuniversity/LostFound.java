@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -29,6 +30,7 @@ import static com.pritz.sikkimuniversity.R.id.postimage;
 public class LostFound extends AppCompatActivity {
 private RecyclerView postinsta;
     private DatabaseReference mdatabase;
+
     private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +39,9 @@ private RecyclerView postinsta;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        progressDialog=new ProgressDialog(this);
+        /*progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Fetching Data....");
-        progressDialog.show();
+        progressDialog.show();*/
         mdatabase= FirebaseDatabase.getInstance().getReference().child("lost");
         postinsta=(RecyclerView) findViewById(R.id.postinsta);
         postinsta.setHasFixedSize(true);
@@ -73,9 +75,10 @@ private RecyclerView postinsta;
 
 
 
-
         }
     };
+    //progressBar.setVisibility(View.GONE);
+
     postinsta.setAdapter(firebaseRecyclerAdapter);
     mdatabase.keepSynced(true);
 

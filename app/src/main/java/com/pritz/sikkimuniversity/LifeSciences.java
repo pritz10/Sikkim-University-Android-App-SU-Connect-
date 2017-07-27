@@ -35,7 +35,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email1);
             Phno = getResources().getStringArray(R.array._3PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -53,7 +53,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email2);
             Phno = getResources().getStringArray(R.array._3PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -71,7 +71,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email3);
             Phno = getResources().getStringArray(R.array._3PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -90,7 +90,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email4);
             Phno = getResources().getStringArray(R.array._3PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

@@ -42,7 +42,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setTitle("Enter Your Registration Number");
+        //getSupportActionBar().setTitle("Enter Your Registration Number");
+        getSupportActionBar().hide();
         // Get Reference to variables
         etEmail = (EditText) findViewById(R.id.email);
 
@@ -81,7 +82,7 @@ public class Login extends AppCompatActivity {
     public void checkLogin(View arg0) {
 
         // Get text from email and passord field
-        final String email = etEmail.getText().toString();
+        final String email = etEmail.getText().toString().toUpperCase();
         if (TextUtils.isEmpty(email)) {
             Snackbar.make(arg0, "Enter your Registration Number !", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();

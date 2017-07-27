@@ -49,6 +49,7 @@ public class LibSu extends AppCompatActivity {
         progressDialog.setMessage("Have a Good day...");
         progressDialog.show();
        webView.loadUrl("http://14.139.206.50:8000/");
+        //webView.loadUrl("https://drive.google.com/file/d/0B-zPCyAZKuwXc3JlWUhzaVhxaTA/view");
 
     }
 

@@ -5,24 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="10dp"
-
-    android:layout_marginTop="10dp"
+     android:layout_marginTop="10dp"
     android:orientation="vertical"
     android:weightSum="1"
     app:layout_collapseParallaxMultiplier="1.0">
-
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mainframe"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:gravity="center"
-        android:layout_gravity="right"
-        android:textSize="12dp"
-        android:text="Aug 31,2017 9:32:24 Pm"
-        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/name"
@@ -43,11 +29,24 @@
         android:singleLine="true"
         android:text="Pritam Shah(Computer Applications)"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimaryDark"
         android:textColorHighlight="@color/colorPrimary"
         android:textIsSelectable="false"
         android:textSize="17dp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainframe"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Aug 31,2017 9:32:24 Pm"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp" />
 
     <EditText
         android:id="@+id/mainframe"

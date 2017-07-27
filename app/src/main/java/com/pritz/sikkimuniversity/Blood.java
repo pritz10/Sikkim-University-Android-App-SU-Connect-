@@ -8,10 +8,13 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -34,7 +38,13 @@ import java.util.Map;
 
 public class Blood extends AppCompatActivity {
     ListView listView;
+    Spinner spinner;
+    String bloodgroup;
+private Query query;
     private DatabaseReference mdatabase;
+    private DatabaseReference bld;
+    ArrayAdapter<CharSequence> adapter;
+
     private StorageReference mStorageRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +52,10 @@ public class Blood extends AppCompatActivity {
         setContentView(R.layout.activity_blood);
         getSupportActionBar().setTitle("SU Blood Donors");
         mdatabase= FirebaseDatabase.getInstance().getReference().child("blood_donation");
+        spinner = (Spinner) findViewById(R.id.spinner);
+        adapter = ArrayAdapter.createFromResource(this, R.array.bloodgrp, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
         final DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         final String name = sharedPreferences.getString("s_name","");
@@ -78,7 +92,35 @@ button.setOnClickListener(null);
                 }
             });
         }
-        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,mref) {
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + "", Toast.LENGTH_LONG).show();
+                //bloodgroup = parent.getItemAtPosition(position) + "";
+                bloodgroup = spinner.getSelectedItem().toString();
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+       /* if((!bloodgroup.equals("Enter Your Blood Group")))
+        {
+            //DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
+
+            query=mref.orderByChild("blodgrp").equalTo(bloodgroup);
+
+        }*/
+       // query =mref.limitToFirst(100);
+        query=mref.orderByChild("blodgrp").equalTo("AB+");
+
+
+
+        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,query) {
             @Override
             protected void populateView(View v, blood model, int position)
             {

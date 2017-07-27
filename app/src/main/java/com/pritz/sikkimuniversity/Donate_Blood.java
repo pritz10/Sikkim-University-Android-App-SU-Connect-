@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.shapes.OvalShape;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public class Donate_Blood extends AppCompatActivity {
     Spinner spinner;
@@ -99,15 +101,7 @@ public class Donate_Blood extends AppCompatActivity {
                     progressDialog.show();
                     progressDialog.setCancelable(false);
                     StorageReference reference=mStorageRefe.child("blodn").child(imageurl.getLastPathSegment());
-                    reference.putFile(imageurl).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                            double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-                            System.out.println("Upload is " + progress + "% done");
-                            progressDialog.setMessage("Finishing Up " + progress + "% done !");
-
-                        }
-                    }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                             Uri downloaduri=taskSnapshot.getDownloadUrl();
@@ -139,6 +133,14 @@ public class Donate_Blood extends AppCompatActivity {
 
 
                         }
+                    }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                           // double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                            int progress = (int) (100 * (float) taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
+                            progressDialog.setMessage( progress + "% done !");
+
+                        }
                     });
 
                 }
@@ -163,7 +165,10 @@ public class Donate_Blood extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-               imageurl = result.getUri();
+
+                imageurl = result.getUri();
+
+                String id = UUID.randomUUID().toString();
                 pdf2.setImageURI(imageurl);
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {

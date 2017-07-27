@@ -1,11 +1,14 @@
 package com.pritz.sikkimuniversity;
 
 import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -13,7 +16,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.ShareCompat;
+import android.text.TextUtils;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,29 +29,37 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import static android.R.attr.x;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    EditText editText;
+    ListView listView;
+    DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
 int a=0;
     public ImageView imageButton;
-public Button vcbtn;
-    public Button loc;
-    public Button up;
-    public Button CAL;
-    public Button advr;
-    public Button ir;
-    public Button con;
-    public Button ant;
    @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,83 +74,66 @@ public Button vcbtn;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("A Central University established by an Act of Parliament of India,2007");
-       //final String x = intent.getStringExtra("UserName");
-       //if(x == null)
-       //{}
-       //else
-         //  nav_user.setText(x);
+
 
        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
        String name = sharedPreferences.getString("s_name","");
        nav_user.setText(name);
 
-       vcbtn=(Button)findViewById(R.id.vcbtn);
-       vcbtn.setOnClickListener(new View.OnClickListener() {
+
+       listView = (ListView) findViewById(R.id.listview);
+       final String date = DateFormat.getDateTimeInstance().format(new Date());
+
+
+
+
+
+       FirebaseListAdapter<notifi> adapter=new FirebaseListAdapter<notifi>(this, notifi.class, R.layout.notifi,mref) {
            @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
-               startActivity(intent);
-           }
-       });
-       loc=(Button)findViewById(R.id.loc);
-       loc.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Details.class); // Location of SU
-               startActivity(intent);
-           }
-       });
-       ant=(Button)findViewById(R.id.ant);
-       ant.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),AntiRagging.class); // Antiragging
-               startActivity(intent);
-           }
-       });
+           protected void populateView(View v, notifi model, int position)
+           {
+               final String pskey=getRef(position).getKey();
+               TextView date_,name_,mainframe_;
+               mainframe_=(TextView) v.findViewById(R.id.mainframe);
+               date_=(TextView)v.findViewById(R.id.date);
+               name_=(TextView)v.findViewById(R.id.name);
+               mainframe_.setText(model.getMessage());
+               name_.setText(model.getname());
+               date_.setText(model.getDate());
 
-       CAL=(Button)findViewById(R.id.CAL);
-       CAL.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Wall.class);
-               startActivity(intent);
-           }
-       });
+               v.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       Toast.makeText(getBaseContext(), pskey, Toast.LENGTH_LONG).show();
+                       mref.child(pskey).addValueEventListener(new ValueEventListener() {
+                           @Override
+                           public void onDataChange(DataSnapshot dataSnapshot) {
 
-       con=(Button)findViewById(R.id.con);
-       con.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplication(),Contact1.class);
+                               Intent intent = new Intent(MainActivity.this,Important.class);
+                               intent.putExtra("gte",pskey);
+                               startActivity(intent);
+                           }
 
-               startActivity(intent);
+                           @Override
+                           public void onCancelled(DatabaseError databaseError) {
+
+                           }
+                       });
+
+                   }
+               });
+
 
            }
-       });
-       up=(Button)findViewById(R.id.up);
-       up.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Snackbar.make(v, "No Upcoming Events\n,Thankyou !", Snackbar.LENGTH_LONG)
-                       .setAction("Action", null).show();
-           }
-       });
-       advr=(Button)findViewById(R.id.advr);
-       advr.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(getApplicationContext(), lol.class);
-                             startActivity(intent);
+       };
 
-               // Snackbar.make(v, "Currently No Advertisements !", Snackbar.LENGTH_LONG)
-                       //.setAction("Action", null).show();
-           }
-       });
+       listView.setAdapter(adapter);
+//     progressBar.setVisibility(View.GONE);
+       //ra.add(getterandSetter);
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,6 +142,7 @@ public Button vcbtn;
                 startActivity(intent);
             }
         });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -205,7 +202,32 @@ public Button vcbtn;
 
             startActivity(i);
         }
+        if(id==R.id.vc)
+        {
+            Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
+            startActivity(intent);
+        }
+        if(id==R.id.Loc)
+        {
+            Intent intent=new Intent(getApplication(),Details.class); // Location of SU
+            startActivity(intent);
+        }
+        if(id==R.id.nss)
+        {
+            Intent intent=new Intent(getApplication(),NSS.class);
 
+            startActivity(intent);
+        }
+        if(id==R.id.ant)
+        {
+            Intent intent=new Intent(getApplication(),AntiRagging.class); // Antiragging
+            startActivity(intent);
+        }
+        if(id==R.id.cal)
+        {
+            Intent intent=new Intent(getApplication(),Wall.class);
+            startActivity(intent);
+        }
 
 
         return super.onOptionsItemSelected(item);
@@ -268,7 +290,7 @@ public Button vcbtn;
 
         }
         else if (id == R.id.contact) {
-            Intent intent = new Intent(getApplicationContext(), Contact1.class);
+            Intent intent = new Intent(getApplicationContext(), contact_book.class);
             startActivity(intent);
         }
         else if (id == R.id.help) {

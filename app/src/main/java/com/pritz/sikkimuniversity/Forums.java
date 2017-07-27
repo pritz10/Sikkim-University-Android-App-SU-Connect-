@@ -1,11 +1,18 @@
 package com.pritz.sikkimuniversity;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
+import android.media.MediaActionSound;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -14,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -39,6 +47,7 @@ public class  Forums extends AppCompatActivity{
     TextToSpeech t1;
     forumss ra;
 
+
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("forums");
 
     @Override
@@ -49,6 +58,8 @@ public class  Forums extends AppCompatActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Chat Room");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        final MediaPlayer mp=MediaPlayer.create(this,R.raw.sentmessage);
+
         // Intent intent = getIntent();
         //final String x = intent.getStringExtra("name");
 
@@ -75,7 +86,8 @@ public class  Forums extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                final String message=editText.getText().toString();
+                 String message=editText.getText().toString();
+               // message=message+"\nAug 31,2017 9:32:24 Pm";
                 if (!TextUtils.isEmpty(message))
                 {
                     final GetterandSetter getterandSetter = new GetterandSetter(name,date,message);
@@ -87,7 +99,7 @@ public class  Forums extends AppCompatActivity{
                     mref.push().setValue(getterandSetter);
                     editText.setText("");
 
-
+mp.start();
                 }
 
             }
@@ -107,11 +119,28 @@ public class  Forums extends AppCompatActivity{
                 date_.setText(model.getDate());
 
 
+
             }
         };
 
+       /* NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
+        builder.setSmallIcon(android.R.drawable.ic_dialog_alert);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.journaldev.com/"));
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+        builder.setContentIntent(pendingIntent);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.sul));
+        builder.setContentTitle(getterandSetter.getname());
+        builder.setContentText(getterandSetter.getMessage());
+        builder.setSubText("Tap to view the website.");
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        // Will display the notification in the notification bar
+        notificationManager.notify(1, builder.build());
+        t1.speak(getterandSetter.getname(), TextToSpeech.QUEUE_FLUSH, null);*/
+        //progressBar.setVisibility(View.GONE);
         listView.setAdapter(adapter);
-        t1.speak(getterandSetter.getname(), TextToSpeech.QUEUE_FLUSH, null);
+
         //ra.add(getterandSetter);
 
 

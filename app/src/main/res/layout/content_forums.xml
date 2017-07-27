@@ -8,22 +8,22 @@
 android:paddingBottom="4dp"
     android:paddingLeft="4dp"
     android:paddingRight="4dp"
-
+android:background="@drawable/kl"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.Forums"
     tools:showIn="@layout/activity_forums"
     >
 
-
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_weight="0.87"
-        android:paddingTop="15dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
         android:stackFromBottom="true"
         android:textAlignment="gravity"
         android:transcriptMode="alwaysScroll" />
@@ -38,9 +38,10 @@ android:paddingBottom="4dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/ltitle"
         android:layout_marginTop="2dp"
-        android:background="@drawable/des"
+        android:background="@drawable/frm"
         android:ems="10"
         android:hint="Queries, Suggestions,Messages"
+        android:textColorHint="@color/colorPrimaryDark"
         android:inputType="textMultiLine"
         android:paddingBottom="15dp"
         android:paddingEnd="15dp"
@@ -48,6 +49,6 @@ android:paddingBottom="4dp"
         android:paddingRight="15dp"
         android:paddingStart="15dp"
         android:paddingTop="5dp"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorPrimaryDark" />
 
 </LinearLayout>

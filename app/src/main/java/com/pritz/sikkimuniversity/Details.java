@@ -26,8 +26,8 @@ ProgressDialog progressDialog;
 
         webView = (WebView) findViewById(R.id.webview);
        progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage(" So the day was tough...");
-        progressDialog.show();
+        //progressDialog.setMessage(" So the day was tough...");
+        //progressDialog.show();
         WebSettings webSettings = webView.getSettings();
         webView.setWebViewClient(new Details.myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
@@ -74,7 +74,7 @@ ProgressDialog progressDialog;
         public void onReceivedError(WebView view, int errorCode,
                                     String description, String failingUrl) {
             setContentView(R.layout.nointernet);
-            Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection... " + description, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection...", Toast.LENGTH_SHORT).show();
             //super.onReceivedError(view, errorCode, description, failingUrl);
         }
 
@@ -83,7 +83,7 @@ ProgressDialog progressDialog;
 
             super.onPageFinished(view, url);
 
-progressDialog.dismiss();
+//progressDialog.dismiss();
         }
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
+    android:background="@drawable/devbac"
     android:layout_height="match_parent"
     tools:context="com.pritz.sikkimuniversity.Developers"
     android:weightSum="1">

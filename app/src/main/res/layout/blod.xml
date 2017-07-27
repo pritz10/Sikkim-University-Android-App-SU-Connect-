@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-
     android:divider="@android:color/transparent"
     android:dividerHeight="10.0sp"
     android:layout_height="match_parent">
@@ -13,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Pritam Shah@ Computer Appications"
         android:textSize="15dp"
         android:textStyle="bold" />
@@ -33,7 +32,7 @@
             android:layout_gravity="center"
 
             android:src="@drawable/rob"
-            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_color="@color/colorPrimaryDark"
             app:civ_border_width="3dp" />
 
 
@@ -43,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="AB-"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="40dp"
             android:textStyle="bold" />
 

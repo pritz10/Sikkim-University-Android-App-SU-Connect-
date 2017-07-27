@@ -36,7 +36,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email1);
             Phno = getResources().getStringArray(R.array._4PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -54,7 +54,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email2);
             Phno = getResources().getStringArray(R.array._4PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -72,7 +72,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email3);
             Phno = getResources().getStringArray(R.array._4PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -90,7 +90,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email4);
             Phno = getResources().getStringArray(R.array._4PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -108,7 +108,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email5);
             Phno = getResources().getStringArray(R.array._4PhoneNumber5);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

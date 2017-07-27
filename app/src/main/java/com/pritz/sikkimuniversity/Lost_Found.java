@@ -30,10 +30,13 @@ import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import java.io.File;
+import java.net.URL;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import static android.R.attr.data;
 import static android.R.id.message;
@@ -43,6 +46,7 @@ public class Lost_Found extends AppCompatActivity {
     ImageButton lost;
     EditText ltitle;
     EditText ldetail;
+
     private Uri imageurl = null;
     private static final int GALLERY_REQUEST = 1;
     private StorageReference mStorageRef;
@@ -90,13 +94,19 @@ public class Lost_Found extends AppCompatActivity {
         if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null) {
             progressDialog.show();
             progressDialog.setCancelable(false);
-            StorageReference reference = mStorageRef.child("Blog_images").child(imageurl.getLastPathSegment());
+
+           
+            Uri file = Uri.fromFile(new File("imageurl,System.currentTimeMillis(),/images.jpg"));
+            StorageReference reference = mStorageRef.child("Blog_images").child(file.getLastPathSegment());
             reference.putFile(imageurl).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                    double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                   //float progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+
+                    int progress = (int) (100 * (float) taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
                     System.out.println("Upload is " + progress + "% done");
-                   progressDialog.setMessage("Finishing Up \t " + progress + "% done !");
+                    float currentprogress = (float) progress;
+                    progressDialog.setMessage( progress + "% done !");
 
                 }
             }).addOnPausedListener(new OnPausedListener<UploadTask.TaskSnapshot>() {

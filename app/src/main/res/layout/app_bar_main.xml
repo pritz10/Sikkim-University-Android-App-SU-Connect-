@@ -21,16 +21,20 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_main"
+        android:id="@+id/include2" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
+        android:layout_width="56dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="top|left"
         android:layout_margin="@dimen/fab_margin"
+        app:fabSize="mini"
         android:background="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:srcCompat="@mipmap/send" />
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@drawable/frms" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -2,7 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:orderInCategory="100" />
-
+    <item
+        android:id="@+id/vc"
+        android:orderInCategory="101"
+        android:title="Message From VC"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Loc"
+        android:orderInCategory="101"
+        android:title="Location of SU"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nss"
+        android:orderInCategory="101"
+        android:title="SU-NSS"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ant"
+        android:orderInCategory="101"
+        android:title="Antiragging"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cal"
+        android:orderInCategory="101"
+        android:title="Calendar"
+        app:showAsAction="never" />
     <item
         android:id="@+id/feed"
         android:orderInCategory="101"
