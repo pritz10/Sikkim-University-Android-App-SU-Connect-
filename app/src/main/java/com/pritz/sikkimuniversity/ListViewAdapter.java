@@ -34,7 +34,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
-        ImageButton rank;
+        ImageButton rank;   //l//
         TextView country;
     }
 
