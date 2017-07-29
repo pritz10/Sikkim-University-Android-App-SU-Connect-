@@ -18,6 +18,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/sea"
         android:background="@drawable/frm"
         android:gravity="center"
 

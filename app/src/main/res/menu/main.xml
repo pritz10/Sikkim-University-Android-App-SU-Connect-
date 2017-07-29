@@ -10,6 +10,7 @@
     <item
         android:id="@+id/Loc"
         android:orderInCategory="101"
+
         android:title="Location of SU"
         app:showAsAction="never" />
     <item

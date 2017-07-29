@@ -26,7 +26,7 @@ android:paddingRight="13dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/dp"
+                android:src="@mipmap/blodimae"
                 app:civ_border_width="3dp"
                 app:civ_border_color="@color/colorPrimary"/>
 

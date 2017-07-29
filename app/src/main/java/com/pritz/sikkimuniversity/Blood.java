@@ -1,12 +1,16 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -44,7 +48,7 @@ private Query query;
     private DatabaseReference mdatabase;
     private DatabaseReference bld;
     ArrayAdapter<CharSequence> adapter;
-
+    File gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/blodgr.xml");
     private StorageReference mStorageRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +66,7 @@ private Query query;
         listView = (ListView) findViewById(R.id.listview);
 
 
-        File gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/blodgr.xml");
+
 
 
          Button button=(Button)findViewById(R.id.button10);
@@ -99,6 +103,8 @@ button.setOnClickListener(null);
                 Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + "", Toast.LENGTH_LONG).show();
                 //bloodgroup = parent.getItemAtPosition(position) + "";
                 bloodgroup = spinner.getSelectedItem().toString();
+
+
             }
 
 
@@ -116,11 +122,14 @@ button.setOnClickListener(null);
 
         }*/
        // query =mref.limitToFirst(100);
-        query=mref.orderByChild("blodgrp").equalTo("AB+");
 
 
 
-        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,query) {
+        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,mref) {
+
+
+
+
             @Override
             protected void populateView(View v, blood model, int position)
             {
@@ -164,4 +173,5 @@ String number=(String)dataSnapshot.child("Phone").getValue();
 
         listView.setAdapter(adapter);
     }
-}
+
+    }
