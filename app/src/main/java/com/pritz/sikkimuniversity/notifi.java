@@ -7,6 +7,7 @@ package com.pritz.sikkimuniversity;
 public class notifi {
     private String name;
     private String date;
+private String image;
     private String message;
 
 
@@ -14,10 +15,11 @@ public class notifi {
     {
 
     }
-    public notifi(String name, String date, String message){
+    public notifi(String name, String date, String message,String image){
         this.name=name;
         this.date=date;
         this.message=message;
+        this.image=image;
 
     }
 
@@ -43,5 +45,13 @@ public class notifi {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

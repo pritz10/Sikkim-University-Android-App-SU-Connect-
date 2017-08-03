@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class Login extends AppCompatActivity {
     public static final int READ_TIMEOUT=15000;
     private EditText etEmail;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().hide();
         // Get Reference to variables
         etEmail = (EditText) findViewById(R.id.email);
+
 
 
         File file = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/userinfo.xml");
@@ -105,6 +108,7 @@ public class Login extends AppCompatActivity {
     private class AsyncLogin extends AsyncTask<String, String, String> {
         ProgressDialog pdLoading = new ProgressDialog(Login.this);
         HttpURLConnection conn;
+
         URL url = null;
 
         @Override
@@ -197,6 +201,9 @@ public class Login extends AppCompatActivity {
 
         }
 
+
+
+
         @Override
         protected void onPostExecute(String result) {
 
@@ -226,6 +233,7 @@ public class Login extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("s_name", result);
                 //editor.putString("s_dept",Department);
+
                 editor.apply();
                 startActivity(new Intent(Login.this, MainActivity.class));
 

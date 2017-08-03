@@ -17,6 +17,7 @@
         <activity
             android:name=".Login"
             android:label="Sikkim University"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,7 @@
             android:name=".MainActivity"
             android:label="Sikkim University"
             android:parentActivityName=".MainActivity"
+
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -36,6 +38,8 @@
         <activity
             android:name=".Departments"
             android:label="@string/title_activity_departments"
+
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -45,6 +49,8 @@
         <activity
             android:name=".LibSu"
             android:label="@string/title_activity_lib_su"
+
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -53,6 +59,7 @@
         </activity>
         <activity
             android:name=".Lost_Found"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_lost__found"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -72,6 +79,8 @@
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -81,6 +90,7 @@
         <activity
             android:name=".SUSA"
             android:label="SUSA"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -90,6 +100,8 @@
         <activity
             android:name=".SU_Live"
             android:label="@string/title_activity_su__live"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -123,6 +135,8 @@
         <activity android:name=".Details" />
         <activity
             android:name=".Fromvc"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -130,7 +144,10 @@
         </activity>
         <activity
             android:name=".AntiRagging"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity">
+
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
@@ -138,6 +155,8 @@
         <activity
             android:name=".Schools"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -146,6 +165,8 @@
         <activity
             android:name=".Department_list"
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -154,6 +175,8 @@
         <activity
             android:name=".HumanScience"
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -162,6 +185,8 @@
         <activity
             android:name=".LanguageandLitreature"
             android:label="jahsdfkjh"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Schools"
             android:theme="@style/AppTheme">
             <meta-data
@@ -171,6 +196,8 @@
         <activity
             android:name=".LifeSciences"
             android:label="Dsidhsihgf"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Schools"
             android:theme="@style/AppTheme">
             <meta-data
@@ -180,6 +207,8 @@
         <activity
             android:name=".PhysicalSciences"
             android:label="sfgbfgh"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Schools"
             android:theme="@style/AppTheme">
             <meta-data
@@ -189,6 +218,8 @@
         <activity
             android:name=".ProfessionalStudies"
             android:label="Deptdgk[nb"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Schools"
             android:theme="@style/AppTheme">
             <meta-data
@@ -198,13 +229,14 @@
         <activity
             android:name=".SocialSciences"
             android:label="Deptsvd"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Schools"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-
         <activity android:name=".SU_Connect" />
         <activity android:name=".lol" />
         <activity android:name=".Aboout_App" />
@@ -212,6 +244,8 @@
         <activity
             android:name=".help"
             android:label="Deptsvd"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
@@ -221,6 +255,8 @@
         <activity
             android:name=".Developers"
             android:label="Deptsvd"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
@@ -230,6 +266,8 @@
         <activity
             android:name=".Blood"
             android:label="Deptsvd"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
@@ -242,17 +280,21 @@
         <activity
             android:name=".Donate_Blood"
             android:label="Deptsvd"
+            android:screenOrientation="portrait"
+
             android:parentActivityName=".Blood"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity android:name=".Multi" />
+
         <activity
             android:name=".Important"
             android:label="Deptsvd"
             android:parentActivityName=".Blood"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -269,6 +311,8 @@
         </activity>
         <activity
             android:name=".NSS"
+            android:screenOrientation="portrait"
+
             android:label="Deptsvd"
             android:parentActivityName=".Blood"
             android:theme="@style/AppTheme">
@@ -276,6 +320,7 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
+        <activity android:name=".Admin"></activity>
     </application>
 
 </manifest>

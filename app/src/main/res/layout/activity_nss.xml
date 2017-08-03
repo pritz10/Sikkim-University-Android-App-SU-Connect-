@@ -6,6 +6,8 @@
     android:background="@color/colorAccent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     tools:context="com.pritz.sikkimuniversity.NSS">
 
 
@@ -16,6 +18,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:orientation="vertical">
 
         <TextView
@@ -62,7 +65,14 @@
             android:cropToPadding="true"
             app:srcCompat="@drawable/qwwww" />
 
-
+        <ImageView
+            android:id="@+id/imagvde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/qqqqwqw" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -105,6 +115,14 @@
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             app:srcCompat="@drawable/qwqw" />
+        <ImageView
+            android:id="@+id/imagsdfsdssse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/qqwww" />
 
         <ImageView
             android:id="@+id/imageV"
@@ -123,6 +141,14 @@
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             app:srcCompat="@drawable/qw" />
+        <ImageView
+            android:id="@+id/iacme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/qqqw" />
 
         <Button
             android:id="@+id/calp"

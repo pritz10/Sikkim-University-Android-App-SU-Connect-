@@ -44,6 +44,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -80,7 +81,6 @@ int a=0;
        String name = sharedPreferences.getString("s_name","");
        nav_user.setText(name);
 
-
        listView = (ListView) findViewById(R.id.listview);
        final String date = DateFormat.getDateTimeInstance().format(new Date());
 
@@ -95,16 +95,20 @@ int a=0;
                final String pskey=getRef(position).getKey();
                TextView date_,name_,mainframe_;
                mainframe_=(TextView) v.findViewById(R.id.mainframe);
+               ImageView im=(ImageView)v.findViewById(R.id.pictures);
+
                date_=(TextView)v.findViewById(R.id.date);
                name_=(TextView)v.findViewById(R.id.name);
-               mainframe_.setText(model.getMessage());
+               mainframe_.setText(model.getMessage()+"....");
+             Picasso.with(MainActivity.this).load(model.getImage()).into(im);
                name_.setText(model.getname());
                date_.setText(model.getDate());
+
 
                v.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View v) {
-                       Toast.makeText(getBaseContext(), pskey, Toast.LENGTH_LONG).show();
+                       Toast.makeText(getBaseContext(), "Loading...", Toast.LENGTH_LONG).show();
                        mref.child(pskey).addValueEventListener(new ValueEventListener() {
                            @Override
                            public void onDataChange(DataSnapshot dataSnapshot) {
@@ -204,7 +208,7 @@ int a=0;
         }
         if(id==R.id.vc)
         {
-            Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
+            Intent intent=new Intent(getApplication(),Admin.class); // Message from VC
             startActivity(intent);
         }
         if(id==R.id.Loc)

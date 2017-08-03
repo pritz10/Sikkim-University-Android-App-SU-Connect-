@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.shapes.OvalShape;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -42,9 +43,9 @@ public class Donate_Blood extends AppCompatActivity {
     Spinner spinner;
     EditText ph;
     ImageView pdf2;
-
+Uri img=null;
     String bloodgroup;
-    private Uri imageurl = null;
+
     private static final int GALLERY_REQUEST = 1;
     private StorageReference mStorageRefe= FirebaseStorage.getInstance().getReference();
     private ProgressDialog progressDialog;
@@ -86,6 +87,7 @@ public class Donate_Blood extends AppCompatActivity {
         });
 
 
+        final MediaPlayer mp=MediaPlayer.create(this,R.raw.lo);
 
         Button button = (Button) findViewById(R.id.button11);
         button.setOnClickListener(new View.OnClickListener() {
@@ -93,15 +95,16 @@ public class Donate_Blood extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                progressDialog.setMessage("Just Wait.....");
+                progressDialog.setMessage("Just Wait.....\n" +
+                        "\nYou have chosen to donate your blood.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 ph=(EditText)findViewById(R.id.phnumber);
                 final String phone=ph.getText().toString();
-                if ((imageurl != null &&!TextUtils.isEmpty(phone))&& !bloodgroup.equals("Enter Your Blood Group")) {
+                if ((img != null &&!TextUtils.isEmpty(phone))&& !bloodgroup.equals("Enter Your Blood Group")) {
 
                     progressDialog.show();
                     progressDialog.setCancelable(false);
-                    StorageReference reference=mStorageRefe.child("blodn").child(imageurl.getLastPathSegment());
-                    reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    StorageReference reference=mStorageRefe.child("blodn").child(img.getLastPathSegment());
+                    reference.putFile(img).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                             Uri downloaduri=taskSnapshot.getDownloadUrl();
@@ -125,20 +128,13 @@ public class Donate_Blood extends AppCompatActivity {
                             editor.putString("phone", phone);
                             //editor.putString("s_dept",Department);
                             editor.apply();
+                            mp.start();
                             progressDialog.dismiss();
                             Intent i=new Intent(Donate_Blood.this,Blood.class);
                             finish();
                             startActivity(i);
 
 
-
-                        }
-                    }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                           // double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-                            int progress = (int) (100 * (float) taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
-                            progressDialog.setMessage( progress + "% done !");
 
                         }
                     });
@@ -155,7 +151,7 @@ public class Donate_Blood extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
-            imageurl = data.getData();
+             Uri imageurl = data.getData();
             CropImage.activity(imageurl)
                     .setGuidelines(CropImageView.Guidelines.ON)
                   .setAspectRatio(1,1)
@@ -166,10 +162,8 @@ public class Donate_Blood extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
 
-                imageurl = result.getUri();
-
-                String id = UUID.randomUUID().toString();
-                pdf2.setImageURI(imageurl);
+                img = result.getUri();
+                pdf2.setImageURI(img);
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();

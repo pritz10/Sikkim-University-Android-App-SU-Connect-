@@ -24,8 +24,8 @@
         android:layout_gravity="center"
 
         android:text="No Internet Connection!"
-       android:background="@drawable/fors"
-        android:textColor="@color/colorPrimaryDark"
+
+        android:textColor="@color/colorAccent"
         android:textSize="27dp"
         android:textStyle="bold" />
 

@@ -42,9 +42,8 @@ import java.util.Map;
 
 public class Blood extends AppCompatActivity {
     ListView listView;
-    Spinner spinner;
-    String bloodgroup;
-private Query query;
+
+
     private DatabaseReference mdatabase;
     private DatabaseReference bld;
     ArrayAdapter<CharSequence> adapter;
@@ -56,11 +55,10 @@ private Query query;
         setContentView(R.layout.activity_blood);
         getSupportActionBar().setTitle("SU Blood Donors");
         mdatabase= FirebaseDatabase.getInstance().getReference().child("blood_donation");
-        spinner = (Spinner) findViewById(R.id.spinner);
-        adapter = ArrayAdapter.createFromResource(this, R.array.bloodgrp, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+
+
         final DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
+
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         final String name = sharedPreferences.getString("s_name","");
         listView = (ListView) findViewById(R.id.listview);
@@ -69,63 +67,11 @@ private Query query;
 
 
 
-         Button button=(Button)findViewById(R.id.button10);
-        if (gotyou.exists())
-        {
-button.setOnClickListener(null);
-            button.setText("You are a Real Life Hero");
-        }
-
-        else
-        {
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v)
-                {
-                    Intent intent=new Intent(Blood.this,Donate_Blood.class);
-                    startActivity(intent);
-                /*final String grp1=grp.getText().toString().toUpperCase();
-
-                final blood b2= new blood(grp1,name);
-                Map<String,Object> values = new HashMap<>();
-                values.put("name", "Pritam");
-                values.put("blood",grp1);
-                mref.push().setValue(b2);
-                grp.setText("");*/
-
-                }
-            });
-        }
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + "", Toast.LENGTH_LONG).show();
-                //bloodgroup = parent.getItemAtPosition(position) + "";
-                bloodgroup = spinner.getSelectedItem().toString();
 
 
-            }
+        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,
 
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-       /* if((!bloodgroup.equals("Enter Your Blood Group")))
-        {
-            //DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
-
-            query=mref.orderByChild("blodgrp").equalTo(bloodgroup);
-
-        }*/
-       // query =mref.limitToFirst(100);
-
-
-
-        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,mref) {
+                mref.orderByChild("blodgrp").startAt("A")) {
 
 
 
@@ -147,7 +93,7 @@ button.setOnClickListener(null);
                 v.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getBaseContext(), pskey, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "Calling...", Toast.LENGTH_LONG).show();
 mdatabase.child(pskey).addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -172,6 +118,46 @@ String number=(String)dataSnapshot.child("Phone").getValue();
 
 
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_forums, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.db) {
+            if (gotyou.exists())
+            {
+                AlertDialog.Builder builder=new AlertDialog.Builder(this);
+                //builder.setTitle("Exit");
+                builder.setMessage("You have chosen to donate your blood.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
+                builder.setPositiveButton("Okay",null);
+              ;
+                builder.create();
+                builder.show();
+            }
+
+            else
+            {
+
+                        Intent intent=new Intent(Blood.this,Donate_Blood.class);
+                        startActivity(intent);
+
+
+            }
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     }

@@ -74,7 +74,7 @@ android:paddingRight="13dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
-                android:text="To Donate Blood is to give Life, So you are a real life hero. You must upload a Genuine pic  of Yourself so that the society can see their real life heros.The Phone Number Should be Genuine so that you can be reached by the Needy ones.You can not change pic after that.You cannot undo it after that.Thanks For Your ♥. You can be proud of yourself.." />
+                android:text="To Donate Blood is to Save Life, So you are a real life hero. You must upload a Genuine pic  of Yourself so that the society can see their real life heros.The Phone Number Should be Genuine so that you can be reached by the Needy ones.You can not change pic after that.You cannot undo it after that.Thanks For Your ♥. You can be proud of yourself.." />
 
             <Button
                 android:id="@+id/button11"

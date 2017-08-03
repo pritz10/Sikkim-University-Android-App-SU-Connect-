@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -31,31 +32,33 @@ import java.util.Map;
 import static android.R.attr.data;
 import static android.R.id.message;
 
-public class Lost_Found extends AppCompatActivity {
+public class Admin extends AppCompatActivity {
 
     ImageButton lost;
-    EditText ltitle ;
-    EditText ldetail ;
+    EditText ltitle;
+    EditText ldetail;
+    Button b;
+    EditText ldate;
     private  Uri imageurl=null;
     private static final int GALLERY_REQUEST=1;
     private StorageReference mStorageRef;
-    DatabaseReference mref=FirebaseDatabase.getInstance().getReference().child("lost");
+    DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
 
     private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lost__found);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mStorageRef=FirebaseStorage.getInstance().getReference();
+        setContentView(R.layout.activity_admin);
 
+        getSupportActionBar().setTitle("ADMON");
+        mStorageRef=FirebaseStorage.getInstance().getReference();
+        final MediaPlayer mp=MediaPlayer.create(this,R.raw.chi);
         //initialization//
         lost = (ImageButton) findViewById(R.id.lost);
         ltitle = (EditText) findViewById(R.id.ltitle);
         ldetail = (EditText) findViewById(R.id.ldetail);
-        progressDialog=new ProgressDialog(this);
+        ldate = (EditText) findViewById(R.id.date);
+        progressDialog = new ProgressDialog(this);
         lost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,10 +67,10 @@ public class Lost_Found extends AppCompatActivity {
                 startActivityForResult(galleryintent,GALLERY_REQUEST);
             }
         });
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        b=(Button)findViewById(R.id.postfor);
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 startposting();
             }
         });
@@ -75,13 +78,29 @@ public class Lost_Found extends AppCompatActivity {
     private void startposting() {
         progressDialog.setMessage("Just Wait.....");
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.lo);
+        progressDialog.setMessage("Uploading....");
+
         final String title = ltitle.getText().toString().trim();
+        final String date = ldate.getText().toString().trim();
         final String detail = ldetail.getText().toString().trim();
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         final String name = sharedPreferences.getString("s_name","");
         final String Department= sharedPreferences.getString("s_dept","");
+        if(imageurl==null && !TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail))
+        {
+            DatabaseReference databaseReference = mref.push();
+            databaseReference.child("name").setValue(title);
+            databaseReference.child("message").setValue(detail);
+            databaseReference.child("date").setValue(date);mp.start();
 
-        if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl != null)
+
+
+            Intent i = new Intent(Admin.this, Admin.class);
+            finish();
+            startActivity(i);
+
+        }
+        if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail) && imageurl!=null)
         {
             progressDialog.show();
             StorageReference reference=mStorageRef.child("Blog_images").child(imageurl.getLastPathSegment());
@@ -91,20 +110,15 @@ public class Lost_Found extends AppCompatActivity {
                     Uri downloaduri = taskSnapshot.getDownloadUrl();
 
                     DatabaseReference databaseReference = mref.push();
-                    databaseReference.child("title").setValue(title);
-                    databaseReference.child("detail").setValue(detail);
+                    databaseReference.child("name").setValue(title);
+                    databaseReference.child("message").setValue(detail);
+                    databaseReference.child("date").setValue(date);
                     databaseReference.child("image").setValue(downloaduri.toString());
-
-
-                    SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-                    String name = sharedPreferences.getString("s_name", "");
-
-                    databaseReference.child("Username").setValue(name);
-                    final String currentDateTimeString = DateFormat.getDateInstance().format(new Date());
-                    databaseReference.child("date").setValue(currentDateTimeString);
-                    progressDialog.dismiss();
                     mp.start();
-                    Intent i = new Intent(Lost_Found.this, LostFound.class);
+
+
+
+                    Intent i = new Intent(Admin.this, Admin.class);
                     finish();
                     startActivity(i);
 

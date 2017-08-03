@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-android:background="@drawable/frn"
 
 
     android:orientation="vertical"
@@ -19,20 +18,20 @@ android:background="@drawable/frn"
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textStyle="bold"
-        android:text="News Feed" />
+        android:text="Notice Board"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-        android:stackFromBottom="true"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1.0sp"
+        android:stackFromBottom="false"
         android:textAlignment="gravity"
         android:transcriptMode="alwaysScroll"
         />

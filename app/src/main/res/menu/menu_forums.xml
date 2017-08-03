@@ -4,7 +4,7 @@
     tools:context="com.pritz.sikkimuniversity.Blood">
     <item
         android:id="@+id/db"
-        android:orderInCategory="100"
+    android:icon="@drawable/control"
         android:title="Donate Blood"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>
