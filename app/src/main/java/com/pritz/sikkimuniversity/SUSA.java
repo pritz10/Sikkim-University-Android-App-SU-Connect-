@@ -22,8 +22,7 @@ import static com.pritz.sikkimuniversity.R.id.webview;
 
 public class SUSA extends AppCompatActivity {
     private WebView webView;
-  ProgressDialog progressDialog;
-
+ProgressBar progressBar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +34,8 @@ public class SUSA extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.webview);
 
-        progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage("Have Patience....");
-        progressDialog.show();
+        progressBar1=(ProgressBar)findViewById(R.id.progressBar);
+        progressBar1.setVisibility(View.VISIBLE);
         WebSettings webSettings=webView.getSettings();
         webView.setWebViewClient(new myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
@@ -93,7 +91,7 @@ public class SUSA extends AppCompatActivity {
 
             super.onPageFinished(view, url);
 
-           progressDialog.dismiss();
+progressBar1.setVisibility(View.GONE);
         }
     }
 

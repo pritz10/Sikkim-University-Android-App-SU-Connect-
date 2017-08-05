@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context="com.pritz.sikkimuniversity.Developers"
     android:weightSum="1">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +25,7 @@
             android:paddingRight="7dp"
             android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+            <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_image"
         android:layout_width="150dp"

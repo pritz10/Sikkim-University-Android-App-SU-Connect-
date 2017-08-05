@@ -30,9 +30,8 @@ import static com.pritz.sikkimuniversity.R.id.webview;
 public class LibSu extends AppCompatActivity {
 
     private WebView webView;
-  //  ProgressBar progressBar;
-    ProgressDialog progressDialog;
-    @Override
+    ProgressBar progressBar1;
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lib_su);
@@ -40,15 +39,15 @@ public class LibSu extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = (WebView) findViewById(R.id.webview);
-        progressDialog=new ProgressDialog(this);
-      //  progressBar = (ProgressBar) findViewById(R.id.progressBar);
+       // progressDialog=new ProgressDialog(this);
+        progressBar1=(ProgressBar)findViewById(R.id.progressBar);
+       //  progressBar1.setVisibility(View.VISIBLE);
         webView.setWebViewClient(new myWebClient());
         WebSettings webSettings=webView.getSettings();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
-        progressDialog.setMessage("Have a Good day...");
-        progressDialog.show();
-       webView.loadUrl("http://14.139.206.50:8000/");
+
+         webView.loadUrl("http://14.139.206.50:8000/");
         //webView.loadUrl("https://drive.google.com/file/d/0B-zPCyAZKuwXc3JlWUhzaVhxaTA/view");
 
     }
@@ -75,7 +74,7 @@ public class LibSu extends AppCompatActivity {
 
             super.onPageFinished(view, url);
 
-          progressDialog.dismiss();
+          progressBar1.setVisibility(View.GONE);
 
         }
 

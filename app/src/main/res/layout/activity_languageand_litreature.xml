@@ -4,11 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/colorAccent"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
     android:layout_height="match_parent"
     tools:context="com.pritz.sikkimuniversity.LanguageandLitreature">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="2.0sp"
         android:id="@+id/list_view">
     </ListView>
 

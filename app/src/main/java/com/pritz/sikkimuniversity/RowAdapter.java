@@ -33,9 +33,9 @@ public class RowAdapter extends ArrayAdapter{
         ImageView dp;
         TextView names;
         TextView details;
-        FloatingActionButton phonenuber;
-        FloatingActionButton adder;
-        FloatingActionButton emailID;
+        Button phonenuber;
+        Button adder;
+        Button emailID;
     }
 
     @Override
@@ -66,9 +66,9 @@ public class RowAdapter extends ArrayAdapter{
             dh.dp=(ImageView)row.findViewById(R.id.image);
             dh.names=(TextView)row.findViewById(R.id.name);
             dh.details=(TextView)row.findViewById(R.id.details);
-            dh.phonenuber=(FloatingActionButton) row.findViewById(R.id.call);
-            dh.adder=( FloatingActionButton)row.findViewById(R.id.add);
-            dh.emailID=( FloatingActionButton)row.findViewById(R.id.email);
+            dh.phonenuber=(Button) row.findViewById(R.id.call);
+            dh.adder=( Button)row.findViewById(R.id.add);
+            dh.emailID=( Button)row.findViewById(R.id.email);
             row.setTag(dh);
         }
         else{

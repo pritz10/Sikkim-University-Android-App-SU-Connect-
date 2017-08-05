@@ -33,7 +33,7 @@ public class LostFound extends AppCompatActivity {
 private RecyclerView postinsta;
     private DatabaseReference mdatabase;
 
-    private ProgressDialog progressDialog;
+      ProgressBar progressBar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,8 @@ private RecyclerView postinsta;
         /*progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Fetching Data....");
         progressDialog.show();*/
+        progressBar1=(ProgressBar)findViewById(R.id.progressBar);
+        progressBar1.setVisibility(View.VISIBLE);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("lost");
         postinsta=(RecyclerView) findViewById(R.id.postinsta);
         postinsta.setHasFixedSize(true);
@@ -67,6 +69,7 @@ private RecyclerView postinsta;
             viewHolder.setDetail(model.getDetail());
             viewHolder.setDate(model.getDate());
 
+            progressBar1.setVisibility(View.GONE);
 
 
 

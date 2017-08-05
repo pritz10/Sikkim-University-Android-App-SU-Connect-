@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.ProgressBar;
+
+import fr.castorflex.android.smoothprogressbar.SmoothProgressDrawable;
 
 public class help extends AppCompatActivity {
 
@@ -20,7 +25,7 @@ public class help extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-        getSupportActionBar().setTitle("Help/Feedback");
+        getSupportActionBar().setTitle("Help/Report/Feedback");
         aa1=(Button)findViewById(R.id.aa);
         bb=(Button)findViewById(R.id.bb);
         cc=(Button)findViewById(R.id.cc);
@@ -48,6 +53,15 @@ public class help extends AppCompatActivity {
                 main(m);
                 break;
             case R.id.ee:m="ma";
+                AlertDialog.Builder builder=new AlertDialog.Builder(this);
+                //builder.setTitle("Exit");
+                builder.setMessage("For Marshmallow users." +
+                        "\nYou have to give permission to this app by selecting app info and navigating to permission in settings.You have to give permission for accessing 'Contact','Camera','Gallery','Storage'. Otherwise the app will not work smoothly if the permissions are not provided." +
+                        "Thank You ");
+                builder.setPositiveButton("Okay",null);
+                ;
+                builder.create();
+                builder.show();
                 break;
             case R.id.ff:m="Any Others";
                 main(m);

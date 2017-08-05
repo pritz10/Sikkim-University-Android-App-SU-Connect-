@@ -1,105 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:background="@color/colorAccent">
-
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="2dp" />
-
-    <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_toRightOf="@+id/image"
-            android:gravity="center"
-            android:text="this is name"
-
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/details"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_below="@+id/name"
-            android:layout_toRightOf="@+id/image"
-            android:gravity="center"
-            android:hint="hello"
-            android:text="name_of_teachers"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="13dp"
-            android:textStyle="bold" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/frm"
+    android:paddingEnd="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingStart="8dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/details"
+        android:layout_gravity="right"
+        android:layout_weight="0.5"
         android:orientation="horizontal"
-        android:layout_toRightOf="@+id/image"
-        android:layout_toEndOf="@+id/image"
-        android:layout_alignBottom="@+id/image">
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/view2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:clickable="true"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/callbtn" />
-
-        <android.support.design.widget.FloatingActionButton
+        <Button
             android:id="@+id/email"
+            style="@android:style/Widget.Holo.Button.Toggle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/fors"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Email" />
 
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:clickable="true"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/callbtn" />
+        <Button
+            android:id="@+id/add"
+            style="@android:style/Widget.Holo.Button.Toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/fors"
+            android:paddingLeft="4dp"
 
-        <android.support.design.widget.FloatingActionButton
+            android:paddingRight="4dp"
+            android:text="Add" />
+
+        <Button
             android:id="@+id/call"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:background="@color/colorPrimaryDark"
-            android:clickable="true"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/callbtn" />
+            style="@android:style/Widget.Holo.Button.Toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/fors"
+            android:text="CAll" />
     </LinearLayout>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/image"
+        android:layout_weight="2.5"
+        android:src="@drawable/pritz"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/colorPrimary"/>
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:layout_weight="0.7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/image"
+        android:layout_toEndOf="@+id/image"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="right"
+            android:layout_weight="0.5"
+            android:id="@+id/name"
+            android:paddingBottom="4dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="fuck ass"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingBottom="4dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="right"
+            android:textAlignment="center"
+            android:id="@+id/details"
+            android:text="asshole"/>
+    </LinearLayout>
 </RelativeLayout>
+
+
+
+

@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:orientation="vertical"
     android:paddingBottom="2dp"
     android:paddingLeft="2dp"
@@ -16,32 +19,20 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-
+        android:src="@drawable/pritz"
         app:civ_border_color="@color/colorAccent"
-        app:civ_border_width="3dp" />
+        app:civ_border_width="3dp"
+          />
 
     <RelativeLayout
         android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/pictures"
-        android:layout_toEndOf="@+id/pictures"
         android:layout_alignBottom="@+id/pictures"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/name"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-
-            android:text="See More..."
-            android:textColor="@color/colorPrimary" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pictures"
+        android:layout_toRightOf="@+id/pictures">
 
         <TextView
             android:id="@+id/mainframe"
@@ -51,10 +42,9 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/date"
             android:layout_gravity="center"
-            android:textStyle="bold"
-             android:elevation="0dp"
-            android:gravity="center"
-            android:maxLines="1"
+            android:elevation="0dp"
+            android:gravity="left"
+            android:maxLines="2"
             android:nestedScrollingEnabled="false"
             android:paddingBottom="2dp"
             android:paddingEnd="5dp"
@@ -65,20 +55,23 @@
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
             android:selectAllOnFocus="false"
-            android:text="messeageifhosdh ssodjfodsijoidsj here"
-            android:textColor="@color/colorAccent"
-            android:textColorHighlight="@color/colorAccent" />
+            android:text="messeageifhosdh ssodjfodsijoidsj heremesseageifhosdh ssodjfodsijoidsj here"
+            android:textColorHighlight="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true" />
 
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
 
+            android:layout_toLeftOf="@+id/date"
+            android:layout_toStartOf="@+id/date"
             android:clickable="false"
             android:elevation="1dp"
             android:freezesText="false"
-            android:gravity="center"
+            android:gravity="left"
             android:isScrollContainer="false"
             android:linksClickable="false"
             android:maxLines="1"
@@ -87,29 +80,27 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingStart="5dp"
-            android:paddingTop="5dp"
+            android:paddingTop="6dp"
             android:singleLine="true"
             android:text="Face of The Week"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             android:textColorHighlight="@color/colorAccent"
             android:textIsSelectable="false"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_gravity="center"
-            android:layout_toLeftOf="@+id/textView9"
             android:gravity="center"
-            android:textStyle="bold"
             android:paddingTop="4dp"
-            android:text="Aug 31"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:text="Sept 31"
+            android:textColor="#FF177AE4"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 

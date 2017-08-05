@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +43,7 @@ import java.util.Map;
 
 public class Blood extends AppCompatActivity {
     ListView listView;
-
+ProgressBar progressBar1;
 
     private DatabaseReference mdatabase;
     private DatabaseReference bld;
@@ -55,7 +56,7 @@ public class Blood extends AppCompatActivity {
         setContentView(R.layout.activity_blood);
         getSupportActionBar().setTitle("SU Blood Donors");
         mdatabase= FirebaseDatabase.getInstance().getReference().child("blood_donation");
-
+        progressBar1=(ProgressBar)findViewById(R.id.progressBar);
 
         final DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
 
@@ -89,6 +90,7 @@ public class Blood extends AppCompatActivity {
                 groiup.setText(model.getBlodgrp());
 
                 Picasso.with(getApplicationContext()).load(model.getImage()).into(Pic);
+                progressBar1.setVisibility(View.GONE);
 
                 v.setOnClickListener(new View.OnClickListener() {
                     @Override

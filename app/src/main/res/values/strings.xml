@@ -16,6 +16,7 @@
     <string name="pref_description_social_recommendations">Recommendations for people to contact
         based on your message history
     </string>
+    <string name="share">Share</string>
 
     <string name="pref_title_display_name">Display name</string>
     <string name="pref_default_display_name">John Smith</string>
@@ -184,6 +185,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <p>\n</p>if You are having login problem then you can report to admin, just scroll down.
     </string>
 
+
     <string-array name="Schools">
         <item>School of Human Sciences</item>
         <item>School of Language And Literature</item>
@@ -240,20 +242,22 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_2teachers_name3">
-        <item>Irshad Gulam Ahmed</item>
-        <item>Jayita Sengupta</item>
-        <item>Rosy Chamling</item>
-        <item>Ram Bhawan Yadav</item>
-        <item>Saswati Saha</item>
-        <item>Abrona Lee Pandi Aden</item>
+        <item>Prof. Irshad Gulam Ahmed</item>
+        <item>Dr. Jayita Sengupta</item>
+        <item>Dr. Rosy Chamling</item>
+        <item>Dr. Ram Bhawan Yadav</item>
+        <item>Smt. Saswati Saha</item>
+        <item>Smt. Abrona Lee Pandi Aden</item>
+
     </string-array>
     <string-array name="_2Designation3">
-        <item>Professor</item>
+        <item>Professor(HOD)</item>
         <item>Associate Professor</item>
-        <item> Associate Professor</item>
-        <item> Associate Professor</item>
-        <item> Associate Professor</item>
-        <item> Associate Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+
     </string-array>
     <string-array name="_2PhoneNumber3">
         <item>9749102132</item>
@@ -262,26 +266,27 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>8116413752</item>
         <item>8116413752</item>
         <item>8116413752</item>
+
     </string-array>
     <string-array name="_2email3">
         <item>igahmed@cus.ac.in</item>
         <item> jsengupta@cus.ac.in</item>
         <item>rchamling@cus.ac.in</item>
-        <item>rchamling@cus.ac.in</item>
-        <item>rchamling@cus.ac.in</item>
-        <item>rchamling@cus.ac.in</item>
+        <item>rbyadav@cus.ac.in</item>
+        <item>ssaha@cus.ac.in</item>
+        <item>aladen@cus.ac.in</item>
     </string-array>
 
 
     <string-array name="_2teachers_name2">
         <item>Dr. Dhriti Roy</item>
-        <item>Mr. Moromti Baroowa</item>
-        <item>Mr. Irfan Ahmad</item>
+        <item>Shri. Moromti Baroowa</item>
+        <item>Shri. Irfan Ahmad</item>
     </string-array>
     <string-array name="_2Designation2">
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant Professor</item>
-        <item>Assistant Professor</item>
-        <item> Assistant Professor, Chinese </item>
+        <item> Assistant Professor</item>
     </string-array>
     <string-array name="_2PhoneNumber2">
         <item>9749102132</item>
@@ -299,7 +304,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>Dr. Charisma Karthak. Lepcha</item>
     </string-array>
     <string-array name="_1Designation1">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
     </string-array>
@@ -315,8 +320,8 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
     <string-array name="_1teachers_name2">
         <item>Dr. Sohel Firdos</item>
-        <item>Dr. Uttam Lal</item>
-        <item>Dr. Rafiul Ahmed</item>
+        <item>Dr. Rafiul Ahmed</item>// change photo
+        <item>Dr. Uttam Lal</item>   //
         <item>Dr. Elangbam Ishwarjit Singh</item>
         <item>Dr. Abdul Hannan</item>
         <item>Dr. Vimal Khawas</item>
@@ -324,7 +329,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_1Designation2">
         <item>Associate Professor</item>
         <item>Assistant Professor</item>
-        <item>Assistant Professor</item>
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant professor.</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -339,8 +344,8 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
     <string-array name="_1email2">
         <item>sfirdos@cus.ac.in</item>
-        <item>ulal@cus.ac.in</item>
         <item>rahmed@cus.ac.in</item>
+        <item>ulal@cus.ac.in</item>
         <item>eisingh@cus.ac.in</item>
         <item>ahannan@cus.ac.in</item>
         <item>vkhawas@cus.ac.in</item>
@@ -353,7 +358,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>Dr. Namrata</item>
     </string-array>
     <string-array name="_1Designation3">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -372,12 +377,12 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_2teachers_name1">
-        <item>Bhaichung Tshering Bhutia</item>
+        <item>Shri Bhaichung Tshering Bhutia</item>
         <item>Dr. Hissay Wangchuk Bhutia</item>
 
     </string-array>
     <string-array name="_2Designation1">
-        <item>Associate Professor </item>
+        <item>Associate Professor(In-charge) </item>
         <item>Associate Professor </item>
 
     </string-array>
@@ -392,11 +397,11 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_2teachers_name4">
-        <item>Mr. Dinesh Shahu</item>
-        <item>Mrs. Chukey Bhutia</item>
+        <item>Shri. Dinesh Shahu</item>
+        <item>Smt. Chukey Bhutia</item>
     </string-array>
     <string-array name="_2Designation4">
-        <item> Assistant Professor </item>
+        <item> Assistant Professor(In-charge) </item>
         <item>Assistant Professor </item>
     </string-array>
     <string-array name="_2PhoneNumber4">
@@ -410,53 +415,61 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_2teachers_name5">
-        <item>Kachyo Lepcha</item>
-        <item>Dukmit Lepcha</item>
+        <item>Shri. Norbu Tshering Lepcha</item>   // extra photo needed
+        <item>Shri. Kachyo Lepcha</item>    //swap photo
+        <item>Smt. Dukmit Lepcha</item>
     </string-array>
     <string-array name="_2Designation5">
-        <item>Assistant Professor</item>
+        <item>Associtate Professor</item>
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant Proffesor</item>
     </string-array>
     <string-array name="_2PhoneNumber5">
         <item>9749102132</item>
         <item>7894561548</item>
+        <item>7894561548</item>
     </string-array>
     <string-array name="_2email5">
         <item>klepcha@cus.ac.in</item>
+        <item>duk_mit@yahoo.com</item>
         <item>duk_mit@yahoo.com</item>
     </string-array>
 
 
     <string-array name="_2teachers_name6">
-        <item>Kausila Subba</item>
-        <item>Tej Raj Limboo</item>
+        <item>Shri. Bal Bahadur Subba</item>  // extra photo needed
+        <item>Smt. Kaushila Subba</item>
+        <item>Shri. Tej Raj Limboo</item>
     </string-array>
     <string-array name="_2Designation6">
-        <item>Asst. Professor</item>
+        <item>Associate Professor</item>
+        <item>Asst. Professor(In-charge)</item>
         <item>Assistant Proffesor</item>
     </string-array>
     <string-array name="_2PhoneNumber6">
         <item>9749102132</item>
         <item>7894561548</item>
+        <item>7894561548</item>
     </string-array>
     <string-array name="_2email6">
         <item>trlimboo@cus.ac.in</item>
+        <item>ksubba01@cus.ac.in</item>
         <item>ksubba01@cus.ac.in</item>
     </string-array>
 
 
     <string-array name="_2teachers_name7">
-        <item>Pratap Chandra Pradhan</item>
+        <item>Prof. Pratap Chandra Pradhan</item>
         <item>Dr. Kabita Lama</item>
         <item>Dr. Pushpa Sharma</item>
-        <item>Dr. Samar Sinhai</item>
-        <item>Mr. Dewchandra Subba</item>
-        <item>Mr. Balaram Pandey</item>
+        <item>Dr. Samar Sinha</item>
+        <item>Shri. Dewchandra Subba</item>
+        <item>Shri. Balaram Pandey</item>
     </string-array>
     <string-array name="_2Designation7">
-        <item>Professor</item>
-        <item>Assistant Proffesor</item>
-        <item>Assistant Professor</item>
+        <item>Professor(HOD)</item>
+        <item>Associate Profesor</item>
+        <item>Associate Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant professor</item>
         <item>Assistant professor</item>
@@ -480,16 +493,16 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
 
     <string-array name="_3teachers_name1">
-        <item>N Sathyanarayana</item>
-        <item>Dhani Raj Chhetri</item>
-        <item>Santosh Kumar Rai</item>
-        <item>N. Bijayalaxmi Devi</item>
+        <item>Dr. N Sathyanarayana</item>
+        <item>Dr. Dhani Raj Chhetri</item>
+        <item>Shri. Santosh Kumar Rai</item>
+        <item>Shri. N. Bijayalaxmi Devi</item>
         <item>Dr. Arun Chettri</item>
         <item>Dr. Arun Kumar Rai </item>
     </string-array>
     <string-array name="_3Designation1">
         <item>Associate Professor </item>
-        <item>Assistant Proffesor</item>
+        <item>Associate Proffesor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant prof.</item>
@@ -514,14 +527,18 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
     <string-array name="_3teachers_name2">
         <item>Dr. S. Manivannan</item>
+        <item>Dr. Laxuman Sharma</item>//1
+        <item>Dr. Niladri Bag</item> //2
+        <item>Dr. Sujata Upadhyay</item> // 1swap photo
         <item>Dr. Manju Rana</item>
-        <item>Dr. Sujata Upadhyay</item>
-        <item>Dr. Niladri Bag</item>
-        <item>Mr. Rajesh Kumar</item>
+        <item>Dr. Karma Diki Bhutia</item> // extra needed photo
+        <item>Shri. Rajesh Kumar</item> // 2) from 2nd last
     </string-array>
     <string-array name="_3Designation2">
         <item>Associate Professor </item>
-        <item>Assistant Proffesor</item>
+        <item>Associate Professor(HOD) </item>
+        <item>Associate Proffesor</item>
+        <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant professor</item>
@@ -532,9 +549,13 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>8116413752</item>
         <item>9933450552</item>
         <item>9635712676</item>
+        <item>9635712676</item>
+        <item>9635712676</item>
     </string-array>
     <string-array name="_3email2">
         <item>smanivanan@cus.ac.in</item>
+        <item>lsharma@cus.ac.in</item>
+        <item>supadhyay@cus.ac.in</item>
         <item>mrana@cus.ac.in</item>
         <item>supadhyay@cus.ac.in</item>
         <item>nbdevi@cus.ac.in</item>
@@ -544,13 +565,13 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_3teachers_name3">
         <item>Prof. Jyoti Prakash Tamang</item>
         <item>Dr. Hare Krishna Tiwari</item>
-        <item>Dr. Bimala Singh</item>
-        <item>Dr. Buddhiman Tamang</item>
+        <item>Dr. Buddhiman Tamang</item> //swap photo
+        <item>Dr. Bimala Singh</item>    //
         <item>Dr. Nagendra Thakur</item>
     </string-array>
     <string-array name="_3Designation3">
         <item>Professor </item>
-        <item>Associate Proffesor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant professor</item>
@@ -565,9 +586,9 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_3email3">
         <item>jptamang@cus.ac.in</item>
         <item>hktiwari@cus.ac.in</item>
-        <item>bsingh@cus.ac.in</item>
         <item>btamang01@cus.ac.in</item>
-        <item>nthakur@cus.ac.in</item>
+        <item>bsingh@cus.ac.in</item>
+        <item>nthaknur@cus.ac.in</item>
     </string-array>
 
     <string-array name="_3teachers_name4">
@@ -577,11 +598,10 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>Dr. Sudeep Ghatani</item>
     </string-array>
     <string-array name="_3Designation4">
-        <item>Associate Professor </item>
-        <item>Assistant Proffesor</item>
+        <item>Assistant Professor(In-charge) </item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
-        <item>Assistant professor</item>
+        <item>Assistant Professor</item>
     </string-array>
     <string-array name="_3PhoneNumber4">
         <item>9749102132</item>
@@ -604,7 +624,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
     <string-array name="_4Designation1">
         <item>Assistant Proffesor</item>
-        <item>Assistant Professor</item>
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant Professor</item>
     </string-array>
     <string-array name="_4PhoneNumber1">
@@ -620,15 +640,15 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
 
     <string-array name="_4teachers_name2">
-        <item>Dr.Mohan Pradhan</item>
-        <item>Mrs.Chunnu Khawas</item>
-        <item>Mr.Partha Pratim Ray</item>
-        <item>Mrs.Rebicka Rai</item>
-        <item>Mrs.Lekhika Chettri</item>
+        <item>Dr. Mohan P Pradhan</item>
+        <item>Smt. Chunnu Khawas</item>
+        <item>Smt. Rebika Rai</item>
+        <item>Shri. Partha Pratim Ray</item>
+        <item>Smt. Lekhika Chettri</item>
 
     </string-array>
     <string-array name="_4Designation2">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item> Assistant Professor</item>
         <item> Assistant Professor</item>
@@ -637,16 +657,16 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_4PhoneNumber2">
         <item>9749102132</item>
         <item>9635712676</item>
-        <item>7894561548</item>
         <item>8116413752</item>
+        <item>7894561548</item>
         <item>9933450552</item>
 
     </string-array>
     <string-array name="_4email2">
         <item>mohanpratap@gmail.com</item>
         <item>ckhawas@cus.ac.in</item>
-        <item>ppray@cus.ac.in</item>
         <item>rrai@cus.ac.in</item>
+        <item>ppray@cus.ac.in</item>
         <item>lchettri@cus.ac.in</item>
 
 
@@ -656,11 +676,11 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>Dr. Rakesh Kumar Ranjan</item>
         <item>Dr. Md. Abdullah Khan</item>
         <item>Dr. Nishchal Wanjari</item>
-        <item>Mr. Badikar Ananda Ganapati</item>
-        <item>Om Prakash Kaptan</item>
+        <item>Shri. Badikar Ananda Ganapati</item>
+        <item>Shri. Om Prakash Kaptan</item>
     </string-array>
     <string-array name="_4Designation3">
-        <item>In-charge, Assistant Professor</item>
+        <item>Assistant Professor(In-charge) </item>
         <item>Assistant Proffesor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -683,10 +703,10 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
     <string-array name="_4teachers_name4">
         <item>Dr. Thoudem Roshan Singh</item>
-        <item>Ms. Rinkila Bhutia</item>
+        <item>Smt. Rinkila Bhutia</item>
     </string-array>
     <string-array name="_4Designation4">
-        <item>Assistant Professor</item>
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant Professor</item>
     </string-array>
     <string-array name="_4PhoneNumber4">
@@ -708,7 +728,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
     <string-array name="_4Designation5">
         <item>Associate Professor</item>
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -729,14 +749,16 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_5teachers_name1">
-        <item>Dr. Abhijit Dutta</item>
+        <item>Prof. Abhijit Dutta</item>
         <item>Dr. A N Shankar</item>
         <item>Dr. Sudhansu Sekhar Mahapatra</item>
-        <item>Sh. Bivek Tamang</item>
-        <item>Mr. Rakesh Basnet</item>
-        <item>Mr. B Muthupandian</item>
+        <item>Shri. Bivek Tamang</item>
+        <item>Shri. Rakesh Basnet</item>
+        <item>Shri. B Muthupandian</item>
+        <item>Dr. Ravi Shekhar Vishal</item>
     </string-array>
     <string-array name="_5Designation1">
+        <item>Professor (HOD)</item>
         <item>Associate Professor</item>
         <item>Associate Professor</item>
         <item>Assistant Professor</item>
@@ -752,6 +774,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>5673869344</item>
         <item>3458936950</item>
         <item>3456565666</item>
+        <item>3456565666</item>
     </string-array>
     <string-array name="_5email1">
         <item>adutta@cus.ac.in</item>
@@ -760,16 +783,17 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>btamang@cus.ac.in</item>
         <item>rbasnet@cus.ac.in</item>
         <item>bmpandian@cus.ac.in</item>
+        <item>rsvishal@cus.ac.in</item>
     </string-array>
 
     <string-array name="_5teachers_name2">
-        <item>Dr.T.J.M.S. Raju</item>
+        <item>Dr. T.J.M.S. Raju</item>
         <item>Dr. Anju Verma</item>
         <item>Dr. Subhash Misra</item>
         <item>Dr. Vimal Kishor</item>
     </string-array>
     <string-array name="_5Designation2">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -789,12 +813,12 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
 
     <string-array name="_5teachers_name3">
-        <item>Dr. V. Rama Devi</item>
+        <item>Prof. V. Rama Devi</item>
         <item>Dr. Shailendra Kumar</item>
         <item>Dr. Pradip Kumar Das</item>
         <item>Dr. A. Ravi Prakash</item>
         <item>Dr. Krishna Murari</item>
-        <item>Rachana Rai</item>
+        <item>Smt. Rachana Rai</item>
     </string-array>
     <string-array name="_5Designation3">
         <item>Professor</item>
@@ -825,33 +849,38 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_5teachers_name4">
         <item>Dr. Silajit Guha</item>
         <item>Dr. Manoj Das</item>
-        <item>Ms. Jasmine Yimchunger</item>
+        <item>Dr. Jasmine Yimchunger</item>
+        <item>Smt. Niharika Buragohain</item>
     </string-array>
     <string-array name="_5Designation4">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
+        <item>Assistant Professor</item>
+
     </string-array>
     <string-array name="_5PhoneNumber4">
         <item>9749102132</item>
         <item>7894561548</item>
+        <item>8116413752</item>
         <item>8116413752</item>
     </string-array>
     <string-array name="_5email4">
         <item>sguha@cus.ac.in</item>
         <item>mkdas@cus.ac.in</item>
         <item>jyimchunger@cus.ac.in</item>
+        <item>nburagohain@cus.ac.in</item>
     </string-array>
 
 
     <string-array name="_5teachers_name5">
         <item>Dr. Krishnendu Dutta</item>
-        <item>Mr. Jayanta Kumar Barman</item>
-        <item>Ms. Samidha Vedabala</item>
-        <item>Ms. Samidha Vedabalar</item>
+        <item>Shri. Jayanta Kumar Barman</item>
+        <item>Smt. Samidha Vedabala</item>
+        <item>Shri. Santosh Kumar</item>
     </string-array>
     <string-array name="_5Designation5">
-        <item>Assistant Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -870,11 +899,11 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_5teachers_name6">
-        <item>Ms. Ashi Pempem Wangmo</item>
-        <item>Mr. Jigme Wangchuk Bhutia</item>
+        <item>Smt. Ashi Pempem Wangmo</item>
+        <item>Dr. Jigme Wangchuk Bhutia</item>
     </string-array>
     <string-array name="_5Designation6">
-        <item>Assistant Professor</item>
+        <item>Assistant Professor(In-charge)</item>
         <item>Assistant Professor</item>
     </string-array>
     <string-array name="_5PhoneNumber6">
@@ -890,12 +919,14 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_6teachers_name1">
         <item>Dr. Manesh Choubey</item>
         <item>Dr. Komol Singha</item>
+        <item>Dr. Rajesh Raj S.N.</item>
         <item>Dr. Ruma Kundu</item>
         <item>Dr. Pradyut Guha</item>
         <item>Dr. Rangalal Mahapatra</item>
     </string-array>
     <string-array name="_6Designation1">
         <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Associate Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -904,6 +935,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_6PhoneNumber1">
         <item>9749102132</item>
         <item>7894561548</item>
+        <item>7894561548</item>
         <item>8116413752</item>
         <item>5673869344</item>
         <item>2348975475</item>
@@ -911,22 +943,23 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_6email1">
         <item>mchoubey@cus.ac.in</item>
         <item>ksingha@cus.ac.in</item>
+        <item>ksingha@cus.ac.in</item>
         <item>rkundu@cus.ac.in</item>
         <item>pguha@cus.ac.in</item>
         <item>rmohapatra@cus.ac.in</item>
     </string-array>
 
     <string-array name="_6teachers_name2">
-        <item>Dr.V.Krishna Ananth</item>
+        <item>Dr. V.Krishna Ananth</item>
         <item>Dr. Vijay Kumar Thangellapali</item>
-        <item>Ms. Sangmu Thendup</item>
+        <item>Smt. Sangmu Thendup</item>
         <item>Dr. Anira Phipon Lepcha</item>
         <item>Dr. S. Jeevanandam</item>
-        <item>DR. KHWAIRAKPAM RENUKA DEVI</item>
+        <item>Dr. Khwairakpam Renuka Devi</item>
     </string-array>
     <string-array name="_6Designation2">
         <item>Associate Professor</item>
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -952,10 +985,10 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_6teachers_name3">
         <item>Dr. Manish</item>
         <item>Dr. Sebastian N</item>
-        <item>Mr. Phairembam Newton Singh</item>
+        <item>Shri. Phairembam Newton Singh</item>
     </string-array>
     <string-array name="_6Designation3">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
     </string-array>
@@ -971,15 +1004,15 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_6teachers_name4">
-        <item>Dr. Imtiaz Gulam Ahmed</item>
-        <item>Mr. Veer Mayank</item>
-        <item>Ms. Denkila Bhutia</item>
+        <item>Prof. Imtiaz Gulam Ahmed</item>
+        <item>Shri. Veer Mayank</item>
+        <item>Smt. Denkila Bhutia</item>
         <item>Dr. Nidhi Saxena</item>
-        <item>Mr. Vjoy  V</item>
-        <item>Sonam Yangchen Bhutia</item>
+        <item>Shri. Vjoy  V</item>
+        <item>Dr. Sonam Yangchen Bhutia</item>
     </string-array>
     <string-array name="_6Designation4">
-        <item>Professor</item>
+        <item>Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -1009,7 +1042,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
         <item>Dr. Sanghamitra Choudhury</item>
     </string-array>
     <string-array name="_6Designation5">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
     </string-array>
@@ -1026,14 +1059,14 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
     <string-array name="_6teachers_name6">
         <item>Dr. Durga Prasad Chettri</item>
-        <item>Mr. Bidhan Golay</item>
-        <item>Dr. Gadde Omprasad</item>
-        <item>Dr Amit Kumar Gupta</item>
+        <item>Shri. Bidhan Golay</item>
+        <item>Dr. Om Prasad Gadde</item>
+        <item>Dr. Amit Kumar Gupta</item>
         <item>Dr. Budh Bdr. Lama</item>
-        <item>Swastika Pradhan</item>
+        <item>Smt. Swastika Pradhan</item>
     </string-array>
     <string-array name="_6Designation6">
-        <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
@@ -1059,24 +1092,34 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
     <string-array name="_6teachers_name7">
         <item>Dr. Swati Akshay Sachdeva</item>
+        <item>Dr. Sandhya Thapa</item>
         <item>Dr. Khangembam Indira</item>
-        <item>Shankar Narayan Bagh</item>
+        <item>Shri. Shankar Narayan Bagh</item>
+        <item>Smt. Sona Rai</item>
     </string-array>
     <string-array name="_6Designation7">
         <item>Associate Professor</item>
+        <item>Associate Professor(HOD)</item>
+        <item>Assistant Professor</item>
         <item>Assistant Professor</item>
         <item>Assistant Professor</item>
     </string-array>
     <string-array name="_6PhoneNumber7">
         <item>9749102132</item>
         <item>7894561548</item>
+        <item>7894561548</item>
+        <item>8116413752</item>
         <item>8116413752</item>
     </string-array>
     <string-array name="_6email7">
         <item>sasachdeva@cus.ac.in</item>
+        <item>sthapa@cus.ac.in</item>
         <item>kindira@cus.ac.in</item>
         <item>snbagh@cus.ac.in</item>
+        <item>sona.zhces@gmail.com</item>
     </string-array>
+
+
 
     <string name="btn_Login">Log In</string>
     <string name="tv_UserName">User Name</string>

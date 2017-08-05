@@ -47,17 +47,20 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import static android.R.attr.data;
 import static android.R.attr.x;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     EditText editText;
     ListView listView;
+    ProgressBar progressBar1;
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
 int a=0;
     public ImageView imageButton;
@@ -82,13 +85,16 @@ int a=0;
        nav_user.setText(name);
 
        listView = (ListView) findViewById(R.id.listview);
+       progressBar1=(ProgressBar)findViewById(R.id.progressBar);
+       progressBar1.setVisibility(View.VISIBLE);
+
        final String date = DateFormat.getDateTimeInstance().format(new Date());
 
 
 
 
 
-       FirebaseListAdapter<notifi> adapter=new FirebaseListAdapter<notifi>(this, notifi.class, R.layout.notifi,mref) {
+       FirebaseListAdapter<notifi> adapter=new FirebaseListAdapter<notifi>(this, notifi.class, R.layout.notifi,mref.limitToLast(10)) {
            @Override
            protected void populateView(View v, notifi model, int position)
            {
@@ -103,7 +109,7 @@ int a=0;
              Picasso.with(MainActivity.this).load(model.getImage()).into(im);
                name_.setText(model.getname());
                date_.setText(model.getDate());
-
+               progressBar1.setVisibility(View.GONE);
 
                v.setOnClickListener(new View.OnClickListener() {
                    @Override
@@ -130,8 +136,10 @@ int a=0;
 
            }
        };
+        listView.setAdapter(adapter);
 
-       listView.setAdapter(adapter);
+
+
 //     progressBar.setVisibility(View.GONE);
        //ra.add(getterandSetter);
 

@@ -3,12 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
     android:layout_height="match_parent"
-    android:background="@drawable/schoolbac"
+    android:background="@color/colorAccent"
     tools:context="com.pritz.sikkimuniversity.PhysicalSciences">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="2.0sp"
         android:id="@+id/list_view">
     </ListView>
 
