@@ -136,7 +136,7 @@ mp.start();
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         // Will display the notification in the notification bar
-        notificationManager.notify(1, builder.build());
+        notificationManager.notifyboa(1, builder.build());
         t1.speak(getterandSetter.getname(), TextToSpeech.QUEUE_FLUSH, null);*/
         //progressBar.setVisibility(View.GONE);
         listView.setAdapter(adapter);

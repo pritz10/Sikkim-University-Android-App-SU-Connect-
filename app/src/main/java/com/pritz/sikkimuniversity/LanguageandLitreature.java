@@ -10,10 +10,10 @@ import android.widget.ListView;
 public class LanguageandLitreature extends AppCompatActivity {
     int[] image1 = {R.mipmap.bhaichungbhai, R.mipmap.drhissay};
     int[] image2 = {R.mipmap.dhriti_roy, R.mipmap.irfan_ahmad, R.mipmap.mr_moromti_baroowa};
-    int[] image3 = {R.mipmap.irshad, R.mipmap.jayita, R.mipmap.r_chamling};
+    int[] image3 = {R.mipmap.irshad, R.mipmap.jayita, R.mipmap.r_chamling,R.mipmap.blodimae,R.mipmap.blodimae,R.mipmap.blodimae};
     int[] image4 = {R.mipmap.mr_dinesh_shahu, R.mipmap.mrs_chunkey};
-    int[] image5 = {R.mipmap.dukmit_lepcha, R.mipmap.kachyo_lepcha};
-    int[] image6 = {R.mipmap.kausila_subba, R.mipmap.tej_raj_limboo};
+    int[] image5 = {R.mipmap.blodimae,R.mipmap.kachyo_lepcha,R.mipmap.dukmit_lepcha};
+    int[] image6 = {R.mipmap.blodimae,R.mipmap.kausila_subba, R.mipmap.tej_raj_limboo};
     int[] image7 ={R.mipmap.pratap_chandra, R.mipmap.dr_kabita_lama, R.mipmap.pushpa, R.mipmap.samar_sinha, R.mipmap.dr_subba, R.mipmap.balaram_pandey};
     String[] teacher_name;
     String[] teacher_details;
@@ -39,7 +39,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email1);
             Phno = getResources().getStringArray(R.array._2PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -57,7 +57,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email2);
             Phno = getResources().getStringArray(R.array._2PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -75,7 +75,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email3);
             Phno = getResources().getStringArray(R.array._2PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -93,7 +93,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email4);
             Phno = getResources().getStringArray(R.array._2PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -111,7 +111,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email5);
             Phno = getResources().getStringArray(R.array._2PhoneNumber5);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -130,7 +130,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email6);
             Phno = getResources().getStringArray(R.array._2PhoneNumber6);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -148,7 +148,7 @@ public class LanguageandLitreature extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._2email7);
             Phno = getResources().getStringArray(R.array._2PhoneNumber7);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

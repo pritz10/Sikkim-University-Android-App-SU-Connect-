@@ -17,7 +17,7 @@
         android:scrollbarStyle="insideInset"
         android:scrollbarSize="3dp"
         android:layout_alignParentStart="true"
-       >
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,175 +26,322 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:src="@drawable/pritz"
-        app:civ_border_width="3dp"
-        app:civ_border_color="@color/colorPrimary"/>
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ps"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/colorPrimary"/>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_height="wrap_content"
-        android:text="Pritam Shah" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"
+                android:text="Pritam Shah" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.23"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.23"
+                android:orientation="horizontal">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/mail1"
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/mail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/mail" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/abt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/helpprs" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/cal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/devcal" />
+            </LinearLayout>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rob"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/colorPrimary"/>
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"
+                android:text="Robin Gurung" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="0.23">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/mail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/mail" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/abt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/helpprs" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/cal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                     app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/devcal" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/jaun"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
+
+
+            <TextView
+                android:id="@+id/textViey4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Tilak Gurung"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="0.23">
+
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/abt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="aboutapp"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/helpprs" />
+
+
+
+
+
+            </LinearLayout>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SU-Connect Beta Testers"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="mail1"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/mail" />
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="0.23">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/abt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="aboutapp"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/helpprs" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/cal1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="call1"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/devcal" />
-    </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageg3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/blodimae"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image1g3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/blodimae"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imag3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/blodimae"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageg4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/blodimae"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/image2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:src="@drawable/rob"
-        app:civ_border_width="3dp"
-        app:civ_border_color="@color/colorPrimary"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="0.23">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/blodimae"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3dp" />
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/blodimae"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3dp" />
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/blodimae"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3dp" />
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/blodimae"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3dp" />
 
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_height="wrap_content"
-        android:text="Robin Gurung" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_weight="0.23">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/mail2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="mail2"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/mail" />
+            <TextView
+                android:id="@+id/textVie"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="146dp"
+                android:text="Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/abt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="aboutapp"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/helpprs" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/cal2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="call2"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/devcal" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textVie"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_height="146dp"
-        android:text="Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University" />
-
-</LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

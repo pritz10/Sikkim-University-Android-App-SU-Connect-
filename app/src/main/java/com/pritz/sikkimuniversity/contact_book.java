@@ -29,7 +29,7 @@ public class contact_book extends AppCompatActivity {
 getSupportActionBar().setTitle("Contact Book");
         // Generate sample data
 
-        country = new String[] { "Office of the Vice Chancellor","Office of the Office of the Registrar","Office of the Controller of Examination",
+        country = new String[] { "Office of the Vice Chancellor","Office of the Registrar","Office of the Controller of Examination",
                 "Office of the Finance Officer","Office of the Librarian","Dean, Students' Welfare","Dean, School of Social Sciences","Dean, School of Professional Studies",
                 "Dean, School of Physical Sciences","Dean, School of Life Sciences","Dean, School of Languages and Literature","Dean, School of Human Sciences",
                 "Finance","Academics","Administration","Establishment","Evaluation","Systems Management","Medical Unit","Guest House", "Science Library","Department of Anthropology",

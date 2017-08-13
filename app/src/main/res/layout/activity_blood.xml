@@ -23,18 +23,15 @@ android:layout_gravity="center"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <ListView
-        android:id="@+id/listview"
+
+    android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_weight="0.87"
-        android:divider="@android:color/transparent"
+        android:layout_marginBottom="6dp"
         android:dividerHeight="10.0sp"
-        android:stackFromBottom="true"
-        android:textAlignment="gravity"
-        android:transcriptMode="alwaysScroll" />
+        android:id="@+id/blodlife">
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

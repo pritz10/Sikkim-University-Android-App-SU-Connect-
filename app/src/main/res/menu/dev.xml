@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pritz.sikkimuniversity.Developers">
+    <item
+        android:id="@+id/ml"
+        android:icon="@drawable/mail"
+        android:title="Mail"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cl"
+        android:icon="@drawable/devcal"
+        android:title="Call"
+        app:showAsAction="always" />
+
+</menu>

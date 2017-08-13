@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pritz.sikkimuniversity.Mainnotice">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:drawableLeft="@mipmap/star"
+        android:drawableRight="@mipmap/star"
+        android:paddingBottom="4dp"
+        android:background="@drawable/des"
+        android:text="Notice Board"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:layout_x="168dp"
+        android:layout_y="216dp"
+        android:visibility="visible" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="6dp"
+        android:dividerHeight="14.0sp"
+        android:id="@+id/posti">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

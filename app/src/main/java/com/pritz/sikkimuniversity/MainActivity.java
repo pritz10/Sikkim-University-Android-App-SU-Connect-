@@ -58,12 +58,10 @@ import static android.R.attr.x;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    EditText editText;
-    ListView listView;
-    ProgressBar progressBar1;
-    DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
-int a=0;
-    public ImageView imageButton;
+
+
+
+
    @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,67 +81,9 @@ int a=0;
        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
        String name = sharedPreferences.getString("s_name","");
        nav_user.setText(name);
-
-       listView = (ListView) findViewById(R.id.listview);
-       progressBar1=(ProgressBar)findViewById(R.id.progressBar);
-       progressBar1.setVisibility(View.VISIBLE);
-
-       final String date = DateFormat.getDateTimeInstance().format(new Date());
-
-
-
-
-
-       FirebaseListAdapter<notifi> adapter=new FirebaseListAdapter<notifi>(this, notifi.class, R.layout.notifi,mref.limitToLast(10)) {
-           @Override
-           protected void populateView(View v, notifi model, int position)
-           {
-               final String pskey=getRef(position).getKey();
-               TextView date_,name_,mainframe_;
-               mainframe_=(TextView) v.findViewById(R.id.mainframe);
-               ImageView im=(ImageView)v.findViewById(R.id.pictures);
-
-               date_=(TextView)v.findViewById(R.id.date);
-               name_=(TextView)v.findViewById(R.id.name);
-               mainframe_.setText(model.getMessage()+"....");
-             Picasso.with(MainActivity.this).load(model.getImage()).into(im);
-               name_.setText(model.getname());
-               date_.setText(model.getDate());
-               progressBar1.setVisibility(View.GONE);
-
-               v.setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       Toast.makeText(getBaseContext(), "Loading...", Toast.LENGTH_LONG).show();
-                       mref.child(pskey).addValueEventListener(new ValueEventListener() {
-                           @Override
-                           public void onDataChange(DataSnapshot dataSnapshot) {
-
-                               Intent intent = new Intent(MainActivity.this,Important.class);
-                               intent.putExtra("gte",pskey);
-                               startActivity(intent);
-                           }
-
-                           @Override
-                           public void onCancelled(DatabaseError databaseError) {
-
-                           }
-                       });
-
-                   }
-               });
-
-
-           }
-       };
-        listView.setAdapter(adapter);
-
-
-
-//     progressBar.setVisibility(View.GONE);
-       //ra.add(getterandSetter);
-
-
+       Mainnotice c=new Mainnotice();
+       getSupportFragmentManager().beginTransaction()
+               .replace(R.id.content,c).commit();
 
        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -162,8 +102,7 @@ int a=0;
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-       // NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+         navigationView.setNavigationItemSelectedListener(this);
 
 
 
@@ -193,30 +132,14 @@ int a=0;
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.exit) {
             Exit();
             return true;
         }
-        if(id==R.id.feed)
-        {
 
-            String uriText =
-                    "mailto:"+"developerapphelp@gmail.com"+
-                            "?subject=" + Uri.encode("Feedback..");
-            Uri uri= Uri.parse(uriText);
-
-            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
-
-            Intent i = Intent.createChooser(emailIntent, "Send email to the developer...");
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-            startActivity(i);
-        }
         if(id==R.id.vc)
         {
-            Intent intent=new Intent(getApplication(),Admin.class); // Message from VC
+            Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
             startActivity(intent);
         }
         if(id==R.id.Loc)

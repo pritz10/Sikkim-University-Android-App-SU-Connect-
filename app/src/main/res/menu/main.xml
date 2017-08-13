@@ -29,11 +29,7 @@
         android:orderInCategory="101"
         android:title="Calendar"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/feed"
-        android:orderInCategory="101"
-        android:title="Feedback"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/exit"
         android:orderInCategory="101"

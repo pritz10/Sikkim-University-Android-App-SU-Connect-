@@ -2,66 +2,68 @@ package com.pritz.sikkimuniversity;
 
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class Details extends AppCompatActivity {
     private WebView webView;
-ProgressDialog progressDialog;
 
+Button p;
+    int a=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().hide();
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("SU-MAP");
         webView = (WebView) findViewById(R.id.webview);
-       progressDialog=new ProgressDialog(this);
-        //progressDialog.setMessage(" So the day was tough...");
-        //progressDialog.show();
-        WebSettings webSettings = webView.getSettings();
+
+        //  progressBar = (ProgressBar) findViewById(R.id.progressBar);
         webView.setWebViewClient(new Details.myWebClient());
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
 
+        // webView.loadUrl("http://www.cus.ac.in/images/contents/Sta/artImg/master.jpg");
+        webView.loadDataWithBaseURL("file:///android_asset/", "<img src='map1.jpg' />", "text/html", "utf-8", null);
+        p=( Button)findViewById(R.id.mp);
+        p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            if (a==1) {
+                webView.loadDataWithBaseURL("file:///android_asset/", "<img src='map3.jpg' />", "text/html", "utf-8", null);
+            a++;
+                p.setText("White Theme");
+            }
+            else
+            {
+                webView.loadDataWithBaseURL("file:///android_asset/", "<img src='map1.jpg' />", "text/html", "utf-8", null);
+            a=1;
+                p.setText("Black Theme");
+            }
 
-        webView.loadUrl("https://www.google.com/maps/d/viewer?mid=10dmFwkrBxY1Ai4GW0w0t5zgxVUE&ll=27.29511964027944%2C88.63853885742185&z=13");
-        //  webView.clearCache(true);
-        //  webView.clearHistory();
-
-
-        webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        webView.getSettings().setAppCacheEnabled(true);
-        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-        webSettings.setUseWideViewPort(true);
-        webSettings.setSavePassword(true);
-        webSettings.setSaveFormData(true);
-        webSettings.setEnableSmoothTransition(true);
-
-
-        // webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        //  webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+            }
+        });
 
     }
 
-
     public class myWebClient extends WebViewClient {
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            super.onPageStarted(view, url, favicon);
-        }
+
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -74,7 +76,7 @@ ProgressDialog progressDialog;
         public void onReceivedError(WebView view, int errorCode,
                                     String description, String failingUrl) {
             setContentView(R.layout.nointernet);
-            Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection... " + description, Toast.LENGTH_SHORT).show();
             //super.onReceivedError(view, errorCode, description, failingUrl);
         }
 
@@ -83,19 +85,9 @@ ProgressDialog progressDialog;
 
             super.onPageFinished(view, url);
 
-//progressDialog.dismiss();
-        }
-    }
 
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
-            webView.goBack();
-            return true;
-        } else {
-            finish();
-            return true;
         }
     }
 }
+
+

@@ -8,13 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 public class SocialSciences extends AppCompatActivity {
-    int[] image1 = {R.mipmap.manesh,R.mipmap.komol,R.mipmap.dr_ruma_kundu,R.mipmap.pradyut,R.mipmap.rangalal};
+    int[] image1 = {R.mipmap.manesh,R.mipmap.komol,R.mipmap.blodimae,R.mipmap.dr_ruma_kundu,R.mipmap.pradyut,R.mipmap.rangalal};
     int[] image2 = {R.mipmap.ka,R.mipmap.vijay_k_thangellapali,R.mipmap.sangmu_thendup,R.mipmap.anira,R.mipmap.s_jeevanandam,R.mipmap.kr_devi};
     int[] image3 = {R.mipmap.manish,R.mipmap.sebastian,R.mipmap.newton};
     int[] image4 = {R.mipmap.ig_ahmed,R.mipmap.veer_mayank,R.mipmap.denkila_bhutia,R.mipmap.ns,R.mipmap.vijoy_v,R.mipmap.sonam_yangchen_bhutia};
     int[] image5 = {R.mipmap.nawal_k_paswan,R.mipmap.salvin_paul,R.mipmap.sanghamitra_choudhury};
     int[] image6 = {R.mipmap.durga_p_c,R.mipmap.bidhan_golay,R.mipmap.om_prasad_gadde,R.mipmap.amit_k_gupta,R.mipmap.budh_b_lama,R.mipmap.s_pradhan};
-    int[] image7 = {R.mipmap.swati2,R.mipmap.dr_khangembam_indira,R.mipmap.sn_bagh};
+    int[] image7 = {R.mipmap.swati2,R.mipmap.caaa,R.mipmap.dr_khangembam_indira,R.mipmap.sn_bagh,R.mipmap.blodimae};
     String[] teacher_name;
     String[] teacher_details;
     String[] emailid;
@@ -38,7 +38,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email1);
             Phno = getResources().getStringArray(R.array._6PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -56,7 +56,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email2);
             Phno = getResources().getStringArray(R.array._6PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -74,7 +74,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email3);
             Phno = getResources().getStringArray(R.array._6PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -93,7 +93,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email4);
             Phno = getResources().getStringArray(R.array._6PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -111,7 +111,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email5);
             Phno = getResources().getStringArray(R.array._6PhoneNumber5);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -129,7 +129,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email6);
             Phno = getResources().getStringArray(R.array._6PhoneNumber6);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -147,7 +147,7 @@ public class SocialSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._6email7);
             Phno = getResources().getStringArray(R.array._6PhoneNumber7);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

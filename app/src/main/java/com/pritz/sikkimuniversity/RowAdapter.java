@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.ContactsContract;
-import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,9 +60,9 @@ public class RowAdapter extends ArrayAdapter{
         final Datahandler dh;
         if(convertView==null){
             LayoutInflater inflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row=inflater.inflate(R.layout.costum_view,parent,false);
+            row=inflater.inflate(R.layout.custom_view,parent,false);
             dh = new Datahandler();
-            dh.dp=(ImageView)row.findViewById(R.id.image);
+            dh.dp=(ImageView)row.findViewById(R.id.imagee);
             dh.names=(TextView)row.findViewById(R.id.name);
             dh.details=(TextView)row.findViewById(R.id.details);
             dh.phonenuber=(Button) row.findViewById(R.id.call);

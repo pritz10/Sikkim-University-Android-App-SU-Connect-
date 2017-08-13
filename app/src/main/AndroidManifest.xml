@@ -3,9 +3,15 @@
     package="com.pritz.sikkimuniversity">
     android:hardwareAccelerated="true"
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,9 +24,7 @@
             android:name=".Login"
             android:label="Sikkim University"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Splash"
             android:label="@string/app_name"
@@ -35,19 +39,16 @@
             android:name=".MainActivity"
             android:label="Sikkim University"
             android:parentActivityName=".MainActivity"
-
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-
         <activity
             android:name=".Departments"
             android:label="@string/title_activity_departments"
-
-            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -56,9 +57,8 @@
         <activity
             android:name=".LibSu"
             android:label="@string/title_activity_lib_su"
-
-            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -66,9 +66,9 @@
         </activity>
         <activity
             android:name=".Lost_Found"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_lost__found"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -86,9 +86,8 @@
         <activity
             android:name=".LostFound"
             android:label="@string/title_activity_lost_found"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -97,8 +96,8 @@
         <activity
             android:name=".SUSA"
             android:label="SUSA"
-            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -107,9 +106,8 @@
         <activity
             android:name=".SU_Live"
             android:label="@string/title_activity_su__live"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -139,22 +137,26 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity android:name=".Details" />
+        <activity
+            android:name=".Details"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity
             android:name=".Fromvc"
-            android:screenOrientation="portrait"
-
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity
             android:name=".AntiRagging"
-            android:screenOrientation="portrait"
-
-            android:parentActivityName=".MainActivity">
-
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
@@ -163,7 +165,6 @@
             android:name=".Schools"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -173,7 +174,6 @@
             android:name=".Department_list"
             android:parentActivityName=".Schools"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -183,7 +183,6 @@
             android:name=".HumanScience"
             android:parentActivityName=".Schools"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -192,9 +191,8 @@
         <activity
             android:name=".LanguageandLitreature"
             android:label="jahsdfkjh"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -203,9 +201,8 @@
         <activity
             android:name=".LifeSciences"
             android:label="Dsidhsihgf"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -214,9 +211,8 @@
         <activity
             android:name=".PhysicalSciences"
             android:label="sfgbfgh"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -225,9 +221,8 @@
         <activity
             android:name=".ProfessionalStudies"
             android:label="Deptdgk[nb"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -236,24 +231,22 @@
         <activity
             android:name=".SocialSciences"
             android:label="Deptsvd"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Schools"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".SU_Connect" />
-        <activity android:name=".lol" />
+
         <activity android:name=".Aboout_App" />
         <activity android:name=".GuestMode" />
         <activity
             android:name=".help"
             android:label="Deptsvd"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -262,9 +255,8 @@
         <activity
             android:name=".Developers"
             android:label="Deptsvd"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -273,9 +265,8 @@
         <activity
             android:name=".Blood"
             android:label="Deptsvd"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -287,21 +278,18 @@
         <activity
             android:name=".Donate_Blood"
             android:label="Deptsvd"
-            android:screenOrientation="portrait"
-
             android:parentActivityName=".Blood"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-
         <activity
             android:name=".Important"
             android:label="Deptsvd"
             android:parentActivityName=".Blood"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
@@ -318,16 +306,18 @@
         </activity>
         <activity
             android:name=".NSS"
-            android:screenOrientation="portrait"
-
             android:label="Deptsvd"
             android:parentActivityName=".Blood"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity android:name=".Admin"></activity>
+        <activity android:name=".Admin" />
+        <activity android:name=".Notification" />
+        <activity android:name=".Notificaion" />
+        <activity android:name=".NotificationAdmin"></activity>
     </application>
 
 </manifest>

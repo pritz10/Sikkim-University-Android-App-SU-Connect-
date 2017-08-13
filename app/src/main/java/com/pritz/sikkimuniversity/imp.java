@@ -4,24 +4,24 @@ package com.pritz.sikkimuniversity;
  * Created by pritz on 24/7/17.
  */
 
-public class notifi {
+public class imp {
     private String name;
     private String date;
 private String image;
     private String message;
 
 
-    public notifi()
+    public imp()
     {
 
     }
-    public notifi(String name, String date, String message,String image){
+  /*  public imp(String name, String date, String message,String image){
         this.name=name;
         this.date=date;
         this.message=message;
         this.image=image;
 
-    }
+    }*/
 
     public String getMessage() {
         return message;

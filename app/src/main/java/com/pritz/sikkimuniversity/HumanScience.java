@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class HumanScience extends AppCompatActivity {
     int[] image1 = {R.mipmap.kotra_mohan, R.mipmap.dr_maibam_samson_singh, R.mipmap.dr_charisma_k_lepcha};//not suggested
-    int[] image2 = {R.mipmap.drsohelfirdos, R.mipmap.druttamlal, R.mipmap.drrafiulahmed, R.mipmap.elangbam_ishwarjit_singh, R.mipmap.abdul_hannan, R.mipmap.vimal_khawas};
+    int[] image2 = {R.mipmap.drsohelfirdos, R.mipmap.drrafiulahmed, R.mipmap.druttamlal, R.mipmap.elangbam_ishwarjit_singh, R.mipmap.abdul_hannan, R.mipmap.vimal_khawas};
     int[] image3 = {R.mipmap.nutankumar_thingujam, R.mipmap.drsatyanandapanda, R.mipmap.drsaurabhmaheshwari, R.mipmap.namrata_p};
     String[] teacher_name;
     String[] teacher_details;
@@ -36,7 +36,7 @@ public class HumanScience extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._1email1);
             Phno = getResources().getStringArray(R.array._1PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -54,7 +54,7 @@ public class HumanScience extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._1email2);
             Phno = getResources().getStringArray(R.array._1PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -72,7 +72,7 @@ public class HumanScience extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._1email3);
             Phno = getResources().getStringArray(R.array._1PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

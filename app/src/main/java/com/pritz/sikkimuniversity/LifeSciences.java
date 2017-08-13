@@ -9,8 +9,8 @@ import android.widget.ListView;
 
 public class LifeSciences extends AppCompatActivity {
     int[] image1 = {R.mipmap.sathyanarayana,R.mipmap.dhani_raj_chhetri,R.mipmap.santosh_kumar_rai,R.mipmap.m_bijayalaxmi_devi,R.mipmap.arun_chettri,R.mipmap.ak_rai};
-    int[] image2 = {R.mipmap.manivannan,R.mipmap.manjurana,R.mipmap.sujata,R.mipmap.niladri_bag,R.mipmap.r_kumar};
-    int[] image3 = {R.mipmap.prof_j_p_tamang,R.mipmap.dr_hare_krishna,R.mipmap.bimala,R.mipmap.buddhiman,R.mipmap.dr_nagendra_thakur};
+    int[] image2 = {R.mipmap.manivannan,R.mipmap.blodimae,R.mipmap.niladri_bag,R.mipmap.r_kumar,R.mipmap.manjurana,R.mipmap.blodimae,R.mipmap.sujata};
+    int[] image3 = {R.mipmap.prof_j_p_tamang,R.mipmap.dr_hare_krishna,R.mipmap.bimala,R.mipmap.dr_nagendra_thakur,R.mipmap.buddhiman};
     int[] image4 = {R.mipmap.basundhara_chettri,R.mipmap.dr_bhoj_kumar_acharya,R.mipmap.dr_bisu_singh,R.mipmap.sudeep_ghatani};
     String[] teacher_name;
     String[] teacher_details;
@@ -35,7 +35,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email1);
             Phno = getResources().getStringArray(R.array._3PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -53,7 +53,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email2);
             Phno = getResources().getStringArray(R.array._3PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -71,7 +71,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email3);
             Phno = getResources().getStringArray(R.array._3PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -90,7 +90,7 @@ public class LifeSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._3email4);
             Phno = getResources().getStringArray(R.array._3PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

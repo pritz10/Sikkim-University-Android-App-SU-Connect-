@@ -321,7 +321,8 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_1teachers_name2">
         <item>Dr. Sohel Firdos</item>
         <item>Dr. Rafiul Ahmed</item>// change photo
-        <item>Dr. Uttam Lal</item>   //
+        <item>Dr. Uttam Lal</item>
+        //
         <item>Dr. Elangbam Ishwarjit Singh</item>
         <item>Dr. Abdul Hannan</item>
         <item>Dr. Vimal Khawas</item>
@@ -415,8 +416,10 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
     <string-array name="_2teachers_name5">
-        <item>Shri. Norbu Tshering Lepcha</item>   // extra photo needed
-        <item>Shri. Kachyo Lepcha</item>    //swap photo
+        <item>Shri. Norbu Tshering Lepcha</item>
+        // extra photo needed
+        <item>Shri. Kachyo Lepcha</item>
+        //swap photo
         <item>Smt. Dukmit Lepcha</item>
     </string-array>
     <string-array name="_2Designation5">
@@ -437,7 +440,8 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
 
     <string-array name="_2teachers_name6">
-        <item>Shri. Bal Bahadur Subba</item>  // extra photo needed
+        <item>Shri. Bal Bahadur Subba</item>
+        // extra photo needed
         <item>Smt. Kaushila Subba</item>
         <item>Shri. Tej Raj Limboo</item>
     </string-array>
@@ -528,11 +532,15 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_3teachers_name2">
         <item>Dr. S. Manivannan</item>
         <item>Dr. Laxuman Sharma</item>//1
-        <item>Dr. Niladri Bag</item> //2
-        <item>Dr. Sujata Upadhyay</item> // 1swap photo
+        <item>Dr. Niladri Bag</item>
+        //2
+        <item>Dr. Sujata Upadhyay</item>
+        // 1swap photo
         <item>Dr. Manju Rana</item>
-        <item>Dr. Karma Diki Bhutia</item> // extra needed photo
-        <item>Shri. Rajesh Kumar</item> // 2) from 2nd last
+        <item>Dr. Karma Diki Bhutia</item>
+        // extra needed photo
+        <item>Shri. Rajesh Kumar</item>
+        // 2) from 2nd last
     </string-array>
     <string-array name="_3Designation2">
         <item>Associate Professor </item>
@@ -565,8 +573,10 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_3teachers_name3">
         <item>Prof. Jyoti Prakash Tamang</item>
         <item>Dr. Hare Krishna Tiwari</item>
-        <item>Dr. Buddhiman Tamang</item> //swap photo
-        <item>Dr. Bimala Singh</item>    //
+        <item>Dr. Buddhiman Tamang</item>
+        //swap photo
+        <item>Dr. Bimala Singh</item>
+        //
         <item>Dr. Nagendra Thakur</item>
     </string-array>
     <string-array name="_3Designation3">
@@ -1120,7 +1130,6 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     </string-array>
 
 
-
     <string name="btn_Login">Log In</string>
     <string name="tv_UserName">User Name</string>
     <string name="tv_Password">Password</string>
@@ -1244,4 +1253,7 @@ During Silver Jubilee Year the NSS theme song had been composed. All NSS volunte
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

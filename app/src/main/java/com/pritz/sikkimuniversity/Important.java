@@ -30,7 +30,7 @@ public class Important extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important);
-        String gte=getIntent().getExtras().getString("gte");
+        String gte= getIntent().getExtras().getString("gte");
         getSupportActionBar().setTitle("........");
        dat_=(TextView)findViewById(R.id.dat);
         info_=(TextView)findViewById(R.id.info);
@@ -57,28 +57,28 @@ public class Important extends AppCompatActivity {
         });
     }
 
-    private ShareActionProvider mShareActionProvider;
+   private ShareActionProvider mShareActionProvider;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        /** Inflating the current activity's menu with res/menu/items.xml */
+
         getMenuInflater().inflate(R.menu.menu_scrolling, menu);
         MenuItem item = menu.findItem(R.id.share);
-        /** Getting the actionprovider associated with the menu item whose id is share */
+
         mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
 
-        /** Setting a share intent */
         mShareActionProvider.setShareIntent(getDefaultShareIntent());
 
         return super.onCreateOptionsMenu(menu);
 
     }
 
-    /** Returns a share intent */
+
     private Intent getDefaultShareIntent(){
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         //intent.putExtra(Intent.EXTRA_SUBJECT,"From SU-Connect Notice Board");
         intent.putExtra(Intent.EXTRA_TEXT,"From SU-Connect Notice Board\n\n"+dat+"\n"+nam+"\n\n"+inf+"\n\nDownload image\n\n"+img);
         return intent;
-    }}
+    }
+}

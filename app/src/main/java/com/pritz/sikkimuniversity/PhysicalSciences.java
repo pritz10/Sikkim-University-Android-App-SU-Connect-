@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class PhysicalSciences extends AppCompatActivity {
     int[] image1 = {R.mipmap.sudarsan_tamang,R.mipmap.somendranath_chakroborty,R.mipmap.biswajit_g_r};
-    int[] image2 = {R.mipmap.mppradhan,R.mipmap.chunnukhawas,R.mipmap.ppr1, R.mipmap.rebikarai,R.mipmap.lekhikachettri };
+    int[] image2 = {R.mipmap.mppradhan,R.mipmap.chunnukhawas, R.mipmap.rebikarai,R.mipmap.ppr1,R.mipmap.lekhikachettri };
     int[] image3 = {R.mipmap.rakesh_kumar_ranjan,R.mipmap.md_abdullah_khan,R.mipmap.nishchal_wanjar,R.mipmap.ananda_g_b,R.mipmap.op_kaptan};
     int[] image4 = {R.mipmap.dr_thoudem_roshan_singh,R.mipmap.ms_rinkila_bhutia};
     int[] image5 = {R.mipmap.dr_subir_mukhopadhay,R.mipmap.dr_amitabha_bhattacharyya,R.mipmap.dr_hemam_dinesh_singh,R.mipmap.dr_ajay_tripathi,R.mipmap.dr_archana_tiwari};
@@ -36,7 +36,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email1);
             Phno = getResources().getStringArray(R.array._4PhoneNumber1);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -54,7 +54,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email2);
             Phno = getResources().getStringArray(R.array._4PhoneNumber2);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -72,7 +72,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email3);
             Phno = getResources().getStringArray(R.array._4PhoneNumber3);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -90,7 +90,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email4);
             Phno = getResources().getStringArray(R.array._4PhoneNumber4);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {
@@ -108,7 +108,7 @@ public class PhysicalSciences extends AppCompatActivity {
             emailid = getResources().getStringArray(R.array._4email5);
             Phno = getResources().getStringArray(R.array._4PhoneNumber5);
             int i = 0;
-            ra = new RowAdapter(getApplicationContext(), R.layout.costum_view);
+            ra = new RowAdapter(getApplicationContext(), R.layout.custom_view);
             listView.setAdapter(ra);
             TeacherDetailsProvider tdp;
             for (String id : teacher_name) {

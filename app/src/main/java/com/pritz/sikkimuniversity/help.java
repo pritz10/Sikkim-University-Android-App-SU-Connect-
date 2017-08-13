@@ -14,7 +14,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
-import fr.castorflex.android.smoothprogressbar.SmoothProgressDrawable;
+
 
 public class help extends AppCompatActivity {
 

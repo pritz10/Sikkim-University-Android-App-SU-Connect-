@@ -30,91 +30,12 @@
       android:text="@string/nss"
         android:textColor="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqqqqqw" />
-        <ImageView
-            android:id="@+id/ima5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqqqqw" />
 
-        <ImageView
-            android:id="@+id/image5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqqqqqqw" />
 
-        <ImageView
-            android:id="@+id/imageVi5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qwwww" />
 
-        <ImageView
-            android:id="@+id/imagvde"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqqqwqw" />
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qwqw" />
-        <ImageView
-            android:id="@+id/imgeView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqqqw" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqw" />
-        <ImageView
-            android:id="@+id/imageVdfiew5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qqww" />
-        <ImageView
-            android:id="@+id/imagew5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            app:srcCompat="@drawable/qwqw" />
+
         <ImageView
             android:id="@+id/imagsdfsdssse"
             android:layout_width="match_parent"

@@ -9,6 +9,8 @@ import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,8 +25,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseListAdapter;
+ import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,14 +40,16 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-
+import static com.pritz.sikkimuniversity.R.id.pic;
+import static com.pritz.sikkimuniversity.R.id.pictures;
 
 
 public class Blood extends AppCompatActivity {
-    ListView listView;
-ProgressBar progressBar1;
-
+    ///ListView listView;
+    private RecyclerView postinsta;
     private DatabaseReference mdatabase;
+    ProgressBar progressBar1;
+
     private DatabaseReference bld;
     ArrayAdapter<CharSequence> adapter;
     File gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/blodgr.xml");
@@ -55,72 +59,95 @@ ProgressBar progressBar1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood);
         getSupportActionBar().setTitle("SU Blood Donors");
-        mdatabase= FirebaseDatabase.getInstance().getReference().child("blood_donation");
-        progressBar1=(ProgressBar)findViewById(R.id.progressBar);
-
-        final DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
-
+        progressBar1 = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar1.setVisibility(View.VISIBLE);
+        mdatabase = FirebaseDatabase.getInstance().getReference().child("blood_donation");
+        postinsta = (RecyclerView) findViewById(R.id.blodlife);
+        postinsta.setHasFixedSize(true);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+        // recyclerView.setLayoutManager(mLayouanager);
+        mdatabase.keepSynced(true);
+        postinsta.setLayoutManager(mLayoutManager);
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-        final String name = sharedPreferences.getString("s_name","");
-        listView = (ListView) findViewById(R.id.listview);
+        final String name = sharedPreferences.getString("s_name", "");
 
-
-
-
-
-
-
-        FirebaseListAdapter<blood> adapter=new FirebaseListAdapter<blood>(this, blood.class, R.layout.blod,
-
-                mref.orderByChild("blodgrp").startAt("A")) {
-
-
-
-
-            @Override
-            protected void populateView(View v, blood model, int position)
-            {
-                final String pskey=getRef(position).getKey();
-                TextView name_,groiup;
-                ImageView Pic;
-                groiup=(TextView)v.findViewById(R.id.bldgrp);
-                name_=(TextView)v.findViewById(R.id.name1);
-                Pic=(ImageView)v.findViewById(R.id.pic);
-                name_.setText(model.getName());
-                groiup.setText(model.getBlodgrp());
-
-                Picasso.with(getApplicationContext()).load(model.getImage()).into(Pic);
-                progressBar1.setVisibility(View.GONE);
-
-                v.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(getBaseContext(), "Calling...", Toast.LENGTH_LONG).show();
-mdatabase.child(pskey).addValueEventListener(new ValueEventListener() {
+    }
     @Override
-    public void onDataChange(DataSnapshot dataSnapshot) {
-String number=(String)dataSnapshot.child("Phone").getValue();
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+number));
-        startActivity(intent);
+    protected void onStart() {
+        super.onStart();
+      FirebaseRecyclerAdapter<blood,BlogViewholder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<blood, BlogViewholder>(
+              blood.class,R.layout.blod,BlogViewholder.class,mdatabase.orderByChild("blodgrp").startAt("A")
+      ) {
+          @Override
+          protected void populateViewHolder(BlogViewholder viewHolder, blood model, int position) {
+              viewHolder.setName(model.getName());
+              viewHolder.setImage(getApplicationContext(),model.getImage());
+              viewHolder.setBlodgrp(model.getBlodgrp());
+             // viewHolder.setPhone(model.getPhone());
+              final String pskey=getRef(position).getKey();
+              progressBar1.setVisibility(View.GONE);
+             viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     Toast.makeText(getBaseContext(), "Calling...", Toast.LENGTH_LONG).show();
+                     mdatabase.child(pskey).addValueEventListener(new ValueEventListener() {
+                         @Override
+                         public void onDataChange(DataSnapshot dataSnapshot) {
+                             String number=(String)dataSnapshot.child("Phone").getValue();
+                             Intent intent = new Intent(Intent.ACTION_CALL);
+                             intent.setData(Uri.parse("tel:"+number));
+                             startActivity(intent);
+                         }
+
+                         @Override
+                         public void onCancelled(DatabaseError databaseError) {
+
+                         }
+                     });
+                 }
+             });
+          }
+      };
+
+        postinsta.setAdapter(firebaseRecyclerAdapter);
+        mdatabase.keepSynced(true);
     }
 
-    @Override
-    public void onCancelled(DatabaseError databaseError) {
+
+
+
+    public static class BlogViewholder extends RecyclerView.ViewHolder{
+
+        View view;
+        public BlogViewholder(View itemView) {
+            super(itemView);
+            view=itemView;
+
+        }
+        public void setName(String name)
+        {
+            TextView blodgropu=(TextView)view.findViewById(R.id.name1);
+            blodgropu.setText(name);
+        }
+        public void setBlodgrp(String blodgrp)        {
+            TextView pdetail=(TextView)view.findViewById(R.id.bldgrp);
+            pdetail.setText(blodgrp);
+        }
+
+        public void setImage(Context ctx, String image)
+        {
+            ImageView post=(ImageView)view.findViewById(pic);
+            Picasso.with(ctx).load(image).into(post);
+
+        }
+
+
 
     }
-});
-
-                    }
-                });
 
 
-            }
-        };
 
 
-        listView.setAdapter(adapter);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
