@@ -65,7 +65,7 @@ public class Blood extends AppCompatActivity {
         postinsta = (RecyclerView) findViewById(R.id.blodlife);
         postinsta.setHasFixedSize(true);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
-        // recyclerView.setLayoutManager(mLayouanager);
+        ////// recyclerView.setLayoutManager(mLayouanager);
         mdatabase.keepSynced(true);
         postinsta.setLayoutManager(mLayoutManager);
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
