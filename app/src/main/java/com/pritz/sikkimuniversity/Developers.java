@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.annotation.IdRes;
-import android.support.design.widget.FloatingActionButton;
+ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
 
 
 
@@ -28,7 +27,7 @@ FloatingActionButton cal1_,cal2_,mail1_,mail2_,abt1_,abt2_;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_developers);
-        getSupportActionBar().setTitle("Developers");
+//        getSupportActionBar().setTitle("Developers");
         if1=(FloatingActionButton)findViewById(R.id.abt1);
         if2=(FloatingActionButton)findViewById(R.id.abt2);
         if3=(FloatingActionButton)findViewById(R.id.abt3);
@@ -36,7 +35,8 @@ FloatingActionButton cal1_,cal2_,mail1_,mail2_,abt1_,abt2_;
         aa1=(FloatingActionButton)findViewById(R.id.cal2);
         bb=(FloatingActionButton)findViewById(R.id.mail1);
         bb1=(FloatingActionButton)findViewById(R.id.mail2);
-aa.setOnClickListener(new View.OnClickListener() {
+
+      aa.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         try {

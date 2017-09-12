@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/devbac"
     android:layout_height="match_parent"
     tools:context="com.pritz.sikkimuniversity.Developers"
     android:weightSum="1">
@@ -17,23 +16,25 @@
         android:scrollbarStyle="insideInset"
         android:scrollbarSize="3dp"
         android:layout_alignParentStart="true"
-        >
+        tools:ignore="ObsoleteLayoutParam,UselessParent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingLeft="7dp"
             android:paddingRight="7dp"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
+
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimary"
                 android:src="@drawable/ps"
-                app:civ_border_width="3dp"
-                app:civ_border_color="@color/colorPrimary"/>
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -41,9 +42,9 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:layout_height="wrap_content"
-                android:text="Pritam Shah" />
+                android:text="@string/pritam_shah" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -65,8 +66,10 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/mail" />
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/mail"
+                    tools:ignore="NestedWeights" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/abt1"
@@ -81,7 +84,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:fabSize="mini"
                     app:srcCompat="@drawable/helpprs" />
 
                 <android.support.design.widget.FloatingActionButton
@@ -97,20 +101,19 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="mini"
                     app:srcCompat="@drawable/devcal" />
             </LinearLayout>
 
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/image2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/rob"
-                app:civ_border_width="3dp"
-                app:civ_border_color="@color/colorPrimary"/>
+                 android:src="@drawable/rob"
+                tools:ignore="ContentDescription" />
 
 
             <TextView
@@ -119,9 +122,10 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:layout_height="wrap_content"
-                android:text="Robin Gurung" />
+                android:text="Robin Gurung"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -143,8 +147,10 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/mail" />
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/mail"
+                    tools:ignore="NestedWeights" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/abt2"
@@ -159,7 +165,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:fabSize="mini"
                     app:srcCompat="@drawable/helpprs" />
 
                 <android.support.design.widget.FloatingActionButton
@@ -175,19 +182,20 @@
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
-                     app:backgroundTint="@color/colorPrimary"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="mini"
                     app:srcCompat="@drawable/devcal" />
 
             </LinearLayout>
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/image3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:src="@drawable/jaun"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="3dp" />
+                tools:ignore="ContentDescription" />
 
 
             <TextView
@@ -196,8 +204,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Tilak Gurung"
-                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/tilak_gurung"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -206,7 +214,6 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:layout_weight="0.23">
-
 
 
                 <android.support.design.widget.FloatingActionButton
@@ -223,8 +230,10 @@
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
                     android:onClick="aboutapp"
-                    app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/helpprs" />
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/helpprs"
+                    tools:ignore="InefficientWeight,NestedWeights" />
 
 
 
@@ -249,50 +258,9 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="SU-Connect Beta Testers"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_weight="0.23">
-
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/imageg3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/blodimae"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="3dp" />
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/image1g3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/blodimae"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="3dp" />
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/imag3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/blodimae"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="3dp" />
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/imageg4"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/blodimae"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="3dp" />
-
-
-        </LinearLayout>
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -300,34 +268,88 @@
                 android:orientation="horizontal"
                 android:layout_weight="0.23">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/vidur"
+                    tools:ignore="ContentDescription" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/prey"
+                    tools:ignore="ContentDescription" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/nish"
+                    tools:ignore="ContentDescription" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/kide"
+                    tools:ignore="ContentDescription" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="0.23">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                      android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/blodimae"
+                    tools:ignore="ContentDescription"
+                    app:civ_border_width="2dp"
                     app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="3dp" />
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                     android:layout_width="70dp"
+                    android:src="@drawable/subu"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/blodimae"
+
+                    app:civ_border_width="2dp"
                     app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="3dp" />
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                     android:layout_width="70dp"
+                    android:src="@drawable/shrwa"
+                    tools:ignore="ContentDescription" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/blodimae"
+
+                    app:civ_border_width="2dp"
                     app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="3dp" />
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                     android:layout_width="70dp"
+                    android:src="@drawable/ree"
+                    tools:ignore="ContentDescription" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/blodimae"
+
+                    app:civ_border_width="2dp"
                     app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="3dp" />
+                    android:src="@drawable/jan"
+                    tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
@@ -338,9 +360,9 @@
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:layout_height="146dp"
-                android:text="Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University" />
+                android:text="@string/made_with_in_department_of_computer_applications_sikkim_university_for_sikkim_university" />
 
         </LinearLayout>
     </ScrollView>

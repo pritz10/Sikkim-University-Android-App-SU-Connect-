@@ -16,14 +16,13 @@
         android:layout_below="@+id/imageView6"
         android:layout_centerHorizontal="true"
         android:background="@drawable/des"
-        android:capitalize="characters"
         android:ems="10"
         android:foregroundGravity="center"
         android:gravity="center"
 
         android:hint="Registration Number "
 
-        android:inputType="textVisiblePassword"
+        android:inputType=""
         android:paddingBottom="15dp"
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
@@ -31,7 +30,9 @@
         android:paddingStart="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextFields"
+        android:maxLines="1" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -66,14 +67,14 @@
         android:id="@+id/imageView6"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:foregroundGravity="center"
         android:keepScreenOn="true"
-        app:srcCompat="@drawable/sulogo" />
+        app:srcCompat="@drawable/sulogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/f"
@@ -86,7 +87,8 @@
         app:srcCompat="@drawable/guest"
         android:layout_alignTop="@+id/fa"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
 
     <TextView
         android:id="@+id/textView5"
@@ -98,7 +100,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="@color/colorAccent"
-        android:text="Virtual Campus Made with ♥ "
+        android:text="@string/virtual_campus_made_with"
         android:layout_alignLeft="@+id/fa"
         android:layout_alignStart="@+id/fa" />
 

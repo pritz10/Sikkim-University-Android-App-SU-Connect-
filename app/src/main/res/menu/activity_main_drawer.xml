@@ -5,44 +5,45 @@
         <item
             android:id="@+id/department"
             android:icon="@drawable/dept"
-            android:title="Schools" />
+
+            android:title="@string/schools" />
         <item
             android:id="@+id/libsu"
             android:icon="@drawable/libssss"
-            android:title="Library" />
+            android:title="@string/library" />
         <item
             android:id="@+id/lost"
             android:icon="@drawable/lossss"
-            android:title="Lost/Found" />
+            android:title="@string/lost_found" />
         <item
             android:id="@+id/gallery"
             android:icon="@drawable/suliv"
-            android:title="Blood Donors" />
+            android:title="@string/blood_donors" />
 
     </group>
 
-    <item android:title="More..">
+    <item android:title="@string/more">
         <menu>
             <item
                 android:id="@+id/fourms"
                 android:icon="@drawable/forms"
-                android:title="Chat Room" />
+                android:title="@string/chat_room" />
             <item
                 android:id="@+id/susa"
                 android:icon="@drawable/susa"
-                android:title="SUSA" />
+                android:title="@string/susa" />
             <item
                 android:id="@+id/contact"
                 android:icon="@drawable/forums1"
-                android:title="Contact Book" />
+                android:title="@string/contact_book" />
             <item
                 android:id="@+id/pron"
                 android:icon="@drawable/tts"
-                android:title="Pronounce" />
+                android:title="@string/pronounce" />
             <item
                 android:id="@+id/help"
                 android:icon="@drawable/help"
-                android:title="Help/Report" />
+                android:title="@string/help_report" />
         </menu>
     </item>
 

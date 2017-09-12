@@ -9,10 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarStyle="insideInset"
-        android:scrollbarSize="9dp">
+        android:scrollbarSize="9dp"
+        tools:ignore="ExtraText,UselessParent">
 
         <LinearLayout
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:weightSum="1">
@@ -28,7 +29,8 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:elevation="1dp"
-                app:srcCompat="@mipmap/add_btn" />
+                app:srcCompat="@mipmap/add_btn"
+                tools:ignore="ContentDescription,ObsoleteLayoutParam,UnusedAttribute" />
 
             <EditText
                 android:id="@+id/date"
@@ -43,14 +45,15 @@
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Date"
-                android:inputType="textPersonName"
+                android:inputType=""
                 android:paddingBottom="15dp"
                 android:paddingEnd="15dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingStart="15dp"
                 android:paddingTop="15dp"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam,TextFields" />
 
             <EditText
                 android:id="@+id/ltitle"
@@ -72,7 +75,8 @@
                 android:paddingRight="15dp"
                 android:paddingStart="15dp"
                 android:paddingTop="15dp"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam" />
 
             <EditText
                 android:id="@+id/ldetail"
@@ -95,13 +99,18 @@
                 android:paddingRight="15dp"
                 android:paddingStart="15dp"
                 android:paddingTop="15dp"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam" />
 
             <Button
                 android:id="@+id/postfor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Post" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:text="Post"
+                tools:ignore="HardcodedText" />
 
 
         </LinearLayout>>

@@ -91,7 +91,13 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_wall">Wall</string>
 
-
+    <string name="black">Black</string>
+    <string name="blue">Blue</string>
+    <string name="color">Color</string>
+    <string name="eraser">Eraser</string>
+    <string name="green">Green</string>
+    <string name="red">Red</string>
+    <string name="stroke">Stroke</string>
     <string name="guest">
 <p>\n</p>Sikkim University is a central university established under an Act of Parliament of India [THE SIKKIM UNIVERSITY ACT, 2006 ]. It is located at Gangtok
         <p>\n</p>  <p>\n</p>Campus size: 1.177 mi²  <p>\n</p>
@@ -128,7 +134,7 @@ Headquarters: Gangtok, India<p>\n</p></string>
 
 T.B. Subba
     </string>
-    <string name="antiragging"> Click Here "\n\nRAGGING: Any disorderly conduct whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness any other student, indulging in rowdy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or to raise fear or apprehension thereof in a fresher or a junior student or asking the students to do any act or perform something which such student will not in the ordinary course and which has the effect of causing or generating a sense of shame or embarrassment so as to adversely affect the physique or psyche of a fresher or a junior student.\n\n"
+    <string name="antiragging">Click Here "\t" Warning: Phone Number will be Traced."\n\nRAGGING: Any disorderly conduct whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness any other student, indulging in rowdy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or to raise fear or apprehension thereof in a fresher or a junior student or asking the students to do any act or perform something which such student will not in the ordinary course and which has the effect of causing or generating a sense of shame or embarrassment so as to adversely affect the physique or psyche of a fresher or a junior student.\n\n"
         "\nAnti-Ragging Cell:\n"
         "1.Dean, Students’ Welfare Chairman.\n"
 "2.Provost Member.\n"
@@ -1256,4 +1262,19 @@ During Silver Jubilee Year the NSS theme song had been composed. All NSS volunte
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="made_with_in_department_of_computer_applications_sikkim_university_for_sikkim_university">Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University</string>
+    <string name="pritam_shah">Pritam Shah</string>
+    <string name="tilak_gurung">Tilak Gurung</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="virtual_campus_made_with">Virtual Campus Made with ♥</string>
+    <string name="blood_donors">Blood Donors</string>
+    <string name="chat_room">Chat Room</string>
+    <string name="contact_book">Contact Book</string>
+    <string name="help_report">Help/Report</string>
+    <string name="library">Library</string>
+    <string name="lost_found">Lost/Found</string>
+    <string name="more">More..</string>
+    <string name="pronounce">Pronounce</string>
+    <string name="susa">SUSA</string>
+    <string name="schools">Schools</string>
 </resources>

@@ -20,6 +20,31 @@
 
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/sharee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/shreef" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="@color/colorPrimaryDark"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/dwn" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/dat"
             android:layout_width="400dp"
@@ -59,6 +84,7 @@
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:cropToPadding="true" />
+
     </LinearLayout>
 </ScrollView>
 </LinearLayout>

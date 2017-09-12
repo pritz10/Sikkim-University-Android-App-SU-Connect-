@@ -1,10 +1,12 @@
 package com.pritz.sikkimuniversity;
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -38,6 +41,7 @@ public class Login extends AppCompatActivity {
     public static final int CONNECTION_TIMEOUT=10000;
     public static final int READ_TIMEOUT=15000;
     private EditText etEmail;
+    TextToSpeech t1;
 
 
     @Override
@@ -114,6 +118,14 @@ public class Login extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    if(status != TextToSpeech.ERROR) {
+                        t1.setLanguage(Locale.UK);
+                    }
+                }
+            });
 
             //this method will be running on UI thread
             pdLoading.setMessage("\tBreathe in Breathe out...");
@@ -222,7 +234,10 @@ public class Login extends AppCompatActivity {
                 /* Here launching another activity when login successful. If you persist login state
                 use sharedPreferences of Android. and logout button to clear sharedPreferences.
                  */
-                Toast.makeText(Login.this, "Welcome\t" + result, Toast.LENGTH_LONG).show();
+               Toast toast=Toast.makeText(Login.this, "\nWELCOME to Sikkim University Android App \n" + result.toUpperCase()+"\n", Toast.LENGTH_LONG);
+                toast.show();
+                toast.setGravity(Gravity.TOP, 0, 0);
+
 
                 //  Intent loginIntent = new Intent(Login.this,MainActivity.class);
                 //Send Data
@@ -232,6 +247,10 @@ public class Login extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("s_name", result);
+                t1.speak("Welcome to Sikkim University Android App  ,"+result+"\nHave A Nice Day ahead", TextToSpeech.QUEUE_FLUSH, null);
+                //adapter.notifyDataSetChanged();
+
+
                 //editor.putString("s_dept",Department);
 
                 editor.apply();

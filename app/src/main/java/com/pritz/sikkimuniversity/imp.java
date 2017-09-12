@@ -7,7 +7,7 @@ package com.pritz.sikkimuniversity;
 public class imp {
     private String name;
     private String date;
-private String image;
+    private String image;
     private String message;
 
 
@@ -15,13 +15,13 @@ private String image;
     {
 
     }
-  /*  public imp(String name, String date, String message,String image){
+    public imp(String name, String date, String message,String image){
         this.name=name;
         this.date=date;
         this.message=message;
         this.image=image;
 
-    }*/
+    }
 
     public String getMessage() {
         return message;

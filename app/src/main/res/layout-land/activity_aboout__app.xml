@@ -4,44 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
     android:paddingRight="20dp"
     android:paddingLeft="20dp"
-    tools:context="com.pritz.sikkimuniversity.Fromvc">
-
+    android:background="@color/colorAccent"
+    tools:context="com.pritz.sikkimuniversity.Aboout_App">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarStyle="insideInset"
         android:scrollbarSize="9dp"
-        tools:ignore="UselessParent">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:weightSum="1">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:id="@+id/imageView3"
-                android:src="@drawable/vc"
-                tools:ignore="ContentDescription"></ImageView>
 
             <TextView
                 android:id="@+id/ty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VC"
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/imageView3"
+                android:text="@string/aboutapp"
 
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
-            <View
-                android:background="#00000000"
-                android:layout_height="0.8dp"
-                android:layout_width="match_parent"/>
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:onClick="loaddev"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Report to Developers" />
+
+
         </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>

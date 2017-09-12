@@ -14,68 +14,53 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
+ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
- import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.StorageReference;
+
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
-import static com.pritz.sikkimuniversity.R.id.pic;
-import static com.pritz.sikkimuniversity.R.id.pictures;
+import static com.pritz.sikkimuniversity.R.id.pico;
 
 
 public class Blood extends AppCompatActivity {
-    ///ListView listView;
+
     private RecyclerView postinsta;
     private DatabaseReference mdatabase;
     ProgressBar progressBar1;
 
-    private DatabaseReference bld;
-    ArrayAdapter<CharSequence> adapter;
+     ArrayAdapter<CharSequence> adapter;
     File gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/blodgr.xml");
-    private StorageReference mStorageRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood);
-        getSupportActionBar().setTitle("SU Blood Donors");
+     //   getSupportActionBar().setTitle("SU Blood Donors");
         progressBar1 = (ProgressBar) findViewById(R.id.progressBar);
         progressBar1.setVisibility(View.VISIBLE);
         mdatabase = FirebaseDatabase.getInstance().getReference().child("blood_donation");
         postinsta = (RecyclerView) findViewById(R.id.blodlife);
         postinsta.setHasFixedSize(true);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
-        ////// recyclerView.setLayoutManager(mLayouanager);
-        mdatabase.keepSynced(true);
+         mdatabase.keepSynced(true);
         postinsta.setLayoutManager(mLayoutManager);
-        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-        final String name = sharedPreferences.getString("s_name", "");
 
     }
     @Override
     protected void onStart() {
         super.onStart();
-      FirebaseRecyclerAdapter<blood,BlogViewholder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<blood, BlogViewholder>(
+      FirebaseRecyclerAdapter<blood,BlogViewholder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<blood,BlogViewholder>(
               blood.class,R.layout.blod,BlogViewholder.class,mdatabase.orderByChild("blodgrp").startAt("A")
       ) {
           @Override
@@ -83,7 +68,6 @@ public class Blood extends AppCompatActivity {
               viewHolder.setName(model.getName());
               viewHolder.setImage(getApplicationContext(),model.getImage());
               viewHolder.setBlodgrp(model.getBlodgrp());
-             // viewHolder.setPhone(model.getPhone());
               final String pskey=getRef(position).getKey();
               progressBar1.setVisibility(View.GONE);
              viewHolder.view.setOnClickListener(new View.OnClickListener() {
@@ -130,14 +114,15 @@ public class Blood extends AppCompatActivity {
             blodgropu.setText(name);
         }
         public void setBlodgrp(String blodgrp)        {
-            TextView pdetail=(TextView)view.findViewById(R.id.bldgrp);
-            pdetail.setText(blodgrp);
+            TextView f=(TextView)view.findViewById(R.id.bldgrp);
+            f.setText(blodgrp);
         }
 
         public void setImage(Context ctx, String image)
         {
-            ImageView post=(ImageView)view.findViewById(pic);
-            Picasso.with(ctx).load(image).into(post);
+
+            ImageView il=(ImageView)view.findViewById(pico);
+            Picasso.with(ctx).load(image).resize(100,100).into(il);
 
         }
 
@@ -151,26 +136,22 @@ public class Blood extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_forums, menu);
+         getMenuInflater().inflate(R.menu.menu_forums, menu);
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+
         if (id == R.id.db) {
             if (gotyou.exists())
             {
                 AlertDialog.Builder builder=new AlertDialog.Builder(this);
-                //builder.setTitle("Exit");
+
                 builder.setMessage("You have chosen to donate your blood.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 builder.setPositiveButton("Okay",null);
-              ;
                 builder.create();
                 builder.show();
             }

@@ -26,7 +26,8 @@ android:background="@drawable/kl"
         android:dividerHeight="10.0sp"
         android:stackFromBottom="true"
         android:textAlignment="gravity"
-        android:transcriptMode="alwaysScroll" />
+        android:transcriptMode="alwaysScroll"
+        tools:ignore="InefficientWeight,ObsoleteLayoutParam" />
 
     <EditText
         android:id="@+id/editText2"
@@ -40,7 +41,7 @@ android:background="@drawable/kl"
         android:layout_marginTop="2dp"
         android:background="@drawable/frm"
         android:ems="10"
-        android:hint="Queries, Suggestions,Messages"
+        android:hint="Type a message....."
         android:textColorHint="@color/colorPrimaryDark"
         android:inputType="textMultiLine"
         android:paddingBottom="15dp"
@@ -49,6 +50,7 @@ android:background="@drawable/kl"
         android:paddingRight="15dp"
         android:paddingStart="15dp"
         android:paddingTop="5dp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText,ObsoleteLayoutParam" />
 
 </LinearLayout>

@@ -56,7 +56,7 @@ public class  Forums extends AppCompatActivity{
         setContentView(R.layout.activity_forums);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Chat Room");
+      //  getSupportActionBar().setTitle("Chat Room");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.sentmessage);
 

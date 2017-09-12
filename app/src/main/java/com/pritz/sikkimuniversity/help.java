@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +18,7 @@ import android.widget.ProgressBar;
 
 
 public class help extends AppCompatActivity {
-
+FloatingActionButton fb;
     Button aa1,bb,cc,dd,ee,ff,gg;
     String m;
 
@@ -25,7 +26,6 @@ public class help extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-        getSupportActionBar().setTitle("Help/Report/Feedback");
         aa1=(Button)findViewById(R.id.aa);
         bb=(Button)findViewById(R.id.bb);
         cc=(Button)findViewById(R.id.cc);
@@ -33,6 +33,14 @@ public class help extends AppCompatActivity {
         ee=(Button)findViewById(R.id.ee);
         ff=(Button)findViewById(R.id.ff);
         gg=(Button)findViewById(R.id.gg);
+       fb=(FloatingActionButton)findViewById(R.id.fbc);
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Developers.class);
+                startActivity(i);
+            }
+        });
 
 
     }
@@ -66,9 +74,7 @@ public class help extends AppCompatActivity {
             case R.id.ff:m="Any Others";
                 main(m);
                 break;
-            case R.id.gg:Intent i=new Intent(getApplication(),Developers.class);
-                startActivity(i);
-                break;
+
 
         }}
 

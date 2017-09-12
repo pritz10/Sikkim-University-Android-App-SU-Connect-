@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pritz.sikkimuniversity">
-    android:hardwareAccelerated="true"
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-feature
@@ -16,8 +16,9 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/sul"
+        android:icon="@drawable/sulo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -76,7 +77,7 @@
         </activity>
         <activity
             android:name=".Forums"
-            android:label="@string/title_activity_forums"
+            android:label="Chat Room"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -139,6 +140,7 @@
         </activity>
         <activity
             android:name=".Details"
+            android:label="SU-Map"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -147,6 +149,7 @@
         </activity>
         <activity
             android:name=".Fromvc"
+            android:label="Message from VC"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -238,13 +241,11 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
-        <activity android:name=".SU_Connect" />
-
         <activity android:name=".Aboout_App" />
         <activity android:name=".GuestMode" />
         <activity
             android:name=".help"
-            android:label="Deptsvd"
+            android:label="Help/Feedback/Report"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -254,7 +255,7 @@
         </activity>
         <activity
             android:name=".Developers"
-            android:label="Deptsvd"
+            android:label="Developers"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -264,7 +265,7 @@
         </activity>
         <activity
             android:name=".Blood"
-            android:label="Deptsvd"
+            android:label="SU-Blood Donors"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -277,7 +278,7 @@
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".Donate_Blood"
-            android:label="Deptsvd"
+            android:label="Donate Blood"
             android:parentActivityName=".Blood"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -287,7 +288,7 @@
         </activity>
         <activity
             android:name=".Important"
-            android:label="Deptsvd"
+            android:label="..."
             android:parentActivityName=".Blood"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -297,7 +298,7 @@
         </activity>
         <activity
             android:name=".contact_book"
-            android:label="Deptsvd"
+            android:label="Contack Book"
             android:parentActivityName=".Blood"
             android:theme="@style/AppTheme">
             <meta-data
@@ -306,7 +307,7 @@
         </activity>
         <activity
             android:name=".NSS"
-            android:label="Deptsvd"
+            android:label="NSS"
             android:parentActivityName=".Blood"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -314,10 +315,17 @@
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
+        <activity
+            android:name=".handwriting"
+            android:label="Paperfree"
+            android:parentActivityName=".MainActivity"
+             android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainActivity" />
+        </activity>
         <activity android:name=".Admin" />
-        <activity android:name=".Notification" />
-        <activity android:name=".Notificaion" />
-        <activity android:name=".NotificationAdmin"></activity>
+        <activity android:name=".NotificationAdmin" />
     </application>
 
 </manifest>

@@ -18,14 +18,13 @@
     android:visibility="visible">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+   <ImageView
         android:id="@+id/pictures"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:src="@drawable/rob"
-        app:civ_border_color="@color/colorAccent"
-        app:civ_border_width="3dp"
+
         />
 
     <RelativeLayout
