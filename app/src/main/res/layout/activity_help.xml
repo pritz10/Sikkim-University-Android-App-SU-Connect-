@@ -4,129 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context="com.pritz.sikkimuniversity.help">
 
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageButton"
+        tools:ignore="ObsoleteLayoutParam,UselessParent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/imageButton"
-        tools:ignore="ObsoleteLayoutParam">
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            tools:ignore="ScrollViewSize">
 
-            <LinearLayout
+
+            <TextView
+                android:id="@+id/editText3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="7dp"
-                android:paddingRight="7dp"
-                android:orientation="vertical"
-                tools:ignore="ScrollViewSize">
+                android:layout_height="wrap_content"
+                android:ems="10"
+
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="How can we help You?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,SpUsage,TextViewEdits" />
+
+            <Button
+                android:id="@+id/aa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:elevation="0dp"
+                android:onClick="happy"
+                android:text="Report a bug !"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,UnusedAttribute" />
+
+            <Button
+                android:id="@+id/bb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:onClick="happy"
+                android:text="Suggest Something New"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/cc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:onClick="happy"
+                android:text="Improve Existing Feature"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/dd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:onClick="happy"
+                android:text="Share a Joke with us"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/ee"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:onClick="happy"
+                android:text="Android Marsmallow User"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/ff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/dept1"
+                android:onClick="happy"
+                android:text="Any Other"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/fbc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/not"
+                android:text="Meet Developers"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textVie"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/editText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-
-                    android:textStyle="bold"
-                    android:textColor="@color/colorAccent"
-                    android:gravity="center"
-                    android:textSize="27dp"
-                    android:inputType="textPersonName"
-                    android:text="How can we help You?"
-                    tools:ignore="TextViewEdits" />
-
-                <Button
-                    android:id="@+id/aa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:background="@drawable/dept1"
-                    android:elevation="0dp"
-                     android:onClick="happy"
-                    android:text="Report a bug !"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold"
-                    tools:ignore="UnusedAttribute" />
-
-                <Button
-                    android:id="@+id/bb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:onClick="happy"
-                    android:background="@drawable/dept1"
-                    android:text="Suggest Something New"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/cc"
-                    android:onClick="happy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:background="@drawable/dept1"
-                    android:text="Improve Existing Feature"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/dd"
-                    android:onClick="happy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:background="@drawable/dept1"
-                    android:text="Share a Joke with us"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/ee"
-                    style="@style/Widget.AppCompat.Button"
-                    android:layout_width="match_parent"
-                    android:onClick="happy"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:background="@drawable/dept1"
-                    android:text="Android Marsmallow User"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/ff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:background="@drawable/dept1"
-                    android:onClick="happy"
-                    android:text="Any Other"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fbc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:backgroundTint="@color/colorPrimary"
-
-                    app:srcCompat="@drawable/helpprs" />
-                <TextView
-                    android:id="@+id/textVie"
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/colorAccent"
-                    android:layout_height="146dp"
-                    android:text="Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University" />
-
-            </LinearLayout>
-
-
-        </ScrollView>
-    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
 
 

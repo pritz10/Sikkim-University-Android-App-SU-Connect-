@@ -18,7 +18,7 @@ import android.widget.ProgressBar;
 
 
 public class help extends AppCompatActivity {
-FloatingActionButton fb;
+Button fb;
     Button aa1,bb,cc,dd,ee,ff,gg;
     String m;
 
@@ -33,11 +33,11 @@ FloatingActionButton fb;
         ee=(Button)findViewById(R.id.ee);
         ff=(Button)findViewById(R.id.ff);
         gg=(Button)findViewById(R.id.gg);
-       fb=(FloatingActionButton)findViewById(R.id.fbc);
+       fb=(Button)findViewById(R.id.fbc);
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),Developers.class);
+                Intent i=new Intent(help.this,Developers.class);
                 startActivity(i);
             }
         });

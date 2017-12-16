@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class Department_list extends AppCompatActivity {
+public class School_list extends AppCompatActivity {
 
     String[] school;
     ListView listView;
@@ -35,7 +35,7 @@ public class Department_list extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent x = new Intent(Department_list.this,HumanScience.class);
+                    Intent x = new Intent(School_list.this,HumanScience.class);
                     x.putExtra("roger", position);
                      startActivity(x);
                 }
@@ -58,7 +58,7 @@ public class Department_list extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent x = new Intent(Department_list.this, LanguageandLitreature.class);
+                Intent x = new Intent(School_list.this, LanguageandLitreature.class);
                 x.putExtra("roger", position);
                 startActivity(x);
             }
@@ -81,7 +81,7 @@ public class Department_list extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent x = new Intent(Department_list.this,LifeSciences.class);
+                    Intent x = new Intent(School_list.this,LifeSciences.class);
                     x.putExtra("roger", position);
                     startActivity(x);
                 }
@@ -103,7 +103,7 @@ public class Department_list extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent x = new Intent(Department_list.this, PhysicalSciences.class);
+                    Intent x = new Intent(School_list.this, PhysicalSciences.class);
                     x.putExtra("roger", position);
                     startActivity(x);
                 }
@@ -125,7 +125,7 @@ public class Department_list extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent x = new Intent(Department_list.this,ProfessionalStudies.class);
+                    Intent x = new Intent(School_list.this,ProfessionalStudies.class);
                     x.putExtra("roger", position);
                     startActivity(x);
                 }
@@ -147,7 +147,7 @@ public class Department_list extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent x = new Intent(Department_list.this,SocialSciences.class);
+                    Intent x = new Intent(School_list.this,SocialSciences.class);
                     x.putExtra("roger", position);
                     startActivity(x);
                 }

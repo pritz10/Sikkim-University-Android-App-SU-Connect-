@@ -2,7 +2,6 @@
 package com.pritz.sikkimuniversity;
 import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.text.Editable;
         import android.text.TextWatcher;
         import android.widget.EditText;
@@ -20,13 +19,15 @@ public class contact_book extends AppCompatActivity {
     String[] number;
 
     String[] country;
-    ArrayList<WorldPopulation> arraylist = new ArrayList<WorldPopulation>();
+    ArrayList<Contactboo_kGettersetter> arraylist = new ArrayList<Contactboo_kGettersetter>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_book);
 getSupportActionBar().setTitle("Contact Book");
+        getSupportActionBar().setSubtitle("120 Contacts");
+
         // Generate sample data
 
         country = new String[] { "Office of the Vice Chancellor","Office of the Registrar","Office of the Controller of Examination",
@@ -53,7 +54,7 @@ getSupportActionBar().setTitle("Contact Book");
 
         for (int i = 0; i < number.length; i++)
         {
-            WorldPopulation wp = new WorldPopulation(country[i],number[i]);
+            Contactboo_kGettersetter wp = new Contactboo_kGettersetter(country[i],number[i]);
             // Binds all strings into an array
             arraylist.add(wp);
         }
@@ -92,6 +93,6 @@ getSupportActionBar().setTitle("Contact Book");
         });
     }
 
-    // Not using options menu in this tutorial
+
 
 }

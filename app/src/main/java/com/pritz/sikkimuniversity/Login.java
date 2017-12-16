@@ -1,6 +1,5 @@
 package com.pritz.sikkimuniversity;
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -15,11 +14,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -32,8 +26,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Login extends AppCompatActivity {
     // CONNECTION_TIMEOUT and READ_TIMEOUT are in milliseconds
@@ -224,12 +216,12 @@ public class Login extends AppCompatActivity {
 
             pdLoading.dismiss();
 
-            if (result.equalsIgnoreCase("false")) {
+            if (result.equals("1")) {
                 Toast.makeText(Login.this, "Invalid Registration Number!", Toast.LENGTH_LONG).show();
             } else if (result.equalsIgnoreCase("exception") || result.equalsIgnoreCase("unsuccessful")) {
 
                 Toast.makeText(Login.this, "OOPs! Something went wrong. Connection Problem.", Toast.LENGTH_LONG).show();
-            } else //(result.equalsIgnoreCase("true"))
+            } else  //(result.equalsIgnoreCase("true"))
             {
                 /* Here launching another activity when login successful. If you persist login state
                 use sharedPreferences of Android. and logout button to clear sharedPreferences.

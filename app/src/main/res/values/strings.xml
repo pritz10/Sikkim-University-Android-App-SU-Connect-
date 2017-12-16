@@ -1277,4 +1277,10 @@ During Silver Jubilee Year the NSS theme song had been composed. All NSS volunte
     <string name="pronounce">Pronounce</string>
     <string name="susa">SUSA</string>
     <string name="schools">Schools</string>
+    <string name="todo">TODO</string>
+    <string name="download">Download</string>
+    <string name="sharew">Share⬀</string>
+    <string name="download1">⬃Download</string>
+    <string name="textview">TextView</string>
+    <string name="seen_by">Seen By</string>
 </resources>

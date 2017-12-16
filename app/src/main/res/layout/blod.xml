@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,7 +20,8 @@
         android:textColor="@color/colorAccent"
         android:text="Pritam Shah@ Computer Appications"
         android:textSize="15dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -36,7 +38,7 @@
             android:layout_gravity="center"
 
             android:src="@drawable/rob"
-            />
+    tools:ignore="ContentDescription" />
 
 
         <TextView
@@ -47,7 +49,8 @@
             android:text="AB-"
             android:textColor="@color/colorAccent"
             android:textSize="40dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,InefficientWeight,SpUsage" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
@@ -58,7 +61,8 @@
             app:fabSize="mini"
             app:layout_anchor="@+id/include"
             app:layout_anchorGravity="bottom|right"
-            app:srcCompat="@drawable/devcal" />
+            app:srcCompat="@drawable/devcal"
+            tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 

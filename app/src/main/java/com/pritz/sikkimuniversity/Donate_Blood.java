@@ -96,7 +96,7 @@ Uri img=null;
 
 
                 progressDialog.setMessage("Just Wait.....\n" +
-                        "\nYou have chosen to donate your blood.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
+                        "\nYou have chosen to donate your blood_gettersetter.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood_gettersetter. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 ph=(EditText)findViewById(R.id.phnumber);
                 final String phone=ph.getText().toString();
                 if ((img != null &&!TextUtils.isEmpty(phone))&& !bloodgroup.equals("Enter Your Blood Group")) {

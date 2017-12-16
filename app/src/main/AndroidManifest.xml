@@ -3,6 +3,9 @@
     package="com.pritz.sikkimuniversity">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -36,6 +39,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".NotificationIntentService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name=".NotificationEventReceiver" />
+        <receiver android:name=".NotificationServiceStarterReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".MainActivity"
             android:label="Sikkim University"
@@ -139,7 +156,7 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity
-            android:name=".Details"
+            android:name=".SU_Map"
             android:label="SU-Map"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -174,7 +191,7 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity
-            android:name=".Department_list"
+            android:name=".School_list"
             android:parentActivityName=".Schools"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">

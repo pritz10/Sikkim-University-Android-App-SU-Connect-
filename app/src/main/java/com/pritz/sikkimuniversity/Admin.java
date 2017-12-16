@@ -38,6 +38,7 @@ public class Admin extends AppCompatActivity {
     EditText ltitle;
     EditText ldetail;
     Button b;
+
     EditText ldate;
     private  Uri imageurl=null;
     private static final int GALLERY_REQUEST=1;
@@ -50,7 +51,7 @@ public class Admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
-        getSupportActionBar().setTitle("ADMON");
+        getSupportActionBar().setTitle("ADMIN");
         mStorageRef=FirebaseStorage.getInstance().getReference();
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.chi);
         //initialization//
@@ -91,7 +92,9 @@ public class Admin extends AppCompatActivity {
             DatabaseReference databaseReference = mref.push();
             databaseReference.child("name").setValue(title);
             databaseReference.child("message").setValue(detail);
-            databaseReference.child("date").setValue(date);mp.start();
+            databaseReference.child("date").setValue(date);
+            databaseReference.child("seen").setValue("1");
+            mp.start();
 
 
 
@@ -112,6 +115,7 @@ public class Admin extends AppCompatActivity {
                     DatabaseReference databaseReference = mref.push();
                     databaseReference.child("name").setValue(title);
                     databaseReference.child("message").setValue(detail);
+                    databaseReference.child("seen").setValue("1");
                     databaseReference.child("date").setValue(date);
                     databaseReference.child("image").setValue(downloaduri.toString());
                     mp.start();

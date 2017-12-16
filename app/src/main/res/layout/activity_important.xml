@@ -3,88 +3,128 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:paddingTop="6dp"
-    android:paddingLeft="20dp"
-    android:orientation="vertical"
-    android:paddingRight="20dp"
-    android:paddingBottom="6dp"
     tools:context="com.pritz.sikkimuniversity.Important">
-<ScrollView
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
 
-        android:orientation="vertical">
+    android:orientation="vertical">
+
+
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/sharee"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:id="@+id/dat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="24 August"
+                android:textColor="#FF0CB6EF"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam" />
+
+            <ImageView
+                android:id="@+id/imm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:clickable="true"
-                app:backgroundTint="@color/colorPrimaryDark"
-                app:srcCompat="@drawable/shreef" />
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/download"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/drhissay"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/todo"
+                android:cropToPadding="true" />
+
+            <TextView
+                android:id="@+id/info"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                 android:background="@color/colorPrimaryDark"
-                android:clickable="true"
-                app:backgroundTint="@color/colorPrimaryDark"
-                app:srcCompat="@drawable/dwn" />
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="Please Wait.."
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/dat"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="5dp"
-            android:background="@color/colorAccent"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-
-            android:layout_gravity="center"
-             android:gravity="center"
-            android:text="24 August"
-            android:textColor="#FF0CB6EF"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/info"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="aboutapp"
-            android:gravity="left"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/colorAccent"
-            android:textColor="@color/colorPrimaryDark"
-             android:textStyle="bold" />
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true" />
+            <Button
+                android:id="@+id/down"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#03b633"
+                android:text="@string/download1"
+                android:textColor="@color/colorPrimaryDark" />
 
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/shar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#FF0CB6EF"
+                android:text="@string/sharew"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/seenby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/seen_by" />
+
+    <TextView
+        android:id="@+id/Ppl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/textview" />
+
+
 </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

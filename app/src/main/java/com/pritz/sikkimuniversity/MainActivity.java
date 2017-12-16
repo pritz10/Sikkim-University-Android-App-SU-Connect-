@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("A Central University established by an Act of Parliament of India,2007");
 
+       NotificationEventReceiver.setupAlarm(getApplicationContext());
+
 
 
        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
@@ -118,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         }
         if(id==R.id.Loc)
         {
-            Intent intent=new Intent(getApplication(),Details.class); // Location of SU
+            Intent intent=new Intent(getApplication(),SU_Map.class); // Location of SU
             startActivity(intent);
         }
         if(id==R.id.nss)
@@ -223,4 +225,22 @@ public class MainActivity extends AppCompatActivity
         editor.putString("secret_key",god);
         editor.apply();
     }
+
+
+
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+    }
+
+    // To prevent crash on resuming activity  : interaction with fragments allowed only after Fragments Resumed or in OnCreate
+    // http://www.androiddesignpatterns.com/2013/08/fragment-transaction-commit-state-loss.html
+    @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        // handleIntent();
+    }
+
 }

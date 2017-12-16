@@ -21,11 +21,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"
-        android:id="@+id/include2" />
+    <include
+        android:id="@+id/include2"
+        layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab3"
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
@@ -35,21 +36,21 @@
         app:fabSize="mini"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="bottom|right"
-        app:srcCompat="@drawable/handfree"
+        app:srcCompat="@drawable/frms"
         tools:ignore="RtlHardcoded" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
+        android:layout_gravity="top|right"
         android:layout_margin="@dimen/fab_margin"
         android:background="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimaryDark"
         app:fabSize="mini"
         app:layout_anchor="@+id/include2"
-        app:layout_anchorGravity="center_vertical|right"
-        app:srcCompat="@drawable/frms"
+        app:layout_anchorGravity="bottom|left"
+        app:srcCompat="@drawable/handfree"
         tools:ignore="RtlHardcoded" />
 
 </android.support.design.widget.CoordinatorLayout>

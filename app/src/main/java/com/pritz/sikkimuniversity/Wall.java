@@ -46,6 +46,8 @@ public class Wall extends AppCompatActivity {
         webView.setWebViewClient(new myWebClient());
         WebSettings webSettings=webView.getSettings();
         webView.getSettings().setJavaScriptEnabled(true);
+        webSettings.setUseWideViewPort(true);
+
         webView.getSettings().setBuiltInZoomControls(true);
         progressDialog.setMessage("Have a Good day...");
         progressDialog.show();

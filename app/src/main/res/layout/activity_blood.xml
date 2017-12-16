@@ -23,7 +23,8 @@ android:layout_gravity="center"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
 
-    android:layout_alignParentStart="true" />
+    android:layout_alignParentStart="true"
+        tools:ignore="ObsoleteLayoutParam,UnusedAttribute" />
 
     <android.support.v7.widget.RecyclerView
         android:layout_height="match_parent"

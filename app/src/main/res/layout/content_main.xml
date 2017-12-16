@@ -5,12 +5,13 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:paddingRight="5dp"
-    android:paddingLeft="5dp"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
 
+    android:paddingTop="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -20,7 +21,8 @@ android:paddingRight="5dp"
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        tools:ignore="InefficientWeight">
 
     </FrameLayout>
 </LinearLayout>

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.pritz.sikkimuniversity"
         minSdkVersion 16
@@ -50,6 +50,8 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile "com.hanks:htextview-rainbow:0.1.1"
+    compile "com.hanks:htextview-scale:0.1.1"
     testCompile 'junit:junit:4.12'
 }
 

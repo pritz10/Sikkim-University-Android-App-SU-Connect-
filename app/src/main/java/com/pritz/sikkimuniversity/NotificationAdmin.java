@@ -29,7 +29,8 @@ public class NotificationAdmin extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-                               builder.setSmallIcon(R.drawable.sulogo)
+
+                builder.setSmallIcon(R.drawable.sulogo)
                                 .setContentTitle("Notifications Example")
                                 .setContentText("This is a test notification");
 

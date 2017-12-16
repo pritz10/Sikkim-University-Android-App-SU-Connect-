@@ -1,21 +1,15 @@
 package com.pritz.sikkimuniversity;
 
-import android.app.ProgressDialog;
-import android.graphics.Bitmap;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class Details extends AppCompatActivity {
+public class SU_Map extends AppCompatActivity {
     private WebView webView;
 
 Button p;
@@ -32,7 +26,7 @@ Button p;
         webView = (WebView) findViewById(R.id.webview);
 
         //  progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        webView.setWebViewClient(new Details.myWebClient());
+        webView.setWebViewClient(new SU_Map.myWebClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);

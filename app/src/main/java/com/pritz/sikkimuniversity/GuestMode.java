@@ -31,14 +31,14 @@ Button button4,button6,button7,button8,button9;
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
 
-        Intent i = Intent.createChooser(emailIntent, "Send email to the developer...");
+        Intent i = Intent.createChooser(emailIntent, "Send email to Sikkim University...");
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         startActivity(i);
     }
     public void loc(View g)
     {
-        Intent i=new Intent(GuestMode.this,Details.class);
+        Intent i=new Intent(GuestMode.this,SU_Map.class);
         startActivity(i);
     }
 }

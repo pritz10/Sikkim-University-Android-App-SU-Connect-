@@ -5,10 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import android.widget.Toolbar;
 
 
 public class Schools extends AppCompatActivity {
@@ -38,7 +35,7 @@ public class Schools extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent x = new Intent(Schools.this,Department_list.class);
+                Intent x = new Intent(Schools.this,School_list.class);
                 x.putExtra("dept_names", position);
                 startActivity(x);
             }

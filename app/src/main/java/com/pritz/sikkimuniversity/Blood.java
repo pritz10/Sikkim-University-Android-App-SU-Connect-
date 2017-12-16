@@ -2,11 +2,8 @@ package com.pritz.sikkimuniversity;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -60,11 +57,11 @@ public class Blood extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-      FirebaseRecyclerAdapter<blood,BlogViewholder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<blood,BlogViewholder>(
-              blood.class,R.layout.blod,BlogViewholder.class,mdatabase.orderByChild("blodgrp").startAt("A")
+      FirebaseRecyclerAdapter<blood_gettersetter,BlogViewholder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<blood_gettersetter,BlogViewholder>(
+              blood_gettersetter.class,R.layout.blod,BlogViewholder.class,mdatabase.orderByChild("blodgrp").startAt("A")
       ) {
           @Override
-          protected void populateViewHolder(BlogViewholder viewHolder, blood model, int position) {
+          protected void populateViewHolder(BlogViewholder viewHolder, blood_gettersetter model, int position) {
               viewHolder.setName(model.getName());
               viewHolder.setImage(getApplicationContext(),model.getImage());
               viewHolder.setBlodgrp(model.getBlodgrp());
@@ -150,7 +147,7 @@ public class Blood extends AppCompatActivity {
             {
                 AlertDialog.Builder builder=new AlertDialog.Builder(this);
 
-                builder.setMessage("You have chosen to donate your blood.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
+                builder.setMessage("You have chosen to donate your blood_gettersetter.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood_gettersetter. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 builder.setPositiveButton("Okay",null);
                 builder.create();
                 builder.show();

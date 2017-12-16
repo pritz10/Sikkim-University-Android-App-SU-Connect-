@@ -148,7 +148,7 @@ public class RowAdapter extends ArrayAdapter{
 
                 try {
                     getContext().getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
-                    Toast.makeText(getContext(),"Details Added to your contact",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(),"SU_Map Added to your contact",Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(getContext(), "Exception: " + e.getMessage(), Toast.LENGTH_SHORT).show();

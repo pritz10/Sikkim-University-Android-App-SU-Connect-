@@ -8,10 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,14 +20,14 @@ public class ListViewAdapter extends BaseAdapter {
     // Declare Variables
     Context mContext;
     LayoutInflater inflater;
-    private List<WorldPopulation> details = null;
-    private ArrayList<WorldPopulation> arraylist;
+    private List<Contactboo_kGettersetter> details = null;
+    private ArrayList<Contactboo_kGettersetter> arraylist;
 
-    public ListViewAdapter(Context context, List<WorldPopulation> worldpopulationlist) {
+    public ListViewAdapter(Context context, List<Contactboo_kGettersetter> worldpopulationlist) {
         mContext = context;
         this.details = worldpopulationlist;
         inflater = LayoutInflater.from(mContext);
-        this.arraylist = new ArrayList<WorldPopulation>();
+        this.arraylist = new ArrayList<Contactboo_kGettersetter>();
         this.arraylist.addAll(worldpopulationlist);
     }
 
@@ -44,7 +42,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public WorldPopulation getItem(int position) {
+    public Contactboo_kGettersetter getItem(int position) {
         return details.get(position);
     }
 
@@ -104,7 +102,7 @@ public class ListViewAdapter extends BaseAdapter {
         }
         else
         {
-            for (WorldPopulation wp : arraylist)
+            for (Contactboo_kGettersetter wp : arraylist)
             {
                 if (wp.getName().toLowerCase(Locale.getDefault()).contains(charText))
                 {

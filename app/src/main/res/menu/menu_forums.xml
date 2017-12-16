@@ -6,5 +6,6 @@
         android:id="@+id/db"
     android:icon="@drawable/control"
         android:title="Donate Blood"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
 </menu>

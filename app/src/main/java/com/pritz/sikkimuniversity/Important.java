@@ -8,8 +8,17 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,31 +26,48 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import static android.R.attr.description;
+
 public class Important extends AppCompatActivity {
-    TextView dat_,info_;
+    TextView dat_,info_,peo,seenbby;
     ImageView immm;
     String dat;
     String  nam;
     String inf;
+     String key;
+     String people;
+     String se;
     String img;
-FloatingActionButton s,d;
+    int a;
+
+Button s,d;
+
 
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important);
 
 
-        getSupportActionBar().setTitle("........");
+        getSupportActionBar().setTitle("Loading...");
         SharedPreferences sharedPreferences = getSharedPreferences("keyvalue", Context.MODE_PRIVATE);
+
+
 
         dat_=(TextView)findViewById(R.id.dat);
         info_=(TextView)findViewById(R.id.info);
+        peo=(TextView)findViewById(R.id.Ppl);
+        seenbby=(TextView) findViewById(R.id.seenby);
         immm=(ImageView)findViewById(R.id.imm);
-        s=(FloatingActionButton)findViewById(R.id.sharee);
-        d=(FloatingActionButton)findViewById(R.id.download);
-        String key = sharedPreferences.getString("secret_key","");
+        s=(Button)findViewById(R.id.shar);
+        d=(Button)findViewById(R.id.down);
+
+
+
+        key = sharedPreferences.getString("secret_key","");
         mref.child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -50,11 +76,18 @@ FloatingActionButton s,d;
                 nam=(String)dataSnapshot.child("name").getValue();
                 inf=(String)dataSnapshot.child("message").getValue();
                 img=(String)dataSnapshot.child("image").getValue();
-                Picasso.with(Important.this).load(img).resize(500,600).into(immm);
+                people=(String)dataSnapshot.child("people").getValue();
+               se=(String)dataSnapshot.child("seen").getValue();
+
+                Picasso.with(Important.this).load(img).fit().into(immm);
+
 
                 getSupportActionBar().setTitle(nam);
                 dat_.setText(dat);
                 info_.setText(nam+"\n\n"+inf);
+                seenbby.setText("Seeb by-"+se);
+                peo.setText(people);
+                viewed(a);
             }
 
             @Override
@@ -62,6 +95,7 @@ FloatingActionButton s,d;
 
             }
         });
+
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,4 +116,31 @@ FloatingActionButton s,d;
 });
 
     }
+    void viewed(int a)
+    { SharedPreferences pl = getSharedPreferences("ppkey", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pl.edit();
+        String chekkey = pl.getString("pkey","");
+        if(chekkey.equals(key))
+        {
+            Toast.makeText(this, " You have already viewed this...", Toast.LENGTH_LONG).show();
+
+        }
+        else
+        {
+
+            editor.putString("pkey",key);
+            editor.apply();
+            a=Integer.parseInt(se);
+            a++;
+            String b=Integer.toString(a);
+            mref.child(key).child("seen").setValue(b);
+
+            SharedPreferences sharedPreferences =getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+            String name = sharedPreferences.getString("s_name","");
+            String p =people+"\n"+name;
+            mref.child(key).child("people").setValue(p);
+        }
+
+    }
+
 }

@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import static android.R.attr.description;
 import static com.pritz.sikkimuniversity.R.id.webview;
 
 
@@ -80,8 +83,9 @@ ProgressBar progressBar1;
 
         }
         @Override
-        public void onReceivedError(WebView view, int errorCode,
-                                    String description, String failingUrl) {
+        public void onReceivedError (WebView view,
+                                     WebResourceRequest request,
+                                     WebResourceError error){
             setContentView(R.layout.nointernet);
             Toast.makeText(getApplicationContext(), "NO INTERNET\t!\nCheck Your Internet Connection... " + description, Toast.LENGTH_SHORT).show();
             //super.onReceivedError(view, errorCode, description, failingUrl);

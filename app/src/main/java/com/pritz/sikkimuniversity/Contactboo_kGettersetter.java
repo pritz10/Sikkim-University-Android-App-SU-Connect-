@@ -5,11 +5,11 @@ package com.pritz.sikkimuniversity;
  */
 
 
-    public class WorldPopulation {
+    public class Contactboo_kGettersetter {
         private String number;
         private String name;
 
-        public WorldPopulation(String name, String number) {
+        public Contactboo_kGettersetter(String name, String number) {
             this.name = name;
             this.number = number;
         }

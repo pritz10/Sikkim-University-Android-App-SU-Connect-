@@ -14,7 +14,7 @@
     android:layout_marginStart="12dp"
     android:layout_marginTop="12dp"
     android:descendantFocusability="blocksDescendants"
-    tools:context="com.pritz.sikkimuniversity.Department_list">
+    tools:context="com.pritz.sikkimuniversity.School_list">
   <ListView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
