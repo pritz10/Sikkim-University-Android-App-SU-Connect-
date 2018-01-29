@@ -3,7 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:alwaysDrawnWithCache="false"
+    android:animateLayoutChanges="true"
+    android:animationCache="true"
+    android:duplicateParentState="false"
+    android:fadeScrollbars="false"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,17 +22,23 @@
         android:paddingBottom="2dp"
         android:paddingLeft="2dp"
         android:paddingRight="2dp"
+
         android:paddingTop="2dp"
         android:visibility="visible">
 
 
         <ImageView
             android:id="@+id/pictures"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:src="@drawable/rob"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
 
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/prey"
             tools:ignore="ContentDescription" />
 
         <RelativeLayout
@@ -45,11 +58,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+                android:layout_below="@+id/name"
                 android:layout_gravity="center"
                 android:elevation="0dp"
                 android:gravity="left"
-                android:maxLines="1"
+                android:maxLines="3"
+                android:textColor="#035efa"
                 android:nestedScrollingEnabled="false"
                 android:paddingBottom="2dp"
                 android:paddingEnd="5dp"
@@ -60,9 +74,9 @@
                 android:scrollbarAlwaysDrawHorizontalTrack="false"
                 android:scrollbarAlwaysDrawVerticalTrack="false"
                 android:selectAllOnFocus="false"
-                android:text="1234567890-jggggggggggggggggggggggggggggggggggggg"
+                android:text="11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
                 android:textColorHighlight="@color/colorAccent"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
 
             <TextView
@@ -102,29 +116,20 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:background="#03b633"
+                android:gravity="center"
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"
-                android:background="#03b633"
                 android:text="Sept 31"
                 android:textColor="#fdfdfd"
-                tools:ignore="HardcodedText" android:layout_marginEnd="2dp" android:layout_marginStart="3dp" />
+                tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/seen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="♥ 25 people seen.."
-                android:textColor="#FF177AE4"
-                tools:ignore="HardcodedText,RtlHardcoded" />
 
         </RelativeLayout>
 

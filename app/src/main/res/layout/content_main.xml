@@ -5,24 +5,30 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:orientation="vertical"
-    android:paddingBottom="5dp"
+     android:orientation="vertical"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
 
-    android:paddingTop="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.pritz.sikkimuniversity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
 
-    <FrameLayout
-        android:id="@+id/content"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/maintabs"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:ignore="InefficientWeight">
+        android:layout_height="wrap_content"
+        app:tabTextColor="#FF979797"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabIndicatorColor="#FFFA8500"
+        app:tabIndicatorHeight="4dp"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+       >
 
-    </FrameLayout>
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
 </LinearLayout>

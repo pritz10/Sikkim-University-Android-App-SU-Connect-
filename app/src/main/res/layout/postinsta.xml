@@ -13,14 +13,14 @@
 
         <TextView
             android:id="@+id/losname"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:paddingLeft="2dp"
             android:paddingRight="2dp"
             android:text="Name@Department Name"
             android:textColor="@color/colorPrimary"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -33,7 +33,7 @@
             android:paddingRight="2dp"
             android:paddingLeft="2dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/vc" />
+            app:srcCompat="@drawable/vc" android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/posttitle"
@@ -45,7 +45,7 @@
             android:paddingTop="5dp"
             android:text="Something Went Wromg"
             android:textColor="@color/colorAccent"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -56,14 +56,14 @@
             android:layout_gravity="left"
             android:paddingLeft="2dp"
             android:paddingRight="2dp"
-            android:text="Something Went Wromg"
+            android:text="@string/something_went_wromg"
             android:textColor="@color/colorAccent"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/datei"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="June 2 7:23 Pm"

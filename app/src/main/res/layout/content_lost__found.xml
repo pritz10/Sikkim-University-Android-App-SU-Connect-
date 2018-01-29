@@ -16,7 +16,7 @@ android:orientation="vertical"
         android:scrollbarSize="9dp">
 
         <LinearLayout
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:weightSum="1">
@@ -42,7 +42,6 @@ android:orientation="vertical"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:background="@drawable/des"
         android:ems="10"
@@ -54,7 +53,7 @@ android:orientation="vertical"
         android:paddingRight="15dp"
         android:paddingStart="15dp"
         android:paddingTop="15dp"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent" android:layout_alignParentStart="true"/>
 
     <EditText
         android:id="@+id/ldetail"
@@ -63,7 +62,6 @@ android:orientation="vertical"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/ltitle"
         android:layout_marginTop="19dp"
         android:background="@drawable/des"

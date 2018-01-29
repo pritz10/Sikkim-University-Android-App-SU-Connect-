@@ -14,13 +14,11 @@
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/colorPrimary"
 
-        android:layout_x="168dp"
-        android:layout_y="216dp"
         android:visibility="visible"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true" tools:targetApi="lollipop"/>
     <android.support.v7.widget.RecyclerView
         android:layout_height="match_parent"
         android:layout_width="match_parent"

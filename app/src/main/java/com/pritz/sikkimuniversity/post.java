@@ -1,21 +1,14 @@
 package com.pritz.sikkimuniversity;
 
 /**
- * Created by pritz on 15/3/17.
+ * Created by Sikim on 15/3/17.
  */
 
 public class post {
 
     private String title,detail,image,Username,date;
 
-  /*  public post(String title,String detail,String image,String Username)
-    {
 
-        this.title=title;
-        this.detail=detail;
-        this.image=image;
-        this.Username=Username;
-    }*/
     public String getUsername()
     {
         return Username;

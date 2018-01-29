@@ -25,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 import static com.pritz.sikkimuniversity.R.id.pictures;
 import static com.pritz.sikkimuniversity.R.id.rainbo;
 
@@ -45,8 +47,7 @@ public class Mainnotice extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mainnotice, container, false);
+         return inflater.inflate(R.layout.fragment_mainnotice, container, false);
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -62,14 +63,12 @@ public class Mainnotice extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("s_name", "");
-        //notice.setSelected(true);
-        notice.setText(name);
+         notice.setText(name);
         postinsta.setHasFixedSize(true);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setReverseLayout(true);
         mLayoutManager.setStackFromEnd(true);
-        // recyclerView.setLayoutManager(mLayoutManager);
-        mdatabase.keepSynced(true);
+         mdatabase.keepSynced(true);
         postinsta.setLayoutManager(mLayoutManager);
 
 
@@ -95,30 +94,15 @@ public class Mainnotice extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-       /* DatabaseReference connectedRef = FirebaseDatabase.getInstance().getReference(".info/connected");
-        connectedRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                boolean connected = snapshot.getValue(Boolean.class);
-                if (connected) {
-                    Toast.makeText(getActivity(), "\n\t Connected To Server\t\n", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getActivity(), "\n\tSlow Internet \t\n", Toast.LENGTH_SHORT).show();                }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                Toast.makeText(getActivity(), "\n\t NO Internet\t\n", Toast.LENGTH_SHORT).show();
-            }
-        });*/
         FirebaseRecyclerAdapter<imp, BlogViewholder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<imp, BlogViewholder>(
-                imp.class, R.layout.posti, BlogViewholder.class, mdatabase.limitToLast(1)) {
+                imp.class, R.layout.posti, BlogViewholder.class, mdatabase.limitToLast(20)) {
             @Override
             protected void populateViewHolder(BlogViewholder viewHolder, imp model, int position) {
                 final String pskey = getRef(position).getKey();
                 viewHolder.setname(model.getname());
-               viewHolder.setSeen(model.getSeen());
-                viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
+                 viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
+
                 viewHolder.setMessage(model.getMessage());
                 viewHolder.setDate(model.getDate());
                 notice.setVisibility(View.GONE);
@@ -153,13 +137,11 @@ public class Mainnotice extends Fragment {
             }
         };
         postinsta.setAdapter(firebaseRecyclerAdapter);
-        mdatabase.keepSynced(true);
 
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(String uri);
+         void onFragmentInteraction(String uri);
     }
 
 
@@ -186,18 +168,15 @@ public class Mainnotice extends Fragment {
         public void setImage(Context ctx, String image) {
 
             ImageView post = (ImageView) view.findViewById(pictures);
-            Picasso.with(ctx).load(image).resize(100, 100).centerCrop().into(post);
-
-        }
+           Picasso.with(ctx).load(image).resize(100, 100).centerCrop().into(post);
+         }
 
         public void setDate(String date) {
             TextView date1 = (TextView) view.findViewById(R.id.date);
             date1.setText(date);
         }
 
-       public void setSeen(String seen) {
-            TextView see = (TextView) view.findViewById(R.id.seen);
-            see.setText(seen);}
+
         }
 
     }

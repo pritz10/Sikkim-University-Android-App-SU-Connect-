@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pritz.sikkimuniversity.Story">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" tools:targetApi="lollipop"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:dividerHeight="13.0sp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+         android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <ImageButton
+            android:id="@+id/cameras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/cameras" />
+
+        <ImageButton
+            android:id="@+id/addpic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/picbtn" />
+
+        <EditText
+            android:id="@+id/strymsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="Enter Story..."
+            android:inputType="textPersonName"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="14dp" />
+
+        <ImageButton
+            android:id="@+id/sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/sendbtn" />
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dispic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="1dp" />
+
+</RelativeLayout>

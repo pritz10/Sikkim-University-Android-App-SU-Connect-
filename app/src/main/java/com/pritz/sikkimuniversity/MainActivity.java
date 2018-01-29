@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,8 +27,9 @@ import static android.R.attr.x;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,Mainnotice.OnFragmentInteractionListener {
 
-
-
+private ViewPager mviewpager;
+private SectionsPagerAdapter sectionpager;
+private TabLayout mtablayout;
 
    @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -42,6 +45,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("A Central University established by an Act of Parliament of India,2007");
+        mviewpager=(ViewPager) findViewById(R.id.mpager);
+        sectionpager=new SectionsPagerAdapter(getSupportFragmentManager());
+
+        mviewpager.setAdapter(sectionpager);
+        mtablayout=(TabLayout) findViewById(R.id.maintabs);
+        mtablayout.setupWithViewPager(mviewpager);
 
        NotificationEventReceiver.setupAlarm(getApplicationContext());
 
@@ -50,9 +59,9 @@ public class MainActivity extends AppCompatActivity
        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
        String name = sharedPreferences.getString("s_name","");
        nav_user.setText(name);
-       Mainnotice c=new Mainnotice();
+      /* Mainnotice c=new Mainnotice();
        getSupportFragmentManager().beginTransaction()
-               .replace(R.id.content,c).commit();
+               .replace(R.id.content,c).commit();*/
 
        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

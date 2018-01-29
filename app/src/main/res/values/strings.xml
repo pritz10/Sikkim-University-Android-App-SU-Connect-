@@ -1265,7 +1265,10 @@ During Silver Jubilee Year the NSS theme song had been composed. All NSS volunte
     <string name="made_with_in_department_of_computer_applications_sikkim_university_for_sikkim_university">Made with ♥ in Department of Computer Applications,Sikkim University For Sikkim University</string>
     <string name="pritam_shah">Pritam Shah</string>
     <string name="tilak_gurung">Tilak Gurung</string>
-    <string name="notice_board">Notice Board</string>
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <string name="virtual_campus_made_with">Virtual Campus Made with ♥</string>
     <string name="blood_donors">Blood Donors</string>
     <string name="chat_room">Chat Room</string>
@@ -1283,4 +1286,17 @@ During Silver Jubilee Year the NSS theme song had been composed. All NSS volunte
     <string name="download1">⬃Download</string>
     <string name="textview">TextView</string>
     <string name="seen_by">Seen By</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="stories">Stories</string>
+    <string name="something_went_wromg">Something Went Wromg</string>
+    <string name="_25_august">25 August</string>
+    <string name="todgo">TODO</string>
+    <string name="todosd">TODO</string>
+    <string name="enter_message">Enter Message...</string>
+    <string name="pritz">pritz</string>
+    <string name="fg">TODO</string>
+    <string name="enter_stories">Enter Stories..</string>
+    <string name="tododf">TODO</string>
+    <string name="add_your_story">Add Your Story</string>
+    <string name="fd">TODO</string>
 </resources>

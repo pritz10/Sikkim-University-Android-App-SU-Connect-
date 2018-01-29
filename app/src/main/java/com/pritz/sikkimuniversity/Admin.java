@@ -54,7 +54,7 @@ public class Admin extends AppCompatActivity {
         getSupportActionBar().setTitle("ADMIN");
         mStorageRef=FirebaseStorage.getInstance().getReference();
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.chi);
-        //initialization//
+
         lost = (ImageButton) findViewById(R.id.lost);
         ltitle = (EditText) findViewById(R.id.ltitle);
         ldetail = (EditText) findViewById(R.id.ldetail);
@@ -84,17 +84,14 @@ public class Admin extends AppCompatActivity {
         final String title = ltitle.getText().toString().trim();
         final String date = ldate.getText().toString().trim();
         final String detail = ldetail.getText().toString().trim();
-        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-        final String name = sharedPreferences.getString("s_name","");
-        final String Department= sharedPreferences.getString("s_dept","");
+
         if(imageurl==null && !TextUtils.isEmpty(title) && !TextUtils.isEmpty(detail))
         {
             DatabaseReference databaseReference = mref.push();
             databaseReference.child("name").setValue(title);
             databaseReference.child("message").setValue(detail);
             databaseReference.child("date").setValue(date);
-            databaseReference.child("seen").setValue("1");
-            mp.start();
+             mp.start();
 
 
 
@@ -115,10 +112,9 @@ public class Admin extends AppCompatActivity {
                     DatabaseReference databaseReference = mref.push();
                     databaseReference.child("name").setValue(title);
                     databaseReference.child("message").setValue(detail);
-                    databaseReference.child("seen").setValue("1");
                     databaseReference.child("date").setValue(date);
-                    databaseReference.child("image").setValue(downloaduri.toString());
-                    mp.start();
+                     databaseReference.child("image").setValue(downloaduri.toString());
+                     mp.start();
 
 
 

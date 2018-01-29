@@ -49,18 +49,6 @@ public class Login extends AppCompatActivity {
 
         File file = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/userinfo.xml");
         if (file.exists()) {
-            /*final ProgressDialog progressBar = new ProgressDialog(Login.this);
-            progressBar.setCancelable(true);
-            progressBar.setMessage("Getting Refreshed...");
-            progressBar.show();
-            long delayInMillis = 5000;
-            Timer timer = new Timer();
-            timer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    progressBar.dismiss();
-                }
-            }, delayInMillis);*/
 
                     startActivity(new Intent(Login.this, MainActivity.class));
             Login.this.finish();

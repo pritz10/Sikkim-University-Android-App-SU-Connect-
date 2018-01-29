@@ -1,7 +1,7 @@
 package com.pritz.sikkimuniversity;
 
 /**
- * Created by pritz on 24/7/17.
+ * Created by Sikim on 24/7/17.
  */
 
 public class imp {
@@ -9,29 +9,23 @@ public class imp {
     private String date;
     private String image;
     private String message;
-    private String seen;
+
 
 
     public imp()
     {
 
     }
-    public imp(String name, String date, String message,String image,String seen){
+    public imp(String name, String date, String message,String image){
         this.name=name;
         this.date=date;
         this.message=message;
         this.image=image;
-       this.seen=seen;
+
 
     }
 
-    public String getSeen() {
-        return seen;
-    }
 
-    public void setSeen(String seen) {
-        this.seen = seen;
-    }
 
     public String getMessage() {
         return message;

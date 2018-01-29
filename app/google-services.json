@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "416241124000-dfa2g9burgv0mqbihbrrd4b7posr2go9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pritz.sikkimuniversity",
+            "certificate_hash": "a3134c05bc5c82f649bbfa94d7147dce630a2f0b"
+          }
+        },
+        {
           "client_id": "416241124000-fejfiuqkoii7i5lof5326o0qcmungjud.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

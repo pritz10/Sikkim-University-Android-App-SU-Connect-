@@ -49,12 +49,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:foregroundGravity="center"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/drhissay"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:contentDescription="@string/todo"
-                android:cropToPadding="true" />
+                android:cropToPadding="true"
+                android:foregroundGravity="center"
+                android:src="@mipmap/ppr1" />
 
             <TextView
                 android:id="@+id/info"
@@ -108,23 +108,15 @@
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
-    <TextView
-        android:id="@+id/seenby"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/seen_by" />
 
-    <TextView
-        android:id="@+id/Ppl"
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/sg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/textview" />
-
-
-</LinearLayout>
-    </ScrollView>
+        android:text="seen by-" />
 </LinearLayout>
 
 

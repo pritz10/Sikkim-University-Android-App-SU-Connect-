@@ -24,6 +24,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".Login"
             android:label="Sikkim University"

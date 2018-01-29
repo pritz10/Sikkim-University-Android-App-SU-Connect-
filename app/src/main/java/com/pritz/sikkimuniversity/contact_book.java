@@ -41,13 +41,12 @@ getSupportActionBar().setTitle("Contact Book");
                 "Department of English","Department of Hindi","Department of Zoology","Department of Tourism","Department of Commerce","Department of Mathematics"," PS to Vice-Chancellor",
                 " PS to Registrar","PA to Finance Officer"," Joint Registrar, Finance"," Joint Registrar, Academics","Assistant Registrar, Establishment","Assistant Registrar, Administration"
                 ,"Section Officer, Academics","Assistant, Registrar Office"," Dispatch Section","Section Officer, Administration Section","Section Officer, Establishment Section","Section Officer, Finance Section",
-                "Finance Section, Second connection","System Analyst","Security Officer","Assistant Engineer"};
+                "Finance Section, Second connection","System Analyst","Security Officer","Assistant Engineer","Pritam Shah(Developer)"};
 
         number  = new String[] {"251067","251403","250104","251396","251060","231198","251111","251225","251222","251188","251078","251221","250074","251130",
                 "250228","251066","250225","251186","251056","251042","232062","231121","231662","251968","251152","251485","280302","201826","280337","231549","251788",
                 "251441","251342","280774","231547","232080","251004","232067","232085","231270","231151","232225","201827","280239","231551","231776","231302","231318","231322","231522","251011","251013",
-                "251015","251016","251017","251018","251019","251021","251022","251023","251024","251025","251027","251028","251032","251033","251034"
-        };
+                "251015","251016","251017","251018","251019","251021","251022","251023","251024","251025","251027","251028","251032","251033","251034","8906076058"        };
 
         // Locate the ListView in listview_main.xml
         list = (ListView)findViewById(R.id.listview);

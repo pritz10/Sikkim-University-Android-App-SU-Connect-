@@ -3,88 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorAccent"
-
-    android:orientation="vertical"
+     android:orientation="vertical"
     tools:context="com.pritz.sikkimuniversity.Mainnotice"
     tools:ignore="RtlHardcoded">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/nop"
-        android:orientation="horizontal">
-
-        <com.hanks.htextview.rainbow.RainbowTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:paddingBottom="4dp"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="4dp"
-            android:text="⚀⚁⚂"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:colorSpace="150dp"
-            app:colorSpeed="1dp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/noti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_weight="0.87"
-
-
-            android:gravity="center"
-            android:paddingBottom="4dp"
-            android:paddingTop="4dp"
-
-
-            android:text="Notice Board"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,InefficientWeight,ObsoleteLayoutParam,RtlHardcoded" />
-
-        <com.hanks.htextview.rainbow.RainbowTextView
-            android:id="@+id/rainbowTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingBottom="4dp"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="4dp"
-            android:text="⚃⚄⚅"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:colorSpace="150dp"
-            app:colorSpeed="1dp"
-            tools:ignore="HardcodedText" />
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/Ta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/colorAccent"
 
         android:text="Take a Deep Breathe !"
-        android:textColor="@color/colorPrimaryDark"
-        android:background="@color/colorAccent"
-        tools:ignore="HardcodedText" />
+         tools:ignore="HardcodedText" />
 
     <com.hanks.htextview.rainbow.RainbowTextView
         android:id="@+id/rainbo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+
         android:gravity="center"
+        android:layout_gravity="center"
+
         android:paddingBottom="4dp"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
@@ -99,11 +39,10 @@
         android:id="@+id/Taa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
         android:gravity="center"
         android:text="While We Fetch Some News For You !"
 
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
         tools:ignore="HardcodedText" />
 
     <ProgressBar
@@ -127,7 +66,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="6dp"
-        android:background="@color/colorAccent"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:dividerHeight="14.0sp"

@@ -43,7 +43,7 @@ public class Donate_Blood extends AppCompatActivity {
     Spinner spinner;
     EditText ph;
     ImageView pdf2;
-Uri img=null;
+    Uri img=null;
     String bloodgroup;
 
     private static final int GALLERY_REQUEST = 1;

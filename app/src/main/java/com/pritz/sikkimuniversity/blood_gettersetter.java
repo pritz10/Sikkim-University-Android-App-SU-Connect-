@@ -1,7 +1,7 @@
 package com.pritz.sikkimuniversity;
 
 /**
- * Created by pritz on 18/7/17.
+ * Created by Sikim on 18/7/17.
  */
 
 public class blood_gettersetter {
