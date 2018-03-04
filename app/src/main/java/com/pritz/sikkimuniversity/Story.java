@@ -85,7 +85,6 @@ public class Story extends Fragment {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                     Uri downloaduri=taskSnapshot.getDownloadUrl();
-
                     DatabaseReference databaseReference=mref.push();
                     databaseReference.child("title").setValue(title);
                      databaseReference.child("image").setValue(downloaduri.toString());

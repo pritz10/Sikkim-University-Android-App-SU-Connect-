@@ -10,6 +10,33 @@
     tools:context="com.pritz.sikkimuniversity.Login">
 
     <EditText
+        android:id="@+id/pasword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignStart="@+id/email"
+
+        android:layout_below="@+id/email"
+
+        android:layout_marginTop="11dp"
+        android:background="@drawable/des"
+        android:ems="10"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextFields" />
+
+    <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,14 +65,17 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/email"
-        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/pasword"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="bottom|end"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
         android:background="@color/colorPrimary"
         android:onClick="checkLogin"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:elevation="11dp"
+        app:elevation="5dp"
         app:srcCompat="@mipmap/send" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fa"
