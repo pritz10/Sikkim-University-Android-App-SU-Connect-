@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_bus"
+        android:icon="@drawable/bus"
+        android:title="Bus" />
+
+    <item
+        android:id="@+id/navigation_blood"
+        android:icon="@drawable/blod"
+        android:title="Blood Donors" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/contact"
+        android:title="Contacts" />
+
+
+</menu>

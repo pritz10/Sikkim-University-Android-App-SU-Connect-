@@ -16,7 +16,7 @@ public class imp {
     {
 
     }
-    public imp(String name, String date, String message,String image){
+    public imp(String name, String date, String message, String image){
         this.name=name;
         this.date=date;
         this.message=message;

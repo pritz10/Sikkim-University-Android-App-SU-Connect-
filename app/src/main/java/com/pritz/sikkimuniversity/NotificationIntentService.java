@@ -23,7 +23,7 @@ import com.google.firebase.database.Query;
 
 
 public class NotificationIntentService extends IntentService {
-    private DatabaseReference mref;
+  private DatabaseReference mref;
 
     private static final int NOTIFICATION_ID = 1;
     private static final String ACTION_START = "ACTION_START";

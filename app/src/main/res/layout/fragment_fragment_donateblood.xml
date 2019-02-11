@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentDonateblood">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="9dp"
+        android:scrollbarStyle="insideInset"
+        tools:ignore="ExtraText,UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:ignore="ScrollViewSize">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pdf"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/add_btn"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp" />
+
+            <EditText
+                android:id="@+id/phnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ltitle"
+                android:layout_marginTop="19dp"
+                android:drawableLeft="@drawable/email"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingBottom="15dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/colorAccent"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="To Donate Blood is to Save Life, So you are a real life hero. You must upload a Genuine pic  of Yourself so that the society can see their real life heros.The Phone Number Should be Genuine so that you can be reached by the Needy ones.You can not change pic after that.You cannot undo it after that.Thanks For Your ♥. You can be proud of yourself.."
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/seng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Be a Blood Donar"
+                android:background="@drawable/fors"
+                android:layout_weight="7.65"
+                tools:ignore="HardcodedText,InefficientWeight" />
+
+        </LinearLayout>
+        >
+    </ScrollView>
+
+</LinearLayout>

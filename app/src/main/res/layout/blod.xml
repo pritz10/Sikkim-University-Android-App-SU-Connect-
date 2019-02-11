@@ -31,14 +31,12 @@
         android:layout_marginBottom="5dp"
         android:weightSum="1">
 
-<ImageView
-    android:id="@+id/pico"
+        <ImageView
+            android:id="@+id/pico"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-
-            android:src="@drawable/rob"
-    tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" />
 
 
         <TextView
@@ -52,17 +50,7 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText,InefficientWeight,SpUsage" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|left"
-            app:backgroundTint="@color/colorPrimary"
-            app:fabSize="mini"
-            app:layout_anchor="@+id/include"
-            app:layout_anchorGravity="bottom|right"
-            app:srcCompat="@drawable/devcal"
-            tools:ignore="RtlHardcoded" />
+
 
     </LinearLayout>
 

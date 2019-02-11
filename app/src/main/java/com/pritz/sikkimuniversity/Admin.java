@@ -37,7 +37,7 @@ public class Admin extends AppCompatActivity {
     ImageButton lost;
     EditText ltitle;
     EditText ldetail;
-    Button b;
+    Button b,mo;
 
     EditText ldate;
     private  Uri imageurl=null;
@@ -54,7 +54,15 @@ public class Admin extends AppCompatActivity {
         getSupportActionBar().setTitle("ADMIN");
         mStorageRef=FirebaseStorage.getInstance().getReference();
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.chi);
+        mo=(Button)findViewById(R.id.nyc);
+        mo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin.this, signup.class);
+                startActivity(i);
 
+            }
+        });
         lost = (ImageButton) findViewById(R.id.lost);
         ltitle = (EditText) findViewById(R.id.ltitle);
         ldetail = (EditText) findViewById(R.id.ldetail);

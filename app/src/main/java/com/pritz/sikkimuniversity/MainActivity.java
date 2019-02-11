@@ -211,6 +211,7 @@ private TabLayout mtablayout;
             startActivity(intent);
         }
         else if (id == R.id.contact) {
+
             Intent intent = new Intent(getApplicationContext(), contact_book.class);
             startActivity(intent);
         }

@@ -78,10 +78,10 @@ public class SU_Connect extends AppCompatActivity implements View.OnClickListene
 
     private void loadSignUpPage() {
         String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
-        Intent signUpIntent = new Intent(this, SignUpActivity.class);
+     String password = editTextPassword.getText().toString().trim();
+        //Intent signUpIntent = new Intent(this, SignUpActivity.class);
 
-        startActivity(signUpIntent);
+     //   startActivity(signUpIntent);
     }
 
 

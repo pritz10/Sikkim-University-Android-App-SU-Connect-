@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.pritz.sikkimuniversity.LostFound"
-    tools:showIn="@layout/activity_lost_found">
+    android:orientation="vertical"
+    tools:context=".fragmentBlood">
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Be a blood donar" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/colorPrimary"
-
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_gravity="center"
+        android:layout_x="168dp"
         android:layout_y="216dp"
         android:visibility="visible"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
+        android:layout_alignParentStart="true"
+        tools:ignore="ObsoleteLayoutParam,UnusedAttribute" />
+
     <android.support.v7.widget.RecyclerView
-        android:layout_height="match_parent"
+        android:id="@+id/blodlife"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginBottom="6dp"
-        android:dividerHeight="10.0sp"
-        android:id="@+id/postinsta">
+        android:dividerHeight="10.0sp">
+
     </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+</LinearLayout>

@@ -66,14 +66,6 @@ public class  Forums extends AppCompatActivity{
         SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         final String name = sharedPreferences.getString("s_name","");
 
-        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    t1.setLanguage(Locale.ENGLISH);
-                }
-            }
-        });
 
         editText = (EditText) findViewById(R.id.editText2);
         listView = (ListView) findViewById(R.id.listview);
@@ -99,7 +91,6 @@ public class  Forums extends AppCompatActivity{
                     mref.push().setValue(getterandSetter);
                     editText.setText("");
 
-mp.start();
                 }
 
             }

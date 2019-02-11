@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragmentNoticeBoard">
+
+
+    <com.hanks.htextview.rainbow.RainbowTextView
+        android:id="@+id/rainbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:layout_gravity="center"
+
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:text="Pritam Shah"
+        android:textStyle="bold"
+        app:colorSpace="159dp"
+        app:colorSpeed="19dp"
+        tools:ignore="HardcodedText" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_x="168dp"
+        android:layout_y="216dp"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:visibility="visible"
+        tools:ignore="ObsoleteLayoutParam,UnusedAttribute" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/posti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:dividerHeight="14.0sp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"></android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

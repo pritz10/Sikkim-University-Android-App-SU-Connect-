@@ -24,7 +24,12 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".MainFragmenthome"
+            android:label="@string/title_activity_chnck"></activity>
+        <activity
+            android:name=".BottomNavigation"
+            android:label="@string/title_activity_bottom_navigation" />
         <activity
             android:name=".Login"
             android:label="Sikkim University"
@@ -47,13 +52,8 @@
             android:exported="false" />
 
         <receiver android:name=".NotificationEventReceiver" />
-        <receiver android:name=".NotificationServiceStarterReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-                <action android:name="android.intent.action.TIME_SET" />
-            </intent-filter>
-        </receiver>
+
+
         <activity
             android:name=".MainActivity"
             android:label="Sikkim University"
@@ -337,12 +337,13 @@
             android:name=".handwriting"
             android:label="Paperfree"
             android:parentActivityName=".MainActivity"
-             android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".Admin" />
+        <activity android:name=".signup" />
         <activity android:name=".NotificationAdmin" />
     </application>
 

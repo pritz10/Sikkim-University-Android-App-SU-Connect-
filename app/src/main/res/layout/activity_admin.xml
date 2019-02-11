@@ -112,6 +112,12 @@
                 android:text="Post"
                 tools:ignore="HardcodedText" />
 
+            <Button
+                android:id="@+id/nyc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEW USER LOGIN" />
+
 
         </LinearLayout>>
     </ScrollView>>

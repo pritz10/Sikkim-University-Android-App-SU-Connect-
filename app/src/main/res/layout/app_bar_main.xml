@@ -27,34 +27,28 @@
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="left|bottom" />
 
-    <LinearLayout
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="mini"
         app:layout_anchor="@+id/include2"
-        app:layout_anchorGravity="right|top">
+        app:layout_anchorGravity="right|bottom"
+        app:srcCompat="@drawable/frms"
+        tools:ignore="RtlHardcoded" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:fabSize="mini"
-            app:layout_anchor="@+id/include2"
-             app:srcCompat="@drawable/frms"
-            tools:ignore="RtlHardcoded" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:fabSize="mini"
-            app:layout_anchor="@+id/include2"
-            app:srcCompat="@drawable/handfree"
-            tools:ignore="RtlHardcoded" />
-    </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="left|bottom"
+        app:srcCompat="@drawable/handfree"
+        tools:ignore="RtlHardcoded" />
+ </android.support.design.widget.CoordinatorLayout>
