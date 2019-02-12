@@ -106,6 +106,7 @@
                 android:text="Face of They Week"
                 android:textAllCaps="false"
                 android:textColor="#3E2723"
+
                 android:textIsSelectable="false"
                 android:textStyle="bold"
                 tools:ignore="Deprecated,HardcodedText,RtlHardcoded,UnusedAttribute" />
