@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:alwaysDrawnWithCache="false"
     android:animateLayoutChanges="true"
     android:animationCache="true"
+    android:layout_marginLeft="-3dp"
+    android:layout_marginRight="-3dp"
     android:duplicateParentState="false"
     android:fadeScrollbars="false"
-    app:cardBackgroundColor="@color/colorPrimaryDark"
+    app:cardCornerRadius="0dp"
+    app:cardBackgroundColor="#FFCC80"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -62,7 +66,7 @@
                 android:elevation="0dp"
                 android:gravity="left"
                 android:maxLines="3"
-                android:textColor="#035efa"
+                android:textColor="#8D6E63"
                 android:nestedScrollingEnabled="false"
                 android:paddingBottom="2dp"
                 android:paddingEnd="5dp"
@@ -82,7 +86,6 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentTop="true"
                 android:layout_toLeftOf="@+id/date"
                 android:layout_toStartOf="@+id/date"
@@ -102,8 +105,7 @@
                 android:singleLine="true"
                 android:text="Face of They Week"
                 android:textAllCaps="false"
-                android:textColor="@color/colorAccent"
-                android:textColorHighlight="@color/colorAccent"
+                android:textColor="#3E2723"
                 android:textIsSelectable="false"
                 android:textStyle="bold"
                 tools:ignore="Deprecated,HardcodedText,RtlHardcoded,UnusedAttribute" />
@@ -121,12 +123,12 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="2dp"
-                android:background="#03b633"
                 android:gravity="center"
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"
                 android:text="Sept 31"
-                android:textColor="#fdfdfd"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
                 tools:ignore="HardcodedText" />
 
 

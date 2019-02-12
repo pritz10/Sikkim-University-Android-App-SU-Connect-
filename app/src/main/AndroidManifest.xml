@@ -343,6 +343,8 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".Admin" />
+
+        <activity android:name=".GetPassword" />
         <activity android:name=".signup" />
         <activity android:name=".NotificationAdmin" />
     </application>
