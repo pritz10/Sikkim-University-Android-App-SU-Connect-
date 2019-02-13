@@ -9,7 +9,6 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
