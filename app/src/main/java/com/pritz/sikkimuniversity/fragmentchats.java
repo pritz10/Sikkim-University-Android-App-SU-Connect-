@@ -1,6 +1,8 @@
 package com.pritz.sikkimuniversity;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -72,10 +74,12 @@ public class fragmentchats extends Fragment {
                 String message = editText.getText().toString();
                 // message=message+"\nAug 31,2017 9:32:24 Pm";
                 if (!TextUtils.isEmpty(message)) {
-                    final GetterandSetter getterandSetter = new GetterandSetter("Pritam Shah(Computer Apps)", date, message);
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                    String name = sharedPreferences.getString("s_name","");
+                    final GetterandSetter getterandSetter = new GetterandSetter(name, date, message);
                     //String d="Pritam Shah \t"+"(Computer Aplications)";
                     Map<String, Object> values = new HashMap<>();
-                    values.put("name", "Pritam");
+                    values.put("name", name);
                     values.put("date", date);
                     values.put("message", message);
                     mref.push().setValue(getterandSetter);

@@ -111,9 +111,15 @@ public class signup extends AppCompatActivity {
                             String uid=user.getUid();
                             mdatabase=FirebaseDatabase.getInstance().getReference().child("User").child(uid);
                             HashMap<String,String> usermap=new HashMap<>();
-                            usermap.put("Name",Name);
+                            usermap.put("name",Name);
                             usermap.put("Email",email);
-                            usermap.put("Phone",Ph);
+                            usermap.put("Department",Ph);
+                            usermap.put("who","0");
+                            usermap.put("image","sdsdf");
+                            usermap.put("thumb_image)","ejf");
+                            usermap.put("status","Legends are from Sikkim University");
+
+
                             mdatabase.setValue(usermap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

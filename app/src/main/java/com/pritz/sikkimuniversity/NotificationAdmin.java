@@ -30,7 +30,7 @@ public class NotificationAdmin extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
 
-                builder.setSmallIcon(R.drawable.sulogo)
+                builder.setSmallIcon(R.drawable.noin)
                                 .setContentTitle("Notifications Example")
                                 .setContentText("This is a test notification");
 

@@ -1,12 +1,16 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -42,7 +46,8 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
                             .replace(R.id.content,o).commit();
                     return true;
                 case R.id.navigation_contacts:
-                    // mTextMessage.setText("Contacts");
+                    Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                    startActivity(intent); // mTextMessage.setText("Contacts");
                     return true;
             }
             return false;
@@ -57,6 +62,9 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
 //        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.menuforbottomnavigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        MainFragment c=new MainFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content,c).commit();
     }
 
     public void onFragmentInteraction(String key) {
@@ -83,6 +91,57 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
         super.onResumeFragments();
         // handleIntent();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.dev, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.ex) {
+            Exit();
+            return true;
+        }
+
+        if(id==R.id.ml)
+        {
+            Intent intent=new Intent(getApplication(),Aboout_App.class); // Message from VC
+            startActivity(intent);
+        }
+        if(id==R.id.cl)
+        {
+            Intent intent=new Intent(getApplication(),Developers.class); // Location of SU
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    public void Exit()
+    {
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        //builder.setTitle("Exit");
+        builder.setMessage("Are you sure you want to Exit ?");
+        builder.setPositiveButton("No",null);
+        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                //bt.disable();
+                finish();
+                System.exit(0);
+            }
+        });
+        builder.create();
+        builder.show();
+    }
+
 
 }
 

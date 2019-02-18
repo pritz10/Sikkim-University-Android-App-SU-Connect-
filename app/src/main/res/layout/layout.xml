@@ -30,7 +30,7 @@
             android:adjustViewBounds="false"
             android:background="@color/colorAccent"
             android:cropToPadding="false"
-            android:src="@drawable/pritz" />
+            android:src="@drawable/ps" />
 
         <TextView
             android:id="@+id/textView9"

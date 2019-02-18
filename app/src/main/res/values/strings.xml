@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"Sikkim University "</string>
+    <string name="app_name">"SU-Connect "</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -181,15 +181,7 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
 
     <string name="aboutapp">
       <p>\n</p> SU-Connect-This is an Android Application for Sikkim University-A Central University under the act of Parliament 2007.<p>\n</p>
-       <p>\n</p> There is lot of features inside this app. Some of  the are-
-        <p>\n</p><p>\n</p>Chat Room-This is a huge group chat enables you to connect with your friends from same or other departments.You can send messages,queries and suggestions.
-        <p>\n</p><p>\n</p>Schools-Here you can get the contact details of each and every teacher of Sikkim University.
-        <p>\n</p><p>\n</p>Lost/Found- Here you can post images of lost or found item so that you can get it back or help other getting it.
-        <p>\n</p><p>\n</p>SUSA-You can get SUSA connectivity.
-        <p>\n</p><p>\n</p>Blood Donation- Here you can find blood donors from Sikkim University and also be a blood donor.
-        <p>\n</p><p>\n</p>And Many More that no universty or college  app have.The app is brought you by Department of Computer Appications and here we are adding more features and optimizing it. <p>\n</p><p>\n</p> So Log-in and Enjoy.
-        <p>\n</p>if You are having login problem then you can report to admin, just scroll down.
-    </string>
+       <p>\n</p> This app is donated to Sikkim University for free from Pritam Shah and Robin Gurung from Dept. of Computer Applications Sikkim University </string>
 
 
     <string-array name="Schools">

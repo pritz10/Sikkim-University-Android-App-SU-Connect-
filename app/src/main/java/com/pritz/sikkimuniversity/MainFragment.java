@@ -49,7 +49,7 @@ public class MainFragment extends Fragment {
         Adapter adapter = new Adapter(getChildFragmentManager());
         adapter.addFragment(new fragmentNoticeBoard(), "Notice");
         adapter.addFragment(new Story(), "Stroies");
-        adapter.addFragment(new stroies(), "Schools");
+        adapter.addFragment(new fragmentSchools(), "Schools");
         adapter.addFragment(new fragmenttools(), "Tools");
         viewPager.setAdapter(adapter);
 

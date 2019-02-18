@@ -21,7 +21,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/sulogo" />
+        android:src="@drawable/noin" />
 
 
     <TextView

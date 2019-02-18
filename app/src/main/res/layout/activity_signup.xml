@@ -81,7 +81,7 @@
                 android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone Number"
+                android:hint="Department"
                 android:gravity="center"
                 android:textColorHint="@color/colorPrimaryDark"
                 android:inputType="textEmailAddress"

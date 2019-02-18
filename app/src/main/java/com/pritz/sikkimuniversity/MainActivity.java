@@ -107,7 +107,7 @@ private TabLayout mtablayout;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.dev, menu);
         return true;
     }
 
@@ -117,39 +117,21 @@ private TabLayout mtablayout;
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.exit) {
+        if (id == R.id.ex) {
             Exit();
             return true;
         }
 
-        if(id==R.id.vc)
+        if(id==R.id.ml)
         {
-            Intent intent=new Intent(getApplication(),Fromvc.class); // Message from VC
+            Intent intent=new Intent(getApplication(),Aboout_App.class); // Message from VC
             startActivity(intent);
         }
-        if(id==R.id.Loc)
+        if(id==R.id.cl)
         {
-            Intent intent=new Intent(getApplication(),SU_Map.class); // Location of SU
+            Intent intent=new Intent(getApplication(),Developers.class); // Location of SU
             startActivity(intent);
         }
-        if(id==R.id.nss)
-        {
-            Intent intent=new Intent(getApplication(),NSS.class);
-
-            startActivity(intent);
-        }
-        if(id==R.id.ant)
-        {
-            Intent intent=new Intent(getApplication(),AntiRagging.class); // Antiragging
-            startActivity(intent);
-        }
-
-        if(id==R.id.cal)
-        {
-            Intent intent=new Intent(getApplication(),Wall.class);
-            startActivity(intent);
-        }
-
 
         return super.onOptionsItemSelected(item);
     }

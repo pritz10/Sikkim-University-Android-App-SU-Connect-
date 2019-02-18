@@ -13,7 +13,7 @@
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/lo" />
+        app:srcCompat="@drawable/noin" />
 
     <TextView
         android:id="@+id/textView13"

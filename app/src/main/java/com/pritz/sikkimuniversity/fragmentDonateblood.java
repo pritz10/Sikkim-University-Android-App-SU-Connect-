@@ -2,7 +2,9 @@ package com.pritz.sikkimuniversity;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -120,9 +122,11 @@ public class fragmentDonateblood extends Fragment {
                             databaseReference.child("Phone").setValue(phone);
                             FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
                             String uid=user.getUid();
-                            databaseReference.child("User").setValue(uid);
+                            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                            String name = sharedPreferences.getString("s_name","");
+                             databaseReference.child("User").setValue(uid);
                              databaseReference.child("image").setValue(photol);
-                            databaseReference.child("name").setValue("Pritz");
+                            databaseReference.child("name").setValue(name);
                             progressDialog.dismiss();
 
 

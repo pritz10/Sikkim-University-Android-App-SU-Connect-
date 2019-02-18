@@ -346,6 +346,31 @@
 
         <activity android:name=".GetPassword" />
         <activity android:name=".signup" />
+        <activity
+            android:name=".SettingsActivity"
+       android:parentActivityName=".MainFragmenthome"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainFragementhome" />
+        </activity>        <activity android:name=".StatusActivity" />
+        <activity
+            android:name=".Profile"
+            android:parentActivityName=".MainFragmenthome"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.MainFragmenthome" />
+        </activity>
+        <activity
+            android:name=".UsersActivity"
+            android:label="All Users"
+            android:parentActivityName=".SettingsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="anddroid.support.PARENT_ACTIVITY"
+                android:value="com.pritz.sikkimuniversity.SettingsActivity" />
+        </activity>
         <activity android:name=".NotificationAdmin" />
     </application>
 

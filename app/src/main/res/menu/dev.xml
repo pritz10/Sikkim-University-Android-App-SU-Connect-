@@ -1,16 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.pritz.sikkimuniversity.Developers">
+    tools:context="com.pritz.sikkimuniversity.MainFragmenthome">
     <item
         android:id="@+id/ml"
         android:icon="@drawable/mail"
-        android:title="Mail"
-        app:showAsAction="always" />
+        android:title="About App"
+        app:showAsAction="never" />
     <item
         android:id="@+id/cl"
         android:icon="@drawable/devcal"
-        android:title="Call"
-        app:showAsAction="always" />
+        android:title="Developer"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ex"
+        android:icon="@drawable/devcal"
+        android:title="Exit"
+        app:showAsAction="never" />
+
 
 </menu>

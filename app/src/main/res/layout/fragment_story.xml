@@ -51,8 +51,8 @@
 
         <ImageButton
             android:id="@+id/addpic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
             android:layout_weight="1"
             android:alpha="0.5"
             android:background="@android:color/white"

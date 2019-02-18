@@ -1,6 +1,7 @@
 package com.pritz.sikkimuniversity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -31,8 +32,7 @@ public class fragmentNoticeBoard extends Fragment {
 
     private RecyclerView postinsta;
     private DatabaseReference mdatabase;
-    ProgressBar progressBar1;
-    public TextView notice, T1, T2;
+     public TextView notice, T1, T2;
     private FirebaseAuth mauth;
     private OnFragmentInteractionListener mListener;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -51,12 +51,15 @@ public class fragmentNoticeBoard extends Fragment {
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        progressBar1 = (ProgressBar) getActivity().findViewById(R.id.progressBar);
-        progressBar1.setVisibility(View.VISIBLE);
         mdatabase = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
         postinsta = (RecyclerView) getActivity().findViewById(R.id.posti);
         notice = (TextView) getActivity().findViewById(R.id.rainbo);
+
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("s_name","");
+
+        notice.setText("Hi\t"+name);
 
 
         mauth= FirebaseAuth.getInstance();
@@ -66,8 +69,8 @@ public class fragmentNoticeBoard extends Fragment {
                 if(firebaseAuth.getCurrentUser()!=null)
                 {
                    // Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
-                    String name=firebaseAuth.getCurrentUser().getUid().toString();
-                    notice.setText(name);
+                   // String name=firebaseAuth.getCurrentUser().getDisplayName().toString();
+                 //   notice.setText(name);
                 }
             }
         };
@@ -119,8 +122,7 @@ public class fragmentNoticeBoard extends Fragment {
 //                T2.setVisibility(View.GONE);
 
 
-                progressBar1.setVisibility(View.GONE);
-                viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                 viewHolder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(getActivity(), "Loading...", Toast.LENGTH_LONG).show();

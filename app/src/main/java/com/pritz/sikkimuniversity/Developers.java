@@ -40,7 +40,7 @@ FloatingActionButton cal1_,cal2_,mail1_,mail2_,abt1_,abt2_;
     @Override
     public void onClick(View v) {
         try {
-            String number = "08906076058";
+            String number = "6294408224";
 
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:" + number));
@@ -54,7 +54,7 @@ FloatingActionButton cal1_,cal2_,mail1_,mail2_,abt1_,abt2_;
         aa1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String number="08348465526";
+                String number="9547021753";
                 Intent intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel:"+number));
                 startActivity(intent);
@@ -156,46 +156,6 @@ bb1.setOnClickListener(new View.OnClickListener() {
             return new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://www.facebook.com/profile.php?id=100009361852497"));
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.dev, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.cl) {
-            String number="07585910557";
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+number));
-            startActivity(intent);
-        }
-        if (id == R.id.ml) {
-            SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-            String name = sharedPreferences.getString("s_name","");
-            String uriText =
-                    "mailto:"+"developerapphelp@gmail.com"+
-                            "?subject=" + Uri.encode("From\t"+name);
-            Uri uri= Uri.parse(uriText);
-
-            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
-
-            Intent i = Intent.createChooser(emailIntent, "Send email to the Robin Gurung...");
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-            startActivity(i);
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 }

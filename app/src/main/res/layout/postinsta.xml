@@ -33,7 +33,7 @@
             android:paddingRight="2dp"
             android:paddingLeft="2dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/vc" android:contentDescription="@string/todo" />
+            app:srcCompat="@drawable/noin" android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/posttitle"

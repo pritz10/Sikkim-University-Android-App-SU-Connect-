@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 public class BottomNavigation extends AppCompatActivity implements fragmentNoticeBoard.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
-
+public  ActionBar ab;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

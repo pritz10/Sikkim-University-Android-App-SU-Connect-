@@ -108,8 +108,7 @@ public class Story extends Fragment {
             CropImage.activity(l)
                     .setGuidelines(CropImageView.Guidelines.ON)
                     .setAspectRatio(1,1)
-                    .start(getActivity());
-
+                    .start(getContext(), this);
         }
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);

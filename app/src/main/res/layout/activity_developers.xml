@@ -81,6 +81,7 @@
                     android:layout_gravity="bottom|end"
                     android:layout_marginBottom="9dp"
                     android:layout_marginLeft="10dp"
+                    android:visibility="gone"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
@@ -167,6 +168,7 @@
                     android:background="@color/colorPrimaryDark"
                     app:backgroundTint="@color/colorPrimaryDark"
                     app:fabSize="mini"
+                    android:visibility="gone"
                     app:srcCompat="@drawable/helpprs" />
 
                 <android.support.design.widget.FloatingActionButton
@@ -188,25 +190,6 @@
 
             </LinearLayout>
 
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:src="@drawable/jaun"
-                tools:ignore="ContentDescription" />
-
-
-            <TextView
-                android:id="@+id/textViey4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/tilak_gurung"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -230,6 +213,7 @@
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
                     android:onClick="aboutapp"
+                    android:visibility="gone"
                     app:backgroundTint="@color/colorPrimaryDark"
                     app:fabSize="mini"
                     app:srcCompat="@drawable/helpprs"
@@ -237,119 +221,6 @@
 
 
 
-
-
-            </LinearLayout>
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="12dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="SU-Connect Beta Testers"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:layout_weight="0.23">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/vidur"
-                    tools:ignore="ContentDescription" />
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/prey"
-                    tools:ignore="ContentDescription" />
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/nish"
-                    tools:ignore="ContentDescription" />
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/kide"
-                    tools:ignore="ContentDescription" />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:layout_weight="0.23">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                     android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    tools:ignore="ContentDescription"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/subu"/>
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/shrwa"
-                    tools:ignore="ContentDescription" />
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/ree"
-                    tools:ignore="ContentDescription" />
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/colorPrimary"
-                    android:src="@drawable/jan"
-                    tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
