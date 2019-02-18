@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,7 +23,8 @@ public class Login extends AppCompatActivity {
     public FirebaseAuth auth;
     public FirebaseAuth.AuthStateListener authStateListener;
     private ProgressBar progressBar;
-    private Button gosignup, gologin, goreset;
+    private Button gosignup, gologin;
+    TextView goreset;
     String email, password;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,7 @@ public class Login extends AppCompatActivity {
         progressBar =  (ProgressBar) findViewById(R.id.progressBar);
 
         gologin=(Button) findViewById(R.id.btn_loginn);
-        goreset=(Button) findViewById(R.id.btn_reset);
+        goreset=(TextView) findViewById(R.id.btn_reset);
          auth= FirebaseAuth.getInstance();
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
