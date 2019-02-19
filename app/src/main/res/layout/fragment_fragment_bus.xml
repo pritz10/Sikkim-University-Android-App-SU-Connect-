@@ -13,10 +13,4 @@
         android:textColor="@android:color/black"
         android:text="Coming Soon..." />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="443dp"
-        android:layout_height="wrap_content"
-        android:text="ADMIN" />
-
 </FrameLayout>

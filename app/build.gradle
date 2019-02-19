@@ -49,6 +49,7 @@ dependencies {
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.4'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'id.zelory:compressor:2.0.0'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation "com.hanks:htextview-rainbow:0.1.1"

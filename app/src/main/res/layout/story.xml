@@ -11,129 +11,30 @@
     android:fadeScrollbars="false"
     app:cardBackgroundColor="@color/colorPrimaryDark"
     app:cardUseCompatPadding="true">
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">>
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="false"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:paddingBottom="2dp"
-        android:paddingLeft="2dp"
-        android:paddingRight="2dp"
+        android:text="TextView" />
 
-        android:paddingTop="2dp"
-        android:visibility="visible">
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        app:srcCompat="@drawable/noin" />
 
-
-        <ImageView
-            android:id="@+id/pictures"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentLeft="true"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-             tools:ignore="ContentDescription" />
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="113dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/pictures"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/pictures"
-            android:layout_toRightOf="@+id/pictures">
-
-            <TextView
-                android:id="@+id/mainframe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/name"
-                android:layout_gravity="center"
-                android:elevation="0dp"
-                android:gravity="left"
-                android:maxLines="3"
-                android:textColor="#035efa"
-                android:nestedScrollingEnabled="false"
-                android:paddingBottom="2dp"
-                android:paddingEnd="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingStart="5dp"
-                android:paddingTop="3dp"
-                android:scrollbarAlwaysDrawHorizontalTrack="false"
-                android:scrollbarAlwaysDrawVerticalTrack="false"
-                android:selectAllOnFocus="false"
-                android:text="11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
-                android:textColorHighlight="@color/colorAccent"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/date"
-                android:layout_toStartOf="@+id/date"
-                android:clickable="false"
-                android:elevation="1dp"
-                android:freezesText="false"
-                android:gravity="left"
-                android:isScrollContainer="false"
-                android:linksClickable="false"
-                android:maxLines="1"
-                android:paddingBottom="2dp"
-                android:paddingEnd="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingStart="5dp"
-                android:paddingTop="3dp"
-                android:singleLine="true"
-                android:text="Face of They Week"
-                android:textAllCaps="false"
-                android:textColor="@color/colorAccent"
-                android:textColorHighlight="@color/colorAccent"
-                android:textIsSelectable="false"
-                android:textStyle="bold"
-                tools:ignore="Deprecated,HardcodedText,RtlHardcoded,UnusedAttribute" />
-
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="2dp"
-                android:background="#03b633"
-                android:gravity="center"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:text="Sept 31"
-                android:textColor="#fdfdfd"
-                tools:ignore="HardcodedText" />
-
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
 </android.support.v7.widget.CardView>
 
 

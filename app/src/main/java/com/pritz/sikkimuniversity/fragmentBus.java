@@ -14,7 +14,7 @@ import android.widget.Button;
  * A simple {@link Fragment} subclass.
  */
 public class fragmentBus extends Fragment {
-Button admin;
+
 
     public fragmentBus() {
         // Required empty public constructor
@@ -29,14 +29,6 @@ Button admin;
     }
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-    admin=(Button) getActivity().findViewById(R.id.button8);
-    admin.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
 
-            Intent i = new Intent(getActivity(), Admin.class);
-            startActivity(i);
-        }
-    });
     }
 }

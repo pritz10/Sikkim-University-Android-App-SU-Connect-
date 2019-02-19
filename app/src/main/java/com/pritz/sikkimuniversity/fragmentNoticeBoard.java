@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class fragmentNoticeBoard extends Fragment {
     private DatabaseReference mdatabase;
      public TextView notice, T1, T2;
     private FirebaseAuth mauth;
+    Button Ad;
     private OnFragmentInteractionListener mListener;
     private FirebaseAuth.AuthStateListener authStateListener;
     public fragmentNoticeBoard() {
@@ -54,23 +56,27 @@ public class fragmentNoticeBoard extends Fragment {
         mdatabase = FirebaseDatabase.getInstance().getReference().child("Importantnotifications");
         postinsta = (RecyclerView) getActivity().findViewById(R.id.posti);
         notice = (TextView) getActivity().findViewById(R.id.rainbo);
-
+        Ad=(Button)getActivity().findViewById(R.id.Admin);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("s_name","");
 
         notice.setText("Hi\t"+name);
 
-
+        Ad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Admin.class);
+                startActivity(i);
+            }
+        });
         mauth= FirebaseAuth.getInstance();
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser()!=null)
+                if(firebaseAuth.getCurrentUser().getEmail().equals("pritz@gmail.com"))
                 {
-                   // Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
-                   // String name=firebaseAuth.getCurrentUser().getDisplayName().toString();
-                 //   notice.setText(name);
+                    Ad.setVisibility(View.VISIBLE);
                 }
             }
         };

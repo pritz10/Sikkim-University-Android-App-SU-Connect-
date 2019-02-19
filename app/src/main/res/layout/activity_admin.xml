@@ -17,7 +17,14 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:weightSum="1">
-
+            <Button
+                android:id="@+id/nyc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="New User"
+                android:textColor="@android:color/white" />
             <ImageButton
                 android:id="@+id/lost"
                 android:layout_width="wrap_content"
@@ -31,6 +38,28 @@
                 android:elevation="1dp"
                 app:srcCompat="@mipmap/add_btn"
                 tools:ignore="ContentDescription,ObsoleteLayoutParam,UnusedAttribute" />
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/des"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Date"
+                android:inputType="textPersonName"
+                android:paddingBottom="15dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/colorAccent"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam,TextFields" />
 
             <EditText
                 android:id="@+id/ltitle"
@@ -59,48 +88,26 @@
                 android:id="@+id/ldetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/ltitle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="19dp"
                 android:background="@drawable/des"
                 android:ems="10"
-                android:hint="Details"
                 android:gravity="center"
+                android:hint="Details"
                 android:inputType="textMultiLine"
-                android:paddingBottom="15dp"
-                android:paddingEnd="15dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 android:paddingStart="15dp"
+                android:paddingLeft="15dp"
                 android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
                 android:textColor="@color/colorAccent"
                 tools:ignore="HardcodedText,ObsoleteLayoutParam" />
 
-            <EditText
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/des"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="Date"
-                android:inputType="textPersonName"
-                android:paddingBottom="15dp"
-                android:paddingEnd="15dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingStart="15dp"
-                android:paddingTop="15dp"
-                android:textColor="@color/colorAccent"
-                tools:ignore="HardcodedText,ObsoleteLayoutParam,TextFields" />
 
             <Button
                 android:id="@+id/postfor"
@@ -112,11 +119,7 @@
                 android:text="Post"
                 tools:ignore="HardcodedText" />
 
-            <Button
-                android:id="@+id/nyc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NEW USER LOGIN" />
+
 
 
         </LinearLayout>>

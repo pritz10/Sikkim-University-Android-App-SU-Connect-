@@ -5,12 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".fragmentBlood">
-
     <Button
         android:id="@+id/b"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Be a blood donar" />
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Be a Blood Donar"
+        android:textColor="@android:color/white" />
 
     <ProgressBar
         android:id="@+id/progressBar"

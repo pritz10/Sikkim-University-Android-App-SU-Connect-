@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.pritz.sikkimuniversity.Story">
 
@@ -12,7 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/colorPrimary"
-
         android:visibility="visible"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -31,34 +29,93 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_above="@+id/add"
+        android:background="@color/colorPrimary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/add"
+        android:layout_above="@+id/linearLayout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/adde"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="10sp"
+                 android:src="@drawable/ic_add_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/cameras"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginBottom="10sp"
+                 android:src="@drawable/cameras" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_marginRight="2sp"
+            />
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="90sp"
+            android:layout_height="150sp"
+            android:id="@+id/image"
+            android:layout_marginLeft="10sp"
+            android:layout_gravity="center"
+            app:siBorderWidth="1sp"
+            app:siBorderColor="@color/colorPrimaryDark"
+            app:siSquare="true"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        />
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:layout_alignParentBottom="true"
-         android:background="@android:color/white"
+        android:background="@android:color/white"
         android:orientation="horizontal"
-        android:weightSum="10">
-        <ImageButton
-            android:id="@+id/cameras"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:alpha="0.5"
-            android:background="@android:color/white"
-            android:padding="10dp"
-            app:srcCompat="@drawable/cameras" />
+        >
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            />
 
         <ImageButton
-            android:id="@+id/addpic"
-            android:layout_width="60sp"
-            android:layout_height="60sp"
+            android:id="@+id/opener"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:alpha="0.5"
             android:background="@android:color/white"
             android:padding="10dp"
             app:srcCompat="@drawable/picbtn" />
 
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            />
         <EditText
             android:id="@+id/strymsg"
             android:layout_width="wrap_content"
@@ -72,7 +129,11 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="14dp" />
-
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            />
         <ImageButton
             android:id="@+id/sendbtn"
             android:layout_width="wrap_content"
@@ -82,6 +143,24 @@
             android:background="@android:color/white"
             android:padding="10dp"
             app:srcCompat="@drawable/sendbtn" />
+
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:background="@color/colorPrimary">
+    </View>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_marginTop="10sp"
+        android:background="@color/colorPrimaryDark"
+        />
+
 
 </RelativeLayout>
