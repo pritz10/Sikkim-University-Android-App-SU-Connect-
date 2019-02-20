@@ -82,10 +82,10 @@ public class Story extends Fragment {
         opener1 = (LinearLayout)getActivity().findViewById(R.id.add);
         storymes=(EditText)getActivity().findViewById(R.id.strymsg);
         progressBar1=(ProgressBar)getActivity().findViewById(R.id.progressBar);
-        progressBar1.setVisibility(View.VISIBLE);
+//        progressBar1.setVisibility(View.VISIBLE);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("story");
         onStart();
-      pods.setHasFixedSize(true);
+        pods.setHasFixedSize(true);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setReverseLayout(true);
         mLayoutManager.setStackFromEnd(true);
@@ -174,13 +174,13 @@ public class Story extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        FirebaseRecyclerAdapter<forstory, Testingstory.storyholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<forstory, Testingstory.storyholder>
+        FirebaseRecyclerAdapter<forstory, Story.storyholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<forstory, Story.storyholder>
                 (forstory.class,
                         R.layout.str,
-                        Testingstory.storyholder.class,
+                        Story.storyholder.class,
                         mdatabase) {
             @Override
-            protected void populateViewHolder(Testingstory.storyholder viewHolder, forstory model, int position) {
+            protected void populateViewHolder(Story.storyholder viewHolder, forstory model, int position) {
                 viewHolder.setStitle(model.getStitle());
                 viewHolder.setSdate(model.getSdate());
                 viewHolder.setSimage(getActivity(),model.getSimage());
