@@ -1,12 +1,15 @@
 package com.pritz.sikkimuniversity;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,25 +18,34 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
 
 import static android.app.Activity.RESULT_OK;
+import com.pritz.sikkimuniversity.R;
+
+import static com.pritz.sikkimuniversity.R.id.postimage;
+import static com.pritz.sikkimuniversity.R.id.strimage;
 
 
 public class Story extends Fragment {
     Uri imageurl=null;
     EditText storymes;
     ImageButton send;
+    private RecyclerView pods;
+    private DatabaseReference mdatabase;
     ImageButton adde;
     ImageButton opner;
     ImageButton cam;
@@ -41,6 +53,7 @@ public class Story extends Fragment {
     Bitmap bitmap;
     ImageView image;
     LinearLayout opener1;
+    ProgressBar progressBar1;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
     private static final int CAMERA_REQUEST = 1888;
     private static final int GALLERY_REQUEST=1;
@@ -60,6 +73,7 @@ public class Story extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         progressDialog = new ProgressDialog(getActivity());
+        pods=(RecyclerView)getActivity().findViewById(R.id.pos);
         cam=(ImageButton)getActivity().findViewById(R.id.cameras);
         opner=(ImageButton)getActivity().findViewById(R.id.opener);
         send=(ImageButton)getActivity().findViewById(R.id.sendbtn);
@@ -67,6 +81,17 @@ public class Story extends Fragment {
         adde=(ImageButton)getActivity().findViewById(R.id.adde);
         opener1 = (LinearLayout)getActivity().findViewById(R.id.add);
         storymes=(EditText)getActivity().findViewById(R.id.strymsg);
+        progressBar1=(ProgressBar)getActivity().findViewById(R.id.progressBar);
+        progressBar1.setVisibility(View.VISIBLE);
+        mdatabase= FirebaseDatabase.getInstance().getReference().child("story");
+        onStart();
+      pods.setHasFixedSize(true);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager.setReverseLayout(true);
+        mLayoutManager.setStackFromEnd(true);
+        mdatabase.keepSynced(true);
+        pods.setLayoutManager(mLayoutManager);
+
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,14 +131,23 @@ public class Story extends Fragment {
         mStorageRef= FirebaseStorage.getInstance().getReference();
         progressDialog.setMessage("Just Wait.....");
         final String title = storymes.getText().toString().trim();
-        if (!TextUtils.isEmpty(title))
+        if (!TextUtils.isEmpty(title) && imageurl == null)
         {
             DatabaseReference databaseReference=mref.push();
-            databaseReference.child("title").setValue(title);
+            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+            String name = sharedPreferences.getString("s_name","");
+            databaseReference.child("stitle").setValue(name+"\n"+title);
+            final String currentDateTimeString = DateFormat.getDateInstance().format(new Date());
+            databaseReference.child("sdate").setValue(currentDateTimeString);
+            databaseReference.child("simage").setValue("khjkjh");
+            storymes.setText("");
         }
 
         if (!TextUtils.isEmpty(title)   && imageurl != null)
         {
+            progressDialog.setTitle("Uploading Image...");
+            progressDialog.setMessage("Please wait while we upload and process the image.");
+            progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
             StorageReference reference=mStorageRef.child("storypics").child(imageurl.getLastPathSegment());
             reference.putFile(imageurl).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -121,59 +155,63 @@ public class Story extends Fragment {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                     Uri downloaduri=taskSnapshot.getDownloadUrl();
                     DatabaseReference databaseReference=mref.push();
-                    databaseReference.child("title").setValue(title);
-                    databaseReference.child("image").setValue(downloaduri.toString());
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                    String name = sharedPreferences.getString("s_name","");
+                    String a=name+"\n"+title;
+                    databaseReference.child("stitle").setValue(a);
+                    final String currentDateTimeString = DateFormat.getDateInstance().format(new Date());
+                    databaseReference.child("sdate").setValue(currentDateTimeString);
+                    databaseReference.child("simage").setValue(downloaduri.toString());
                     progressDialog.dismiss();
+                    Story c=new Story();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content,c).commit();
                 }
             });
 
         }
     }
-
-
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode==img && resultCode==RESULT_OK && data!=null){
-            Uri path = data.getData();
-            try {
-                // ArrayList<Uri> image_uris = data.getParcelableArrayListExtra(ImagePickerActivity.EXTRA_IMAGE_URIS);
-                bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(),path);
-                /*Matrix matrix = new Matrix();
-                matrix.postRotate(180);
-                Bitmap rotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(),
-                        matrix, true);*/
-
-                //    image.setImageBitmap(rotated);
-                image.setImageBitmap(bitmap);
-                image.setVisibility(View.VISIBLE);
-
-            } catch (IOException e) {
-                e.printStackTrace();
+    public void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<forstory, Testingstory.storyholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<forstory, Testingstory.storyholder>
+                (forstory.class,
+                        R.layout.str,
+                        Testingstory.storyholder.class,
+                        mdatabase) {
+            @Override
+            protected void populateViewHolder(Testingstory.storyholder viewHolder, forstory model, int position) {
+                viewHolder.setStitle(model.getStitle());
+                viewHolder.setSdate(model.getSdate());
+                viewHolder.setSimage(getActivity(),model.getSimage());
             }
+        };
+        pods.setAdapter(firebaseRecyclerAdapter);
 
-           /* Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
-                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-                public void onGenerated(Palette palette) {
-                    final Palette.Swatch vibrantSwatch = palette.getDarkVibrantSwatch();
-                    if (vibrantSwatch != null) {
-                        outerLayout.setBackgroundColor(vibrantSwatch.getRgb());
-                        upload.setBackgroundColor(vibrantSwatch.getTitleTextColor());
-                        bodyText.setTextColor(vibrantSwatch.getBodyTextColor());
-                        choose.setBackgroundColor(vibrantSwatch.getTitleTextColor());
-                        camera.setBackgroundColor(vibrantSwatch.getTitleTextColor());
-                        bodyText.setBackgroundColor(vibrantSwatch.getTitleTextColor());
-                    }
-                }
-            }); */
+
+    }
+    public  static class storyholder extends RecyclerView.ViewHolder
+    {
+        View mView;
+        public storyholder(View itemView) {
+            super(itemView);
+            mView = itemView;
         }
-
-        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            image.setImageBitmap(photo);
+        public void setStitle(String stitle) {
+            TextView ptitle = (TextView) mView.findViewById(R.id.strtitle);
+            ptitle.setText(stitle);
         }
 
 
+        public void setSimage(Context ctx, String simage) {
+            ImageView post = (ImageView) mView.findViewById(strimage);
+            Picasso.with(ctx).load(simage).into(post);
+
+        }
+
+        public void setSdate(String sdate) {
+            TextView date1 = (TextView) mView.findViewById(R.id.strdate);
+            date1.setText(sdate);
+        }
     }
 }

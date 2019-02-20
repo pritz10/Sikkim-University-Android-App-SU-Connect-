@@ -179,7 +179,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="25sp"
             android:paddingTop="10dp"
-            android:text="Made with Love in Sikkim"
+            android:text="Made with Love in Sikkim University"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
     </LinearLayout>

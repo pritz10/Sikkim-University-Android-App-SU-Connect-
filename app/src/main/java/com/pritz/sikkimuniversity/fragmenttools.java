@@ -56,7 +56,7 @@ pf.setOnClickListener(new View.OnClickListener() {
         dev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent status_intent = new Intent(getActivity(), Developers.class);
+                Intent status_intent = new Intent(getActivity(), LostFound.class);
                 startActivity(status_intent);
             }
         });

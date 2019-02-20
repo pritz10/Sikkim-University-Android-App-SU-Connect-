@@ -1,12 +1,8 @@
 package com.pritz.sikkimuniversity;
 
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,11 +18,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+import com.pritz.sikkimuniversity.R;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static android.R.id.message;
 import static com.pritz.sikkimuniversity.R.id.postimage;
 
 public class LostFound extends AppCompatActivity {
@@ -47,7 +40,7 @@ private RecyclerView postinsta;
         progressBar1=(ProgressBar)findViewById(R.id.progressBar);
         progressBar1.setVisibility(View.VISIBLE);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("lost");
-        postinsta=(RecyclerView) findViewById(R.id.postinsta);
+        postinsta=(RecyclerView)findViewById(R.id.postinsta);
         postinsta.setHasFixedSize(true);
         mdatabase.keepSynced(true);
         postinsta.setLayoutManager(new LinearLayoutManager(this));
@@ -60,10 +53,10 @@ private RecyclerView postinsta;
 {
     super.onStart();
     FirebaseRecyclerAdapter<post,BlogViewholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<post, BlogViewholder>
-            (post.class,R.layout.postinsta,BlogViewholder.class,mdatabase) {
+            (post.class,R.layout.str,BlogViewholder.class,mdatabase) {
         @Override
         protected void populateViewHolder(BlogViewholder viewHolder, post model, int position) {
-            viewHolder.setUsername(model.getUsername());
+        //    viewHolder.setUsername(model.getUsername());
             viewHolder.setImage(getApplicationContext(),model.getImage());
             viewHolder.setTitle(model.getTitle());
             viewHolder.setDetail(model.getDetail());
@@ -111,7 +104,7 @@ public static class BlogViewholder extends RecyclerView.ViewHolder{
     public void setUsername(String Username)
     {
         TextView pname=(TextView)view.findViewById(R.id.losname);
-        pname.setText(Username);
+//        pname.setText(Username);
     }
     public void setDate(String date)
     {

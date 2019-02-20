@@ -74,7 +74,7 @@ public class fragmentNoticeBoard extends Fragment {
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser().getEmail().equals("pritz@gmail.com"))
+                if(firebaseAuth.getCurrentUser().getEmail().equals("pritz@suconnect.com"))
                 {
                     Ad.setVisibility(View.VISIBLE);
                 }

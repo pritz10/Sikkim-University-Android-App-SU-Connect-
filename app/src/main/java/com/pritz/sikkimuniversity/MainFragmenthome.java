@@ -46,7 +46,7 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
                             .replace(R.id.content,o).commit();
                     return true;
                 case R.id.navigation_contacts:
-                    Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Testingstory.class);
                     startActivity(intent); // mTextMessage.setText("Contacts");
                     return true;
             }

@@ -42,24 +42,6 @@ public class Login extends AppCompatActivity {
 
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_login);
-      /*try {
-            String ps= FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
-            if (ps.equals("pritamshah1010@gmail.com"))
-            {
-                Intent intent = new Intent(Login.this,Admin.class);
-                startActivity(intent);
-            }
-            else if(FirebaseAuth.getInstance().getCurrentUser()!=null)
-            {
-                Intent intent = new Intent(Login.this,Admin.class);
-                startActivity(intent);
-            }
-        }
-        catch (Exception e)
-        {
-
-        }*/
-
         inputEmail =  (EditText) findViewById(R.id.email);
         inputPassword =  (EditText)  findViewById(R.id.password);
         progressBar =  (ProgressBar) findViewById(R.id.progressBar);
@@ -67,23 +49,6 @@ public class Login extends AppCompatActivity {
         gologin=(Button) findViewById(R.id.btn_loginn);
         goreset=(Button) findViewById(R.id.btn_reset);
          auth= FirebaseAuth.getInstance();
-        authStateListener=new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-             /*   if(firebaseAuth.getCurrentUser()!=null)
-                {
-                    Intent i = new Intent(Login.this, MainActivity.class);
-                    startActivity(i);
-
-                }*/
-
-            }
-        };
-        auth.addAuthStateListener(authStateListener);
-
-
-
-
         goreset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +73,16 @@ public class Login extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
+
+
+
+
+
+
+
+
+
+
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Login.this,new OnCompleteListener<AuthResult>() {
@@ -116,57 +91,41 @@ public class Login extends AppCompatActivity {
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
-                                if (task.isSuccessful()) {
-                                    try {
-                                        Thread t =new Thread(){
-                                            public void run(){
-                                                try{
-                                                    user = FirebaseAuth.getInstance().getCurrentUser();
-                                                    if (user != null) {
-                                                        uid = user.getUid();
-                                                        mdatabase = FirebaseDatabase.getInstance().getReference().child("User").child(uid);
-                                                        mdatabase.addValueEventListener(new ValueEventListener() {
-                                                            @Override
-                                                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                String nmeh = dataSnapshot.child("name").getValue(String.class);
-                                                                final String pheh = dataSnapshot.child("Department").getValue(String.class);
-
-                                                                SharedPreferences got = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
-                                                                SharedPreferences.Editor editor = got.edit();
-                                                                editor.putString("s_name", nmeh+"~"+pheh);
-                                                                //editor.putString("s_dept",Department);
-                                                                editor.apply();
-                                                                progressBar.setVisibility(View.GONE);
-
-                                                                Intent intent = new Intent(Login.this, MainFragmenthome.class);
-                                                                    startActivity(intent);
-
-
-                                                            }
-
-                                                            @Override
-                                                            public void onCancelled(DatabaseError databaseError) {
-
-                                                            }
-                                                        });
-
-                                                    }
-                                                    sleep(500);
-
-                                                }catch(InterruptedException e) {
-                                                    e.printStackTrace();
-                                                }
+                                 if (task.isSuccessful()) {
+                                    user = FirebaseAuth.getInstance().getCurrentUser();
+                                    if (user != null) {
+                                        uid = user.getUid();
+                                        mdatabase = FirebaseDatabase.getInstance().getReference().child("User").child(uid);
+                                        mdatabase.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                String nmeh = dataSnapshot.child("name").getValue(String.class);
+                                                final String pheh = dataSnapshot.child("Department").getValue(String.class);
+                                                SharedPreferences got = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = got.edit();
+                                                editor.putString("s_name", nmeh + "~" + pheh);
+                                                editor.apply();
+                                                progressBar.setVisibility(View.GONE);
+                                                Intent intent = new Intent(Login.this, MainFragmenthome.class);
+                                                startActivity(intent);
+                                                finish();
                                             }
-                                        };t.start();
 
+                                            @Override
+                                            public void onCancelled(DatabaseError databaseError) {
 
+                                            }
+                                        });
 
                                     }
-                                    catch (Exception e)
-                                    {
+                                } else {
+                                    Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_LONG).show();
 
+                                    if (password.length() < 6) {
+                                        inputPassword.setError("Password Too Small");
+                                    } else {
+                                        Toast.makeText(Login.this, "Something Went Wrong!", Toast.LENGTH_LONG).show();
                                     }
-
 
                                 }
                             }

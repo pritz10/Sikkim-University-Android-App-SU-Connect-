@@ -15,6 +15,7 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/colorPrimary"
         android:text="Admin"
+        android:visibility="gone"
         android:textColor="@android:color/white" />
     <com.hanks.htextview.rainbow.RainbowTextView
         android:id="@+id/rainbo"

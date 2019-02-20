@@ -24,9 +24,10 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Testingstory"></activity>
         <activity
             android:name=".MainFragmenthome"
-            android:label="@string/title_activity_chnck"></activity>
+            android:label="@string/title_activity_chnck" />
         <activity
             android:name=".BottomNavigation"
             android:label="@string/title_activity_bottom_navigation" />
@@ -52,7 +53,6 @@
             android:exported="false" />
 
         <receiver android:name=".NotificationEventReceiver" />
-
 
         <activity
             android:name=".MainActivity"
@@ -343,17 +343,17 @@
                 android:value="com.pritz.sikkimuniversity.MainActivity" />
         </activity>
         <activity android:name=".Admin" />
-
         <activity android:name=".GetPassword" />
         <activity android:name=".signup" />
         <activity
             android:name=".SettingsActivity"
-       android:parentActivityName=".MainFragmenthome"
+            android:parentActivityName=".MainFragmenthome"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="anddroid.support.PARENT_ACTIVITY"
                 android:value="com.pritz.sikkimuniversity.MainFragementhome" />
-        </activity>        <activity android:name=".StatusActivity" />
+        </activity>
+        <activity android:name=".StatusActivity" />
         <activity
             android:name=".Profile"
             android:parentActivityName=".MainFragmenthome"
