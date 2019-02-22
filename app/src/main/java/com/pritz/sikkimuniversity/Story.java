@@ -30,11 +30,14 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
 
 import static android.app.Activity.RESULT_OK;
 import com.pritz.sikkimuniversity.R;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 import static com.pritz.sikkimuniversity.R.id.postimage;
 import static com.pritz.sikkimuniversity.R.id.strimage;
@@ -48,6 +51,7 @@ public class Story extends Fragment {
     private DatabaseReference mdatabase;
     ImageButton adde;
     ImageButton opner;
+    Uri imgll = null;
     ImageButton cam;
     private final int img=1;
     Bitmap bitmap;
@@ -132,7 +136,10 @@ public class Story extends Fragment {
         progressDialog.setMessage("Just Wait.....");
         final String title = storymes.getText().toString().trim();
         if (!TextUtils.isEmpty(title) && imageurl == null)
-        {
+        { progressDialog.setTitle("Posting");
+            progressDialog.setMessage("Just a while!");
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
             DatabaseReference databaseReference=mref.push();
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
             String name = sharedPreferences.getString("s_name","");
@@ -141,6 +148,7 @@ public class Story extends Fragment {
             databaseReference.child("sdate").setValue(currentDateTimeString);
             databaseReference.child("simage").setValue("khjkjh");
             storymes.setText("");
+            progressDialog.dismiss();
         }
 
         if (!TextUtils.isEmpty(title)   && imageurl != null)
@@ -214,4 +222,58 @@ public class Story extends Fragment {
             date1.setText(sdate);
         }
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==img && resultCode==RESULT_OK && data!=null){
+            Uri path = data.getData();
+                imageurl=data.getData();
+                image.setImageURI(imageurl);
+                image.setVisibility(View.VISIBLE);
+
+
+
+        }
+
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            imageurl=data.getData();
+            image.setImageURI(imageurl);
+        }
+
+
+    }
+
+  /*  @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
+            Uri imageurl = data.getData();
+            CropImage.activity(imageurl)
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .setInitialCropWindowPaddingRatio(0)
+                    //.setAspectRatio(1, 1)
+                    .start(getContext(), this);
+
+        }
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
+                imgll = result.getUri();
+                image.setImageURI(imgll);
+                image.setVisibility(View.VISIBLE);
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Exception error = result.getError();
+            }
+        }
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            imageurl=data.getData();
+            CropImage.activity(imageurl)
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .setInitialCropWindowPaddingRatio(0)
+                    .start(getContext(), this);
+          //  image.setImageURI(imageurl);
+        }
+
+    }*/
 }

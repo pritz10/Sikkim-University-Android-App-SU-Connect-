@@ -11,7 +11,8 @@
         android:layout_height="match_parent"
         android:layout_alignBottom="@+id/linearLayout"
         android:layout_marginBottom="54dp"
-        android:paddingBottom="10dp"></android.support.v7.widget.RecyclerView>
+        android:paddingBottom="10dp">
+    </android.support.v7.widget.RecyclerView>
 
     <View
         android:layout_width="match_parent"
@@ -57,14 +58,14 @@
             />
 
         <com.github.siyamed.shapeimageview.RoundedImageView
-            android:layout_width="90sp"
-            android:layout_height="150sp"
             android:id="@+id/image"
-            android:layout_marginLeft="10sp"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:siBorderWidth="1sp"
+            android:layout_marginLeft="10sp"
             app:siBorderColor="@color/colorPrimaryDark"
-            app:siSquare="true"/>
+            app:siBorderWidth="1sp"
+            app:siSquare="true" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"

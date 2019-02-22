@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -27,6 +28,7 @@ public class signup extends AppCompatActivity {
     private EditText inputEmail, inputPassword,phonenumber,username;
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
+    public ProgressDialog progressDialog;
     private FirebaseAuth auth;
     private DatabaseReference mdatabase;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -38,7 +40,7 @@ public class signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         auth = FirebaseAuth.getInstance();
 
-
+        progressDialog = new ProgressDialog(this);
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
@@ -68,7 +70,7 @@ public class signup extends AppCompatActivity {
             public void onClick(View v) {
 
                email = inputEmail.getText().toString().trim();
-                  password = inputPassword.getText().toString().trim();
+               //   password = inputPassword.getText().toString().trim();
                   Name = username.getText().toString().trim();
                   Ph = phonenumber.getText().toString().trim();
 
@@ -85,7 +87,7 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)) {
+                /*if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -93,11 +95,14 @@ public class signup extends AppCompatActivity {
                 if (password.length() < 6) {
                     Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
                     return;
-                }
-
+                }*/
+                progressDialog.setTitle("Uploading Image...");
+                progressDialog.setMessage("Please wait while we upload and process the image.");
+                progressDialog.setCanceledOnTouchOutside(false);
+                progressDialog.show();
                 progressBar.setVisibility(View.VISIBLE);
                 //create user
-                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
+                auth.createUserWithEmailAndPassword(email, "pritziloveu").addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Toast.makeText(signup.this, "Creating User Failed", Toast.LENGTH_SHORT).show();
@@ -124,9 +129,12 @@ public class signup extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        startActivity(new Intent(signup.this, Login.class));
-                                        finish();
-
+                                        username.setText("");
+                                        phonenumber.setText("");
+                                        inputEmail.setText("");
+                                        //startActivity(new Intent(signup.this, Login.class));
+                                        //finish();
+                                        progressDialog.dismiss();
                                         Toast.makeText(signup.this, "SuccessFull",
 
                                                 Toast.LENGTH_SHORT).show();

@@ -1,5 +1,6 @@
 package com.pritz.sikkimuniversity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -30,6 +31,7 @@ public class Login extends AppCompatActivity {
     public FirebaseAuth auth;
     FirebaseUser user;
     public String uid;
+    public ProgressDialog progressDialog;
     public DatabaseReference mdatabase;
 
     public FirebaseAuth.AuthStateListener authStateListener;
@@ -39,13 +41,14 @@ public class Login extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
 
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_login);
         inputEmail =  (EditText) findViewById(R.id.email);
         inputPassword =  (EditText)  findViewById(R.id.password);
         progressBar =  (ProgressBar) findViewById(R.id.progressBar);
-
+        progressDialog = new ProgressDialog(this);
         gologin=(Button) findViewById(R.id.btn_loginn);
         goreset=(Button) findViewById(R.id.btn_reset);
          auth= FirebaseAuth.getInstance();
@@ -73,7 +76,11 @@ public class Login extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
-
+                progressDialog.setTitle("Breathe in Breathe out...");
+                progressDialog.setMessage("Getting you to Sikkim University Connect");
+                progressDialog.setCanceledOnTouchOutside(false);
+                progressDialog.show();
+                progressBar.setVisibility(View.VISIBLE);
 
 
 
@@ -105,6 +112,7 @@ public class Login extends AppCompatActivity {
                                                 SharedPreferences.Editor editor = got.edit();
                                                 editor.putString("s_name", nmeh + "~" + pheh);
                                                 editor.apply();
+                                                progressDialog.dismiss();
                                                 progressBar.setVisibility(View.GONE);
                                                 Intent intent = new Intent(Login.this, MainFragmenthome.class);
                                                 startActivity(intent);
@@ -140,6 +148,7 @@ public class Login extends AppCompatActivity {
         {
             Intent intent = new Intent(Login.this, MainFragmenthome.class);
             startActivity(intent);
+            finish();
 
         }
     }
@@ -147,8 +156,8 @@ public class Login extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-        if (authStateListener != null) {
-            auth.removeAuthStateListener(authStateListener);
+       if (authStateListener != null) {
+          auth.removeAuthStateListener(authStateListener);
         }
     }
     }

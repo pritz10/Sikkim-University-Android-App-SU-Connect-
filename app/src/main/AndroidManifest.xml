@@ -24,8 +24,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Testingstory"></activity>
-        <activity
+         <activity
             android:name=".MainFragmenthome"
             android:label="@string/title_activity_chnck" />
         <activity

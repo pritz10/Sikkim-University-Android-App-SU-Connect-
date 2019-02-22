@@ -125,7 +125,7 @@ public class fragmentDonateblood extends Fragment {
                             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
                             String name = sharedPreferences.getString("s_name","");
                              databaseReference.child("User").setValue(uid);
-                             databaseReference.child("image").setValue(photol);
+                             databaseReference.child("image").setValue(downloaduri);
                             databaseReference.child("name").setValue(name);
                             progressDialog.dismiss();
 

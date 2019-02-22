@@ -121,6 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:visibility="gone"
                 android:gravity="center"
                 android:drawableLeft="@drawable/psswrd"
                 android:textColorHint="@color/colorPrimaryDark"

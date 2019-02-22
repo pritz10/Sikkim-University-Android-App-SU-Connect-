@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
@@ -13,10 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainFragmenthome extends AppCompatActivity implements fragmentNoticeBoard.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
+    boolean doubleBackToExitPressedOnce = false;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,8 +61,9 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainfragmenthome);
-
-//        mTextMessage = (TextView) findViewById(R.id.message);
+        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("s_name","");
+        Toast.makeText(getApplicationContext(), "Hi\t"+name, Toast.LENGTH_SHORT).show();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.menuforbottomnavigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         MainFragment c=new MainFragment();
@@ -132,17 +136,40 @@ public class MainFragmenthome extends AppCompatActivity implements fragmentNotic
         builder.setNegativeButton("Yes", new DialogInterface.OnClickListener()
         {
             public void onClick(DialogInterface dialog, int id)
-            {
-                //bt.disable();
-                finish();
-                System.exit(0);
+            {finish();
+                Intent a = new Intent(Intent.ACTION_MAIN);
+                a.addCategory(Intent.CATEGORY_HOME);
+                a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(a);
             }
         });
         builder.create();
         builder.show();
     }
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            Intent a = new Intent(Intent.ACTION_MAIN);
+            a.addCategory(Intent.CATEGORY_HOME);
+            a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(a);            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    }
 
 
 }
+
+
 
 
