@@ -27,40 +27,38 @@ public class Splash extends AppCompatActivity {
         auth= FirebaseAuth.getInstance();
         Toast.makeText(getApplicationContext(), "Splash", Toast.LENGTH_SHORT).show();
 
-        final MediaPlayer mp=MediaPlayer.create(this,R.raw.lg);
 
-        Thread t =new Thread(){
-            public void run(){
-                try{
-                    mp.start();
-                    sleep(500);
 
-                }catch(InterruptedException e){
-                    e.printStackTrace();
-                }finally{
-                    Intent i =new Intent(Splash.this,Login.class);
-                    startActivity(i);
-                }
-            }
-        };
-        t.start();
     }
     @Override
     public void onStart() {
         super.onStart();
-        if(auth.getCurrentUser()!=null)
-        {
-            Intent intent = new Intent(Splash.this, MainFragmenthome.class);
-            startActivity(intent);
-            finish();
+        Thread t =new Thread(){
+            public void run(){
+                try{
+                     sleep(500);
 
-        }
-        else
-        {
-            Intent i =new Intent(Splash.this,Login.class);
-            startActivity(i);
+                }catch(InterruptedException e){
+                    e.printStackTrace();
+                }finally{
+                    if(auth.getCurrentUser()!=null)
+                    {
+                        Intent intent = new Intent(Splash.this, MainFragmenthome.class);
+                        startActivity(intent);
+                        finish();
 
-        }
+                    }
+                    else
+                    {
+                        Intent i =new Intent(Splash.this,Login.class);
+                        startActivity(i);
+
+                    }
+                }
+            }
+        };
+        t.start();
+
     }
 
     @Override

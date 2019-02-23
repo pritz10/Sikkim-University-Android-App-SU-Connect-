@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.pritz.sikkimuniversity"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 26
         multiDexEnabled = true
-        versionCode 2
-        versionName "2.0"
+        versionCode 3
+        versionName "Sikkim University"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

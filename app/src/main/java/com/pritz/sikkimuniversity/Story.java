@@ -213,7 +213,7 @@ public class Story extends Fragment {
 
         public void setSimage(Context ctx, String simage) {
             ImageView post = (ImageView) mView.findViewById(strimage);
-            Picasso.with(ctx).load(simage).into(post);
+            Picasso.with(ctx).load(simage).resize(1000, 1000).centerCrop().into(post);
 
         }
 

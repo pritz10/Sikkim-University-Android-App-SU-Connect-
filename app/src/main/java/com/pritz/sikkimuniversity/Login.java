@@ -41,7 +41,7 @@ public class Login extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
+   //     Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
 
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_login);
@@ -128,11 +128,16 @@ public class Login extends AppCompatActivity {
                                     }
                                 } else {
                                     Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_LONG).show();
-
+                                     progressDialog.dismiss();
+                                     progressBar.setVisibility(View.GONE);
                                     if (password.length() < 6) {
                                         inputPassword.setError("Password Too Small");
+                                        progressDialog.dismiss();
+                                        progressBar.setVisibility(View.GONE);
                                     } else {
                                         Toast.makeText(Login.this, "Something Went Wrong!", Toast.LENGTH_LONG).show();
+                                        progressDialog.dismiss();
+                                        progressBar.setVisibility(View.GONE);
                                     }
 
                                 }

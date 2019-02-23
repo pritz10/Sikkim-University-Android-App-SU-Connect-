@@ -125,7 +125,7 @@ all.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onError() {
 
-                            Picasso.with(SettingsActivity.this).load(image).placeholder(R.drawable.default_avatar).into(mDisplayImage);
+                            Picasso.with(SettingsActivity.this).load(image).placeholder(R.drawable.default_avatar).resize(500, 500).centerCrop().into(mDisplayImage);
 
                         }
                     });

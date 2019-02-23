@@ -151,7 +151,7 @@ public class fragmentBlood extends Fragment {
         {
             ImageView il = (ImageView) view.findViewById(R.id.pico);
           //  ImageView post=(ImageView)view.findViewById(R.id.postimage);
-            Picasso.with(ctx).load(image).into(il);
+            Picasso.with(ctx).load(image).resize(100, 100).centerCrop().into(il);
           //Picasso.with(ctx).load(image).resize(100,100).into(il);
 
         }
