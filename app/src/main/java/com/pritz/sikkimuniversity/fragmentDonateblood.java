@@ -103,11 +103,9 @@ public class fragmentDonateblood extends Fragment {
             public void onClick(View v) {
                 phone = ph.getText().toString();
 
-                Toast.makeText(getActivity(),  "Button Clicled", Toast.LENGTH_LONG).show();
-                progressDialog.setMessage("Just Wait.....\n" +
-                        "\nYou have chosen to donate your blood_gettersetter.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood_gettersetter. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
+                 progressDialog.setMessage("Just Wait.....\n" +
+                        "\nYou are a real life hero. Salute to you. You will get a call when any one need blood. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 if ((img != null && !TextUtils.isEmpty(phone)) && !bloodgroup.equals("Enter Your Blood Group")) {
-                    Toast.makeText(getActivity(),  "if Clicled", Toast.LENGTH_LONG).show();
 
                     progressDialog.show();
                     progressDialog.setCancelable(false);
@@ -117,20 +115,18 @@ public class fragmentDonateblood extends Fragment {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Uri downloaduri=taskSnapshot.getDownloadUrl();
 
-                            DatabaseReference databaseReference = mref.push();
+
+                            DatabaseReference databaseReference=mref.push();
                             databaseReference.child("blodgrp").setValue(bloodgroup.toString());
                             databaseReference.child("Phone").setValue(phone);
-                            FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-                            String uid=user.getUid();
+                            databaseReference.child("image").setValue(downloaduri.toString());
                             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
                             String name = sharedPreferences.getString("s_name","");
-                             databaseReference.child("User").setValue(uid);
-                             databaseReference.child("image").setValue(downloaduri);
                             databaseReference.child("name").setValue(name);
                             progressDialog.dismiss();
 
 
-                        }
+                                            }
                     });
 
                 }

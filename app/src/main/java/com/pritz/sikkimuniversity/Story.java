@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -53,13 +54,14 @@ public class Story extends Fragment {
     ImageButton opner;
     Uri imgll = null;
     ImageButton cam;
+    public MediaPlayer mp;
     private final int img=1;
     Bitmap bitmap;
     ImageView image;
     LinearLayout opener1;
     ProgressBar progressBar1;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
-    private static final int CAMERA_REQUEST = 1888;
+    private static final int CAMERA_REQUEST =1888;
     private static final int GALLERY_REQUEST=1;
     private StorageReference mStorageRef;
     public ProgressDialog progressDialog;
@@ -86,7 +88,7 @@ public class Story extends Fragment {
         opener1 = (LinearLayout)getActivity().findViewById(R.id.add);
         storymes=(EditText)getActivity().findViewById(R.id.strymsg);
         progressBar1=(ProgressBar)getActivity().findViewById(R.id.progressBar);
-//        progressBar1.setVisibility(View.VISIBLE);
+        mp=MediaPlayer.create(getContext(),R.raw.sentmessage);
         mdatabase= FirebaseDatabase.getInstance().getReference().child("story");
         onStart();
         pods.setHasFixedSize(true);
@@ -107,7 +109,7 @@ public class Story extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST );
             }
         });
         adde.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +150,7 @@ public class Story extends Fragment {
             databaseReference.child("sdate").setValue(currentDateTimeString);
             databaseReference.child("simage").setValue("khjkjh");
             storymes.setText("");
+            mp.start();
             progressDialog.dismiss();
         }
 
@@ -171,6 +174,7 @@ public class Story extends Fragment {
                     databaseReference.child("sdate").setValue(currentDateTimeString);
                     databaseReference.child("simage").setValue(downloaduri.toString());
                     progressDialog.dismiss();
+                    mp.start();
                     Story c=new Story();
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content,c).commit();
@@ -227,8 +231,7 @@ public class Story extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode==img && resultCode==RESULT_OK && data!=null){
-            Uri path = data.getData();
-                imageurl=data.getData();
+            imageurl=data.getData();
                 image.setImageURI(imageurl);
                 image.setVisibility(View.VISIBLE);
 
@@ -236,9 +239,37 @@ public class Story extends Fragment {
 
         }
 
-        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
-            imageurl=data.getData();
+        if (requestCode == CAMERA_REQUEST && resultCode ==RESULT_OK){
+            Uri path=data.getData();
+            final DatabaseReference mref=FirebaseDatabase.getInstance().getReference().child("story");
+            mStorageRef= FirebaseStorage.getInstance().getReference();
+            progressDialog.setMessage("Just Wait.....");
+            /*imageurl=data.getData();
             image.setImageURI(imageurl);
+            image.setVisibility(View.VISIBLE);*/
+            progressDialog.setTitle("Uploading Image...");
+             progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
+            StorageReference reference=mStorageRef.child("storypics").child(path.getLastPathSegment());
+            reference.putFile(path).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
+                    Uri downloaduri=taskSnapshot.getDownloadUrl();
+                    DatabaseReference databaseReference=mref.push();
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+                    String name = sharedPreferences.getString("s_name","");
+                     databaseReference.child("stitle").setValue(name);
+                    final String currentDateTimeString = DateFormat.getDateInstance().format(new Date());
+                    databaseReference.child("sdate").setValue(currentDateTimeString);
+                    databaseReference.child("simage").setValue(downloaduri.toString());
+                    progressDialog.dismiss();
+                    Story c=new Story();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content,c).commit();
+                }
+            });
+
+
         }
 
 

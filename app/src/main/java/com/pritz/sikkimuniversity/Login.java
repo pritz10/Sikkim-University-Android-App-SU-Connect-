@@ -26,6 +26,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.File;
+
 public class Login extends AppCompatActivity {
     public EditText inputEmail, inputPassword;
     public FirebaseAuth auth;
@@ -33,7 +35,7 @@ public class Login extends AppCompatActivity {
     public String uid;
     public ProgressDialog progressDialog;
     public DatabaseReference mdatabase;
-
+    File gotyou;
     public FirebaseAuth.AuthStateListener authStateListener;
     private ProgressBar progressBar;
     private Button gosignup, gologin, goreset;
@@ -42,9 +44,10 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //     Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
-
-        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide();
+         gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/userinfo.xml");
+        FirebaseApp.initializeApp(this);
         inputEmail =  (EditText) findViewById(R.id.email);
         inputPassword =  (EditText)  findViewById(R.id.password);
         progressBar =  (ProgressBar) findViewById(R.id.progressBar);
@@ -76,8 +79,8 @@ public class Login extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
-                progressDialog.setTitle("Breathe in Breathe out...");
-                progressDialog.setMessage("Getting you to Sikkim University Connect");
+                progressDialog.setTitle("Take a deep Breathe...");
+                progressDialog.setMessage("Sikkim University Connect");
                 progressDialog.setCanceledOnTouchOutside(false);
                 progressDialog.show();
                 progressBar.setVisibility(View.VISIBLE);
@@ -151,9 +154,12 @@ public class Login extends AppCompatActivity {
         super.onStart();
         if(auth.getCurrentUser()!=null)
         {
-            Intent intent = new Intent(Login.this, MainFragmenthome.class);
-            startActivity(intent);
-            finish();
+            if (gotyou.exists()) {
+                Intent intent = new Intent(Login.this, MainFragmenthome.class);
+                startActivity(intent);
+                finish();
+            }
+
 
         }
     }

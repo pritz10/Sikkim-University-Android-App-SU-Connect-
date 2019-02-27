@@ -344,6 +344,7 @@
         <activity android:name=".signup" />
         <activity
             android:name=".SettingsActivity"
+            android:label="Profile"
             android:parentActivityName=".MainFragmenthome"
             android:theme="@style/AppTheme">
             <meta-data

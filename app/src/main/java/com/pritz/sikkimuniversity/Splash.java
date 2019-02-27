@@ -14,9 +14,12 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.io.File;
+
 @SuppressLint("NewApi")
 public class Splash extends AppCompatActivity {
     public FirebaseAuth auth;
+    File gotyou;
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @SuppressLint("NewApi")
     @Override
@@ -25,10 +28,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
         auth= FirebaseAuth.getInstance();
-        Toast.makeText(getApplicationContext(), "Splash", Toast.LENGTH_SHORT).show();
-
-
-
+        gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/userinfo.xml");
     }
     @Override
     public void onStart() {
@@ -43,16 +43,17 @@ public class Splash extends AppCompatActivity {
                 }finally{
                     if(auth.getCurrentUser()!=null)
                     {
-                        Intent intent = new Intent(Splash.this, MainFragmenthome.class);
-                        startActivity(intent);
-                        finish();
-
+                        if (gotyou.exists())
+                        {
+                            Intent intent = new Intent(Splash.this, MainFragmenthome.class);
+                            startActivity(intent);
+                            finish();
+                        }
                     }
                     else
                     {
                         Intent i =new Intent(Splash.this,Login.class);
                         startActivity(i);
-
                     }
                 }
             }

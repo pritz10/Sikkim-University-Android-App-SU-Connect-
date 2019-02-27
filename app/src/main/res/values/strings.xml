@@ -571,10 +571,9 @@ The Cell shall sensitize the students on anti-ragging rules from time to time an
     <string-array name="_3teachers_name3">
         <item>Prof. Jyoti Prakash Tamang</item>
         <item>Dr. Hare Krishna Tiwari</item>
-        <item>Dr. Buddhiman Tamang</item>
-        //swap photo
         <item>Dr. Bimala Singh</item>
-        //
+        <item>Dr. Buddhiman Tamang</item>
+
         <item>Dr. Nagendra Thakur</item>
     </string-array>
     <string-array name="_3Designation3">

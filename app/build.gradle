@@ -9,7 +9,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 26
         multiDexEnabled = true
-        versionCode 3
+        versionCode 4
         versionName "Sikkim University"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true

@@ -29,17 +29,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/allusr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/colorAccent"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:text="All Users"
-                android:textColor="@android:color/white" />
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/settings_image"
                 android:layout_width="150dp"
@@ -99,14 +88,25 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/allusr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="All Users"
+                android:textColor="@android:color/white" />
+
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:textColor="@android:color/white"
-                android:text="Secured by Handshke Sikkim" />
+                android:layout_weight="1"
+                android:text="Secured by Handshke Sikkim"
+                android:textColor="@android:color/white" />
         </LinearLayout>
             </ScrollView>
     </android.support.v7.widget.CardView>

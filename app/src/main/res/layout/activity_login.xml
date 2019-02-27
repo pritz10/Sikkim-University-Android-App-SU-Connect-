@@ -4,17 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".Login">
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Sikkim University Connect"
+        android:text="SU-Connect"
         android:textColor="@android:color/black"
-        android:layout_marginBottom="25sp"
-        android:textStyle="bold" />
-            <ImageView
+        android:textSize="40dp"
+         android:textStyle="bold"/>
+    <ImageView
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_gravity="center"
@@ -38,15 +46,26 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0.0px"
         app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="@android:color/white"
             android:orientation="vertical"
             android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25sp"
+                android:text="Virtual Campus of SU"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -57,11 +76,11 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/email1"
                     android:drawablePadding="10dp"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:drawableLeft="@drawable/email"
                     android:singleLine="true"
                     android:textColor="@android:color/black"
                     android:textColorHint="@color/colorPrimaryDark" />
@@ -77,9 +96,9 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/key1"
-                    android:drawablePadding="10dp"
+                     android:drawablePadding="10dp"
                     android:hint="Password"
+                    android:drawableLeft="@drawable/psswrd"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true"
@@ -106,21 +125,30 @@
                 android:text="Get My Password"
                 android:textColor="@android:color/white" />
 
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-
-
-
+            <Button
+                android:id="@+id/gs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="Guest"
+                android:textColor="@android:color/white" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               android:gravity="center"
                 android:layout_marginBottom="25sp"
+                android:gravity="center"
                 android:paddingTop="10dp"
-                android:text="Virtual Campus Made with Love in Computer Applications Sikkim University"
+                android:text="Virtual Campus Made with Love from Computer Applications Sikkim University"
                 android:textColor="@android:color/black"
                 android:textStyle="bold" />
+
+
         </LinearLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
 

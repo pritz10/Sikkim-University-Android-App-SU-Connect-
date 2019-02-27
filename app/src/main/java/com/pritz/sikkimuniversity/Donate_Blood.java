@@ -1,5 +1,4 @@
 package com.pritz.sikkimuniversity;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -38,20 +37,17 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.UUID;
-
 public class Donate_Blood extends AppCompatActivity {
     Spinner spinner;
     EditText ph;
     ImageView pdf2;
     Uri img=null;
     String bloodgroup;
-
     private static final int GALLERY_REQUEST = 1;
     private StorageReference mStorageRefe= FirebaseStorage.getInstance().getReference();
     private ProgressDialog progressDialog;
     final DatabaseReference mref = FirebaseDatabase.getInstance().getReference().child("blood_donation");
     ArrayAdapter<CharSequence> adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,26 +71,16 @@ public class Donate_Blood extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + "", Toast.LENGTH_LONG).show();
-                //bloodgroup = parent.getItemAtPosition(position) + "";
-                 bloodgroup = spinner.getSelectedItem().toString();
-            }
-
-
+                  bloodgroup = spinner.getSelectedItem().toString();            }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
-
-
         final MediaPlayer mp=MediaPlayer.create(this,R.raw.lo);
-
         Button button = (Button) findViewById(R.id.button11);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 progressDialog.setMessage("Just Wait.....\n" +
                         "\nYou have chosen to donate your blood_gettersetter.Thanks For Your Cooperation.You are a real life hero. Salute to you. You will get a call when any one need blood_gettersetter. So if you are willing to give then you can donate otherwise you can tell them that you are not interested right now!");
                 ph=(EditText)findViewById(R.id.phnumber);
@@ -108,34 +94,22 @@ public class Donate_Blood extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                             Uri downloaduri=taskSnapshot.getDownloadUrl();
-
                             DatabaseReference databaseReference=mref.push();
                             databaseReference.child("blodgrp").setValue(bloodgroup.toString());
                             databaseReference.child("Phone").setValue(phone);
-
                             databaseReference.child("image").setValue(downloaduri.toString());
-
-
                             SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
                             String name = sharedPreferences.getString("s_name","");
-
                             databaseReference.child("name").setValue(name);
-
-
-
                             SharedPreferences got = getSharedPreferences("blodgr", Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = got.edit();
                             editor.putString("phone", phone);
-                            //editor.putString("s_dept",Department);
                             editor.apply();
                             mp.start();
                             progressDialog.dismiss();
                             Intent i=new Intent(Donate_Blood.this,Blood.class);
                             finish();
                             startActivity(i);
-
-
-
                         }
                     });
 

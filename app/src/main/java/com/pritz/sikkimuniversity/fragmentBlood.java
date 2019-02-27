@@ -69,7 +69,6 @@ public class fragmentBlood extends Fragment {
                 FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
                 String uid=user.getUid();
             String comare=mdatabase.orderByChild("User").startAt(uid).toString();
-                Toast.makeText(getActivity(), comare, Toast.LENGTH_LONG).show();
 
                 if(uid.equals(comare)) {
                     Toast.makeText(getActivity(), comare, Toast.LENGTH_LONG).show();
