@@ -124,7 +124,7 @@ public class Admin extends AppCompatActivity {
                      databaseReference.child("image").setValue(downloaduri.toString());
                      mp.start();
 
-
+//dsfhsdfhj
 
                     Intent i = new Intent(Admin.this, Admin.class);
                     finish();
