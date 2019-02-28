@@ -109,15 +109,13 @@ public class Story extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, CAMERA_REQUEST );
+                startActivityForResult(cameraIntent,CAMERA_REQUEST );
             }
         });
         adde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent galleryintent = new Intent(Intent.ACTION_GET_CONTENT);
-                galleryintent.setType("image/*");
-                startActivityForResult(galleryintent, GALLERY_REQUEST);
+
             }
         });
 
@@ -128,6 +126,9 @@ public class Story extends Fragment {
                     opener1.setVisibility(View.VISIBLE);
                 else
                     opener1.setVisibility(View.GONE);
+                Intent galleryintent = new Intent(Intent.ACTION_GET_CONTENT);
+                galleryintent.setType("image/*");
+                startActivityForResult(galleryintent, GALLERY_REQUEST);
             }
         });
     }
@@ -248,7 +249,7 @@ public class Story extends Fragment {
             image.setImageURI(imageurl);
             image.setVisibility(View.VISIBLE);*/
             progressDialog.setTitle("Uploading Image...");
-             progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
             StorageReference reference=mStorageRef.child("storypics").child(path.getLastPathSegment());
             reference.putFile(path).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

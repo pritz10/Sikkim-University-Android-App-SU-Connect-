@@ -4,14 +4,20 @@
     android:layout_height="match_parent"
      xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.pritz.sikkimuniversity.Story">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/pos"
+
+    
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_marginBottom="54dp"
-        android:paddingBottom="10dp">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_above="@+id/add"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5sp"
@@ -24,19 +30,12 @@
         android:id="@+id/add"
         android:layout_above="@+id/linearLayout"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
+            android:visibility="gone"
             android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/cameras"
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginBottom="10sp"
-                android:background="@drawable/shp"
-                android:src="@drawable/cameras" />
 
             <ImageButton
                 android:id="@+id/adde"
@@ -45,13 +44,24 @@
                 android:layout_margin="10sp"
                 android:background="@drawable/shp"
                  android:src="@drawable/ic_add_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/cameras"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/shp"
+                android:layout_marginBottom="10sp"
+                 android:src="@drawable/cameras" />
         </LinearLayout>
+
         <View
             android:layout_width="0.5sp"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary"
             android:layout_marginRight="2sp"
             />
+
         <com.github.siyamed.shapeimageview.RoundedImageView
             android:id="@+id/image"
             android:layout_width="150sp"
@@ -68,79 +78,69 @@
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
         android:animateLayoutChanges="true"
-        android:background="@drawable/shp"
-        android:orientation="horizontal">
-
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        >
         <View
             android:layout_width="0.5sp"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary"
+            />
 
         <ImageButton
             android:id="@+id/opener"
             android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-             android:background="@drawable/shp"
+            android:alpha="0.5"
+            android:background="@android:color/white"
             android:padding="10dp"
             app:srcCompat="@drawable/picbtn" />
 
+        <View
+            android:layout_width="0.5sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            />
         <EditText
             android:id="@+id/strymsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="8"
-             android:ems="10"
+            android:background="@android:color/white"
+            android:ems="10"
             android:hint="Enter Story..."
             android:inputType="textPersonName"
+            android:paddingBottom="12dp"
             android:paddingLeft="10dp"
-            android:paddingTop="14dp"
-            android:textColor="@android:color/white"
             android:paddingRight="10dp"
-            android:paddingBottom="12dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="false"
-             android:background="@drawable/shp"
-            android:cropToPadding="false"
-            android:padding="10dp"
-            android:src="@drawable/cameras" />
-
+            android:paddingTop="14dp" />
         <View
             android:layout_width="0.5sp"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary" />
-
-        <View
-            android:layout_width="0.5sp"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary" />
-
+            android:background="@color/colorPrimary"
+            />
         <ImageButton
             android:id="@+id/sendbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-             android:background="@drawable/shp"
+            android:alpha="0.5"
+            android:background="@android:color/white"
             android:padding="10dp"
             app:srcCompat="@drawable/sendbtn" />
 
         <View
             android:layout_width="0.5sp"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary"
+            />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
