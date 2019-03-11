@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:alpha="0.5"
-            android:padding="10dp"
+lkdds            android:padding="10dp"
             app:srcCompat="@drawable/picbtn" />
 
         <View
