@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.File;
@@ -27,6 +28,8 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
+        FirebaseApp.initializeApp(this);
+
         auth= FirebaseAuth.getInstance();
         gotyou = new File("/data/data/com.pritz.sikkimuniversity/shared_prefs/userinfo.xml");
     }

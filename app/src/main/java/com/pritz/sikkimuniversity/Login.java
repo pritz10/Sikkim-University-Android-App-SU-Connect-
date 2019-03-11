@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
     File gotyou;
     public FirebaseAuth.AuthStateListener authStateListener;
     private ProgressBar progressBar;
-    private Button gosignup, gologin, goreset;
+    private Button gosignup, gologin, goreset,guest;
     String email, password;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +54,22 @@ public class Login extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         gologin=(Button) findViewById(R.id.btn_loginn);
         goreset=(Button) findViewById(R.id.btn_reset);
-         auth= FirebaseAuth.getInstance();
+        guest=(Button) findViewById(R.id.gs);
+
+        auth= FirebaseAuth.getInstance();
         goreset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, GetPassword.class));
             }
         });
+guest.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(Login.this,GuestMode.class));
 
+    }
+});
         gologin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
